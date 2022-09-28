@@ -2,4 +2,5 @@
   <NavigationBar/>
   <SectionHero/>
   <SectionFeatures/>
+  <SectionQuote/>
 </template>

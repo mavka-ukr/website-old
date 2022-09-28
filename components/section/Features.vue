@@ -39,6 +39,7 @@
 <style lang="scss">
 .features {
   margin-top: 100px;
+  margin-bottom: 100px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

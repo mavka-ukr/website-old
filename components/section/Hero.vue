@@ -8,8 +8,9 @@ const codes = [
 дія знайти_факторіал(к)
   результат = 1
 
-  кожному х беручи діапазон(1, к):
+  кожному х беручи діапазон(1, к)
     результат = результат * х
+  кінець
 
   результат
 кінець
@@ -60,6 +61,8 @@ const currentCode = useState('currentCode', () => codes[1]);
 
 <template>
   <section class="hero">
+    <div class="hero-pattern-1" style="background-image: url(../assets/images/logo-light.png)"></div>
+
     <div class="left">
       <h1 class="hero-title">
         Сучасна українська мова програмування
@@ -104,6 +107,8 @@ const currentCode = useState('currentCode', () => codes[1]);
 
 <style lang="scss">
 .hero {
+  position: relative;
+
   padding: 50px;
 
   display: grid;
@@ -112,7 +117,7 @@ const currentCode = useState('currentCode', () => codes[1]);
   &-title {
     margin: 0;
 
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 600;
 
     max-width: 15ch;
@@ -147,6 +152,7 @@ const currentCode = useState('currentCode', () => codes[1]);
   background: black;
   padding: .5rem;
   border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   font-size: 1rem;
 
@@ -191,5 +197,24 @@ const currentCode = useState('currentCode', () => codes[1]);
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.hero-pattern-1 {
+  position: absolute;
+
+  top: 100px;
+  left: 100px;
+
+  height: 500px;
+  width: 500px;
+
+  background-repeat: no-repeat;
+  background-size: 500px;
+  //filter: grayscale(1);
+  transform: rotate(180deg);
+
+  opacity: .04;
+
+  z-index: -1;
 }
 </style>
