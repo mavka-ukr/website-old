@@ -72,7 +72,6 @@
 
 .links {
   .link {
-    font-weight: 300;
     font-size: .95rem;
     text-decoration: none;
     color: black;
@@ -87,7 +86,7 @@
   background: black;
   color: white;
   border: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   padding: .5rem 1rem;
   border-radius: .6rem;

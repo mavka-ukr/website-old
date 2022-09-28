@@ -1,3 +1,63 @@
+<script setup>
+import { useState } from "nuxt/app";
+
+const codes = [
+  {
+    name: 'факторіал',
+    text: `
+дія знайти_факторіал(к)
+  результат = 1
+
+  кожному х беручи діапазон(1, к):
+    результат = результат * х
+
+  результат
+кінець
+
+ф10 = знайти_факторіал(10)
+
+друк(ф10)
+`.trim(),
+  },
+  {
+    name: 'ракета',
+    text: `
+структура Ракета
+  назва: рядок
+  швидкість: число
+  вага: число
+кінець
+
+дія для Ракета р запустити()
+  друк("Ракету " + р.назва + " запущено!")
+кінець
+
+нептун = Ракета(назва: "Нептун",
+                швидкість: 1000,
+                вага: 500)
+
+нептун.запустити()
+`.trim(),
+  },
+  {
+    name: 'інтернет',
+    text: `
+інтернет має зтягнути взяти
+
+автомобілі_ауді = чекати зтягнути("автомобілі.укр/пі/ауді")
+
+автомобілі_ауді = автомобілі_ауді.жсон()
+
+кожному авто беручи автомобілі_ауді
+  друк("Авто: " + авто.назва)
+кінець
+`.trim(),
+  },
+];
+
+const currentCode = useState('currentCode', () => codes[1]);
+</script>
+
 <template>
   <section class="hero">
     <div class="left">
@@ -16,22 +76,19 @@
     </div>
     <div class="right">
       <div class="code-window">
+        <div class="code-window-names">
+          <template v-for="code in codes">
+            <button @click="currentCode = code" class="code-window-name"
+                    :class="{ 'code-window-name-active': currentCode.name === code.name }">
+              {{ code.name }}
+            </button>
+          </template>
+        </div>
+
         <ClientOnly>
           <highlightjs
               language="diia"
-              :code="`дія знайти_факторіал(к)
-  результат = 1
-
-  кожному х беручи діапазон(1, к):
-    результат = результат * х
-
-  результат
-кінець
-
-ф10 = знайти_факторіал(10)
-
-друкувати(ф10)
-`"
+              :code="currentCode.text"
           />
         </ClientOnly>
 
@@ -64,6 +121,7 @@
   &-subtitle {
     margin: 0;
 
+    font-size: 1rem;
     margin-top: 2rem;
     color: #444;
 
@@ -84,6 +142,8 @@
 }
 
 .code-window {
+  position: relative;
+
   background: black;
   padding: .5rem;
   border-radius: 1rem;
@@ -100,6 +160,36 @@
 
   pre {
     margin: 0;
+
+    overflow-x: auto;
+  }
+}
+
+.code-window-names {
+  position: absolute;
+  display: flex;
+  top: -1rem;
+
+  .code-window-name {
+    background: transparent;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #9d3425;
+
+    &-active {
+      background: #9d3425;
+      color: white;
+    }
+  }
+}
+
+.hljs {
+  max-width: 446px;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>

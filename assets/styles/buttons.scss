@@ -1,6 +1,8 @@
 button {
   position: relative;
 
+  cursor: pointer;
+
   &:disabled {
     opacity: .5;
   }
