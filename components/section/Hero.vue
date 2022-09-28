@@ -61,7 +61,10 @@ const currentCode = useState('currentCode', () => codes[1]);
 
 <template>
   <section class="hero">
-    <div class="hero-pattern-1" style="background-image: url(../assets/images/logo-light.png)"></div>
+    <div class="hero-pattern hero-pattern-1" style="background-image: url(../assets/images/logo-light.png)"></div>
+    <div class="hero-pattern hero-pattern-2" style="background-image: url(../assets/images/logo-light.png)"></div>
+    <div class="hero-pattern hero-pattern-3" style="background-image: url(../assets/images/logo-light.png)"></div>
+    <div class="hero-pattern hero-pattern-4" style="background-image: url(../assets/images/logo-light.png)"></div>
 
     <div class="left">
       <h1 class="hero-title">
@@ -108,6 +111,8 @@ const currentCode = useState('currentCode', () => codes[1]);
 <style lang="scss">
 .hero {
   position: relative;
+
+  margin-top: 50px;
 
   padding: 50px;
 
@@ -199,6 +204,12 @@ const currentCode = useState('currentCode', () => codes[1]);
   }
 }
 
+@keyframes turn {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 .hero-pattern-1 {
   position: absolute;
 
@@ -207,14 +218,47 @@ const currentCode = useState('currentCode', () => codes[1]);
 
   height: 500px;
   width: 500px;
+}
 
+.hero-pattern-2 {
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  height: 50px;
+  width: 50px;
+}
+
+.hero-pattern-3 {
+  position: absolute;
+
+  top: 100px;
+  right: 0px;
+
+  height: 60px;
+  width: 60px;
+}
+
+.hero-pattern-4 {
+  position: absolute;
+
+  top: 600px;
+  left: -220px;
+
+  height: 100px;
+  width: 100px;
+}
+
+.hero-pattern {
   background-repeat: no-repeat;
-  background-size: 500px;
-  //filter: grayscale(1);
-  transform: rotate(180deg);
+  background-size: 100%;
+  filter: grayscale(1);
 
   opacity: .04;
 
   z-index: -1;
+
+  animation: turn 180s infinite linear reverse;
 }
 </style>
