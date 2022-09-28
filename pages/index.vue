@@ -1,0 +1,4 @@
+<template>
+  <NavigationBar/>
+  <SectionHero/>
+</template>
