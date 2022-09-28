@@ -9,7 +9,7 @@ const diia = () => ({
     aliases: ['diia'],
     keywords: {
         $pattern: /[a-zA-Zа-яА-ЯіІїЇєЄ]+/,
-        keyword: 'дія кожному беручи повернути'
+        keyword: 'дія кожному беручи повернути кінець в'
     },
     unicodeRegex: true,
 });
