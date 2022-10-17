@@ -204,6 +204,12 @@ const currentCode = useState('currentCode', () => codes[1]);
   }
 }
 
+.code-window-full {
+  .hljs {
+    max-width: 100% !important;
+  }
+}
+
 @keyframes turn {
   100% {
     transform: rotate(1turn);
