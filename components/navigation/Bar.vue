@@ -15,6 +15,7 @@ addRouteMiddleware(() => {
         <img src="@/assets/images/logo-light.png" alt="">
       </NuxtLink>
       Дія
+      <span class="navbar-alpha">альфа</span>
     </div>
     <div class="links">
       <a class="link" href="/play">Грати</a>
@@ -41,6 +42,7 @@ addRouteMiddleware(() => {
   height: 80px;
 
   .logo {
+    position: relative;
     grid-area: logo;
     display: flex;
     align-items: center;
@@ -72,9 +74,22 @@ addRouteMiddleware(() => {
     justify-content: flex-end;
   }
 
+  .navbar-alpha {
+    position: absolute;
+    left: 85px;
+    top: 40px;
+    font-size: .5rem;
+    color: rgba(black, .5);
+  }
+
   @media only screen and (max-width: 956px) {
     grid-template-areas: "logo" "links"  "buttons";
     place-items: center;
+
+    .navbar-alpha {
+      left: 85px;
+      top: 16px;
+     }
 
     .links {
       position: fixed;

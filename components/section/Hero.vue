@@ -149,6 +149,25 @@ const currentCode = useState('currentCode', () => codes[1]);
       font-size: 1.2rem;
     }
   }
+
+
+  @media only screen and (max-width: 956px) {
+    grid-template-columns: 1fr;
+
+    padding: 1rem;
+
+    .right {
+      margin-top: 5rem;
+
+      .hljs {
+        max-width: calc(100vw - 6rem);
+      }
+    }
+
+    .hero-pattern {
+      display: none;
+    }
+  }
 }
 
 .code-window {

@@ -67,6 +67,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+
+  @media only screen and (max-width: 956px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .bwb {

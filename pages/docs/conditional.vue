@@ -1,3 +1,23 @@
+<script setup>
+const basic = `
+якщо а == 2
+  друк("а дорівнює 2")
+кінець
+`.trim();
+
+const other = `
+якщо (а == 2 або б != так) і (в == "їхав козак за дунай...")
+  друк("пройшло!")
+кінець
+
+якщо бути == так
+  друк("йой, най буде")
+інакше
+  друк("чи не бути...")
+кінець
+`.trim();
+</script>
+
 <template>
   <DocsWrapper>
     <h1 class="docs-content-title">
@@ -5,14 +25,26 @@
     </h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi aperiam assumenda aut beatae
-      blanditiis dolor ducimus earum eius eligendi error esse est eum eveniet, excepturi explicabo harum, hic illo
-      in ipsam iusto laboriosam minus molestias mollitia neque nisi nobis officia officiis placeat quae rerum,
-      sapiente sint temporibus totam ut voluptas. Alias amet ipsam itaque libero minus necessitatibus numquam,
-      possimus praesentium qui quibusdam quod, repudiandae soluta suscipit temporibus vero. Adipisci amet assumenda
-      at aut commodi consectetur, corporis delectus distinctio eveniet ex expedita fuga impedit in magni
-      necessitatibus nobis numquam perspiciatis, placeat quam quibusdam, quidem reiciendis saepe sapiente tenetur
-      voluptate.
+      Умовні операції в <span class="diia-word">Дії</span> пишуться так:
     </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="basic"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Інші приклади:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="other"
+        />
+      </ClientOnly>
+    </div>
   </DocsWrapper>
 </template>
