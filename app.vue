@@ -1,7 +1,5 @@
 <template>
-  <main class="container">
-    <NuxtPage/>
-  </main>
+  <NuxtPage/>
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
     <div class="logo">
-      <div class="logo-image">
+      <NuxtLink to="/" class="logo-image">
         <img src="@/assets/images/logo-light.png" alt="">
-      </div>
+      </NuxtLink>
       Дія
     </div>
     <div class="links">
@@ -12,9 +12,9 @@
       <a class="link" href="/packages">Спільнота</a>
     </div>
     <div class="buttons">
-      <button class="button">
+      <NuxtLink to="/docs" class="button">
         Документація
-      </button>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -91,5 +91,7 @@
   padding: .5rem 1rem;
   border-radius: .6rem;
   cursor: pointer;
+
+  text-decoration: none;
 }
 </style>
