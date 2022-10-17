@@ -1,7 +1,17 @@
+<script setup>
+import { addRouteMiddleware, useState } from "nuxt/app";
+
+const sidebarShown = useState('sidebarShown', () => false);
+
+addRouteMiddleware(() => {
+  sidebarShown.value = false;
+});
+</script>
+
 <template>
   <main class="container">
     <div id="docs" class="docs">
-      <div class="docs-sidebar">
+      <div class="docs-sidebar" :class="{ 'shown': sidebarShown }">
         <div class="docs-sidebar-head">
           <NuxtLink to="/" class="logo">
             <img src="@/assets/images/logo-light.png" alt="">
@@ -37,6 +47,10 @@
       <div class="docs-content">
         <slot/>
       </div>
+
+      <button @click="sidebarShown = !sidebarShown" class="docs-sidebar-toggle">
+        {{ sidebarShown ? '×' : '☰' }}
+      </button>
     </div>
   </main>
 </template>
@@ -103,6 +117,29 @@ $sidebarWidth: 20rem;
       }
     }
   }
+
+  &-toggle {
+    position: fixed;
+
+    top: 1rem;
+    left: 1rem;
+
+    padding: 1rem;
+
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  @media screen and (max-width: 956px) {
+    width: calc(100% - 2rem);
+
+    background-color: white;
+
+    &:not(.shown) {
+      display: none;
+    }
+  }
 }
 
 .docs-content {
@@ -112,6 +149,13 @@ $sidebarWidth: 20rem;
 
   &-title {
     text-align: center;
+  }
+
+  @media screen and (max-width: 956px) {
+    margin-left: 0;
+
+    padding: 0 1rem;
+    padding-top: 4rem;
   }
 }
 </style>
