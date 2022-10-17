@@ -166,6 +166,7 @@ $sidebarWidth: 20rem;
   margin-left: $sidebarWidth;
 
   padding: 0 3rem;
+  padding-bottom: 4rem;
 
   &-title {
     text-align: center;
@@ -176,7 +177,6 @@ $sidebarWidth: 20rem;
 
     padding: 0 1rem;
     padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 }
 </style>
