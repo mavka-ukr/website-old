@@ -61,10 +61,10 @@ const currentCode = useState('currentCode', () => codes[1]);
 
 <template>
   <section class="hero">
-    <div class="hero-pattern hero-pattern-1" style="background-image: url(../assets/images/logo-light.png)"></div>
-    <div class="hero-pattern hero-pattern-2" style="background-image: url(../assets/images/logo-light.png)"></div>
-    <div class="hero-pattern hero-pattern-3" style="background-image: url(../assets/images/logo-light.png)"></div>
-    <div class="hero-pattern hero-pattern-4" style="background-image: url(../assets/images/logo-light.png)"></div>
+    <div class="hero-pattern hero-pattern-1"></div>
+    <div class="hero-pattern hero-pattern-2"></div>
+    <div class="hero-pattern hero-pattern-3"></div>
+    <div class="hero-pattern hero-pattern-4"></div>
 
     <div class="left">
       <h1 class="hero-title">
@@ -254,6 +254,8 @@ const currentCode = useState('currentCode', () => codes[1]);
   background-repeat: no-repeat;
   background-size: 100%;
   filter: grayscale(1);
+
+  background-image: url(@/assets/images/logo-light.png);
 
   opacity: .04;
 
