@@ -129,6 +129,11 @@ $sidebarWidth: 20rem;
     font-size: 1.5rem;
     background-color: transparent;
     border: none;
+
+
+    @media screen and (min-width: 956px) {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 956px) {
