@@ -65,6 +65,8 @@ $sidebarWidth: 20rem;
 .docs-sidebar {
   position: fixed;
 
+  z-index: 1000;
+
   height: calc(100% - 2rem);
   width: $sidebarWidth;
 
@@ -120,6 +122,7 @@ $sidebarWidth: 20rem;
 
   &-toggle {
     position: fixed;
+    z-index: 1001;
 
     top: 1rem;
     left: 1rem;
@@ -127,9 +130,13 @@ $sidebarWidth: 20rem;
     padding: 1rem;
 
     font-size: 1.5rem;
-    background-color: transparent;
+    background-color: rgba(white, .1);
     border: none;
+    border-radius: 2px;
 
+    background-image: radial-gradient(transparent 1px, white 1px);
+    background-size: 8px 8px;
+    backdrop-filter: saturate(50%) blur(4px);
 
     @media screen and (min-width: 956px) {
       display: none;
@@ -137,7 +144,15 @@ $sidebarWidth: 20rem;
   }
 
   @media screen and (max-width: 956px) {
-    width: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    padding: 1rem;
 
     background-color: white;
 
@@ -161,6 +176,7 @@ $sidebarWidth: 20rem;
 
     padding: 0 1rem;
     padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 </style>
