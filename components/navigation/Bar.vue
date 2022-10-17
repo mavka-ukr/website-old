@@ -1,5 +1,15 @@
+<script setup>
+import { addRouteMiddleware, useState } from "nuxt/app";
+
+const navigationShown = useState('navigationShown', () => false);
+
+addRouteMiddleware(() => {
+  navigationShown.value = false;
+});
+</script>
+
 <template>
-  <div class="navbar">
+  <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
     <div class="logo">
       <NuxtLink to="/" class="logo-image">
         <img src="@/assets/images/logo-light.png" alt="">
@@ -17,6 +27,10 @@
       </NuxtLink>
     </div>
   </div>
+
+  <button @click="navigationShown = !navigationShown" class="nav-toggle">
+    {{ navigationShown ? '×' : '☰' }}
+  </button>
 </template>
 
 <style lang="scss">
@@ -39,6 +53,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .link {
+      font-size: .95rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    .link + .link {
+      margin-left: 1rem;
+    }
   }
 
   .buttons {
@@ -46,6 +70,46 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: 956px) {
+    grid-template-areas: "logo" "links"  "buttons";
+    place-items: center;
+
+    .links {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background-color: white;
+      flex-direction: column;
+
+      .link {
+        font-size: 2rem;
+      }
+
+      .link + .link {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    }
+
+    .buttons {
+      position: fixed;
+
+      bottom: 4rem;
+
+      z-index: 1001;
+
+      .button {
+        font-size: 2rem;
+      }
+    }
+
+    &:not(.navigation-shown) {
+      .links, .buttons {
+        display: none;
+      }
+    }
   }
 }
 
@@ -67,18 +131,6 @@
 
       object-fit: contain;
     }
-  }
-}
-
-.links {
-  .link {
-    font-size: .95rem;
-    text-decoration: none;
-    color: black;
-  }
-
-  .link + .link {
-    margin-left: 1rem;
   }
 }
 

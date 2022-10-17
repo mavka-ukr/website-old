@@ -48,7 +48,7 @@ addRouteMiddleware(() => {
         <slot/>
       </div>
 
-      <button @click="sidebarShown = !sidebarShown" class="docs-sidebar-toggle">
+      <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
         {{ sidebarShown ? '×' : '☰' }}
       </button>
     </div>
@@ -120,29 +120,6 @@ $sidebarWidth: 20rem;
     }
   }
 
-  &-toggle {
-    position: fixed;
-    z-index: 1001;
-
-    top: 1rem;
-    left: 1rem;
-
-    padding: 1rem;
-
-    font-size: 1.5rem;
-    background-color: rgba(white, .1);
-    border: none;
-    border-radius: 2px;
-
-    background-image: radial-gradient(transparent 1px, white 1px);
-    background-size: 8px 8px;
-    backdrop-filter: saturate(50%) blur(4px);
-
-    @media screen and (min-width: 956px) {
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 956px) {
     width: 100%;
     height: 100%;
@@ -177,6 +154,7 @@ $sidebarWidth: 20rem;
 
     padding: 0 1rem;
     padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 </style>

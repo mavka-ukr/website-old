@@ -13,6 +13,8 @@ html, body {
 
 body {
   padding: 1rem;
+
+  overflow-x: hidden;
 }
 
 .container {
@@ -25,6 +27,30 @@ body {
 .diia-word {
   color: #485cb0;
   font-weight: 500;
+}
+
+.nav-toggle {
+  position: fixed;
+  z-index: 1001;
+
+  top: 1rem;
+  left: 1rem;
+
+  width: 54px;
+  height: 54px;
+
+  font-size: 1.5rem;
+  background-color: rgba(white, .1);
+  border: none;
+  border-radius: 2px;
+
+  background-image: radial-gradient(transparent 1px, white 1px);
+  background-size: 8px 8px;
+  backdrop-filter: saturate(50%) blur(4px);
+
+  @media screen and (min-width: 956px) {
+    display: none;
+  }
 }
 
 @import "buttons";
