@@ -1,3 +1,29 @@
+<script setup>
+const simple = `
+дія знайти_суму_та_надрукувати_результат(а, б)
+  результат = а + б
+
+  друк("сума = " + результат)
+кінець
+`.trim();
+
+const call = `
+знайти_суму_та_надрукувати_результат(2, 2)
+`.trim();
+
+const return_1 = `
+дія знайти_добуток(а, б)
+  вернути а * б
+кінець
+`.trim();
+
+const return_2 = `
+дія знайти_добуток(а, б)
+  а * б
+кінець
+`.trim();
+</script>
+
 <template>
   <DocsWrapper>
     <h1 class="docs-content-title">
@@ -5,14 +31,49 @@
     </h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi aperiam assumenda aut beatae
-      blanditiis dolor ducimus earum eius eligendi error esse est eum eveniet, excepturi explicabo harum, hic illo
-      in ipsam iusto laboriosam minus molestias mollitia neque nisi nobis officia officiis placeat quae rerum,
-      sapiente sint temporibus totam ut voluptas. Alias amet ipsam itaque libero minus necessitatibus numquam,
-      possimus praesentium qui quibusdam quod, repudiandae soluta suscipit temporibus vero. Adipisci amet assumenda
-      at aut commodi consectetur, corporis delectus distinctio eveniet ex expedita fuga impedit in magni
-      necessitatibus nobis numquam perspiciatis, placeat quam quibusdam, quidem reiciendis saepe sapiente tenetur
-      voluptate.
+      Дія в <span class="diia-word">Дії</span> є послідовним набором операцій, що має назву.
+      Дія може приймати вхідні параметри та вертати значення.
     </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="simple"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Приклад застосування (виклику) дії:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="call"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Приклад дії, що вертає значення:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="return_1"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Ключове слово "вернути" не є обов'язковим:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="return_2"
+        />
+      </ClientOnly>
+    </div>
   </DocsWrapper>
 </template>
