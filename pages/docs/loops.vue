@@ -1,3 +1,19 @@
+<script setup>
+const simpleEach = `
+кожному х беручи діапазон(0, 10)
+  друк(х)
+кінець
+`.trim();
+
+const simpleWhile = `
+а = 10
+
+поки а != 0
+  а = а - 1
+кінець
+`.trim();
+</script>
+
 <template>
   <DocsWrapper>
     <h1 class="docs-content-title">
@@ -5,14 +21,25 @@
     </h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi aperiam assumenda aut beatae
-      blanditiis dolor ducimus earum eius eligendi error esse est eum eveniet, excepturi explicabo harum, hic illo
-      in ipsam iusto laboriosam minus molestias mollitia neque nisi nobis officia officiis placeat quae rerum,
-      sapiente sint temporibus totam ut voluptas. Alias amet ipsam itaque libero minus necessitatibus numquam,
-      possimus praesentium qui quibusdam quod, repudiandae soluta suscipit temporibus vero. Adipisci amet assumenda
-      at aut commodi consectetur, corporis delectus distinctio eveniet ex expedita fuga impedit in magni
-      necessitatibus nobis numquam perspiciatis, placeat quam quibusdam, quidem reiciendis saepe sapiente tenetur
-      voluptate.
+      Цикл в <span class="diia-word">Дії</span> є послідовним набором операцій, що повторюється визначену або
+      невизначену кількість раз.
     </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="simpleEach"
+        />
+      </ClientOnly>
+    </div>
+    <br>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :code="simpleWhile"
+        />
+      </ClientOnly>
+    </div>
   </DocsWrapper>
 </template>
