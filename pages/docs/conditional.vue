@@ -25,7 +25,7 @@ const other = `
     </h1>
 
     <p>
-      Умовні операції в <span class="diia-word">Дії</span> пишуться так:
+      Умовні операції пишуться так:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

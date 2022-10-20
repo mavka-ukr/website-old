@@ -41,7 +41,7 @@ const voidity = `
     </h1>
 
     <p>
-      В <span class="diia-word">Дії</span> існують такі типи даних:
+      Існують такі типи даних:
     </p>
     <ul>
       <li><code>число</code></li>

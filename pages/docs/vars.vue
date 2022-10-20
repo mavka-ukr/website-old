@@ -31,7 +31,7 @@ const visibility = `
     </h1>
 
     <p>
-      У <span class="diia-word">Дії</span> є лише один спосіб оголошення та присвоєння змінної:
+      Є лише один спосіб оголошення та присвоєння змінної:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
