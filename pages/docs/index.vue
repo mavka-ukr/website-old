@@ -17,7 +17,7 @@ const life = `
       абетки.
     </p>
     <p>
-      Метою створення <span class="diia-word">Дії</span> є <a href="https://github.com/kohutd">моє</a> бажання до
+      Причиною створення <span class="diia-word">Дії</span> є <a href="https://github.com/kohutd">моє</a> бажання до
       написання комп'ютерних команд українською мовою.
     </p>
     <p>
