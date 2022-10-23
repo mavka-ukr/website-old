@@ -37,6 +37,7 @@ const visibility = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="simple"
         />
       </ClientOnly>
@@ -48,6 +49,7 @@ const visibility = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="other"
         />
       </ClientOnly>
@@ -59,6 +61,7 @@ const visibility = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="visibility"
         />
       </ClientOnly>

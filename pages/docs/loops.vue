@@ -28,6 +28,7 @@ const simpleWhile = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="simpleEach"
         />
       </ClientOnly>
@@ -37,6 +38,7 @@ const simpleWhile = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="simpleWhile"
         />
       </ClientOnly>

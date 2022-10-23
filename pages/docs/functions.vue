@@ -42,6 +42,7 @@ const return_2 = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="simple"
         />
       </ClientOnly>
@@ -53,6 +54,7 @@ const return_2 = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="call"
         />
       </ClientOnly>
@@ -64,6 +66,7 @@ const return_2 = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="return_1"
         />
       </ClientOnly>
@@ -75,6 +78,7 @@ const return_2 = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="return_2"
         />
       </ClientOnly>

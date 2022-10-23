@@ -57,6 +57,7 @@ const voidity = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="number"
         />
       </ClientOnly>
@@ -68,6 +69,7 @@ const voidity = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="string"
         />
       </ClientOnly>
@@ -79,6 +81,7 @@ const voidity = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="logical"
         />
       </ClientOnly>
@@ -90,6 +93,7 @@ const voidity = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="array"
         />
       </ClientOnly>
@@ -101,6 +105,7 @@ const voidity = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="voidity"
         />
       </ClientOnly>

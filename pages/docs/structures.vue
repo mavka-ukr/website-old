@@ -36,12 +36,13 @@ const call = `
 
     <p>
       Структура є способом поміщення даних в одне місце.
-      Структура має назву, може мати властивості (дані) та дії (операції над даними).
+      Структура має назву, може мати властивості (опис даних) та дії (операції над даними).
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="simple"
         />
       </ClientOnly>
@@ -51,6 +52,7 @@ const call = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="diia"
         />
       </ClientOnly>
@@ -60,6 +62,7 @@ const call = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="instance"
         />
       </ClientOnly>
@@ -69,6 +72,7 @@ const call = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="call"
         />
       </ClientOnly>

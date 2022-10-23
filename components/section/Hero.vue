@@ -94,6 +94,7 @@ const currentCode = useState('currentCode', () => codes[1]);
         <ClientOnly>
           <highlightjs
               language="diia"
+              :autodetect="false"
               :code="currentCode.text"
           />
         </ClientOnly>

@@ -1,3 +1,25 @@
+<script setup>
+const npmInstall = `
+npm install -g diia
+`.trim();
+
+const diiaRun = `
+дія [опція]... [файл]
+`.trim();
+
+const helloWorldFile = `
+дія привіт_світ()
+  друк("привіт, світ!")
+кінець
+
+привіт_світ()
+`.trim();
+
+const runHelloWorldFile = `
+дія привіт_світ.дія
+`.trim();
+</script>
+
 <template>
   <DocsWrapper>
     <h1 class="docs-content-title">
@@ -5,14 +27,63 @@
     </h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci animi aperiam assumenda aut beatae
-      blanditiis dolor ducimus earum eius eligendi error esse est eum eveniet, excepturi explicabo harum, hic illo
-      in ipsam iusto laboriosam minus molestias mollitia neque nisi nobis officia officiis placeat quae rerum,
-      sapiente sint temporibus totam ut voluptas. Alias amet ipsam itaque libero minus necessitatibus numquam,
-      possimus praesentium qui quibusdam quod, repudiandae soluta suscipit temporibus vero. Adipisci amet assumenda
-      at aut commodi consectetur, corporis delectus distinctio eveniet ex expedita fuga impedit in magni
-      necessitatibus nobis numquam perspiciatis, placeat quam quibusdam, quidem reiciendis saepe sapiente tenetur
-      voluptate.
+      <b>Вимоги:</b>
     </p>
+    <ul>
+      <li>Linux або MacOS</li>
+      <li>NodeJS 18+</li>
+      <li>NPM</li>
+    </ul>
+    <p>
+      <b>Встановлення:</b>:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            lang="bash"
+            :autodetect="false"
+            :code="npmInstall"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      <b>Запуск</b>:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="bash"
+            :autodetect="false"
+            :code="diiaRun"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      <b>Приклад</b>:
+    </p>
+    <p>
+      Створіть файл <code>привіт_світ.дія</code>:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="helloWorldFile"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Запустіть за допомогою наступної команди:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="bash"
+            :autodetect="false"
+            :code="runHelloWorldFile"
+        />
+      </ClientOnly>
+    </div>
   </DocsWrapper>
 </template>

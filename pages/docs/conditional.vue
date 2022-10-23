@@ -31,6 +31,7 @@ const other = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="basic"
         />
       </ClientOnly>
@@ -42,6 +43,7 @@ const other = `
       <ClientOnly>
         <highlightjs
             language="diia"
+            :autodetect="false"
             :code="other"
         />
       </ClientOnly>
