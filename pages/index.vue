@@ -5,5 +5,7 @@
     <SectionFeatures/>
     <SectionQuote/>
     <SectionBuildWith/>
+    <SectionGetInvolved/>
+    <SectionFooter/>
   </main>
 </template>
