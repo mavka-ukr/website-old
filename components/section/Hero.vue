@@ -72,7 +72,7 @@ const currentCode = useState('currentCode', () => codes[1]);
       </h1>
       <p class="hero-subtitle">
         Дія - це перша* мова програмування, що працює на українській абетці.
-        Дія створена для того аби я міг зручно програмувати звичним для мене набором символів.
+        Дія створена для того, аби я міг зручно програмувати звичним для мене набором символів.
       </p>
       <div class="hero-buttons">
         <NuxtLink href="/docs" class="button button-large">
