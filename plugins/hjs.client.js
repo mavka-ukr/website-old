@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from "nuxt/app";
-import 'highlight.js/styles/github-dark.css'
+import 'highlight.js/styles/atom-one-dark.css'
 import hljs from 'highlight.js/lib/core';
 // import 'highlight.js/lib/common';
 import bash from 'highlight.js/lib/languages/bash';
@@ -30,19 +30,51 @@ const diia = () => {
         contains: [
             {
                 begin: [
-                    /[ \.]/,
-                    /([a-zA-Zа-яА-ЯіІїЇєЄ_']*)/,
+                    /[a-zа-яіїє_]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/,
                     /\(/
                 ],
-                className: { 2: "title.function" },
+                className: { 1: "title.function", 2: "title.function" },
+            },
+            {
+                begin: [
+                    /[A-ZА-ЯІЇЄ]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/,
+                    /\(/
+                ],
+                className: { 1: "title.class", 2: "title.class" },
+            },
+            {
+                begin: [
+                    "структура ",
+                    /[A-ZА-ЯІЇЄ]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
+                ],
+                className: { 2: "title.class", 3: "title.class" },
+            },
+            {
+                begin: [
+                    "дія для ",
+                    /[A-ZА-ЯІЇЄ]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
+                ],
+                className: { 2: "title.class", 3: "title.class" },
             },
             {
                 className: 'string',
                 begin: /"/,
                 end: /"/,
             },
-            hljs.NUMBER_MODE,
             hljs.COMMENT('\'\'\'', '$'),
+            {
+                scope: 'number',
+                begin: /(-?)0ш([АБВГҐДабвгґд0-9])+/,
+            },
+            {
+                scope: 'number',
+                begin: /0д([01])+/,
+            },
+            hljs.C_NUMBER_MODE,
         ]
     });
 };
