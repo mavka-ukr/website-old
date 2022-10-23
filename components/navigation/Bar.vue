@@ -92,6 +92,7 @@ addRouteMiddleware(() => {
 
     .logo {
       flex-direction: row-reverse;
+      padding-top: 3px;
 
       .navbar-alpha {
         display: none;

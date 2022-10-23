@@ -1,0 +1,3 @@
+документ як "document"
+документ.знайти_елемент як "document.querySelector"
+документ.знайти_всі_елементи як "document.querySelectorAll"
