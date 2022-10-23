@@ -84,11 +84,23 @@ addRouteMiddleware(() => {
 
   @media only screen and (max-width: 956px) {
     grid-template-areas: "logo" "links"  "buttons";
-    place-items: center;
 
     .navbar-alpha {
       left: 85px;
       top: 16px;
+    }
+
+    .logo {
+      flex-direction: row-reverse;
+
+      .navbar-alpha {
+        display: none;
+      }
+
+      .logo-image {
+        margin-right: 1rem;
+        margin-left: calc(.5rem);
+      }
     }
 
     .links {
@@ -110,6 +122,8 @@ addRouteMiddleware(() => {
 
     .buttons {
       position: fixed;
+
+      place-self: center;
 
       bottom: 4rem;
 

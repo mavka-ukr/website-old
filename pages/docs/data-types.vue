@@ -23,10 +23,12 @@ const logical = `
 ні
 `.trim();
 
-const array = `
-[1, 2, 3]
+const obj = `
+Ракета(назва: "Нептун")
 
-["а", 3.14]
+Паспорт(прізвище: "Когут",
+        ім'я: "Давид",
+        по_батькові: "Богданович")
 `.trim();
 
 const voidity = `
@@ -47,7 +49,7 @@ const voidity = `
       <li><code>число</code></li>
       <li><code>рядок</code></li>
       <li><code>логічне</code></li>
-      <li><code>масив</code></li>
+      <li><code>об'єкт (зі структури)</code></li>
       <li><code>пусто</code></li>
     </ul>
     <p>
@@ -87,14 +89,14 @@ const voidity = `
       </ClientOnly>
     </div>
     <p>
-      <b>масив:</b>
+      <b>об'єкт:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
             language="diia"
             :autodetect="false"
-            :code="array"
+            :code="obj"
         />
       </ClientOnly>
     </div>

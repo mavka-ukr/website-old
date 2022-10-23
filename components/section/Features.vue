@@ -8,7 +8,7 @@
         Проста
       </div>
       <div class="feature-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, repudiandae?
+        Синтаксис Дії може лекго зрозуміти навіть школяр в початковій школі.
       </div>
     </div>
     <div class="feature">
@@ -19,7 +19,7 @@
         Швидка
       </div>
       <div class="feature-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, repudiandae?
+        Завдяки реалізації, Дія є досить швидкою інтерпретованою мовою.
       </div>
     </div>
     <div class="feature">
@@ -30,7 +30,7 @@
         Потужна
       </div>
       <div class="feature-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, repudiandae?
+        Простота мови дозволяє вирішувати складні та великі задачі легко і зручно.
       </div>
     </div>
   </section>
