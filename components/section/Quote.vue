@@ -1,11 +1,13 @@
 <template>
   <section class="quote">
     <div class="quote-text">
+      <a target="_blank" href="https://github.com/kohutd">Я</a>
+      вірю, що кожен українець має право використовувати зрозумілі йому інструменти в щоденному житті.
       Якщо вам здалось, що це жарт - подивіться на себе в дзеркало. Це не жарт.
     </div>
-    <div class="quote-author">
-      Когут Давид
-    </div>
+    <!--    <div class="quote-author">-->
+    <!--      Когут Давид-->
+    <!--    </div>-->
   </section>
 </template>
 
@@ -22,9 +24,15 @@
   text-align: center;
 
   &-text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+
+    padding: 0 1rem;
 
     max-width: 60ch;
+
+    font-style: italic;
+
+    font-family: 'Gentium Book Plus', serif;
   }
 
   &-author {

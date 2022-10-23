@@ -97,7 +97,6 @@
     font-weight: bold;
     line-height: .6;
     opacity: .8;
-    font-style: italic;
 
     color: #9d3425;
     z-index: 1;
