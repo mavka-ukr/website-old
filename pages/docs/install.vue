@@ -35,7 +35,7 @@ const runHelloWorldFile = `
       <li>NPM</li>
     </ul>
     <p>
-      <b>Встановлення:</b>:
+      <b>Встановлення:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
@@ -47,7 +47,7 @@ const runHelloWorldFile = `
       </ClientOnly>
     </div>
     <p>
-      <b>Запуск</b>:
+      <b>Запуск:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
@@ -59,7 +59,7 @@ const runHelloWorldFile = `
       </ClientOnly>
     </div>
     <p>
-      <b>Приклад</b>:
+      <b>Приклад:</b>
     </p>
     <p>
       Створіть файл <code>привіт_світ.дія</code>:
