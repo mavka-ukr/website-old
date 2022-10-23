@@ -64,6 +64,13 @@ const diia = () => {
                 className: 'string',
                 begin: /"/,
                 end: /"/,
+                contains: [
+                    {
+                        begin: /\$\(/,
+                        end: /\)/,
+                        scope: 'subst'
+                    }
+                ],
             },
             hljs.COMMENT('\'\'\'', '$'),
             {
