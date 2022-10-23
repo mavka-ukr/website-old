@@ -101,7 +101,7 @@ const currentCode = useState('currentCode', () => codes[1]);
 
         <div class="code-window-buttons">
           <div class="button">
-            ▶️ Запустити
+            ▶️ Бавитись
           </div>
         </div>
       </div>

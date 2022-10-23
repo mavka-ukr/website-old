@@ -18,7 +18,7 @@ addRouteMiddleware(() => {
       <span class="navbar-alpha">альфа</span>
     </div>
     <div class="links">
-      <a class="link" href="/play">Грати</a>
+      <a class="link" href="/play">Бавитись</a>
       <a class="link" href="/packages">Пакунки</a>
       <a class="link" href="/packages">Спільнота</a>
     </div>
@@ -89,7 +89,7 @@ addRouteMiddleware(() => {
     .navbar-alpha {
       left: 85px;
       top: 16px;
-     }
+    }
 
     .links {
       position: fixed;
