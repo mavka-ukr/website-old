@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Дія від Когута Давида, 2022
+    Дія від Когута Давида та вакантних місць, 2022
   </section>
 </template>
 
