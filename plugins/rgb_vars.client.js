@@ -17,12 +17,16 @@ function generateRgbaVars(name) {
     if (colorValue) {
         const colorRgb = hexToRgb(colorValue.trim());
 
-        $root.style.setProperty(`${name}_rgb`, `${colorRgb.r},${colorRgb.g},${colorRgb.b}`);
+        if (colorRgb) {
+            $root.style.setProperty(`${name}_rgb`, `${colorRgb.r},${colorRgb.g},${colorRgb.b}`);
+        }
     }
 }
 
 export default defineNuxtPlugin(() => {
-    generateRgbaVars('--bg-color');
-    generateRgbaVars('--text-color');
-    generateRgbaVars('--hint-color');
+    document.addEventListener('DOMContentLoaded', () => {
+        generateRgbaVars('--bg-color');
+        generateRgbaVars('--text-color');
+        generateRgbaVars('--hint-color');
+    });
 });
