@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from "nuxt/app";
 import 'highlight.js/styles/atom-one-dark.css'
 import hljs from 'highlight.js/lib/core';
-// import 'highlight.js/lib/common';
+import 'highlight.js/lib/common';
 import bash from 'highlight.js/lib/languages/bash';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 

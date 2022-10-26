@@ -45,6 +45,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/interpolation" class="docs-sidebar-menu-item" active-class="active">
             Інтерполяція
           </NuxtLink>
+          <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
+            Приклади
+          </NuxtLink>
         </div>
       </div>
       <div class="docs-content">
