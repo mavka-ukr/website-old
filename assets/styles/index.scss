@@ -59,7 +59,7 @@ body {
   border: none;
   border-radius: 2px;
 
-  background-image: radial-gradient(transparent 1px, rgb(var(--bg-color_rgb)) 1px);
+  background-image: radial-gradient(transparent 1px, var(--bg-color) 1px);
   background-size: 4px 4px;
   backdrop-filter: saturate(50%) blur(4px);
 
