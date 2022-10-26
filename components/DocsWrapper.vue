@@ -14,7 +14,8 @@ addRouteMiddleware(() => {
       <div class="docs-sidebar" :class="{ 'shown': sidebarShown }">
         <div class="docs-sidebar-head">
           <NuxtLink to="/" class="logo">
-            <img src="@/assets/images/logo-light.png" alt="">
+            <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
           </NuxtLink>
         </div>
         <div class="docs-sidebar-menu">

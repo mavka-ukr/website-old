@@ -12,7 +12,8 @@ addRouteMiddleware(() => {
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
     <div class="logo">
       <NuxtLink to="/" class="logo-image">
-        <img src="@/assets/images/logo-light.png" alt="">
+        <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+        <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
       </NuxtLink>
       Дія
       <span class="navbar-alpha">альфа</span>

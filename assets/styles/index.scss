@@ -83,4 +83,29 @@ a {
   font-size: 8px;
 }
 
+.logo-dark,
+.logo-light {
+  display: none;
+}
+
+.cs-light {
+  .logo-dark {
+    display: none;
+  }
+
+  .logo-light {
+    display: inline;
+  }
+}
+
+.cs-dark {
+  .logo-light {
+    display: none;
+  }
+
+  .logo-dark {
+    display: inline;
+  }
+}
+
 @import "buttons";
