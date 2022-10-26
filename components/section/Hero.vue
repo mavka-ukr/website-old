@@ -100,7 +100,7 @@ const currentCode = useState('currentCode', () => codes[1]);
         </ClientOnly>
 
         <div class="code-window-buttons">
-          <div class="button">
+          <div class="button play-button">
             ▶️ Бавитись
           </div>
         </div>
@@ -134,7 +134,7 @@ const currentCode = useState('currentCode', () => codes[1]);
 
     font-size: 1rem;
     margin-top: 2rem;
-    color: #444;
+    color: var(--hint-color);
 
     max-width: 35ch;
   }
@@ -184,6 +184,8 @@ const currentCode = useState('currentCode', () => codes[1]);
   &-buttons {
     margin-top: .5rem;
 
+    display: flex;
+
     .button {
       font-size: .8rem;
     }
@@ -211,7 +213,7 @@ const currentCode = useState('currentCode', () => codes[1]);
 
     &-active {
       background: #9d3425;
-      color: white;
+      color: var(--bg-color);
     }
   }
 }
@@ -288,5 +290,10 @@ const currentCode = useState('currentCode', () => codes[1]);
   z-index: -1;
 
   animation: turn 180s infinite linear reverse;
+}
+
+.play-button {
+  background-color: black;
+  color: white;
 }
 </style>

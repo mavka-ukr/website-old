@@ -62,7 +62,7 @@
 
 .feature-description {
   margin-top: 1rem;
-  color: #444444;
+  color: var(--hint-color);
 }
 
 .feature-icon {

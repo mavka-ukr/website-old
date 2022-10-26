@@ -59,7 +59,11 @@ addRouteMiddleware(() => {
     .link {
       font-size: .95rem;
       text-decoration: none;
-      color: black;
+      color: var(--hint-color);
+
+      &:hover {
+        color: var(--text-color);
+      }
     }
 
     .link + .link {
@@ -79,7 +83,7 @@ addRouteMiddleware(() => {
     left: 85px;
     top: 40px;
     font-size: .5rem;
-    color: rgba(black, .5);
+    color: var(--hint-color);
   }
 
   @media only screen and (max-width: 956px) {
@@ -108,7 +112,7 @@ addRouteMiddleware(() => {
       position: fixed;
       inset: 0;
       z-index: 1000;
-      background-color: white;
+      background-color: var(--bg-color);
       flex-direction: column;
 
       .link {
@@ -165,8 +169,8 @@ addRouteMiddleware(() => {
 }
 
 .button {
-  background: black;
-  color: white;
+  background: var(--text-color);
+  color: var(--bg-color);
   border: none;
   font-weight: 600;
   font-size: 1rem;

@@ -101,24 +101,24 @@ $sidebarWidth: 20rem;
       display: block;
 
       text-decoration: none;
-      border: 1px solid black;
+      border: 1px solid var(--text-color);
       border-bottom: none;
 
       cursor: pointer;
 
-      color: black;
+      color: var(--text-color);
 
       &:last-child {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--text-color);
       }
 
       &:hover {
-        background-color: lightgray;
+        background-color: rgba(var(--text-color_rgb), .1);
       }
 
       &.active {
-        background-color: black;
-        color: white;
+        background-color: var(--text-color);
+        color: var(--bg-color);
       }
     }
   }
@@ -134,7 +134,7 @@ $sidebarWidth: 20rem;
 
     padding: 1rem;
 
-    background-color: white;
+    background-color: var(--bg-color);
 
     &:not(.shown) {
       display: none;

@@ -31,21 +31,21 @@ button:after,
 button:hover,
 .button:hover {
   &:after {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(var(--text-color_rgb), .1);
   }
 }
 
 button:active,
 .button:active {
   &:after {
-    background: rgba(0, 0, 0, .1);
+    background: rgba(var(--bg-color_rgb), .1);
   }
 }
 
 .button:hover {
-  box-shadow: 0 0 0 3px rgba(black, .5);
+  box-shadow: 0 0 0 3px rgba(var(--text-color_rgb), .5);
 
   &.button-large {
-    box-shadow: 0 0 0 4px rgba(black, .5);
+    box-shadow: 0 0 0 4px rgba(var(--text-color_rgb), .5);
   }
 }

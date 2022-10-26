@@ -9,6 +9,6 @@
   padding: 10rem 1rem 2rem 1rem;
 
   text-align: center;
-  color: gray;
+  color: var(--hint-color);
 }
 </style>
