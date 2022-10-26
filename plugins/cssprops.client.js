@@ -1,6 +1,12 @@
 import { defineNuxtPlugin } from "nuxt/app";
 
 function hexToRgb(hex) {
+    hex = hex.trim();
+
+    if (hex.length === 4) {
+        hex = `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
+    }
+
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 
     return result ? {
@@ -15,7 +21,7 @@ function generateRgbProp(name) {
     const colorValue = getComputedStyle($root).getPropertyValue(name);
 
     if (colorValue) {
-        const colorRgb = hexToRgb(colorValue.trim());
+        const colorRgb = hexToRgb(colorValue);
 
         if (colorRgb) {
             $root.style.setProperty(`${name}_rgb`, `${colorRgb.r},${colorRgb.g},${colorRgb.b}`);
@@ -53,7 +59,4 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 export default defineNuxtPlugin(() => {
-    setTimeout(() => {
-        regenerateRgbProps();
-    }, 1000);
 });
