@@ -23,7 +23,7 @@ const diia = () => {
         aliases: ['diia'],
         keywords: {
             $pattern: /[a-zA-Zа-яА-ЯіІїЇєЄ]+/,
-            keyword: 'дія кожній беручи повернути кінець структура для чекати включити має взяти якщо або і інакше вернути поки як',
+            keyword: 'дія кожній беручи повернути кінець структура для чекати включити має взяти якщо або і інакше вернути поки як дати модуль',
             literal: 'так ні пусто'
         },
         unicodeRegex: true,
@@ -54,11 +54,45 @@ const diia = () => {
             },
             {
                 begin: [
-                    "дія для ",
+                    /[A-ZА-ЯІЇЄ]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/,
+                    "."
+                ],
+                className: { 1: "title.class", 2: "title.class" },
+            },
+            {
+                begin: [
+                    "дати ",
                     /[A-ZА-ЯІЇЄ]/,
                     /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
                 ],
                 className: { 2: "title.class", 3: "title.class" },
+            },
+            {
+                begin: [
+                    "дати ",
+                    /[a-zа-яіїє_]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
+                ],
+                className: { 2: "title.function", 3: "title.function" },
+            },
+            {
+                begin: [
+                    "взяти ",
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']+\./,
+                    /[a-zа-яіїє_]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
+                ],
+                className: { 3: "title.function", 4: "title.function" },
+            },
+            {
+                begin: [
+                    "взяти ",
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']+\./,
+                    /[A-ZА-ЯІЇЄ]/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/
+                ],
+                className: { 3: "title.class", 4: "title.class" },
             },
             {
                 className: 'string',
@@ -68,8 +102,8 @@ const diia = () => {
                     {
                         begin: /%\(/,
                         end: /\)/,
-                        scope: 'subst'
-                    }
+                        scope: 'subst',
+                    },
                 ],
             },
             hljs.COMMENT('\'\'\'', '$'),
