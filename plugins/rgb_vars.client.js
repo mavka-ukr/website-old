@@ -10,7 +10,7 @@ function hexToRgb(hex) {
     } : null;
 }
 
-function generateRgbaVars(name) {
+function generateRgbProp(name) {
     const $root = document.getElementsByTagName('html')[0];
     const colorValue = getComputedStyle($root).getPropertyValue(name);
 
@@ -31,9 +31,18 @@ function setColorScheme(cs) {
         document.body.classList.remove('cs-light');
         document.body.classList.add('cs-dark');
     }
+
+    regenerateRgbProps();
+}
+
+function regenerateRgbProps() {
+    generateRgbProp('--bg-color');
+    generateRgbProp('--text-color');
+    generateRgbProp('--hint-color');
 }
 
 setColorScheme('light');
+regenerateRgbProps();
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     setColorScheme('dark');
@@ -44,7 +53,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 export default defineNuxtPlugin(() => {
-    generateRgbaVars('--bg-color');
-    generateRgbaVars('--text-color');
-    generateRgbaVars('--hint-color');
+    setTimeout(() => {
+        regenerateRgbProps();
+    }, 1000);
 });
