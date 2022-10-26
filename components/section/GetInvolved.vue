@@ -15,9 +15,10 @@
           GitHub
         </div>
       </a>
-      <a target="_blank" href="https://t.me/diia_chat" class="involve-item">
+      <a target="_blank" href="https://t.me/diia_lang" class="involve-item">
         <div class="involve-item-icon">
-          <img src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-2048x2048.png" alt="Telegram Logo">
+          <img src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-2048x2048.png"
+               alt="Telegram Logo">
         </div>
         <div class="involve-item-name">
           Telegram
