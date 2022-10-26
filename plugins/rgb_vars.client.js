@@ -23,12 +23,6 @@ function generateRgbaVars(name) {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    generateRgbaVars('--bg-color');
-    generateRgbaVars('--text-color');
-    generateRgbaVars('--hint-color');
-});
-
 function setColorScheme(cs) {
     if (cs === 'light') {
         document.body.classList.remove('cs-dark');
@@ -50,4 +44,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 export default defineNuxtPlugin(() => {
+    generateRgbaVars('--bg-color');
+    generateRgbaVars('--text-color');
+    generateRgbaVars('--hint-color');
 });
