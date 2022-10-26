@@ -66,7 +66,7 @@ const diia = () => {
                 end: /"/,
                 contains: [
                     {
-                        begin: /\$\(/,
+                        begin: /%\(/,
                         end: /\)/,
                         scope: 'subst'
                     }
