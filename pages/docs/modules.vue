@@ -1,7 +1,5 @@
 <script setup>
 const modA = `
-модуль а
-
 дія знайти_добуток(а, б)
   а + б
 кінець
@@ -14,8 +12,6 @@ const modA = `
 дати Багатокутник
 `.trim();
 const modB = `
-модуль б
-
 взяти а.знайти_добуток
 взяти а.Багатокутник
 
@@ -36,6 +32,9 @@ const modB = `
     <p>
       Модуль є способом організації коду. Модуль може брати код з іншого модуля і віддавати свій.
     </p>
+    <p>
+      <code>а.дія</code>
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
@@ -45,7 +44,9 @@ const modB = `
         />
       </ClientOnly>
     </div>
-    <br>
+    <p>
+      <code>б.дія</code>
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
