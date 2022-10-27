@@ -16,7 +16,7 @@ addRouteMiddleware(() => {
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
       </NuxtLink>
       Дія
-      <span class="navbar-alpha">альфа</span>
+      <span class="navbar-alpha">концепт</span>
     </div>
     <div class="links">
       <a class="link" href="/play">Бавитись</a>
