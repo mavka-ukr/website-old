@@ -1,6 +1,6 @@
 <script setup>
 const tgbotPak = `
-пак додати телеграм_бот
+пак додати "https://github.com/kohutd/diia-telegram-bot" телеграм_бот
 `.trim();
 
 const tgbot = `

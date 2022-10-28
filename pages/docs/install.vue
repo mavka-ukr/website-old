@@ -4,7 +4,7 @@ npm install -g diia
 `.trim();
 
 const diiaRun = `
-дія [опція]... [файл]
+дія
 `.trim();
 
 const helloWorldFile = `
