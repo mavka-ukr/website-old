@@ -20,8 +20,8 @@ addRouteMiddleware(() => {
     </div>
     <div class="links">
       <a class="link" href="/play">Бавитись</a>
-      <a class="link" href="/packages">Пакунки</a>
-      <a class="link" href="/packages">Спільнота</a>
+      <a class="link" target="_blank" href="https://github.com/topics/diia-pak">Пакунки</a>
+      <a class="link" href="/community">Спільнота</a>
     </div>
     <div class="buttons">
       <NuxtLink to="/docs" class="button">
