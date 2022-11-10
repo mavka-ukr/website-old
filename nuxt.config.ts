@@ -18,6 +18,14 @@ export default defineNuxtConfig({
             },
         ],
     },
+    app: {
+        head: {
+            meta: [
+                { name: 'description', content: 'Сучасна українська мова програмування.' },
+                { name: 'keywords', content: 'дія, мова програмування, програмування, українська мова програмування, українська мова' },
+            ],
+        }
+    },
     modules: [
         '@nuxt/content'
     ],
