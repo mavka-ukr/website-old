@@ -4,7 +4,7 @@
     <SectionHero/>
     <SectionFeatures/>
     <SectionQuote/>
-    <SectionBuildWith/>
+    <SectionBuildWith v-if="false"/>
     <SectionGetInvolved/>
     <SectionFooter/>
   </main>
