@@ -34,8 +34,11 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/conditional" class="docs-sidebar-menu-item" active-class="active">
             Умовні оператори
           </NuxtLink>
-          <NuxtLink href="/docs/functions" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink href="/docs/dii" class="docs-sidebar-menu-item" active-class="active">
             Дії
+          </NuxtLink>
+          <NuxtLink href="/docs/functions" class="docs-sidebar-menu-item" active-class="active">
+            Функції
           </NuxtLink>
           <NuxtLink href="/docs/loops" class="docs-sidebar-menu-item" active-class="active">
             Цикли
