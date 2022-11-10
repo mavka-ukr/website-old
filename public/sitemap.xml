@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://diia.dev/docs/examples</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/modules</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/structures</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/loops</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/functions</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/conditional</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/data-types</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/vars</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs/install</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/docs</loc>
+    </url>
+    <url>
+        <loc>https://diia.dev/</loc>
+    </url>
+</urlset>
