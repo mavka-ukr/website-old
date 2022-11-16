@@ -7,10 +7,12 @@ specifiers:
   nuxt: 3.0.0-rc.11
   sass: ^1.55.0
   scss: ^0.2.4
+  vue-gtag-next: ^1.14.0
 
 dependencies:
   '@highlightjs/vue-plugin': 2.1.0_highlight.js@11.6.0
   highlight.js: 11.6.0
+  vue-gtag-next: 1.14.0
 
 devDependencies:
   '@nuxt/content': 2.1.1
@@ -5342,6 +5344,12 @@ packages:
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
+
+  /vue-gtag-next/1.14.0:
+    resolution: {integrity: sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==}
+    peerDependencies:
+      vue: ^3.0.0-rc.11
+    dev: false
 
   /vue-router/4.1.5_vue@3.2.41:
     resolution: {integrity: sha512-IsvoF5D2GQ/EGTs/Th4NQms9gd2NSqV+yylxIyp/OYp8xOwxmU8Kj/74E9DTSYAyH5LX7idVUngN3JSj1X4xcQ==}
