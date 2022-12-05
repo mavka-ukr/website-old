@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Дія від Когута Давида та <i>вакантне місце</i>, 2022
+    Дія Мова, 2022
   </section>
 </template>
 
