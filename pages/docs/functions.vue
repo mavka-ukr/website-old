@@ -1,8 +1,8 @@
 <script setup>
 const simple = `
-доб = (а, б): а + б
+сум = (а, б): а * б
 
-друк(доб(2, 2))
+друк(сум(2, 2))
 `.trim();
 
 const simple2 = `
