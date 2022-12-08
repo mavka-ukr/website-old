@@ -3,5 +3,4 @@
 </template>
 
 <script>
-import "./assets/styles/index.scss";
-</script>
+import "./assets/styles/index.scss";</script>

@@ -58,10 +58,10 @@ const currentCode = useState('currentCode', () => codes[1]);
       <h1 class="hero-title">
         Сучасна українська мова програмування
       </h1>
-      <p class="hero-subtitle">
-        Дія - це експериментальна мова програмування, що працює на українській абетці.
+      <h5 class="hero-subtitle">
+        Дія - це експериментальна мова програмування, що працює з літерами української абетки.
         Дія створена для того, аби я міг зручно програмувати звичним для мене набором символів.
-      </p>
+      </h5>
       <div class="hero-buttons">
         <NuxtLink href="/docs" class="button button-large">
           Розпочати
@@ -125,6 +125,8 @@ const currentCode = useState('currentCode', () => codes[1]);
     color: var(--hint-color);
 
     max-width: 35ch;
+
+    font-weight: normal;
   }
 
   &-buttons {
