@@ -30,9 +30,8 @@ const runHelloWorldFile = `
       <b>Вимоги:</b>
     </p>
     <ul>
-      <li>Linux або MacOS</li>
-      <li>NodeJS 18+</li>
-      <li>NPM</li>
+      <li>Linux або MacOS (на Windows не тестувалось)</li>
+      <li><a href="https://nodejs.org" target="_blank">NodeJS 18+</a></li>
     </ul>
     <p>
       <b>Встановлення:</b>
