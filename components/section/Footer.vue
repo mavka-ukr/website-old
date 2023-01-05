@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Дія Мова, 2022
+    Дія.мова, 2022
   </section>
 </template>
 
