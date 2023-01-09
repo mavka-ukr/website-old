@@ -3,6 +3,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/lib/common';
 import bash from 'highlight.js/lib/languages/bash';
+import javascript from 'highlight.js/lib/languages/javascript';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
 const diia = () => {
@@ -122,6 +123,7 @@ const diia = () => {
 
 hljs.registerLanguage('diia', diia);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('javascript', javascript);
 
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.use(hljsVuePlugin);

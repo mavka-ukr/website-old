@@ -39,8 +39,7 @@ const mainDiia = `
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="js"
-            :autodetect="false"
+            language="javascript"
             :code="fetchJs"
         />
       </ClientOnly>
