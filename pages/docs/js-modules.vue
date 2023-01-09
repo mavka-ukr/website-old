@@ -17,9 +17,9 @@ diia.moduleContext.set('отримати_жсон', fetchAndParseJson);
 const mainDiia = `
 підключити_файл_розширення("fetchAndParseJson.js")
 
-галарея_кави = чекати отримати_жсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
+галерея_кави = чекати отримати_жсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
-друк(галарея_кави)
+друк(галерея_кави)
 `.trim();
 </script>
 
