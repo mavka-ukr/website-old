@@ -55,6 +55,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
             Приклади
           </NuxtLink>
+          <NuxtLink href="/docs/js-modules" class="docs-sidebar-menu-item" active-class="active">
+            JS-модулі
+          </NuxtLink>
         </div>
       </div>
       <div class="docs-content">
