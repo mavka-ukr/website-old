@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Дія.мова, 2022
+    Дія - мова програмування, 2022
   </section>
 </template>
 
