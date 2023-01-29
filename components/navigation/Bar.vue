@@ -6,6 +6,10 @@ const navigationShown = useState('navigationShown', () => false);
 addRouteMiddleware(() => {
   navigationShown.value = false;
 });
+
+function openPlay() {
+  alert("Цей функціонал ще в розробці. Ви можете спробувати мову встановивши її на комп'ютер.")
+}
 </script>
 
 <template>
@@ -19,7 +23,7 @@ addRouteMiddleware(() => {
       <span class="navbar-alpha">концепт</span>
     </div>
     <div class="links">
-      <a class="link" href="/play">Бавитись</a>
+      <a @click.prevent="openPlay" class="link" href="/play">Бавитись</a>
       <a class="link" target="_blank" href="https://github.com/topics/diia-pak">Пакунки</a>
       <a target="_blank" class="link" href="https://t.me/diia_chat">Спільнота</a>
     </div>

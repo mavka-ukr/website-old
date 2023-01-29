@@ -45,6 +45,10 @@ const codes = [
 ];
 
 const currentCode = useState('currentCode', () => codes[1]);
+
+function openPlay() {
+  alert("Цей функціонал ще в розробці. Ви можете спробувати мову встановивши її на комп'ютер.")
+}
 </script>
 
 <template>
@@ -87,7 +91,7 @@ const currentCode = useState('currentCode', () => codes[1]);
         </ClientOnly>
 
         <div class="code-window-buttons">
-          <div class="button play-button">
+          <div @click.prevent="openPlay" class="button play-button">
             ▶️ Бавитись
           </div>
         </div>
