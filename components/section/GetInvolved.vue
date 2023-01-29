@@ -24,6 +24,15 @@
           Telegram
         </div>
       </a>
+      <a target="_blank" href="https://patreon.com/diia" class="involve-item patreon">
+        <div class="involve-item-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Patreon_logo.svg/2048px-Patreon_logo.svg.png"
+               alt="Patreon Logo">
+        </div>
+        <div class="involve-item-name">
+          Patreon
+        </div>
+      </a>
     </div>
   </section>
 </template>
@@ -42,8 +51,13 @@
     margin-top: 5rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
   }
 
   .involve-item {
