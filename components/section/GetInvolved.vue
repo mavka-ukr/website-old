@@ -7,7 +7,7 @@
       Приєднатись до створення
     </h3>
     <div class="involve-items">
-      <a target="_blank" href="https://github.com/kohutd/diia" class="involve-item">
+      <a target="_blank" href="https://github.com/diia-lang" class="involve-item">
         <div class="involve-item-icon">
           <img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" alt="GitHub Logo">
         </div>

@@ -25,7 +25,7 @@ function openPlay() {
     <div class="links">
       <a @click.prevent="openPlay" class="link" href="/play">Бавитись</a>
       <a class="link" target="_blank" href="https://github.com/topics/diia-pak">Пакунки</a>
-      <a target="_blank" class="link" href="https://t.me/diia_chat">Спільнота</a>
+      <a target="_blank" class="link" href="https://t.me/diia_lang">Спільнота</a>
     </div>
     <div class="buttons">
       <NuxtLink to="/docs" class="button">
