@@ -58,6 +58,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/extensions" class="docs-sidebar-menu-item" active-class="active">
             Розширення
           </NuxtLink>
+          <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
+            .дані
+          </NuxtLink>
         </div>
       </div>
       <div class="docs-content">
