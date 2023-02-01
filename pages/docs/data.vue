@@ -17,11 +17,11 @@ const simple = `
 <template>
   <DocsWrapper>
     <h1 class="docs-content-title">
-      .дані
+      Дід
     </h1>
 
     <p>
-      <code>.дані</code> - це формат для зручного збереження та передачі даних. За виглядом ідентичний до об'єкта.
+      <code>Дід</code> - це формат для зручного збереження та передачі даних. За виглядом ідентичний до об'єкта.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
