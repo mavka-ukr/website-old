@@ -1,17 +1,17 @@
 <script setup>
 const fetchJs = `
-const fetchAndParseJson = new diia.JsFunctionVal((url) => {
-    url = url.asString().asJsString();
+const fetchAndParseJson = new diia.JsFunctionCell(diia, (args) => {
+  const url = diia.toCell(args[0]).asString().asJsString();
 
-    return new diia.AsyncVal(async () => {
-       const response = await fetch(url);
-       const json = await response.json();
+  return new diia.AsyncCell(diia, async () => {
+    const response = await fetch(url);
+    const json = await response.json();
 
-       return diia.toVal(json);
-    });
+    return diia.toCell(json);
+  });
 });
 
-diia.moduleContext.set('отримати_жсон', fetchAndParseJson);
+diia.context.set("отримати_жсон", fetchAndParseJson);
 `.trim();
 
 const mainDiia = `
@@ -30,7 +30,8 @@ const mainDiia = `
     </h1>
 
     <p>
-      Розширення дозволяють доповнювати можливості мови за допомогою JavaScript. По-суті, ви можете написати скрипт на JS-і та
+      Розширення дозволяють доповнювати можливості мови за допомогою JavaScript. По-суті, ви можете написати скрипт на
+      JS-і та
       підключити його до Дії.
     </p>
     <p>

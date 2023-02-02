@@ -13,7 +13,7 @@ function log(value) {
 
 function buildGlobalContext(diia) {
   return new diia.Context(diia, null, {
-    "друк": new diia.JsFunctionCell(diia, (...args) => log(
+    "друк": new diia.JsFunctionCell(diia, (args) => log(
         ...args
             .map((arg) => diia.toCell(arg).asString().asJsString())
     )),
@@ -81,15 +81,18 @@ function run() {
 .play-container {
   margin-top: 2rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  border: 1px solid #eee;
 }
 
 .play-container-button {
+  border-top: 1px solid #eee;
   padding: 1rem;
 }
 
 .play-container-history-line {
   padding: 1rem;
 
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #eee;
 }
 </style>
