@@ -45,10 +45,6 @@ const codes = [
 ];
 
 const currentCode = useState('currentCode', () => codes[1]);
-
-function openPlay() {
-  alert("Цей функціонал ще в розробці. Ви можете спробувати мову встановивши її на комп'ютер.")
-}
 </script>
 
 <template>
@@ -91,9 +87,9 @@ function openPlay() {
         </ClientOnly>
 
         <div class="code-window-buttons">
-          <div @click.prevent="openPlay" class="button play-button">
+          <RouterLink to="/play" class="button play-button">
             ▶️ Бавитись
-          </div>
+          </RouterLink>
         </div>
       </div>
     </div>

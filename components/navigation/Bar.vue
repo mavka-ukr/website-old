@@ -14,16 +14,16 @@ function openPlay() {
 
 <template>
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
-    <div class="logo">
-      <NuxtLink to="/" class="logo-image">
+    <NuxtLink to="/" class="logo">
+      <div class="logo-image">
         <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
-      </NuxtLink>
+      </div>
       Дія
       <span class="navbar-alpha">концепт</span>
-    </div>
+    </NuxtLink>
     <div class="links">
-      <a @click.prevent="openPlay" class="link" href="/play">Бавитись</a>
+      <NuxtLink class="link" href="/play">Бавитись</NuxtLink>
       <a class="link" target="_blank" href="https://github.com/topics/diia-pak">Пакунки</a>
       <a target="_blank" class="link" href="https://t.me/diia_lang">Спільнота</a>
     </div>
