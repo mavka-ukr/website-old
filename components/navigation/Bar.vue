@@ -13,6 +13,10 @@ function openPlay() {
 </script>
 
 <template>
+  <div class="top-under-construction">
+    Мова в активній фазі розробки.
+  </div>
+
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
     <NuxtLink to="/" class="logo">
       <div class="logo-image">
@@ -41,6 +45,8 @@ function openPlay() {
 
 <style lang="scss">
 .navbar {
+  margin-top: 40px;
+
   display: grid;
   grid-template-areas: "logo links buttons";
 
@@ -92,6 +98,7 @@ function openPlay() {
   }
 
   @media only screen and (max-width: 956px) {
+    margin-top: 0;
     grid-template-areas: "logo" "links"  "buttons";
 
     .navbar-alpha {
@@ -184,5 +191,26 @@ function openPlay() {
   cursor: pointer;
 
   text-decoration: none;
+}
+
+.top-under-construction {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: white;
+  font-weight: 500;
+
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+  @media only screen and (max-width: 956px) {
+    display: none;
+  }
 }
 </style>
