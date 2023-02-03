@@ -43,7 +43,7 @@ function run() {
     } else if (typeof e === "string") {
       log(e);
     } else {
-      throw e;
+      log(e);
     }
   }
 }
