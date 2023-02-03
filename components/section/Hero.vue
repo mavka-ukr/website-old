@@ -60,6 +60,7 @@ const currentCode = useState('currentCode', () => codes[1]);
       </h1>
       <h5 class="hero-subtitle">
         Дія - це експериментальна мова програмування, що дозволяє кожному реалізовувати ідеї українською мовою.
+        Дія є першою мовою у своєму роді.
       </h5>
       <div class="hero-buttons">
         <NuxtLink href="/docs" class="button button-large">
