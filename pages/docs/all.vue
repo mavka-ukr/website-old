@@ -142,7 +142,7 @@ const diia_basic = `
       </ClientOnly>
     </div>
     <p>
-      to be continued...
+      буде продовжено...
     </p>
   </DocsWrapper>
 </template>
