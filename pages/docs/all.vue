@@ -47,7 +47,7 @@ const structure_basic = `
     </h1>
 
     <p>
-      Список всіх можливих контрукцій в Дії.
+      Список всіх можливих конструкцій в Дії.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
