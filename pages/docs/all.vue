@@ -31,6 +31,13 @@ const diia_basic = `
   друк("вітаю тебе %(прізвище) %(ім'я)")
 кінець
 `.trim();
+const structure_basic = `
+структура Людина
+  когут рядок = "Когут"
+  ім'я рядок
+  по_батькові
+кінець
+`.trim();
 </script>
 
 <template>
@@ -138,6 +145,16 @@ const diia_basic = `
             language="diia"
             :autodetect="false"
             :code="diia_basic"
+        />
+      </ClientOnly>
+    </div>
+    <br>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="structure_basic"
         />
       </ClientOnly>
     </div>
