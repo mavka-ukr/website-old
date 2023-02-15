@@ -8,7 +8,7 @@
         Проста
       </div>
       <div class="feature-description">
-        Код Дії може зрозуміти навіть школяр в початковій школі.
+        Код <span class="diia-word">Мавки</span> може зрозуміти навіть школяр в початковій школі.
       </div>
     </div>
     <div class="feature">
@@ -19,7 +19,7 @@
         Швидка
       </div>
       <div class="feature-description">
-        Завдяки реалізації, Дія є досить швидкою інтерпретованою мовою.
+        Завдяки реалізації, <span class="diia-word">Мавка</span> є досить швидкою інтерпретованою мовою.
       </div>
     </div>
     <div class="feature">

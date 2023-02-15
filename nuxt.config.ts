@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     meta: {
-        title: 'Дія - сучасна українська мова програмування',
+        title: 'Мавка - сучасна українська мова програмування',
         link: [
             {
                 rel: 'preconnect',
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'Сучасна українська мова програмування.' },
                 {
                     name: 'keywords',
-                    content: 'дія, мова програмування, програмування, українська мова програмування, українська мова'
+                    content: 'мавка, мова програмування, програмування, українська мова програмування, українська мова'
                 },
             ],
         }

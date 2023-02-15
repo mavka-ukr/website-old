@@ -49,7 +49,7 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/modules" class="docs-sidebar-menu-item" active-class="active">
             Модулі
           </NuxtLink>
-          <NuxtLink href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink v-if="false" href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
             Паки
           </NuxtLink>
           <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
@@ -60,6 +60,9 @@ addRouteMiddleware(() => {
           </NuxtLink>
           <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
             Дід
+          </NuxtLink>
+          <NuxtLink href="/docs/oop" class="docs-sidebar-menu-item" active-class="active">
+            ООП
           </NuxtLink>
           <NuxtLink href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все

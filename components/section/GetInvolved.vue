@@ -9,7 +9,7 @@
     <div class="involve-items">
       <a target="_blank" href="https://github.com/diia-lang" class="involve-item">
         <div class="involve-item-icon">
-          <img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" alt="GitHub Logo">
+          <img src="@/assets/images/github-logo.png" alt="GitHub Logo">
         </div>
         <div class="involve-item-name">
           GitHub
@@ -17,7 +17,7 @@
       </a>
       <a target="_blank" href="https://t.me/diia_lang" class="involve-item">
         <div class="involve-item-icon">
-          <img src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-2048x2048.png"
+          <img src="@/assets/images/telegram-logo.png"
                alt="Telegram Logo">
         </div>
         <div class="involve-item-name">
@@ -26,7 +26,7 @@
       </a>
       <a target="_blank" href="https://patreon.com/diia" class="involve-item patreon">
         <div class="involve-item-icon">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Patreon_logo.svg/2048px-Patreon_logo.svg.png"
+          <img src="@/assets/images/patreon-logo.png"
                alt="Patreon Logo">
         </div>
         <div class="involve-item-name">

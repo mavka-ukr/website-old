@@ -23,7 +23,7 @@ function openPlay() {
         <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
       </div>
-      Дія
+      Мавка
       <span class="navbar-alpha">концепт</span>
     </NuxtLink>
     <div class="links">
@@ -91,7 +91,7 @@ function openPlay() {
 
   .navbar-alpha {
     position: absolute;
-    left: 85px;
+    left: 120px;
     top: 40px;
     font-size: .5rem;
     color: var(--hint-color);

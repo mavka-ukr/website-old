@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Дія - мова програмування, 2022
+    Мавка - мова програмування, 2022
   </section>
 </template>
 

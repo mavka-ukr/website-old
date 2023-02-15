@@ -1,5 +1,7 @@
 <script setup>
 const fetchJs = `
+const diia = getDiia();
+
 const fetchAndParseJson = new diia.JsFunctionCell(diia, (args) => {
   const url = diia.toCell(args[0]).asString().asJsString();
 
@@ -15,9 +17,9 @@ diia.context.set("отримати_жсон", fetchAndParseJson);
 `.trim();
 
 const mainDiia = `
-підключити_файл_розширення("fetchAndParseJson.js")
+підключити_розширення_з_файлу("fetchAndParseJson.js")
 
-галерея_кави = чекати отримати_жсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
+галерея_кави = чекати отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
 друк(галерея_кави)
 `.trim();
@@ -32,7 +34,7 @@ const mainDiia = `
     <p>
       Розширення дозволяють доповнювати можливості мови за допомогою JavaScript. По-суті, ви можете написати скрипт на
       JS-і та
-      підключити його до Дії.
+      підключити його до <span class="diia-word">Мавки</span>.
     </p>
     <p>
       <code>fetchAndParseJson.js</code>

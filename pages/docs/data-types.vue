@@ -32,7 +32,7 @@ const obj = `
 `.trim();
 
 const voidity = `
-невизначено
+пусто
 `.trim();
 </script>
 
@@ -47,10 +47,10 @@ const voidity = `
     </p>
     <ul>
       <li><code>число</code></li>
-      <li><code>рядок</code></li>
+      <li><code>текст</code></li>
       <li><code>логічне</code></li>
-      <li><code>об'єкт (зі структури)</code></li>
-      <li><code>невизначено</code></li>
+      <li><code>об'єкт</code></li>
+      <li><code>пусто</code></li>
     </ul>
     <p>
       <b>число:</b>
@@ -101,7 +101,7 @@ const voidity = `
       </ClientOnly>
     </div>
     <p>
-      <b>невизначено:</b>
+      <b>пусто:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
