@@ -25,7 +25,7 @@ addRouteMiddleware(() => {
     <div class="links">
       <NuxtLink class="link" href="/play">Бавитись</NuxtLink>
       <a class="link" target="_blank" href="https://github.com/topics/mavka-pak">Пакунки</a>
-      <a target="_blank" class="link" href="https://t.me/diia_lang">Спільнота</a>
+      <a target="_blank" class="link" href="https://t.me/mavka_lang">Спільнота</a>
     </div>
     <div class="buttons">
       <NuxtLink to="/docs" class="button">
