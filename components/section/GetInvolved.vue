@@ -15,7 +15,7 @@
           GitHub
         </div>
       </a>
-      <a target="_blank" href="https://t.me/mavka_ukr" class="involve-item">
+      <a target="_blank" href="https://t.me/mavka_lang" class="involve-item">
         <div class="involve-item-icon">
           <img src="@/assets/images/telegram-logo.png"
                alt="Telegram Logo">
