@@ -7,7 +7,7 @@
       Приєднатись до створення
     </h3>
     <div class="involve-items">
-      <a target="_blank" href="https://github.com/diia-lang" class="involve-item">
+      <a target="_blank" href="https://github.com/mavka-lang" class="involve-item">
         <div class="involve-item-icon">
           <img src="@/assets/images/github-logo.png" alt="GitHub Logo">
         </div>
@@ -31,6 +31,21 @@
         </div>
         <div class="involve-item-name">
           Patreon
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="get-involved">
+    <h3>
+      Патрони
+    </h3>
+    <div class="involve-items">
+      <a target="_blank" href="https://www.patreon.com/user/creators?u=11659902" class="involve-item">
+        <div class="involve-item-icon round">
+          <img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/11659902/ed678cd729024929a91a6e8229351b1a/eyJ3IjoyMDB9/1.jpeg?token-time=2145916800&token-hash=xrbhLpCiQsKf61Dr9SwvLsjjTjdDWaHEgeUtyvrZ8dw%3D" alt="GitHub Logo">
+        </div>
+        <div class="involve-item-name">
+          Joter Glem
         </div>
       </a>
     </div>
@@ -68,6 +83,12 @@
     &-icon {
       img {
         width: 100px;
+      }
+
+      &.round {
+        img {
+          border-radius: 1rem;
+        }
       }
     }
 

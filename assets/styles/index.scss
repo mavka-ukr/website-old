@@ -70,6 +70,12 @@ body {
   }
 }
 
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .hljs {
   background-color: black !important;
 }

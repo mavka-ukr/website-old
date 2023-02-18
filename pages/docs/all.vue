@@ -47,7 +47,7 @@ const structure_basic = `
     </h1>
 
     <p>
-      Список всіх можливих конструкцій в <span class="diia-word">Мавки</span>.
+      Список всіх можливих конструкцій <span class="diia-word">Мавки</span>.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

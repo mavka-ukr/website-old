@@ -1,10 +1,10 @@
 <script setup>
 const npmInstall = `
-npm install -g diia
+npm i -g mavka
 `.trim();
 
 const diiaRun = `
-дія
+мавка
 `.trim();
 
 const helloWorldFile = `
@@ -16,7 +16,7 @@ const helloWorldFile = `
 `.trim();
 
 const runHelloWorldFile = `
-дія привіт_світ.дія
+мавка привіт_світ.дія
 `.trim();
 </script>
 
@@ -31,7 +31,7 @@ const runHelloWorldFile = `
     </p>
     <ul>
       <li>Linux або MacOS (на Windows не тестувалось)</li>
-      <li><a href="https://nodejs.org" target="_blank">NodeJS 18+</a></li>
+      <li><a class="link" href="https://nodejs.org" target="_blank">NodeJS 18+</a></li>
     </ul>
     <p>
       <b>Встановлення:</b>

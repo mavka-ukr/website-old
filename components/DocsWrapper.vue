@@ -64,6 +64,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/oop" class="docs-sidebar-menu-item" active-class="active">
             ООП
           </NuxtLink>
+          <NuxtLink href="/docs/comments" class="docs-sidebar-menu-item" active-class="active">
+            Коментарі
+          </NuxtLink>
           <NuxtLink href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все
           </NuxtLink>

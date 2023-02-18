@@ -6,10 +6,6 @@ const navigationShown = useState('navigationShown', () => false);
 addRouteMiddleware(() => {
   navigationShown.value = false;
 });
-
-function openPlay() {
-  alert("Цей функціонал ще в розробці. Ви можете спробувати мову встановивши її на комп'ютер.")
-}
 </script>
 
 <template>
@@ -28,7 +24,7 @@ function openPlay() {
     </NuxtLink>
     <div class="links">
       <NuxtLink class="link" href="/play">Бавитись</NuxtLink>
-      <a class="link" target="_blank" href="https://github.com/topics/diia-pak">Пакунки</a>
+      <a class="link" target="_blank" href="https://github.com/topics/mavka-pak">Пакунки</a>
       <a target="_blank" class="link" href="https://t.me/diia_lang">Спільнота</a>
     </div>
     <div class="buttons">

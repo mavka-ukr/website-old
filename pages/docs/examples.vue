@@ -1,19 +1,19 @@
 <script setup>
 const tgbot = `
-підключити_розширення_з_файлу("tgbot.js")
+підключити_розширення_з_мережі("https://мавка.укр/e/tgbot.js")
 
 бот = ТелеграмБот.Бот(токен="ВАШ_ТОКЕН")
 
 тривала дія обробити_оновлення(оновлення)
   якщо оновлення.повідомлення.текст == "статистика"
-    чекати статистика = отримати_джсон("https://russianwarship.rip/api/v2/statistics/latest")
+    чекати відповідь = отримати_джсон("https://russianwarship.rip/api/v2/statistics/latest")
 
-    вбитих_солдат = статистика.data.stats.personnel_units
-    танків = статистика.data.stats.tanks
-    бронетехніки = статистика.data.stats.armoured_fighting_vehicles
-    артилерії = статистика.data.stats.artillery_systems
-    літаків = статистика.data.stats.planes
-    гелікоптерів = статистика.data.stats.helicopters
+    вбитих_солдат = відповідь.data.stats.personnel_units
+    танків = відповідь.data.stats.tanks
+    бронетехніки = відповідь.data.stats.armoured_fighting_vehicles
+    артилерії = відповідь.data.stats.artillery_systems
+    літаків = відповідь.data.stats.planes
+    гелікоптерів = відповідь.data.stats.helicopters
 
     чекати бот.надіслати(ТелеграмБот.Повідомлення(
       оновлення.повідомлення.чат.айді,

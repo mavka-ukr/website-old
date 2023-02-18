@@ -1,27 +1,25 @@
 <script setup>
 const fetchJs = `
-const diia = getDiia();
+const mavka = getMavka();
+const context = getContext();
 
-const fetchAndParseJson = new diia.JsFunctionCell(diia, (args) => {
-  const url = diia.toCell(args[0]).asString().asJsString();
+const fetchAndParseJson = new mavka.tools.asyncFn(async ([url]) => {
+  const response = await fetch(url);
+  const json = await response.json();
 
-  return new diia.AsyncCell(diia, async () => {
-    const response = await fetch(url);
-    const json = await response.json();
-
-    return diia.toCell(json);
-  });
+  return json;
 });
 
-diia.context.set("отримати_жсон", fetchAndParseJson);
+context.set("отримати_джсон", fetchAndParseJson);
 `.trim();
 
 const mainDiia = `
 підключити_розширення_з_файлу("fetchAndParseJson.js")
+;; підключити_розширення_з_мережі("https://...")
 
-галерея_кави = чекати отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
+чекати відповідь = отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
-друк(галерея_кави)
+друк(відповідь)
 `.trim();
 </script>
 
