@@ -7,7 +7,7 @@
       Приєднатись до створення
     </h3>
     <div class="involve-items">
-      <a target="_blank" href="https://github.com/mavka-lang" class="involve-item">
+      <a target="_blank" href="https://github.com/mavka-ukr" class="involve-item">
         <div class="involve-item-icon">
           <img src="@/assets/images/github-logo.png" alt="GitHub Logo">
         </div>
