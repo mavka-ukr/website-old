@@ -31,6 +31,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/data-types" class="docs-sidebar-menu-item" active-class="active">
             Типи даних
           </NuxtLink>
+          <NuxtLink href="/docs/types" class="docs-sidebar-menu-item" active-class="active">
+            Типізація
+          </NuxtLink>
           <NuxtLink href="/docs/conditional" class="docs-sidebar-menu-item" active-class="active">
             Умовні оператори
           </NuxtLink>
@@ -67,7 +70,7 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/comments" class="docs-sidebar-menu-item" active-class="active">
             Коментарі
           </NuxtLink>
-          <NuxtLink href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink v-if="false" href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все
           </NuxtLink>
         </div>

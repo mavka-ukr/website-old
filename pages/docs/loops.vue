@@ -8,7 +8,7 @@ const simpleEach = `
 const simpleWhile = `
 а = 10
 
-поки а != 0
+поки а не 0
   а = а - 1
 кінець
 `.trim();
