@@ -70,6 +70,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/comments" class="docs-sidebar-menu-item" active-class="active">
             Коментарі
           </NuxtLink>
+          <NuxtLink href="/docs/tries" class="docs-sidebar-menu-item" active-class="active">
+            Спроби
+          </NuxtLink>
           <NuxtLink v-if="false" href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все
           </NuxtLink>
