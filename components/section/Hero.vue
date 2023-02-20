@@ -277,7 +277,7 @@ const currentCode = useState('currentCode', () => codes[1]);
 
   opacity: .04;
 
-  z-index: -1;
+  z-index: 0;
 
   animation: turn 180s infinite linear reverse;
 }
