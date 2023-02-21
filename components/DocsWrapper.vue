@@ -76,6 +76,9 @@ addRouteMiddleware(() => {
           <NuxtLink v-if="false" href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все
           </NuxtLink>
+          <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
+            В1
+          </NuxtLink>
         </div>
       </div>
       <div class="docs-content">
