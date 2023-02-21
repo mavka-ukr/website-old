@@ -30,6 +30,13 @@ const diia = () => {
         contains: [
             {
                 begin: [
+                    "дія",
+                    /\(/
+                ],
+                className: { 0: "keyword" },
+            },
+            {
+                begin: [
                     /[a-zа-яіїє_]/,
                     /[a-zA-Zа-яА-ЯіІїЇєЄ_']*/,
                     /\(/

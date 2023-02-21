@@ -73,6 +73,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/tries" class="docs-sidebar-menu-item" active-class="active">
             Спроби
           </NuxtLink>
+          <NuxtLink href="/docs/net" class="docs-sidebar-menu-item" active-class="active">
+            Інтернет
+          </NuxtLink>
           <NuxtLink v-if="false" href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
             Все
           </NuxtLink>
