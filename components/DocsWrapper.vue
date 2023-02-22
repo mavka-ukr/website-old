@@ -85,7 +85,7 @@ addRouteMiddleware(() => {
         </div>
       </div>
       <div class="docs-content">
-        <slot/>
+        <slot />
       </div>
 
       <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
@@ -114,6 +114,13 @@ $sidebarWidth: 20rem;
 
   border-radius: 1rem;
 
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
   &-head {
     padding: .5rem;
 
@@ -131,6 +138,7 @@ $sidebarWidth: 20rem;
 
   &-menu {
     margin-top: 2rem;
+    padding-bottom: 4rem;
 
     &-item {
       padding: .5rem;
