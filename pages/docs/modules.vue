@@ -45,7 +45,7 @@ const modB = `
       Модуль є способом організації коду. Модуль може брати код з іншого модуля і віддавати свій.
     </p>
     <p>
-      <code>а.дія</code>
+      <code>а.м</code>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
@@ -57,7 +57,7 @@ const modB = `
       </ClientOnly>
     </div>
     <p>
-      <code>б.дія</code>
+      <code>б.м</code>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

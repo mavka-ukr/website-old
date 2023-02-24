@@ -1,9 +1,10 @@
 <script setup>
 import { Codemirror } from 'vue-codemirror';
-import Diia from "diia";
+import Mavka from "mavka";
+import { basicSetup } from "codemirror";
 
 const code = ref(`друк("привіт, світ!")`);
-const extensions = [];
+const extensions = [basicSetup];
 
 const history = ref([]);
 
@@ -11,39 +12,44 @@ function log(value) {
   history.value = [...history.value, value];
 }
 
-function buildGlobalContext(diia) {
-  return new diia.Context(diia, null, {
-    "друк": new diia.JsFunctionCell(diia, (args) => log(
+function buildGlobalContext(mavka) {
+  return new mavka.Context(mavka, null, {
+    "друк": new mavka.JsFunctionCell(mavka, (args) => log(
         ...args
-            .map((arg) => diia.toCell(arg).asString().asJsString())
+            .map((arg) => mavka.toCell(arg).asString().asJsString())
     )),
   });
 }
 
-function buildLoader(diia) {
+function buildLoader(mavka) {
   return null;
 }
 
-function buildExternal(diia) {
+function buildExternal(mavka) {
   return {};
 }
 
-const diia = new Diia({
+const mavka = new Mavka({
   buildGlobalContext,
   buildLoader,
   buildExternal
 });
 
-function run() {
+async function run() {
   try {
-    diia.eval(code.value);
+    const mainContext = new mavka.Context(mavka, mavka.context);
+    mainContext.setAsync(true);
+
+    await mavka.eval(code.value, mainContext);
   } catch (e) {
     if (e instanceof Error) {
       log(e.message);
     } else if (typeof e === "string") {
       log(e);
+    } else if (e instanceof mavka.ThrowValue) {
+      log(e.value);
     } else {
-      log(e);
+      log(String(e));
     }
   }
 }
@@ -56,7 +62,7 @@ function run() {
     <div class="play-container">
       <codemirror
           v-model="code"
-          placeholder="головна.дія"
+          placeholder="старт.м"
           :style="{ height: '400px' }"
           :autofocus="true"
           :indent-with-tab="true"

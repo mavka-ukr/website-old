@@ -16,7 +16,7 @@ const helloWorldFile = `
 `.trim();
 
 const runHelloWorldFile = `
-мавка привіт_світ.дія
+мавка привіт_світ
 `.trim();
 </script>
 
@@ -61,7 +61,7 @@ const runHelloWorldFile = `
       <b>Приклад:</b>
     </p>
     <p>
-      Створіть файл <code>привіт_світ.дія</code>:
+      Створіть файл <code>привіт_світ.м</code>:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

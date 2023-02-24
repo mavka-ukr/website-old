@@ -46,7 +46,7 @@ const mainDiia = `
       </ClientOnly>
     </div>
     <p>
-      <code>головна.дія</code>
+      <code>галерея_кави.м</code>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
