@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    Мавка - мова програмування, 2022
+    Мавка - мова програмування, 2024
   </section>
 </template>
 
