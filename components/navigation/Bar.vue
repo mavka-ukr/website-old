@@ -9,9 +9,9 @@ addRouteMiddleware(() => {
 </script>
 
 <template>
-  <div class="top-under-construction">
-    Мова в активній фазі розробки.
-  </div>
+  <a target="_blank" href="https://github.com/mavka-ukr" class="top-under-construction">
+    Приєднуйся до створення В1 на Гітхабі!
+  </a>
 
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
     <NuxtLink to="/" class="logo">
