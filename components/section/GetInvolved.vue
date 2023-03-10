@@ -12,7 +12,7 @@
           <img src="@/assets/images/github-logo.png" alt="GitHub Logo">
         </div>
         <div class="involve-item-name">
-          GitHub
+          Гітхаб
         </div>
       </a>
       <a target="_blank" href="https://t.me/mavka_lang" class="involve-item">
@@ -21,7 +21,7 @@
                alt="Telegram Logo">
         </div>
         <div class="involve-item-name">
-          Telegram
+          Телеграм
         </div>
       </a>
       <a target="_blank" href="https://patreon.com/diia" class="involve-item patreon">
@@ -30,7 +30,7 @@
                alt="Patreon Logo">
         </div>
         <div class="involve-item-name">
-          Patreon
+          Патреон
         </div>
       </a>
     </div>
@@ -40,7 +40,7 @@
           <img src="@/assets/images/discord-logo.png" alt="Discord Logo">
         </div>
         <div class="involve-item-name">
-          Discord
+          Дискорд
         </div>
       </a>
       <a target="_blank" href="https://facebook.com/mavka.ukr" class="involve-item">
@@ -48,7 +48,7 @@
           <img src="@/assets/images/facebook-logo.png" alt="Discord Logo">
         </div>
         <div class="involve-item-name">
-          Facebook
+          Фейсбук
         </div>
       </a>
       <a target="_blank" href="https://twitter.com/mavka_ukr" class="involve-item">
@@ -56,7 +56,7 @@
           <img src="@/assets/images/twitter-logo.png" alt="Discord Logo">
         </div>
         <div class="involve-item-name">
-          Twitter
+          Твітер
         </div>
       </a>
     </div>
