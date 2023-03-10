@@ -29,6 +29,8 @@ function buildExternal(mavka) {
   return {};
 }
 
+window.global = window;
+
 const mavka = new Mavka({
   buildGlobalContext,
   buildLoader,
