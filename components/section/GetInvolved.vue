@@ -3,7 +3,7 @@
 
 <template>
   <section class="get-involved">
-    <h3>
+    <h3 id="get-involved">
       Приєднатись до створення
     </h3>
     <div class="involve-items">
@@ -31,6 +31,32 @@
         </div>
         <div class="involve-item-name">
           Patreon
+        </div>
+      </a>
+    </div>
+    <div class="involve-items">
+      <a target="_blank" href="https://discord.gg/q53ADmPqFU" class="involve-item">
+        <div class="involve-item-icon">
+          <img src="@/assets/images/discord-logo.png" alt="Discord Logo">
+        </div>
+        <div class="involve-item-name">
+          Discord
+        </div>
+      </a>
+      <a target="_blank" href="https://facebook.com/mavka.ukr" class="involve-item">
+        <div class="involve-item-icon">
+          <img src="@/assets/images/facebook-logo.png" alt="Discord Logo">
+        </div>
+        <div class="involve-item-name">
+          Facebook
+        </div>
+      </a>
+      <a target="_blank" href="https://twitter.com/mavka_ukr" class="involve-item">
+        <div class="involve-item-icon">
+          <img src="@/assets/images/twitter-logo.png" alt="Discord Logo">
+        </div>
+        <div class="involve-item-name">
+          Twitter
         </div>
       </a>
     </div>
