@@ -74,6 +74,14 @@
           Joter Glem
         </div>
       </a>
+      <a target="_blank" href="https://www.patreon.com/user/creators?u=72512934" class="involve-item">
+        <div class="involve-item-icon round">
+          <img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/72512934/0098fae9e67c48a4ba50cc479ae62094/eyJ3IjoyMDB9/1.jpeg?token-time=2145916800&token-hash=vvzu4cXVj1FAg7jO9i-P-HzzavzalfnYKMwjpwS3Th0%3D" alt="GitHub Logo">
+        </div>
+        <div class="involve-item-name">
+          Максим Гавриленко
+        </div>
+      </a>
     </div>
   </section>
 </template>
