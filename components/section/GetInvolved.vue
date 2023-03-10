@@ -34,7 +34,7 @@
         </div>
       </a>
     </div>
-    <div class="involve-items">
+    <div class="involve-items" v-if="false">
       <a target="_blank" href="https://discord.gg/q53ADmPqFU" class="involve-item">
         <div class="involve-item-icon">
           <img src="@/assets/images/discord-logo.png" alt="Discord Logo">

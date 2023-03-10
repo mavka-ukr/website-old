@@ -1,6 +1,10 @@
 <script setup>
 const npmInstall = `
 npm i -g mavka
+
+// наразі рекомендується встановлювати останню версію вручну:
+// npm i -g mavka@x.y.z
+// останню версію можна знайти тут: https://www.npmjs.com/package/mavka
 `.trim();
 
 const diiaRun = `
