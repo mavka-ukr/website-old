@@ -1,5 +1,6 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
+import Mavka from "mavka";
 
 const navigationShown = useState('navigationShown', () => false);
 
@@ -20,7 +21,7 @@ addRouteMiddleware(() => {
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
       </div>
       Мавка
-      <span class="navbar-alpha">концепт</span>
+      <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
     </NuxtLink>
     <div class="links">
       <NuxtLink class="link" href="/play">Бавитись</NuxtLink>

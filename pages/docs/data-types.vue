@@ -65,7 +65,7 @@ const voidity = `
       </ClientOnly>
     </div>
     <p>
-      <b>рядок:</b>
+      <b>текст:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
