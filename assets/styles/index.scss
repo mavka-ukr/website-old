@@ -70,6 +70,11 @@ body {
   }
 }
 
+pre, code {
+  font-family: "Fira Code", monospace !important;
+  font-weight: 500;
+}
+
 .link {
   &:hover {
     text-decoration: underline;
