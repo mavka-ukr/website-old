@@ -3,7 +3,7 @@ const fetchJs = `
 const mavka = getMavka();
 const context = getContext();
 
-const fetchAndParseJson = new mavka.tools.asyncFn(async ([url]) => {
+const fetchAndParseJson = mavka.tools.asyncFn(async ([url]) => {
   const response = await fetch(url);
   const json = await response.json();
 
