@@ -30,7 +30,7 @@ mavka.tools.fn((args, context) => {
 });
 
 // перетворює асинхронну js-функцію на тривалу дію Мавки (з доступом до контексту виконання)
-mavka.tools.asyncFn((args, context) => {
+mavka.tools.asyncFn(async (args, context) => {
   //
 });
 
