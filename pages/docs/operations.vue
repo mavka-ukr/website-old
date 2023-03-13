@@ -14,7 +14,7 @@ const simple2 = `
   значення число
 кінець
 
-дія ІншеЧисло.виконати_додавання(б ІншеЧисло) ІншеЧисло
+дія ІншеЧисло.виконати_додавання(б) ІншеЧисло
   якщо б є ІншеЧисло
     ІншеЧисло(я.значення + б.значення - 2)
   інакше
@@ -48,7 +48,7 @@ const simple3 = `
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="diia"
+            language="ediia"
             :autodetect="false"
             :code="simple"
         />
