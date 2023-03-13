@@ -48,7 +48,7 @@ const simple3 = `
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="ediia"
+            language="diia"
             :autodetect="false"
             :code="simple"
         />
