@@ -22,6 +22,18 @@ const visibility = `
 
 друк(а + б) ;; видасть помилку, бо "б" недоступна поза блоком дії "тест"
 `.trim();
+
+const setting = `
+а = 1
+
+дія встановити_а()
+  а = 2
+кінець
+
+встановити_а()
+
+друк(а) ;; 1
+`.trim();
 </script>
 
 <template>
@@ -63,6 +75,18 @@ const visibility = `
             language="diia"
             :autodetect="false"
             :code="visibility"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Присвоєння змінної відбувається в найближчому контексті:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="setting"
         />
       </ClientOnly>
     </div>

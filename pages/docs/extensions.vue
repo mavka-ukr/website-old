@@ -21,6 +21,23 @@ const mainDiia = `
 
 друк(відповідь)
 `.trim();
+
+const tools = `
+// перетворює js-функцію на дію Мавки (з доступом до контексту виконання)
+mavka.tools.fn((args, context) => {
+  //
+});
+
+// перетворює асинхронну js-функцію на тривалу дію Мавки (з доступом до контексту виконання)
+mavka.tools.asyncFn((args, context) => {
+  //
+});
+
+// перетворює будь-яку js-функцію на дію Мавки (без доступу до контексту виконання)
+mavka.tools.convertFnToDiia((...args) => {
+  //
+});
+`.trim();
 </script>
 
 <template>
@@ -54,6 +71,18 @@ const mainDiia = `
             language="diia"
             :autodetect="false"
             :code="mainDiia"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Список функцій які доступні через <code>mavka.tools</code>:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="js"
+            :autodetect="false"
+            :code="tools"
         />
       </ClientOnly>
     </div>

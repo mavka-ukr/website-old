@@ -72,7 +72,7 @@ const return_2 = `
       </ClientOnly>
     </div>
     <p>
-      Ключове слово "вернути" не є обов'язковим:
+      Ключове слово <code>вернути</code> не є обов'язковим:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
