@@ -52,7 +52,7 @@ const tgbot = `
       </ClientOnly>
     </div>
     <p>
-      Документацію до розирення можна знайти тут:
+      Документацію до розширення можна знайти тут:
       <a target="_blank" class="link external" href="https://телеграм-бот.мавка.укр">телеграм-бот.мавка.укр</a>
     </p>
   </DocsWrapper>
