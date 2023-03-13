@@ -43,7 +43,7 @@ const simple3 = `
     </h1>
 
     <p>
-      Мавка надає можливість виконувати базові арифметичні операції.
+      <span class="diia-word">Мавка</span> надає можливість виконувати базові арифметичні операції.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
