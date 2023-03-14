@@ -85,6 +85,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/maps" class="docs-sidebar-menu-item" active-class="active">
             Словники
           </NuxtLink>
+          <NuxtLink href="/docs/magic" class="docs-sidebar-menu-item" active-class="active">
+            Магчні дії
+          </NuxtLink>
           <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             В1
           </NuxtLink>
