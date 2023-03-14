@@ -8,12 +8,6 @@ const simple1 = `
 словотвір.встановити("баг", "вада")
 `.trim();
 
-const simple2 = `
-перебрати словотвір як с
-  друк(с)
-кінець
-`.trim();
-
 const simple3 = `
 слово = словотвір.отримати("баг") ;; вада
 
@@ -38,16 +32,6 @@ const simple3 = `
             lang="diia"
             :autodetect="false"
             :code="simple1"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple2"
         />
       </ClientOnly>
     </div>
