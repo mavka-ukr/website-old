@@ -18,6 +18,7 @@ function buildGlobalContext(mavka) {
         ...args
             .map((arg) => mavka.toCell(arg).asString().asJsString())
     )),
+    "global": mavka.toCell(window),
   });
 }
 
@@ -28,8 +29,6 @@ function buildLoader(mavka) {
 function buildExternal(mavka) {
   return {};
 }
-
-window.global = window;
 
 const mavka = new Mavka({
   buildGlobalContext,
