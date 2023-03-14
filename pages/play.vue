@@ -3,7 +3,7 @@ import { Codemirror } from 'vue-codemirror';
 import Mavka from "mavka";
 import { basicSetup } from "codemirror";
 
-const code = ref(`друк("привіт, світ!")`);
+const code = ref(`друк("привіт від Лесі!")`);
 const extensions = [basicSetup];
 
 const history = ref([]);
@@ -77,8 +77,11 @@ async function run() {
       </div>
 
       <div class="play-container-history">
-        <template v-for="line in [...history].reverse()">
-          <div class="play-container-history-line">{{ line }}</div>
+        <template v-for="(line, i) in [...history].reverse()">
+          <div class="play-container-history-line">
+            <span class="play-container-history-line-text">{{ line }}</span>
+            <span class="play-container-history-line-time">{{ history.length - i - 1 }}</span>
+          </div>
         </template>
       </div>
     </div>
@@ -99,8 +102,20 @@ async function run() {
 }
 
 .play-container-history-line {
+  position: relative;
+
   padding: 1rem;
+  padding-right: 6rem;
 
   border-top: 1px solid #eee;
+}
+
+.play-container-history-line-time {
+  position: absolute;
+
+  right: 1rem;
+  font-size: 0.8rem;
+
+  color: rgba(var(--hint-color_rgb), 0.5);
 }
 </style>

@@ -79,8 +79,11 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/net" class="docs-sidebar-menu-item" active-class="active">
             Інтернет
           </NuxtLink>
-          <NuxtLink v-if="false" href="/docs/all" class="docs-sidebar-menu-item" active-class="active">
-            Все
+          <NuxtLink href="/docs/lists" class="docs-sidebar-menu-item" active-class="active">
+            Списки
+          </NuxtLink>
+          <NuxtLink href="/docs/maps" class="docs-sidebar-menu-item" active-class="active">
+            Словники
           </NuxtLink>
           <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             В1

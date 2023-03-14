@@ -11,15 +11,15 @@ const diiaRun = `
 `.trim();
 
 const helloWorldFile = `
-дія привіт_світ()
-  друк("привіт, світ!")
+дія привіт()
+  друк("привіт від Лесі!")
 кінець
 
-привіт_світ()
+привіт()
 `.trim();
 
 const runHelloWorldFile = `
-мавка привіт_світ
+мавка привіт
 `.trim();
 </script>
 
@@ -64,7 +64,7 @@ const runHelloWorldFile = `
       <b>Приклад:</b>
     </p>
     <p>
-      Створіть файл <code>привіт_світ.м</code>:
+      Створіть файл <code>привіт.м</code>:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
