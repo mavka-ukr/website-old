@@ -89,9 +89,9 @@ const currentCode = useState('currentCode', () => codes[1]);
         </ClientOnly>
 
         <div class="code-window-buttons">
-          <RouterLink to="/play" class="button play-button">
+          <a href="https://бавитись.мавка.укр" target="_blank" class="button play-button">
             ▶️ Бавитись
-          </RouterLink>
+          </a>
         </div>
       </div>
     </div>

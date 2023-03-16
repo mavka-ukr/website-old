@@ -24,7 +24,7 @@ addRouteMiddleware(() => {
       <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
     </NuxtLink>
     <div class="links">
-      <NuxtLink class="link" href="/play">Бавитись</NuxtLink>
+      <a class="link" target="_blank" href="https://бавитись.мавка.укр">Бавитись</a>
       <a class="link" target="_blank" href="https://github.com/topics/mavka-pak">Пакунки</a>
       <a target="_blank" class="link" href="https://t.me/mavka_lang">Спільнота</a>
     </div>
@@ -203,8 +203,8 @@ addRouteMiddleware(() => {
   color: white;
   font-weight: 500;
 
-  background: rgb(238,174,202);
-  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(238, 174, 202);
+  background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 
   @media only screen and (max-width: 956px) {
     display: none;
