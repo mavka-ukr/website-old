@@ -12,6 +12,28 @@ const simpleWhile = `
   а = а - 1
 кінець
 `.trim();
+
+const simple3 = `
+границя = число(читати("границя = "))
+
+парні_числа = Список()
+
+перебрати діапазон(0, границя) як ч
+  ;; перебираємо лише до 50
+  якщо ч більше 50
+    зупинити
+  кінець
+
+  ;; якщо число не парне
+  якщо ч % 2 не рівно 0
+    пропустити
+  кінець
+
+  парні_числа.додати(ч)
+кінець
+
+друк(парні_числа)
+`.trim();
 </script>
 
 <template>
@@ -40,6 +62,18 @@ const simpleWhile = `
             language="diia"
             :autodetect="false"
             :code="simpleWhile"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Знаходження парних чисел в певному діапазоні який не перевищує 50:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="simple3"
         />
       </ClientOnly>
     </div>
