@@ -33,7 +33,7 @@ const runHelloWorldFile = `
       <b>Вимоги:</b>
     </p>
     <ul>
-      <li>Linux або MacOS (на Windows не тестувалось)</li>
+      <li>Linux, MacOS або Windows</li>
       <li><a class="link" href="https://nodejs.org" target="_blank">NodeJS 18+</a></li>
     </ul>
     <p>
