@@ -52,6 +52,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/structures" class="docs-sidebar-menu-item" active-class="active">
             Структури
           </NuxtLink>
+          <NuxtLink v-if="false" href="/docs/mockups" class="docs-sidebar-menu-item" active-class="active">
+            Макети
+          </NuxtLink>
           <NuxtLink href="/docs/modules" class="docs-sidebar-menu-item" active-class="active">
             Модулі
           </NuxtLink>
