@@ -17,7 +17,7 @@ const simple2 = `
     </h1>
 
     <p>
-      Функція є однострічковою дією.
+      Функція є однорядковою дією.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
