@@ -37,6 +37,12 @@ const runHelloWorldFile = `
       <li><a class="link" href="https://nodejs.org" target="_blank">NodeJS 18+</a></li>
     </ul>
     <p>
+      <b>Рекомендації:</b>
+    </p>
+    <ul>
+      <li><a class="link" href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode" target="_blank">Ukrainian Unicode</a></li>
+    </ul>
+    <p>
       <b>Встановлення:</b>
     </p>
     <div class="code-window code-window-full">
