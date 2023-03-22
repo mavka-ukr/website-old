@@ -14,10 +14,6 @@ const diia = () => {
         });
     }
 
-    const JAVA_IDENT_RE = '[\u00C0-\u02B8a-zA-Zа-яА-ЯіІїЇєЄ_$][\u00C0-\u02B8a-zA-Zа-яА-ЯіІїЇєЄ_$0-9]*';
-    const GENERIC_IDENT_RE = JAVA_IDENT_RE
-        + recurRegex('(?:<' + JAVA_IDENT_RE + '~~~(?:\\s*,\\s*' + JAVA_IDENT_RE + '~~~)*>)?', /~~~/g, 2);
-
     return ({
         name: 'Diia',
         aliases: ['diia'],
