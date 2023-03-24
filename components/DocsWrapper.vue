@@ -10,6 +10,9 @@ const sidebarShown = useState('sidebarShown', () => false);
 
 addRouteMiddleware(() => {
   sidebarShown.value = false;
+  window.scrollTo({
+    top: 0
+  });
 });
 </script>
 
