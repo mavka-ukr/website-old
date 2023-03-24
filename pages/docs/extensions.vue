@@ -40,7 +40,7 @@ mavka.isEmpty(mavka.empty);
 mavka.toCell(someValue);
 
 // виконує падіння з певним значенням
-mavka.throw(context, mavka.makeText("Помилка!"));
+mavka.fall(context, mavka.makeText("Помилка!"));
 
 // перетворює js-функцію на дію Мавки (з доступом до контексту виконання)
 mavka.makeProxyFunction((args, context) => {
