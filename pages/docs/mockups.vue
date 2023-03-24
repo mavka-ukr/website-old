@@ -13,19 +13,19 @@ const diia = `
 
 const instance = `
 мій_паспорт = Паспорт(прізвище="Когут",
-                      ім'я="David",
+                      імʼя="David",
                       по_батькові="Богданович",
                       дата_народження="10.02.2001",
                       стать="чоловіча")
 `.trim();
 
 const call = `
-мій_паспорт.змінити_ім'я("Давид")
+мій_паспорт.змінити_імʼя("Давид")
 `.trim();
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs" next="/docs/vars">
     <h1 class="docs-content-title">
       Макети
     </h1>

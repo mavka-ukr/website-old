@@ -35,7 +35,7 @@ const simple3 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/maps" next="/docs/extensions">
     <h1 class="docs-content-title">
       Інтернет
     </h1>

@@ -26,7 +26,7 @@ const simple2 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/comments" next="/docs/magic">
     <h1 class="docs-content-title">
       Спроби
     </h1>

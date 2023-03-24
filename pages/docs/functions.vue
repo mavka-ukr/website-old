@@ -11,7 +11,7 @@ const simple2 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/dii" next="/docs/loops">
     <h1 class="docs-content-title">
       Функції
     </h1>

@@ -29,7 +29,7 @@ const return_2 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/operations" next="/docs/functions">
     <h1 class="docs-content-title">
       Дії
     </h1>

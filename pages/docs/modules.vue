@@ -36,7 +36,7 @@ const modB = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/oop" next="/docs/comments">
     <h1 class="docs-content-title">
       Модулі
     </h1>

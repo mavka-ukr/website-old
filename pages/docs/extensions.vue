@@ -3,7 +3,7 @@ const fetchJs = `
 const mavka = getMavka();
 const context = getContext();
 
-const fetchAndParseJson = mavka.tools.asyncFn(async ([url]) => {
+const fetchAndParseJson = mavka.makeAsyncProxyFunction(async ([url]) => {
   const response = await fetch(url);
   const json = await response.json();
 
@@ -24,25 +24,73 @@ const mainDiia = `
 `.trim();
 
 const tools = `
+// логічне "так"
+mavka.yes;
+
+// логічне "ні"
+mavka.no;
+
+// "пусто"
+mavka.empty;
+
+// перевіряє чи значення Мавки є "пусто"
+mavka.isEmpty(mavka.empty);
+
+// перетвоює будь-яке js-значення на значення Мавки
+mavka.toCell(someValue);
+
+// виконує падіння з певним значенням
+mavka.throw(context, mavka.makeText("Помилка!"));
+
 // перетворює js-функцію на дію Мавки (з доступом до контексту виконання)
-mavka.tools.fn((args, context) => {
+mavka.makeProxyFunction((args, context) => {
   //
 });
 
 // перетворює асинхронну js-функцію на тривалу дію Мавки (з доступом до контексту виконання)
-mavka.tools.asyncFn(async (args, context) => {
+mavka.makeAsyncProxyFunction(async (args, context) => {
   //
 });
 
-// перетворює будь-яку js-функцію на дію Мавки (без доступу до контексту виконання)
-mavka.tools.convertFnToDiia((...args) => {
+// створює текстове значення
+mavka.makeText("Привіт!");
+
+// створює числове значення
+mavka.makeNumber(123);
+
+// створює список
+mavka.makeList([mavka.makeNumber(1), mavka.makeText("123")]);
+
+// створює словник (поки недоступно)
+mavka.makeDictionary(null);
+
+// створює дію (поки недоступно)
+mavka.makeDiia(null);
+
+// створює модуль
+mavka.makeModule(name, giveContext);
+
+// створює портал до js-обʼєкта
+mavka.makePortal({
+  a: 1,
+  b: "some text"
+});
+
+// створює портал до js-функції
+mavka.makePortalFunction((...args) => {
   //
 });
+
+// створює портал до js-масиву
+mavka.makePortalList([1, 2, 3]);
+
+// створює метод для структури (поки недоступно)
+mavka.makeMethod(null);
 `.trim();
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/net" next="/docs/examples">
     <h1 class="docs-content-title">
       Розширення
     </h1>
@@ -76,7 +124,7 @@ mavka.tools.convertFnToDiia((...args) => {
       </ClientOnly>
     </div>
     <p>
-      Список функцій які доступні через <code>mavka.tools</code>:
+      Список інструментів для розробки розширень:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

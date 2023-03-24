@@ -6,7 +6,7 @@ const basic = `
 `.trim();
 
 const other = `
-якщо (а == 2 або б не так) і (в == "їхав козак за дунай...")
+якщо (а == 2 або б != так) і (в == "їхав козак за дунай...")
   друк("пройшло!")
 кінець
 
@@ -24,10 +24,39 @@ const other = `
   друк("а не є текст і не є число")
 кінець
 `.trim();
+
+const ternary = `
+чи_а_рівно_2 = а рівно 2 ? так : ні
+
+;; синтаксис:
+;; [умова] ? [вірно] : [не вірно]
+`.trim();
+
+const operators = `
+== ;; рівно
+!= ;; не рівно
+> ;; більше
+< ;; менше
+>= ;; більше або рівно
+<= ;; менше або рівно
+
+є ;; чи є певного типу
+не є ;; чи не є певного типу
+
+рівно ;; ==
+не рівно ;; !=
+більше ;; >
+менше ;; <
+не менше ;; >=
+не більше ;; <=
+
+містить ;; чи містить ключ (словник) або елемент (список)
+не містить ;; чи не містить ключ (словник) або елемент (список)
+`.trim();
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/types" next="/docs/operations">
     <h1 class="docs-content-title">
       Умовні оператори
     </h1>
@@ -53,6 +82,30 @@ const other = `
             language="diia"
             :autodetect="false"
             :code="other"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Скорочений вигляд операції порівняння:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="ternary"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Список доступних операторів порівняння:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="operators"
         />
       </ClientOnly>
     </div>

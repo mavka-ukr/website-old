@@ -29,7 +29,7 @@ const obj = `
 Ракета(назва="Нептун")
 
 Паспорт(прізвище="Когут",
-        ім'я="Давид",
+        імʼя="Давид",
         по_батькові="Богданович")
 `.trim();
 
@@ -45,7 +45,7 @@ const d = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/data-types" next="/docs/conditional">
     <h1 class="docs-content-title">
       Підказки типів
     </h1>

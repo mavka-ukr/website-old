@@ -1,6 +1,11 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
 
+defineProps({
+  prev: String,
+  next: String
+});
+
 const sidebarShown = useState('sidebarShown', () => false);
 
 addRouteMiddleware(() => {
@@ -55,23 +60,14 @@ addRouteMiddleware(() => {
           <NuxtLink v-if="false" href="/docs/mockups" class="docs-sidebar-menu-item" active-class="active">
             Макети
           </NuxtLink>
+          <NuxtLink href="/docs/oop" class="docs-sidebar-menu-item" active-class="active">
+            ООП
+          </NuxtLink>
           <NuxtLink href="/docs/modules" class="docs-sidebar-menu-item" active-class="active">
             Модулі
           </NuxtLink>
           <NuxtLink v-if="false" href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
             Паки
-          </NuxtLink>
-          <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
-            Приклади
-          </NuxtLink>
-          <NuxtLink href="/docs/extensions" class="docs-sidebar-menu-item" active-class="active">
-            Розширення
-          </NuxtLink>
-          <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
-            Дід
-          </NuxtLink>
-          <NuxtLink href="/docs/oop" class="docs-sidebar-menu-item" active-class="active">
-            ООП
           </NuxtLink>
           <NuxtLink href="/docs/comments" class="docs-sidebar-menu-item" active-class="active">
             Коментарі
@@ -79,8 +75,8 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/tries" class="docs-sidebar-menu-item" active-class="active">
             Спроби
           </NuxtLink>
-          <NuxtLink href="/docs/net" class="docs-sidebar-menu-item" active-class="active">
-            Інтернет
+          <NuxtLink href="/docs/magic" class="docs-sidebar-menu-item" active-class="active">
+            Магічні дії
           </NuxtLink>
           <NuxtLink href="/docs/lists" class="docs-sidebar-menu-item" active-class="active">
             Списки
@@ -88,8 +84,17 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/maps" class="docs-sidebar-menu-item" active-class="active">
             Словники
           </NuxtLink>
-          <NuxtLink href="/docs/magic" class="docs-sidebar-menu-item" active-class="active">
-            Магічні дії
+          <NuxtLink href="/docs/net" class="docs-sidebar-menu-item" active-class="active">
+            Інтернет
+          </NuxtLink>
+          <NuxtLink href="/docs/extensions" class="docs-sidebar-menu-item" active-class="active">
+            Розширення
+          </NuxtLink>
+          <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
+            Приклади
+          </NuxtLink>
+          <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
+            Дід
           </NuxtLink>
           <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             В1
@@ -98,6 +103,19 @@ addRouteMiddleware(() => {
       </div>
       <div class="docs-content">
         <slot />
+
+        <div class="docs-buttons">
+          <template v-if="prev">
+            <NuxtLink :href="prev" class="button button-outline">
+              Відступ
+            </NuxtLink>
+          </template>
+          <template v-if="next">
+            <NuxtLink :href="next" class="button button-outline next-button">
+              Наступ
+            </NuxtLink>
+          </template>
+        </div>
       </div>
 
       <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
@@ -215,6 +233,25 @@ $sidebarWidth: 20rem;
     padding: 0 1rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+}
+
+.docs-content {
+  hr {
+    border: 1px dashed var(--text-color);
+    opacity: 0.25;
+    margin: 2rem 0;
+  }
+}
+
+.docs-buttons {
+  margin-top: 3rem;
+
+  display: flex;
+  align-items: center;
+
+  .next-button {
+    margin-left: auto;
   }
 }
 </style>

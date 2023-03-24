@@ -7,7 +7,7 @@ const life = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper next="/docs/install">
     <h1 class="docs-content-title">
       Вступ
     </h1>
@@ -18,13 +18,13 @@ const life = `
     </p>
     <p>
       Причиною створення <span class="diia-word">Мавки</span> є <a href="https://github.com/kohutd">моє</a> бажання до
-      написання комп'ютерних команд українською мовою.
+      написання компʼютерних команд українською мовою.
     </p>
     <p>
       <span class="diia-word">Мавка</span> цілком та повністю присвячується <span class="diia-word">Лесі Українці</span>.
     </p>
     <p>
-      Я вірю, що кожен українець має право використовувати звичні йому інструменти в щоденному житті.
+      <a href="https://github.com/kohutd">Я</a> вірю, що кожен українець має право використовувати звичні йому інструменти в щоденному житті.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

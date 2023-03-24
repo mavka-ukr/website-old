@@ -2,7 +2,7 @@
 const simple = `
 Паспорт(
   прізвище="Когут",
-  ім'я="Давид",
+  імʼя="Давид",
   по_батькові="Богданович",
   дата_народження=Дата(
     день=20,
@@ -12,16 +12,33 @@ const simple = `
   застарілий=ні
 )
 `.trim();
+
+const simple2 = `
+Книжка(
+  назва="Лісова пісня",
+  автор=Автор(псевдонім="Леся Українка"),
+  рік=1913,
+  жанри=["Пригоди", "Драма", "Романтика"],
+  параметри=(
+    сторінок=200,
+    розмір=(
+      довжина=15,
+      ширина=10,
+      висота=2
+    )
+  )
+)
+`.trim();
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/examples" next="/docs/v1">
     <h1 class="docs-content-title">
       Дід
     </h1>
 
     <p>
-      <code>Дід</code> - це формат для зручного збереження та передачі даних. За виглядом ідентичний до об'єкта.
+      <code>Дід</code> - це формат для зручного збереження та передачі даних. За виглядом ідентичний до обʼєкта.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
@@ -32,5 +49,18 @@ const simple = `
         />
       </ClientOnly>
     </div>
+    <br>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="simple2"
+        />
+      </ClientOnly>
+    </div>
+    <blockquote>
+      Значення може бути числом, текстом, логічним, списком, словником, обʼєктом або пусто.
+    </blockquote>
   </DocsWrapper>
 </template>

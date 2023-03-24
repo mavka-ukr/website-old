@@ -8,7 +8,7 @@ const simpleEach = `
 const simpleWhile = `
 а = 10
 
-поки а не 0
+поки а не рівно 0
   а = а - 1
 кінець
 `.trim();
@@ -16,7 +16,7 @@ const simpleWhile = `
 const simple3 = `
 границя = число(читати("границя = "))
 
-парні_числа = Список()
+парні_числа = []
 
 перебрати діапазон(0, границя) як ч
   ;; перебираємо лише до 50
@@ -37,7 +37,7 @@ const simple3 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/functions" next="/docs/structures">
     <h1 class="docs-content-title">
       Цикли
     </h1>

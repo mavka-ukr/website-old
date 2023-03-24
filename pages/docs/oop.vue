@@ -28,7 +28,7 @@ const simple = `
 кінець
 
 структура Людина є Тварина
-  ім'я текст
+  імʼя текст
   свідомість логічне
 кінець
 
@@ -42,7 +42,7 @@ const simple = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/structures" next="/docs/modules">
     <h1 class="docs-content-title">
       ООП
     </h1>

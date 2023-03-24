@@ -43,7 +43,7 @@ const simple3 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/conditional" next="/docs/dii">
     <h1 class="docs-content-title">
       Арифметика
     </h1>

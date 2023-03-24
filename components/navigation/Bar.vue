@@ -188,6 +188,12 @@ addRouteMiddleware(() => {
   cursor: pointer;
 
   text-decoration: none;
+
+  &.button-outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+  }
 }
 
 .top-under-construction {

@@ -21,7 +21,7 @@ const simple3 = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/magic" next="/docs/maps">
     <h1 class="docs-content-title">
       Списки
     </h1>

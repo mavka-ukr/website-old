@@ -1,10 +1,10 @@
 <script setup>
 const simple = `
-;; однострічковий коментар
+;; однорядковий коментар
 сум = (а, б): а + б
 
 ;--
-коментар з декількома стрічками
+коментар з декількома рядками
 
 а
 б
@@ -17,7 +17,7 @@ const simple = `
 </script>
 
 <template>
-  <DocsWrapper>
+  <DocsWrapper prev="/docs/modules" next="/docs/tries">
     <h1 class="docs-content-title">
       Коментарі
     </h1>
