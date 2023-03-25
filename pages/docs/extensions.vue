@@ -3,7 +3,7 @@ const fetchJs = `
 const mavka = getMavka();
 const context = getContext();
 
-const fetchAndParseJson = mavka.makeAsyncProxyFunction(async ([url]) => {
+const fetchAndParseJson = mavka.makeWrappedAsyncProxyFunction(async ([url]) => {
   const response = await fetch(url);
   const json = await response.json();
 
@@ -52,11 +52,13 @@ mavka.fall(context, mavka.makeText("Помилка!"));
 mavka.makeProxyFunction((args, context) => {
   //
 });
+// mavka.makeWrappedProxyFunction для автоматичного конвернування вхідних і вихідних значень
 
 // перетворює асинхронну js-функцію на тривалу дію Мавки (з доступом до контексту виконання)
 mavka.makeAsyncProxyFunction(async (args, context) => {
   //
 });
+// mavka.makeWrappedAsyncProxyFunction для автоматичного конвернування вхідних і вихідних значень
 
 // створює текстове значення
 mavka.makeText("Привіт!");
