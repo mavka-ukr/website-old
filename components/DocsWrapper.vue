@@ -3,7 +3,9 @@ import { addRouteMiddleware, useState } from "nuxt/app";
 
 defineProps({
   prev: String,
-  next: String
+  next: String,
+  title: String,
+  loading: Boolean,
 });
 
 const sidebarShown = useState('sidebarShown', () => false);
@@ -102,23 +104,40 @@ addRouteMiddleware(() => {
           <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             В1
           </NuxtLink>
+          <NuxtLink v-if="true" href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
+            Список змін
+          </NuxtLink>
         </div>
       </div>
       <div class="docs-content">
-        <slot />
+        <template v-if="title">
+          <h1 class="docs-content-title">
+            {{ title }}
+          </h1>
+        </template>
 
-        <div class="docs-buttons">
-          <template v-if="prev">
-            <NuxtLink :href="prev" class="button button-outline">
-              Відступ
-            </NuxtLink>
-          </template>
-          <template v-if="next">
-            <NuxtLink :href="next" class="button button-outline next-button">
-              Наступ
-            </NuxtLink>
-          </template>
-        </div>
+        <template v-if="loading">
+          <div class="docs-loading">
+            <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
+          </div>
+        </template>
+        <template v-else>
+          <slot />
+
+          <div class="docs-buttons">
+            <template v-if="prev">
+              <NuxtLink :href="prev" class="button button-outline">
+                Відступ
+              </NuxtLink>
+            </template>
+            <template v-if="next">
+              <NuxtLink :href="next" class="button button-outline next-button">
+                Наступ
+              </NuxtLink>
+            </template>
+          </div>
+        </template>
       </div>
 
       <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
@@ -255,6 +274,29 @@ $sidebarWidth: 20rem;
 
   .next-button {
     margin-left: auto;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.docs-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  img {
+    width: 50px;
+    height: 50px;
+
+    animation: spin 500ms linear infinite;
   }
 }
 </style>
