@@ -98,6 +98,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
             Приклади
           </NuxtLink>
+          <NuxtLink href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
+            Паки
+          </NuxtLink>
           <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
             Дід
           </NuxtLink>

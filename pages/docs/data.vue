@@ -30,7 +30,7 @@ const simple2 = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/examples" next="/docs/v1">
+  <DocsWrapper prev="/docs/paks" next="/docs/v1">
     <h1 class="docs-content-title">
       Дід
     </h1>

@@ -31,7 +31,7 @@ const tgbot = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/extensions" next="/docs/data">
+  <DocsWrapper prev="/docs/extensions" next="/docs/paks">
     <h1 class="docs-content-title">
       Приклади
     </h1>
