@@ -53,7 +53,7 @@ const f = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/examples" next="/docs/data">
+  <DocsWrapper prev="/docs/examples" next="/docs/cloud-paks">
     <h1 class="docs-content-title">
       Паки
     </h1>
