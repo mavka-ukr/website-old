@@ -21,6 +21,18 @@ const simple3 = `
 
 слово = словотвір.лайк ;; вподобайка
 `.trim();
+
+const simple4 = `
+макет словник
+  покласти(ключ, значення)
+  отримати(ключ)
+  вилучити(ключ) логічне
+  розмір() число
+  очистити()
+  ключі() список
+  значення() список
+кінець
+`.trim();
 </script>
 
 <template>
@@ -61,6 +73,18 @@ const simple3 = `
             lang="diia"
             :autodetect="false"
             :code="simple3"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      Макет словника:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            lang="diia"
+            :autodetect="false"
+            :code="simple4"
         />
       </ClientOnly>
     </div>
