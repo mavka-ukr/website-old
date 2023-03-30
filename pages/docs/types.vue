@@ -117,7 +117,13 @@ const d = `
       <li><code>текст</code></li>
       <li><code>число</code></li>
       <li><code>логічне</code></li>
+      <li><code>список</code></li>
+      <li><code>словник</code></li>
+      <li><code>обʼєкт</code></li>
       <li><code>пусто</code></li>
+      <li><code>щось</code></li>
+      <li><code>ніщо</code></li>
+      <li><code>(назва макета)</code></li>
       <li><code>(назва структури)</code></li>
       <li><code>(тип) або (тип)</code></li>
     </ul>
