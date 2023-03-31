@@ -14,9 +14,9 @@ context.set("отримати_джсон", fetchAndParseJson);
 `.trim();
 
 const mainDiia = `
-підключити_розширення_з_файлу("fetchAndParseJson.js")
-;; підключити_розширення_з_мережі("https://...")
-;; підключити_розширення("console.log('hello from js')")
+взяти файл "fetchAndParseJson.js" як fetchAndParseJson
+
+js fetchAndParseJson
 
 чекати відповідь = отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
