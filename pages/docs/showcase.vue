@@ -33,7 +33,7 @@ context.set('показати_картинку', mavka.makeWrappedProxyFunction(
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            :language="null"
+            :language="'diia'"
             :autodetect="false"
             :code="a"
         />
