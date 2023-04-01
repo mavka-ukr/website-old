@@ -14,7 +14,7 @@ context.set('показати_картинку', mavka.makeWrappedProxyFunction(
 }));
 "
 
-показати_картинку("https://мавка.укр/logo.png")
+показати_картинку("https://мавка.укр/favicon.ico")
 
 показати_вітрину()
 `.trim();
