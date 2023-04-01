@@ -98,7 +98,7 @@ mavka.makeMethod(null);
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/net" next="/docs/examples">
+  <DocsWrapper prev="/docs/net" next="/docs/showcase">
     <h1 class="docs-content-title">
       Розширення
     </h1>

@@ -95,6 +95,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/extensions" class="docs-sidebar-menu-item" active-class="active">
             Розширення
           </NuxtLink>
+          <NuxtLink href="/docs/showcase" class="docs-sidebar-menu-item" active-class="active">
+            Вітрини
+          </NuxtLink>
           <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
             Приклади
           </NuxtLink>
