@@ -27,6 +27,15 @@ const simple2 = `
   )
 )
 `.trim();
+
+const simple3 = `
+Конкурс(
+  номер=1,
+  завдання="Створити розбирач формату Дід",
+  фонд=20000,
+  реченець="15.04.2023"
+)
+`.trim();
 </script>
 
 <template>
@@ -54,6 +63,16 @@ const simple2 = `
             language="diia"
             :autodetect="false"
             :code="simple2"
+        />
+      </ClientOnly>
+    </div>
+    <br>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="simple3"
         />
       </ClientOnly>
     </div>
