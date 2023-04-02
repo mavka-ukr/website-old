@@ -11,7 +11,7 @@ addRouteMiddleware(() => {
 
 <template>
   <a target="_blank" href="https://конкурс.укр/1" class="top-under-construction">
-    Бери участь в конкус.укр/1 від Мавки!
+    Бери участь в конкурс.укр/1 від Мавки!
   </a>
 
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
