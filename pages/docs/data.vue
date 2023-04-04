@@ -39,7 +39,7 @@ const simple3 = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/cloud-paks" next="/docs/v1">
+  <DocsWrapper prev="/docs/cloud-paks" next="/docs/style">
     <h1 class="docs-content-title">
       Дід
     </h1>

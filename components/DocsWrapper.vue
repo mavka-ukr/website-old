@@ -110,6 +110,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
             Дід
           </NuxtLink>
+          <NuxtLink v-if="true" href="/docs/style" class="docs-sidebar-menu-item" active-class="active">
+            Стиль
+          </NuxtLink>
           <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             В1
           </NuxtLink>

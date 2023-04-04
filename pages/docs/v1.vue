@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/data" next="/docs/changelog">
+  <DocsWrapper prev="/docs/style" next="/docs/changelog">
     <h1 class="docs-content-title">
       Версія 1
     </h1>
