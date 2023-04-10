@@ -84,6 +84,11 @@ const textMock = `
   обрізати() текст
 кінець
 `.trim();
+
+const numberMock = `
+макет число_м
+кінець
+`.trim();
 </script>
 
 <template>
