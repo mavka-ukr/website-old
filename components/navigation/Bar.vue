@@ -10,8 +10,8 @@ addRouteMiddleware(() => {
 </script>
 
 <template>
-  <a target="_blank" href="https://конкурс.укр/1" class="top-under-construction">
-    Бери участь в конкурс.укр/1 від Мавки!
+  <a target="_blank" href="https://github.com/mavka-ukr" class="top-under-construction">
+    Приєднуйся до створення Мавки!
   </a>
 
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
