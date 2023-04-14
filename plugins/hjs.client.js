@@ -35,7 +35,7 @@ const diia = () => {
             {
                 begin: [
                     /[a-zа-яіїє_]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
                     /\(/
                 ],
                 className: { 1: "title.function", 2: "title.function" },
@@ -43,7 +43,7 @@ const diia = () => {
             {
                 begin: [
                     /[A-ZА-ЯІЇЄ]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
                     /\(/
                 ],
                 className: { 1: "title.class", 2: "title.class" },
@@ -52,7 +52,7 @@ const diia = () => {
                 begin: [
                     ' ',
                     /[A-ZА-ЯІЇЄ]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
                 ],
                 className: { 2: "title.class", 3: "title.class" },
             },
@@ -60,14 +60,14 @@ const diia = () => {
                 begin: [
                     "структура ",
                     /[A-ZА-ЯІЇЄ]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/
                 ],
                 className: { 2: "title.class", 3: "title.class" },
             },
             {
                 begin: [
                     /[A-ZА-ЯІЇЄ]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/,
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
                     /\./,
                 ],
                 className: { 1: "title.class", 2: "title.class" },
@@ -76,7 +76,7 @@ const diia = () => {
                 begin: [
                     "дати ",
                     /[A-ZА-ЯІЇЄ]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/
                 ],
                 className: { 2: "title.class", 3: "title.class" },
             },
@@ -84,7 +84,7 @@ const diia = () => {
                 begin: [
                     "дати ",
                     /[a-zа-яіїє_]/,
-                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/
+                    /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/
                 ],
                 className: { 2: "title.function", 3: "title.function" },
             },
