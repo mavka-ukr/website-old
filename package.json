@@ -18,7 +18,7 @@
     "@highlightjs/vue-plugin": "^2.1.0",
     "codemirror": "^6.0.1",
     "highlight.js": "^11.6.0",
-    "mavka": "^0.10.44",
+    "mavka": "^0.10.45",
     "vue-codemirror": "^6.1.1",
     "vue-gtag-next": "^1.14.0"
   }
