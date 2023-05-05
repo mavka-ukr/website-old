@@ -126,7 +126,7 @@ const runHelloWorldFile = `
       <br>
       Сивмол <code class="small-code">[</code> через <code class="small-code">AltGr+9</code>;
       <br>
-      Сивмол <code class="small-code">]</code> через <code class="small-code">AltGr+0</code>;
+      Сивмол <code class="small-code">]</code> через <code class="small-code">AltGr+0w</code>;
       <br>
       Сивмол <code class="small-code">&lt;</code> через <code class="small-code">AltGr+6</code>;
       <br>
