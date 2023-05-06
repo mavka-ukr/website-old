@@ -5,39 +5,57 @@ import Mavka from "mavka";
 const navigationShown = useState('navigationShown', () => false);
 
 addRouteMiddleware(() => {
-  navigationShown.value = false;
+    navigationShown.value = false;
 });
 </script>
 
 <template>
-  <a target="_blank" href="https://github.com/mavka-ukr" class="top-under-construction">
-    Приєднуйся до створення Мавки!
-  </a>
+    <a target="_blank" href="https://github.com/mavka-ukr" class="top-under-construction">
+        Приєднуйся до створення Мавки!
+    </a>
 
-  <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
-    <NuxtLink to="/" class="logo">
-      <div class="logo-image">
-        <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
-        <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
-      </div>
-      Мавка
-      <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
-    </NuxtLink>
-    <div class="links">
-      <a class="link" target="_blank" href="https://бавитись.мавка.укр">Бавитись</a>
-      <a class="link" target="_blank" href="https://пак.укр">Паки</a>
-      <a target="_blank" class="link" href="https://t.me/mavka_lang">Спільнота</a>
+    <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
+        <NuxtLink to="/" class="logo">
+            <div class="logo-image">
+                <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+                <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
+            </div>
+            Мавка
+            <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
+        </NuxtLink>
+        <div class="links">
+            <a class="link" target="_blank" href="https://бавитись.мавка.укр">
+                <img src="@/assets/images/tools/playground.png" alt="">
+                Бавитись
+            </a>
+            <a class="link" target="_blank" href="https://пак.укр">
+                <img src="@/assets/images/tools/pak.png" alt="">
+                Паки
+            </a>
+            <a target="_blank" class="link" href="https://фрагмент.укр">
+                <img src="@/assets/images/tools/fragment.png" alt="">
+                Фрагменти
+            </a>
+            <a v-if="false" target="_blank" class="link" href="https://t.me/mavka_lang">
+                <img src="@/assets/images/telegram-logo.png" alt="">
+                Спільнота
+            </a>
+            <button class="link">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 96 960 960" width="16">
+                    <path d="M226 896q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 642q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 388q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="buttons">
+            <NuxtLink to="/docs" class="button">
+                Документація
+            </NuxtLink>
+        </div>
     </div>
-    <div class="buttons">
-      <NuxtLink to="/docs" class="button">
-        Документація
-      </NuxtLink>
-    </div>
-  </div>
 
-  <button @click="navigationShown = !navigationShown" class="nav-toggle">
-    {{ navigationShown ? '×' : '☰' }}
-  </button>
+    <button @click="navigationShown = !navigationShown" class="nav-toggle">
+        {{ navigationShown ? '×' : '☰' }}
+    </button>
 </template>
 
 <style lang="scss">
@@ -68,14 +86,28 @@ addRouteMiddleware(() => {
       font-size: .95rem;
       text-decoration: none;
       color: var(--hint-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-right: 0.5em;
+        height: 1em;
+      }
 
       &:hover {
         color: var(--text-color);
       }
     }
 
+    button {
+        display: none !important;
+        background: transparent;
+        border: none;
+    }
+
     .link + .link {
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
   }
 
