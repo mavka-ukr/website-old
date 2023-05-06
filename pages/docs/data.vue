@@ -36,6 +36,18 @@ const simple3 = `
   реченець="12.04.2023"
 )
 `.trim();
+
+const simple4 = `
+макет модуль Дід
+  зібрати(значення щось) текст
+  розібрати(значення текст) щось
+кінець
+`.trim();
+
+const simple5 = `
+Дід.зібрати((імʼя="Леся", вік=20))
+Дід.розібрати("(імʼя=\\"Леся\\", вік=20)")
+`.trim();
 </script>
 
 <template>
@@ -79,5 +91,25 @@ const simple3 = `
     <blockquote>
       Значення може бути числом, текстом, логічним, списком, словником, обʼєктом або пусто.
     </blockquote>
+    <hr>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="simple4"
+        />
+      </ClientOnly>
+    </div>
+    <br>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+            language="diia"
+            :autodetect="false"
+            :code="simple5"
+        />
+      </ClientOnly>
+    </div>
   </DocsWrapper>
 </template>
