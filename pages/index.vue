@@ -6,6 +6,7 @@
     <SectionQuote/>
     <SectionBuildWith v-if="false"/>
     <SectionGetInvolved/>
+    <SectionAtom/>
     <SectionFooter/>
   </main>
 </template>

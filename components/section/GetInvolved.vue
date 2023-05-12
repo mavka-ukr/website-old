@@ -24,7 +24,16 @@
           Телеграм
         </div>
       </a>
-      <a target="_blank" href="https://patreon.com/diia" class="involve-item patreon">
+      <a target="_blank" href="https://www.youtube.com/@MavkaUkr" class="involve-item youtube">
+        <div class="involve-item-icon">
+          <img src="@/assets/images/youtube.png"
+               alt="YouTube Logo">
+        </div>
+        <div class="involve-item-name">
+          YouTube
+        </div>
+      </a>
+      <a v-if="false" target="_blank" href="https://patreon.com/diia" class="involve-item patreon">
         <div class="involve-item-icon">
           <img src="@/assets/images/patreon-logo.png"
                alt="Patreon Logo">
@@ -61,7 +70,7 @@
       </a>
     </div>
   </section>
-  <section class="get-involved">
+  <section v-if="false" class="get-involved">
     <h3>
       Патрони
     </h3>

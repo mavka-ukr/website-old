@@ -168,7 +168,7 @@ const currentCode = useState('currentCode', () => codes[1]);
   background: black;
   padding: .5rem;
   border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--code-shadow);
 
   font-size: 1rem;
 

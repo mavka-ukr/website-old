@@ -4,11 +4,15 @@ html {
   --bg-color: #ffffff;
   --text-color: #000000;
   --hint-color: #444444;
+  --code-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --border-color: #444444;
 
   @media (prefers-color-scheme: dark) {
-    --bg-color: #111111;
+    --bg-color: #000000;
     --text-color: #ffffff;
     --hint-color: #999999;
+    --code-shadow: 0 0 0 1px #333;
+    --border-color: #333;
   }
 }
 

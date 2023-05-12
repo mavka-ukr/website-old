@@ -213,7 +213,7 @@ $sidebarWidth: 20rem;
       display: block;
 
       text-decoration: none;
-      border: 1px solid var(--text-color);
+      border: 1px solid var(--border-color);
       border-bottom: none;
 
       cursor: pointer;
@@ -221,7 +221,7 @@ $sidebarWidth: 20rem;
       color: var(--text-color);
 
       &:last-child {
-        border-bottom: 1px solid var(--text-color);
+        border-bottom: 1px solid var(--border-color);
       }
 
       &:hover {
