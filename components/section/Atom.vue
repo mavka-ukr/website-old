@@ -12,8 +12,12 @@
   justify-content: center;
   align-items: center;
 
+  cursor: none;
+
   img {
     width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 }
 </style>
