@@ -32,11 +32,11 @@ addRouteMiddleware(() => {
         <img src="@/assets/images/tools/pak.png" alt="">
         Паки
       </a>
-      <a v-if="false" target="_blank" class="link" href="https://фрагмент.укр">
-        <img src="@/assets/images/tools/fragment.png" alt="">
+      <a v-if="true" target="_blank" class="link" href="https://фрагмент.укр">
+        <img src="@/assets/images/tools/fragment-new.png" alt="">
         Фрагменти
       </a>
-      <a v-if="true" target="_blank" class="link" href="https://t.me/mavka_lang">
+      <a v-if="false" target="_blank" class="link" href="https://t.me/mavka_lang">
         <img src="@/assets/images/telegram-logo.png" alt="">
         Спільнота
       </a>
