@@ -42,7 +42,7 @@ addRouteMiddleware(() => {
             Типи даних
           </NuxtLink>
           <NuxtLink href="/docs/types" class="docs-sidebar-menu-item" active-class="active">
-            Типизація
+            Типізація
           </NuxtLink>
           <NuxtLink href="/docs/conditional" class="docs-sidebar-menu-item" active-class="active">
             Умовні оператори
