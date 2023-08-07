@@ -2,40 +2,23 @@
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/style" next="/docs/changelog">
+  <DocsWrapper prev="/docs/changelog" next="/docs/contributors">
     <h1 class="docs-content-title">
-      Версія 1
+      Ма-2
     </h1>
 
     <p>
-      Цей документ репрезентує список основних можливостей мови, що мають бути присутні у першій реліз-версії.
+      Наразі <span class="diia-word">Мавка</span> є в процесі творення. Наявний виконувач є прототипом та працює на
+      Node.js. Задля забезпечення
+      швидкодії та стабільності, почато роботу над виконувачем
+      <a class="link external" href="https://github.com/mavka-ukr/ma-2" target="_blank">Ма-2</a>.
     </p>
-    <ul>
-      <li>змінні</li>
-      <li>дії</li>
-      <li>функції</li>
-      <li>типи</li>
-      <li>умовні операції</li>
-      <li>цикли</li>
-      <li>структури</li>
-      <li>модулі</li>
-      <li>паки</li>
-      <li>тривалі операції</li>
-      <li>спроби</li>
-      <li>розширення</li>
-      <li>коментарі</li>
-      <li>сб: математика</li>
-      <li>сб: інтернет</li>
-      <li>сб: чз (читання запис)</li>
-      <li>сб: списки</li>
-      <li>сб: дід</li>
-      <li>...</li>
-      <li>можливість писати скрипти</li>
-      <li>можливість написати повноцінний телеграм бот</li>
-      <li>базова підтримка популярними IDE (VSCode / JetBrains)</li>
-    </ul>
-    <p>
-      Мова повинна надавати достатньо інструментів для можливості роботи будь-якого перекладеного скрипта з python/js/ruby/shell.
-    </p>
+
+    <hr>
+
+    <blockquote>
+      Примітка: кожен може взяти участь в творені <span class="diia-word">Мавки</span> на
+      <a class="link external" href="https://github.com/mavka-ukr" target="_blank">GitHub-і</a>.
+    </blockquote>
   </DocsWrapper>
 </template>

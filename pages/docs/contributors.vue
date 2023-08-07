@@ -1,14 +1,14 @@
 <script setup>
-const changelog = ref('');
+const contributors = ref('');
 const isLoading = ref(true);
 
 onMounted(() => {
     isLoading.value = true;
 
-    fetch('https://raw.githubusercontent.com/mavka-ukr/mavka/main/CHANGELOG.md')
+    fetch('https://raw.githubusercontent.com/mavka-ukr/mavka/main/CONTRIBUTORS.md')
         .then((r) => r.text())
         .then((text) => {
-            changelog.value = text;
+            contributors.value = text;
         })
         .finally(() => {
             isLoading.value = false;
@@ -17,20 +17,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <DocsWrapper title="Список змін" :loading="isLoading" prev="/docs/style" next="/docs/v1">
+  <DocsWrapper title="Контрибутори" :loading="isLoading" prev="/docs/v1">
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
             language="markdown"
             :autodetect="false"
-            :code="changelog"
+            :code="contributors"
         />
       </ClientOnly>
     </div>
     <hr>
     <p>
-      <a href="https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md" target="_blank" class="link external">
-        https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md
+      <a href="https://github.com/mavka-ukr/mavka/blob/main/CONTRIBUTORS.md" target="_blank" class="link external">
+        https://github.com/mavka-ukr/mavka/blob/main/CONTRIBUTORS.md
       </a>
     </p>
   </DocsWrapper>

@@ -2,19 +2,19 @@
 import { addRouteMiddleware, useState } from "nuxt/app";
 
 defineProps({
-  prev: String,
-  next: String,
-  title: String,
-  loading: Boolean,
+    prev: String,
+    next: String,
+    title: String,
+    loading: Boolean,
 });
 
 const sidebarShown = useState('sidebarShown', () => false);
 
 addRouteMiddleware(() => {
-  sidebarShown.value = false;
-  window.scrollTo({
-    top: 0
-  });
+    sidebarShown.value = false;
+    window.scrollTo({
+        top: 0
+    });
 });
 </script>
 
@@ -113,14 +113,17 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/math" class="docs-sidebar-menu-item" active-class="active">
             Математика
           </NuxtLink>
-          <NuxtLink v-if="true" href="/docs/style" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink href="/docs/style" class="docs-sidebar-menu-item" active-class="active">
             Стиль
           </NuxtLink>
-          <NuxtLink v-if="true" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
-            В1
-          </NuxtLink>
-          <NuxtLink v-if="true" href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
             Список змін
+          </NuxtLink>
+          <NuxtLink href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
+            Ма-2
+          </NuxtLink>
+          <NuxtLink href="/docs/contributors" class="docs-sidebar-menu-item" active-class="active">
+            Контрибутори
           </NuxtLink>
         </div>
       </div>
@@ -138,7 +141,7 @@ addRouteMiddleware(() => {
           </div>
         </template>
         <template v-else>
-          <slot />
+          <slot/>
 
           <div class="docs-buttons">
             <template v-if="prev">

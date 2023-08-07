@@ -24,7 +24,7 @@ const e = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/data" next="/docs/v1">
+  <DocsWrapper prev="/docs/data" next="/docs/changelog">
     <h1 class="docs-content-title">
       Стиль
     </h1>
