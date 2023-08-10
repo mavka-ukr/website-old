@@ -1,13 +1,8 @@
 <script setup>
-onBeforeMount(() => {
-  if (window.location.hostname !== 'localhost' && window.location.hostname !== 'мавка.укр' && window.location.hostname !== 'xn--80aaf6ah.xn--j1amh') {
-    window.location.href = 'https://мавка.укр';
-  }
-});
 </script>
 
 <template>
-  <NuxtPage />
+  <NuxtPage/>
 </template>
 
 <style lang="scss">
