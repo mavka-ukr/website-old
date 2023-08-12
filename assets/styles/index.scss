@@ -1,4 +1,5 @@
 @import "highlight.js/styles/atom-one-dark.css";
+@import "floating-vue/dist/style.css";
 
 html {
   font-variant-ligatures: none;
@@ -17,6 +18,27 @@ html {
     --code-shadow: 0 0 0 1px #333;
     --border-color: #333;
   }
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0,
+  'wght' 500,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+.material-symbols-rounded.filled {
+  font-variation-settings: 'FILL' 1,
+  'wght' 500,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+.material-symbols-rounded.bold {
+  font-variation-settings: 'FILL' 0,
+  'wght' 900,
+  'GRAD' -25,
+  'opsz' 48
 }
 
 html, body {
@@ -145,6 +167,31 @@ blockquote {
 .small-code {
   font-size: 0.8rem;
   padding: .1rem .25rem;
+}
+
+.v-popper__popper.v-popper__popper--show-from .v-popper__wrapper {
+  transform: scale(0.5);
+}
+
+.v-popper__popper.v-popper__popper--show-to .v-popper__wrapper {
+  transform: none;
+  transition: transform 75ms;
+}
+
+.v-popper--theme-dropdown .v-popper__arrow-inner {
+  border: none;
+}
+
+.v-popper--theme-dropdown .v-popper__arrow-outer {
+  border-color: white;
+}
+
+.v-popper--theme-dropdown .v-popper__inner {
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  border: none;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
 }
 
 @import "buttons";

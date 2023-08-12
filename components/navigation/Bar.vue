@@ -3,6 +3,21 @@ import { addRouteMiddleware, useState } from "nuxt/app";
 import Mavka from "mavka";
 
 const navigationShown = useState('navigationShown', () => false);
+const isMobile = useState('isMobile', () => false);
+
+function onResize() {
+    isMobile.value = window.innerWidth <= 956;
+}
+
+onMounted(() => {
+    isMobile.value = window.innerWidth <= 956;
+    console.log(isMobile.value)
+    window.addEventListener("resize", onResize);
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener("resize", onResize);
+});
 
 addRouteMiddleware(() => {
     navigationShown.value = false;
@@ -23,35 +38,101 @@ addRouteMiddleware(() => {
       Мавка
       <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
     </NuxtLink>
-    <div class="links">
-      <a class="link" target="_blank" href="https://бавитись.мавка.укр">
-        <img src="@/assets/images/tools/playground.png" alt="">
-        Бавитись
-      </a>
-      <a class="link" target="_blank" href="https://пак.укр">
-        <img src="@/assets/images/tools/pak.png" alt="">
-        Паки
-      </a>
-      <a v-if="true" target="_blank" class="link" href="https://фрагмент.укр">
-        <img src="@/assets/images/tools/fragment-new.png" alt="">
-        Фрагменти
-      </a>
-      <a v-if="false" target="_blank" class="link" href="https://t.me/mavka_lang">
-        <img src="@/assets/images/telegram-logo.png" alt="">
-        Спільнота
-      </a>
-      <button class="link">
-        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 96 960 960" width="16">
-          <path
-              d="M226 896q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 642q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19ZM226 388q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Zm254 0q-28 0-47-19t-19-47q0-28 19-47t47-19q28 0 47 19t19 47q0 28-19 47t-47 19Z"/>
-        </svg>
-      </button>
-    </div>
-    <div class="buttons">
-      <NuxtLink to="/docs" class="button">
-        Документація
-      </NuxtLink>
-    </div>
+
+    <template v-if="isMobile">
+      <div v-if="navigationShown" class="ui-mobile-navbar-content">
+        <div class="ui-mobile-navbar-links">
+          <a class="ui-mobile-navbar-link" target="_blank" href="https://бавитись.мавка.укр">
+            <img src="../../../assets/images/tools/playground.png" alt=""/>
+            Бавитись
+          </a>
+          <a class="ui-mobile-navbar-link" target="_blank" href="https://пак.укр">
+            <img src="../../../assets/images/tools/pak.png" alt=""/>
+            Паки
+          </a>
+          <a class="ui-mobile-navbar-link" href="https://фрагмент.укр" target="_blank">
+            <img src="@/assets/images/tools/fragment-new.png" alt=""/>
+            Фрагменти
+          </a>
+          <a class="ui-mobile-navbar-link" href="https://конкурс.укр" target="_blank">
+            <img src="@/assets/images/tools/konkurs.png" alt=""/>
+            Конкурси
+          </a>
+          <NuxtLink class="ui-mobile-navbar-link" to="/rozkladka">
+            <img src="@/assets/images/tools/layout.png" alt=""/>
+            Розкладка
+          </NuxtLink>
+          <NuxtLink class="ui-mobile-navbar-link" to="/cyrrilic">
+            <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
+            Цирілик
+          </NuxtLink>
+          <NuxtLink class="ui-mobile-navbar-link" to="/pravo">
+            <img src="@/assets/images/tools/pravo.png" alt=""/>
+            Право
+          </NuxtLink>
+        </div>
+        <div class="ui-mobile-navbar-buttons">
+          <NuxtLink to="/docs" class="button">
+            Документація
+          </NuxtLink>
+        </div>
+      </div>
+    </template>
+    <template v-else>
+      <div class="links">
+        <a class="link" target="_blank" href="https://бавитись.мавка.укр">
+          <img src="@/assets/images/tools/playground.png" alt="">
+          Бавитись
+        </a>
+        <a class="link" target="_blank" href="https://пак.укр">
+          <img src="@/assets/images/tools/pak.png" alt="">
+          Паки
+        </a>
+        <a target="_blank" class="link" href="https://фрагмент.укр">
+          <img src="@/assets/images/tools/fragment-new.png" alt="">
+          Фрагменти
+        </a>
+
+        <ClientOnly>
+          <VDropdown compute-transform-origin :distance="8">
+            <template #default="{ shown }">
+              <button class="link">
+                <span class="material-symbols-rounded">
+                  <template v-if="shown">close</template>
+                  <template v-else>apps</template>
+                </span>
+              </button>
+            </template>
+
+            <template #popper>
+              <UiMenu>
+                <UiMenuLink v-close-popper href="https://конкурс.укр" target="_blank">
+                  <img src="@/assets/images/tools/konkurs.png" alt=""/>
+                  Конкурси
+                </UiMenuLink>
+                <UiMenuLink v-close-popper tag="RouterLink" to="/rozkladka">
+                  <img src="@/assets/images/tools/layout.png" alt=""/>
+                  Розкладка
+                </UiMenuLink>
+                <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
+                  <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
+                  Цирілик
+                </UiMenuLink>
+                <UiMenuLink v-close-popper tag="RouterLink" to="/pravo">
+                  <img src="@/assets/images/tools/pravo.png" alt=""/>
+                  Право
+                </UiMenuLink>
+              </UiMenu>
+            </template>
+          </VDropdown>
+        </ClientOnly>
+      </div>
+      <div class="buttons">
+        <NuxtLink to="/docs" class="button">
+          Документація
+        </NuxtLink>
+      </div>
+    </template>
   </div>
 
   <button @click="navigationShown = !navigationShown" class="nav-toggle">
@@ -60,6 +141,64 @@ addRouteMiddleware(() => {
 </template>
 
 <style lang="scss">
+.ui-mobile-navbar-content {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding-top: 6rem;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+
+  .ui-mobile-navbar-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .ui-mobile-navbar-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+        margin-bottom: 0.75rem;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .ui-mobile-navbar-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    > * + * {
+      margin-top: 0.5rem;
+    }
+
+    > * {
+      width: 100%;
+      text-align: center;
+      height: 2.5rem;
+
+      button {
+        width: 100%;
+
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
 .navbar {
   margin-top: 40px;
 
@@ -84,12 +223,15 @@ addRouteMiddleware(() => {
     justify-content: center;
 
     .link {
-      font-size: .95rem;
+      font-size: 1rem;
       text-decoration: none;
-      color: var(--hint-color);
       display: flex;
       align-items: center;
       justify-content: center;
+      border: none;
+      background: transparent;
+
+      color: var(--text-color);
 
       padding: 0.5rem 1rem;
       border-radius: 1rem;
@@ -97,8 +239,12 @@ addRouteMiddleware(() => {
       transition: all 125ms ease-in-out;
 
       img {
-        margin-right: 0.5em;
+        margin-right: 0.75em;
         height: 1em;
+      }
+
+      span {
+        font-size: 1.4rem;
       }
 
       &:hover {
@@ -111,13 +257,7 @@ addRouteMiddleware(() => {
       }
     }
 
-    button {
-      display: none !important;
-      background: transparent;
-      border: none;
-    }
-
-    .link + .link {
+    > * + * {
       margin-left: 1rem;
     }
   }
