@@ -117,7 +117,7 @@ addRouteMiddleware(() => {
             Стиль
           </NuxtLink>
           <NuxtLink href="/docs/reflection" class="docs-sidebar-menu-item" active-class="active">
-            Розтини
+            Розбір
           </NuxtLink>
           <NuxtLink href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
             Список змін
