@@ -43,11 +43,11 @@ addRouteMiddleware(() => {
       <div v-if="navigationShown" class="ui-mobile-navbar-content">
         <div class="ui-mobile-navbar-links">
           <a class="ui-mobile-navbar-link" target="_blank" href="https://бавитись.мавка.укр">
-            <img src="../../../assets/images/tools/playground.png" alt=""/>
+            <img src="@/assets/images/tools/playground.png" alt=""/>
             Бавитись
           </a>
           <a class="ui-mobile-navbar-link" target="_blank" href="https://пак.укр">
-            <img src="../../../assets/images/tools/pak.png" alt=""/>
+            <img src="@/assets/images/tools/pak.png" alt=""/>
             Паки
           </a>
           <a class="ui-mobile-navbar-link" href="https://фрагмент.укр" target="_blank">
