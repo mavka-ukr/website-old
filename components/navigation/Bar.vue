@@ -110,15 +110,15 @@ addRouteMiddleware(() => {
                   <img src="@/assets/images/tools/konkurs.png" alt=""/>
                   Конкурси
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" to="/rozkladka">
+                <UiMenuLink v-close-popper tag="NuxtLink" to="/rozkladka">
                   <img src="@/assets/images/tools/layout.png" alt=""/>
                   Розкладка
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
+                <UiMenuLink v-close-popper tag="NuxtLink" to="/cyrrilic">
                   <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
                   Цирілик
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" to="/pravo">
+                <UiMenuLink v-close-popper tag="NuxtLink" to="/pravo">
                   <img src="@/assets/images/tools/pravo.png" alt=""/>
                   Право
                 </UiMenuLink>
