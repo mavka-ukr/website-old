@@ -119,7 +119,7 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
             Список змін
           </NuxtLink>
-          <NuxtLink href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
+          <NuxtLink v-if="false" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             Ма-2
           </NuxtLink>
           <NuxtLink href="/docs/contributors" class="docs-sidebar-menu-item" active-class="active">
