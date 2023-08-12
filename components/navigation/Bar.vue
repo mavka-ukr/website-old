@@ -66,7 +66,7 @@ addRouteMiddleware(() => {
             <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
             Цирілик
           </NuxtLink>
-          <NuxtLink class="ui-mobile-navbar-link" to="/pravo">
+          <NuxtLink v-if="false" class="ui-mobile-navbar-link" to="/pravo">
             <img src="@/assets/images/tools/pravo.png" alt=""/>
             Право
           </NuxtLink>
@@ -118,7 +118,7 @@ addRouteMiddleware(() => {
                   <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
                   Цирілик
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" to="/pravo">
+                <UiMenuLink v-if="false" v-close-popper tag="RouterLink" to="/pravo">
                   <img src="@/assets/images/tools/pravo.png" alt=""/>
                   Право
                 </UiMenuLink>
