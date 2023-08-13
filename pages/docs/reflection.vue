@@ -54,7 +54,7 @@ const definitions = `
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/style" next="/docs/changelog">
+  <DocsWrapper prev="/docs/style" next="/docs/testing">
     <h1 class="docs-content-title">
       Розбір
     </h1>

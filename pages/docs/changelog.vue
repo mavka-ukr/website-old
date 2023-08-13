@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <DocsWrapper title="Список змін" :loading="isLoading" prev="/docs/reflection" next="/docs/contributors">
+  <DocsWrapper title="Список змін" :loading="isLoading" prev="/docs/testing" next="/docs/contributors">
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs

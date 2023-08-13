@@ -119,6 +119,9 @@ addRouteMiddleware(() => {
           <NuxtLink href="/docs/reflection" class="docs-sidebar-menu-item" active-class="active">
             Розбір
           </NuxtLink>
+          <NuxtLink href="/docs/testing" class="docs-sidebar-menu-item" active-class="active">
+            Тестування
+          </NuxtLink>
           <NuxtLink href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
             Список змін
           </NuxtLink>
