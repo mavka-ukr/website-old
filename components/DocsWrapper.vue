@@ -320,7 +320,7 @@ $sidebarWidth: 20rem;
     width: 50px;
     height: 50px;
 
-    animation: spin 500ms linear infinite;
+    animation: spin 500ms cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 }
 </style>
