@@ -93,7 +93,9 @@ addRouteMiddleware(() => {
           </NuxtLink>
         </div>
         <div class="ui-mobile-navbar-buttons">
-          <NuxtLink to="/документація" class="button">Документація</NuxtLink>
+          <NuxtLink :href="encodeURI('/документація')" class="button">
+            Документація
+          </NuxtLink>
         </div>
       </div>
     </template>
