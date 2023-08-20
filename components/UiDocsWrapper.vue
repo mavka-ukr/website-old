@@ -2,277 +2,133 @@
 import { addRouteMiddleware, useState } from "nuxt/app";
 
 defineProps({
-  prev: String,
-  next: String,
-  title: String,
-  loading: Boolean,
+    prev: String,
+    next: String,
+    title: String,
+    loading: Boolean,
 });
 
-const sidebarShown = useState("sidebarShown", () => false);
+const sidebarShown = useState('sidebarShown', () => false);
 
 addRouteMiddleware(() => {
-  sidebarShown.value = false;
-  window.scrollTo({
-    top: 0,
-  });
+    sidebarShown.value = false;
+    window.scrollTo({
+        top: 0
+    });
 });
 </script>
 
 <template>
   <main class="container">
     <div id="docs" class="docs">
-      <div class="docs-sidebar" :class="{ shown: sidebarShown }">
+      <div class="docs-sidebar" :class="{ 'shown': sidebarShown }">
         <div class="docs-sidebar-head">
           <NuxtLink to="/" class="logo">
-            <img
-              class="logo-light"
-              src="@/assets/images/logo-light.png"
-              alt=""
-            />
-            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
+            <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
           </NuxtLink>
         </div>
         <div class="docs-sidebar-menu">
-          <NuxtLink
-            :href="encodeURI(`/документація`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs" class="docs-sidebar-menu-item" active-class="active">
             Вступ
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/встановлення`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/install" class="docs-sidebar-menu-item" active-class="active">
             Встановлення
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/змінні`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/vars" class="docs-sidebar-menu-item" active-class="active">
             Змінні
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/типи`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/data-types" class="docs-sidebar-menu-item" active-class="active">
             Типи даних
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/типизація`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/types" class="docs-sidebar-menu-item" active-class="active">
             Типизація
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/умови`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/conditional" class="docs-sidebar-menu-item" active-class="active">
             Умовні оператори
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/арифметика`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/operations" class="docs-sidebar-menu-item" active-class="active">
             Арифметика
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/дії`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/dii" class="docs-sidebar-menu-item" active-class="active">
             Дії
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/функції`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/functions" class="docs-sidebar-menu-item" active-class="active">
             Функції
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/цикли`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/loops" class="docs-sidebar-menu-item" active-class="active">
             Цикли
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/структури`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/structures" class="docs-sidebar-menu-item" active-class="active">
             Структури
           </NuxtLink>
-          <NuxtLink
-            v-if="false"
-            :href="encodeURI(`/документація/макети`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink v-if="false" href="/docs/mockups" class="docs-sidebar-menu-item" active-class="active">
             Макети
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/ооп`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/oop" class="docs-sidebar-menu-item" active-class="active">
             ООП
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/модулі`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/modules" class="docs-sidebar-menu-item" active-class="active">
             Модулі
           </NuxtLink>
-          <NuxtLink
-            v-if="false"
-            :href="encodeURI(`/документація/паки`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink v-if="false" href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
             Паки
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/коментарі`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/comments" class="docs-sidebar-menu-item" active-class="active">
             Коментарі
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/спроби`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/tries" class="docs-sidebar-menu-item" active-class="active">
             Спроби
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/магія`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/magic" class="docs-sidebar-menu-item" active-class="active">
             Магічні дії
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/списки`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/lists" class="docs-sidebar-menu-item" active-class="active">
             Списки
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/словники`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/maps" class="docs-sidebar-menu-item" active-class="active">
             Словники
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/інтернет`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/net" class="docs-sidebar-menu-item" active-class="active">
             Інтернет
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/розширення`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/extensions" class="docs-sidebar-menu-item" active-class="active">
             Розширення
           </NuxtLink>
-          <NuxtLink
-            v-if="false"
-            :href="encodeURI(`/документація/вітрини`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink v-if="false" href="/docs/showcase" class="docs-sidebar-menu-item" active-class="active">
             Вітрини
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/приклади`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/examples" class="docs-sidebar-menu-item" active-class="active">
             Приклади
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/паки`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/paks" class="docs-sidebar-menu-item" active-class="active">
             Паки
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/хмарні-паки`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/cloud-paks" class="docs-sidebar-menu-item" active-class="active">
             Хмарні паки
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/дід`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/data" class="docs-sidebar-menu-item" active-class="active">
             Дід
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/математика`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/math" class="docs-sidebar-menu-item" active-class="active">
             Математика
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/стиль`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/style" class="docs-sidebar-menu-item" active-class="active">
             Стиль
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/розбір`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/reflection" class="docs-sidebar-menu-item" active-class="active">
             Розбір
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/тестування`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/testing" class="docs-sidebar-menu-item" active-class="active">
             Тестування
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/список-змін`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/changelog" class="docs-sidebar-menu-item" active-class="active">
             Список змін
           </NuxtLink>
-          <NuxtLink
-            v-if="false"
-            :href="encodeURI(`/документація/ма-2`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink v-if="false" href="/docs/v1" class="docs-sidebar-menu-item" active-class="active">
             Ма-2
           </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/контрибутори`)"
-            class="docs-sidebar-menu-item"
-            active-class="active"
-          >
+          <NuxtLink href="/docs/contributors" class="docs-sidebar-menu-item" active-class="active">
             Контрибутори
           </NuxtLink>
         </div>
@@ -286,28 +142,21 @@ addRouteMiddleware(() => {
 
         <template v-if="loading">
           <div class="docs-loading">
-            <img
-              class="logo-light"
-              src="@/assets/images/logo-light.png"
-              alt=""
-            />
-            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
+            <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
+            <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
           </div>
         </template>
         <template v-else>
-          <slot />
+          <slot/>
 
           <div class="docs-buttons">
             <template v-if="prev">
-              <NuxtLink :href="encodeURI(prev)" class="button button-outline">
+              <NuxtLink :href="prev" class="button button-outline">
                 Відступ
               </NuxtLink>
             </template>
             <template v-if="next">
-              <NuxtLink
-                :href="encodeURI(next)"
-                class="button button-outline next-button"
-              >
+              <NuxtLink :href="next" class="button button-outline next-button">
                 Наступ
               </NuxtLink>
             </template>
@@ -316,7 +165,7 @@ addRouteMiddleware(() => {
       </div>
 
       <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
-        {{ sidebarShown ? "×" : "☰" }}
+        {{ sidebarShown ? '×' : '☰' }}
       </button>
     </div>
   </main>
@@ -349,7 +198,7 @@ $sidebarWidth: 20rem;
   }
 
   &-head {
-    padding: 0.5rem;
+    padding: .5rem;
 
     display: flex;
     align-items: center;
@@ -368,7 +217,7 @@ $sidebarWidth: 20rem;
     padding-bottom: 4rem;
 
     &-item {
-      padding: 0.5rem;
+      padding: .5rem;
 
       display: block;
 
@@ -385,7 +234,7 @@ $sidebarWidth: 20rem;
       }
 
       &:hover {
-        background-color: rgba(var(--text-color_rgb), 0.1);
+        background-color: rgba(var(--text-color_rgb), .1);
       }
 
       &.active {
