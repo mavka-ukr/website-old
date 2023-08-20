@@ -39,26 +39,22 @@ const simple = `
 друк(адам є Тварина) ;; так
 друк(адам є Гриб) ;; ні
 `.trim();
+
+useHead({
+  title: "ООП | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/structures" next="/docs/modules">
-    <h1 class="docs-content-title">
-      ООП
-    </h1>
+  <UiDocsWrapper prev="/docs/structures" next="/docs/modules">
+    <h1 class="docs-content-title">ООП</h1>
 
-    <p>
-      <span class="diia-word">Мавка</span> підтримує ООП.
-    </p>
+    <p><span class="diia-word">Мавка</span> підтримує ООП.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <br>
-  </DocsWrapper>
+    <br />
+  </UiDocsWrapper>
 </template>

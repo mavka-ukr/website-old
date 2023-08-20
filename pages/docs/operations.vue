@@ -40,49 +40,36 @@ const simple3 = `
 виконати_ділення_за_модулем_частка ;; //
 виконати_піднесення_до_степеня ;; **
 `.trim();
+
+useHead({
+  title: "Арифметика | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/conditional" next="/docs/dii">
-    <h1 class="docs-content-title">
-      Арифметика
-    </h1>
+  <UiDocsWrapper prev="/docs/conditional" next="/docs/dii">
+    <h1 class="docs-content-title">Арифметика</h1>
 
     <p>
-      <span class="diia-word">Мавка</span> надає можливість виконувати базові арифметичні операції.
+      <span class="diia-word">Мавка</span> надає можливість виконувати базові
+      арифметичні операції.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <p>
-      Також існує можливість перезаписати логіку цих операцій для структур:
-    </p>
+    <p>Також існує можливість перезаписати логіку цих операцій для структур:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
-    <p>
-      Список операцій, що можна перезаписати:
-    </p>
+    <p>Список операцій, що можна перезаписати:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple3"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

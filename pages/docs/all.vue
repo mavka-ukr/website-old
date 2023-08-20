@@ -41,125 +41,89 @@ const structure_basic = `
 </script>
 
 <template>
-  <DocsWrapper>
-    <h1 class="docs-content-title">
-      Все
-    </h1>
+  <UiDocsWrapper>
+    <h1 class="docs-content-title">Все</h1>
 
     <p>
       Список всіх можливих конструкцій <span class="diia-word">Мавки</span>.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number_int"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="number_int" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="number_float" />
+      </ClientOnly>
+    </div>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="number_bin" />
+      </ClientOnly>
+    </div>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="number_hex" />
+      </ClientOnly>
+    </div>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number_float"
+          language="diia"
+          :autodetect="false"
+          :code="number_negative"
         />
       </ClientOnly>
     </div>
-    <br>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="string_basic" />
+      </ClientOnly>
+    </div>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="bool_true" />
+      </ClientOnly>
+    </div>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="bool_false" />
+      </ClientOnly>
+    </div>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number_bin"
+          language="diia"
+          :autodetect="false"
+          :code="undefined_basic"
         />
       </ClientOnly>
     </div>
-    <br>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="diia_basic" />
+      </ClientOnly>
+    </div>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number_hex"
+          language="diia"
+          :autodetect="false"
+          :code="structure_basic"
         />
       </ClientOnly>
     </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number_negative"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="string_basic"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="bool_true"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="bool_false"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="undefined_basic"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="diia_basic"
-        />
-      </ClientOnly>
-    </div>
-    <br>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="structure_basic"
-        />
-      </ClientOnly>
-    </div>
-    <p>
-      буде продовжено...
-    </p>
-  </DocsWrapper>
+    <p>буде продовжено...</p>
+  </UiDocsWrapper>
 </template>

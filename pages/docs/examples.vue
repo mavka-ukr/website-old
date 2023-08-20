@@ -28,32 +28,36 @@ const tgbot = `
 
 бот.запустити(обробити_оновлення)
 `.trim();
+
+useHead({
+  title: "Приклади | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/showcase" next="/docs/paks">
-    <h1 class="docs-content-title">
-      Приклади
-    </h1>
+  <UiDocsWrapper prev="/docs/showcase" next="/docs/paks">
+    <h1 class="docs-content-title">Приклади</h1>
 
     <p>
       <b>Телеграм-бот</b>
     </p>
     <p>
-      Цей бот надсилає статистику війни за сьогодні, якщо користувач напише "статистика" в чаті:
+      Цей бот надсилає статистику війни за сьогодні, якщо користувач напише
+      "статистика" в чаті:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="tgbot"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="tgbot" />
       </ClientOnly>
     </div>
     <p>
       Документацію до розширення можна знайти тут:
-      <a target="_blank" class="link external" href="https://телеграм-бот.мавка.укр">телеграм-бот.мавка.укр</a>
+      <a
+        target="_blank"
+        class="link external"
+        href="https://телеграм-бот.мавка.укр"
+        >телеграм-бот.мавка.укр</a
+      >
     </p>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

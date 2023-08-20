@@ -32,49 +32,38 @@ const simple3 = `
 
 чекати кімната_книг.вийти()
 `.trim();
+
+useHead({
+  title: "Інтернет | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/maps" next="/docs/extensions">
-    <h1 class="docs-content-title">
-      Інтернет
-    </h1>
+  <UiDocsWrapper prev="/docs/maps" next="/docs/extensions">
+    <h1 class="docs-content-title">Інтернет</h1>
 
     <p>
-      <span class="diia-word">Мавка</span> надає дуже високорівневий програмний інтерфейс (ПІ) для взаємодії з мережею
-      інтернет.
-      Передача даних відбувається по протоколу HTTP та у форматі <span class="diia-word">Дід</span>.
+      <span class="diia-word">Мавка</span> надає дуже високорівневий програмний
+      інтерфейс (ПІ) для взаємодії з мережею інтернет. Передача даних
+      відбувається по протоколу HTTP та у форматі
+      <span class="diia-word">Дід</span>.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
-    <p>
-      Також є підтримка WebSockets.
-    </p>
+    <p>Також є підтримка WebSockets.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple3"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

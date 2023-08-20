@@ -51,37 +51,30 @@ const simple2 = `
 
 лісовик()
 `.trim();
+
+useHead({
+  title: "Магічні дії | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/tries" next="/docs/lists">
-    <h1 class="docs-content-title">
-      Магічні дії
-    </h1>
+  <UiDocsWrapper prev="/docs/tries" next="/docs/lists">
+    <h1 class="docs-content-title">Магічні дії</h1>
 
     <p>
-      <span class="diia-word">Мавка</span> надає можливість перезаписувати деякі вбудовані операції для структур через
-      дії. Ці дії
-      називаються магічними.
+      <span class="diia-word">Мавка</span> надає можливість перезаписувати деякі
+      вбудовані операції для структур через дії. Ці дії називаються магічними.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple1"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple1" />
       </ClientOnly>
     </div>
     <p>Приклад:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

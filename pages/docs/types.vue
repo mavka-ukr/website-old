@@ -42,22 +42,29 @@ const d = `
 
 а = А(б=2, в="круто!", г=пусто)
 `.trim();
+
+useHead({
+  title: "Підказки типів | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/data-types" next="/docs/conditional">
-    <h1 class="docs-content-title">
-      Підказки типів
-    </h1>
+  <UiDocsWrapper prev="/docs/data-types" next="/docs/conditional">
+    <h1 class="docs-content-title">Підказки типів</h1>
 
     <p>
-      <span class="diia-word">Мавка</span> надає можливість вказувати типи до певних конструкцій в мові.
-      Ці типи не перевіряються під час виконання програми, а лише дозволяють надати додаткову інформацію для розробників.
-      Ці підказки є аналогом до <a class="link external" target="_blank" href="https://docs.python.org/3/library/typing.html">Python type hints</a>.
+      <span class="diia-word">Мавка</span> надає можливість вказувати типи до
+      певних конструкцій в мові. Ці типи не перевіряються під час виконання
+      програми, а лише дозволяють надати додаткову інформацію для розробників.
+      Ці підказки є аналогом до
+      <a
+        class="link external"
+        target="_blank"
+        href="https://docs.python.org/3/library/typing.html"
+        >Python type hints</a
+      >.
     </p>
-    <p>
-      Конструкції, в яких можна вказати тип:
-    </p>
+    <p>Конструкції, в яких можна вказати тип:</p>
     <ul>
       <li><code>присвоєння змінної</code></li>
       <li><code>параметр дії або функції</code></li>
@@ -69,11 +76,7 @@ const d = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="a"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
     <p>
@@ -81,11 +84,7 @@ const d = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="b"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="b" />
       </ClientOnly>
     </div>
     <p>
@@ -93,11 +92,7 @@ const d = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="c"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="c" />
       </ClientOnly>
     </div>
     <p>
@@ -105,11 +100,7 @@ const d = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="d"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
     <h2 style="margin-top: 3rem">Доступні типи:</h2>
@@ -127,12 +118,12 @@ const d = `
       <li><code>(назва структури)</code></li>
       <li><code>(тип) або (тип)</code></li>
     </ul>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>
 
 <style lang="scss">
 code {
-  padding: .2rem .5rem;
+  padding: 0.2rem 0.5rem;
   background-color: black;
   color: white;
   border-radius: 1rem;
@@ -140,7 +131,7 @@ code {
 
 ul {
   li {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     &:last-child {
       margin-bottom: 0;

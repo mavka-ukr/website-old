@@ -26,62 +26,42 @@ const return_2 = `
 
 добуток = знайти_добуток(2, 2)
 `.trim();
+
+useHead({
+  title: "Дії | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/operations" next="/docs/functions">
-    <h1 class="docs-content-title">
-      Дії
-    </h1>
+  <UiDocsWrapper prev="/docs/operations" next="/docs/functions">
+    <h1 class="docs-content-title">Дії</h1>
 
     <p>
-      Дія є послідовним набором операцій, що має назву.
-      Дія може приймати вхідні параметри та вертати значення.
+      Дія є послідовним набором операцій, що має назву. Дія може приймати вхідні
+      параметри та вертати значення.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <p>
-      Приклад застосування (виклику) дії:
-    </p>
+    <p>Приклад застосування (виклику) дії:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="call"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="call" />
       </ClientOnly>
     </div>
-    <p>
-      Приклад дії, що вертає значення:
-    </p>
+    <p>Приклад дії, що вертає значення:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="return_1"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="return_1" />
       </ClientOnly>
     </div>
-    <p>
-      Ключове слово <code>вернути</code> не є обов'язковим:
-    </p>
+    <p>Ключове слово <code>вернути</code> не є обов'язковим:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="return_2"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="return_2" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

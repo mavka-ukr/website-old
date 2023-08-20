@@ -1,9 +1,10 @@
 <script setup>
 import { useState } from "nuxt/app";
+import UiCodeBlock from "~/components/UiCodeBlock.vue";
 
 const codes = [
   {
-    name: 'привіт, ім\'я',
+    name: "привіт_ім'я.м",
     text: `
 імʼя = читати("введіть ваше імʼя: ")
 
@@ -11,7 +12,7 @@ const codes = [
 `.trim(),
   },
   {
-    name: 'ракета',
+    name: "ракета.м",
     text: `
 структура Ракета
   назва текст
@@ -31,20 +32,20 @@ const codes = [
 `.trim(),
   },
   {
-    name: 'інтернет',
+    name: "інтернет.м",
     text: `
-взяти пак інтернет.*
+взяти "хмарний.пак.укр/інтернет"
 
-чекати відповідь = отримати("дані.тачки.укр")
+чекати тачки = інтернет.отримати("дд.тачки.укр")
 
-перебрати відповідь як авто
-  друк(авто.назва)
+перебрати тачки як тачка
+  друк(тачка.назва)
 кінець
 `.trim(),
   },
 ];
 
-const currentCode = useState('currentCode', () => codes[1]);
+const currentCode = useState("currentCode", () => codes[1]);
 </script>
 
 <template>
@@ -55,12 +56,10 @@ const currentCode = useState('currentCode', () => codes[1]);
     <div class="hero-pattern hero-pattern-4"></div>
 
     <div class="left">
-      <h1 class="hero-title">
-        Сучасна українська мова програмування
-      </h1>
+      <h1 class="hero-title">Сучасна українська мова програмування</h1>
       <h5 class="hero-subtitle">
-        <span class="diia-word">Мавка</span> - це експериментальна мова програмування, що дозволяє кожному втілювати
-        ідеї українською мовою.
+        <span class="diia-word">Мавка</span> - це експериментальна мова
+        програмування, що дозволяє кожному втілювати ідеї українською мовою.
         <span class="diia-word">Мавка</span> є першою мовою у своєму роді.
       </h5>
       <div class="hero-buttons">
@@ -70,30 +69,7 @@ const currentCode = useState('currentCode', () => codes[1]);
       </div>
     </div>
     <div class="right">
-      <div class="code-window">
-        <div class="code-window-names">
-          <template v-for="code in codes">
-            <button @click="currentCode = code" class="code-window-name"
-                    :class="{ 'code-window-name-active': currentCode.name === code.name }">
-              {{ code.name }}
-            </button>
-          </template>
-        </div>
-
-        <ClientOnly>
-          <highlightjs
-              language="diia"
-              :autodetect="false"
-              :code="currentCode.text"
-          />
-        </ClientOnly>
-
-        <div class="code-window-buttons">
-          <a href="https://бавитись.мавка.укр" target="_blank" class="button play-button">
-            ▶️ Бавитись
-          </a>
-        </div>
-      </div>
+      <UiCodeBlock :files="codes" :default-index="1" play-button />
     </div>
   </section>
 </template>
@@ -109,11 +85,16 @@ const currentCode = useState('currentCode', () => codes[1]);
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  .left {
+    margin-top: 2rem;
+  }
+
   &-title {
     margin: 0;
 
     font-size: 2.4rem;
     font-weight: 600;
+    line-height: 1.125;
 
     max-width: 15ch;
   }
@@ -121,30 +102,32 @@ const currentCode = useState('currentCode', () => codes[1]);
   &-subtitle {
     margin: 0;
 
-    font-size: 1rem;
-    margin-top: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    margin-top: 2.5rem;
     color: var(--hint-color);
 
-    max-width: 35ch;
+    max-width: 33ch;
 
-    font-weight: normal;
+    font-weight: 300;
   }
 
   &-buttons {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 
     display: flex;
 
     .button-large {
-      padding: .8rem 1.6rem;
-      border-radius: .8rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.8rem;
       font-size: 1.2rem;
     }
   }
 
-
   @media only screen and (max-width: 956px) {
     grid-template-columns: 1fr;
+
+    margin-top: 50px;
 
     padding: 1rem;
 
@@ -159,67 +142,12 @@ const currentCode = useState('currentCode', () => codes[1]);
     .hero-pattern {
       display: none;
     }
-  }
-}
 
-.code-window {
-  position: relative;
+    .hero-pattern-1 {
+      display: block;
 
-  background: black;
-  padding: .5rem;
-  border-radius: 1rem;
-  box-shadow: var(--code-shadow);
-
-  font-size: 1rem;
-
-  &-buttons {
-    margin-top: .5rem;
-
-    display: flex;
-
-    .button {
-      font-size: .8rem;
+      opacity: 0.02;
     }
-  }
-
-  pre {
-    margin: 0;
-
-    overflow-x: auto;
-  }
-}
-
-.code-window-names {
-  position: absolute;
-  display: flex;
-  top: -1rem;
-
-  .code-window-name {
-    background: transparent;
-    border: none;
-    border-radius: .5rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #9d3425;
-
-    &-active {
-      background: #9d3425;
-      color: var(--bg-color);
-    }
-  }
-}
-
-.hljs {
-  max-width: 446px;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.code-window-full {
-  .hljs {
-    max-width: 100% !important;
   }
 }
 
@@ -276,7 +204,7 @@ const currentCode = useState('currentCode', () => codes[1]);
 
   background-image: url(@/assets/images/logo-light.png);
 
-  opacity: .04;
+  opacity: 0.04;
 
   z-index: 0;
 

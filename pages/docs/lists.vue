@@ -38,65 +38,49 @@ const simple4 = `
   скоротити(функція_скорочення Дія, початкове_значення щось = пусто) щось
 кінець
 `.trim();
+
+useHead({
+  title: "Списки | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/magic" next="/docs/maps">
-    <h1 class="docs-content-title">
-      Списки
-    </h1>
+  <UiDocsWrapper prev="/docs/magic" next="/docs/maps">
+    <h1 class="docs-content-title">Списки</h1>
 
     <p>
-      <code>список</code> є спеціальною структурою, що дозволяє зберігати дані послідовно.
+      <code>список</code> є спеціальною структурою, що дозволяє зберігати дані
+      послідовно.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple1"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple1" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
     <p>
-      Отримати певний елемент зі списку можна завдяки дії <code>отримати</code> або оператора отримання елемента:
+      Отримати певний елемент зі списку можна завдяки дії
+      <code>отримати</code> або оператора отримання елемента:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple3"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
     <blockquote>
       Доступ до елементів відбувається через індекс, який починається з нуля.
     </blockquote>
-    <p>
-      Макет списку:
-    </p>
+    <p>Макет списку:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="simple4"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="simple4" />
       </ClientOnly>
     </div>
-    <blockquote>
-      Документація доповнюється.
-    </blockquote>
-  </DocsWrapper>
+    <blockquote>Документація доповнюється.</blockquote>
+  </UiDocsWrapper>
 </template>

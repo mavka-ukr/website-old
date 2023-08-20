@@ -38,13 +38,15 @@ const simple3 = `
 
 друк(парні_числа)
 `.trim();
+
+useHead({
+  title: "Цикли | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/functions" next="/docs/structures">
-    <h1 class="docs-content-title">
-      Цикли
-    </h1>
+  <UiDocsWrapper prev="/docs/functions" next="/docs/structures">
+    <h1 class="docs-content-title">Цикли</h1>
 
     <p>
       Цикл є послідовним набором операцій, що повторюється визначену або
@@ -52,34 +54,20 @@ const simple3 = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simpleEach"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simpleEach" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simpleWhile"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simpleWhile" />
       </ClientOnly>
     </div>
-    <p>
-      Знаходження парних чисел в певному діапазоні який не перевищує 50:
-    </p>
+    <p>Знаходження парних чисел в певному діапазоні який не перевищує 50:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple3"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

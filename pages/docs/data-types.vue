@@ -89,17 +89,17 @@ const numberMock = `
 макет число_м
 кінець
 `.trim();
+
+useHead({
+  title: "Типи даних | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/vars" next="/docs/types">
-    <h1 class="docs-content-title">
-      Типи даних
-    </h1>
+  <UiDocsWrapper prev="/docs/vars" next="/docs/types">
+    <h1 class="docs-content-title">Типи даних</h1>
 
-    <p>
-      Існують такі типи даних:
-    </p>
+    <p>Існують такі типи даних:</p>
     <ul>
       <li><code>число</code></li>
       <li><code>текст</code></li>
@@ -115,11 +115,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="number"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="number" />
       </ClientOnly>
     </div>
     <p>
@@ -127,23 +123,13 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="string"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="string" />
       </ClientOnly>
     </div>
-    <p>
-      Макет текстового значення:
-    </p>
+    <p>Макет текстового значення:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            lang="diia"
-            :autodetect="false"
-            :code="textMock"
-        />
+        <highlightjs lang="diia" :autodetect="false" :code="textMock" />
       </ClientOnly>
     </div>
     <p>
@@ -151,11 +137,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="logical"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="logical" />
       </ClientOnly>
     </div>
     <p>
@@ -163,11 +145,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="list"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="list" />
       </ClientOnly>
     </div>
     <p>
@@ -175,11 +153,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="map"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="map" />
       </ClientOnly>
     </div>
     <p>
@@ -187,11 +161,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="voidity"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="voidity" />
       </ClientOnly>
     </div>
     <p>
@@ -199,11 +169,7 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="obj"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="obj" />
       </ClientOnly>
     </div>
     <p>
@@ -211,32 +177,25 @@ const numberMock = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="diia"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="diia" />
       </ClientOnly>
     </div>
-    <hr>
+    <hr />
     <p>
-      Щоб перевірити чи значення є певного типу, використовуйте ключове слово <code>є</code>:
+      Щоб перевірити чи значення є певного типу, використовуйте ключове слово
+      <code>є</code>:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="is"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="is" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>
 
 <style lang="scss">
 code {
-  padding: .2rem .5rem;
+  padding: 0.2rem 0.5rem;
   background-color: black;
   color: white;
   border-radius: 1rem;
@@ -244,7 +203,7 @@ code {
 
 ul {
   li {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 
     &:last-child {
       margin-bottom: 0;

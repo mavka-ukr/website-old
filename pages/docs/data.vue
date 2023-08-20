@@ -48,68 +48,52 @@ const simple5 = `
 Дід.зібрати((імʼя="Леся", вік=20))
 Дід.розібрати("(імʼя=\\"Леся\\", вік=20)")
 `.trim();
+
+useHead({
+  title: "Дід | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/cloud-paks" next="/docs/math">
-    <h1 class="docs-content-title">
-      Дід
-    </h1>
+  <UiDocsWrapper prev="/docs/cloud-paks" next="/docs/math">
+    <h1 class="docs-content-title">Дід</h1>
 
     <p>
-      <code>Дід</code> - це формат для зручного збереження та передачі даних. За виглядом ідентичний до обʼєкта.
+      <code>Дід</code> - це формат для зручного збереження та передачі даних. За
+      виглядом ідентичний до обʼєкта.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple3"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
     <blockquote>
-      Значення може бути числом, текстом, логічним, списком, словником, обʼєктом або пусто.
+      Значення може бути числом, текстом, логічним, списком, словником, обʼєктом
+      або пусто.
     </blockquote>
-    <hr>
+    <hr />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple4"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple4" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple5"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple5" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

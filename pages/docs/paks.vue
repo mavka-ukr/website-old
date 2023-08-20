@@ -50,30 +50,27 @@ const f = `
 
 суперпак.привітати_двічі
 `.trim();
+
+useHead({
+  title: "Паки | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/examples" next="/docs/cloud-paks">
-    <h1 class="docs-content-title">
-      Паки
-    </h1>
+  <UiDocsWrapper prev="/docs/examples" next="/docs/cloud-paks">
+    <h1 class="docs-content-title">Паки</h1>
 
     <p>
-      Паки дозволяють виносити часто вживані модулі з програми і ділитись ними з іншими.
+      Паки дозволяють виносити часто вживані модулі з програми і ділитись ними з
+      іншими.
     </p>
     <p>
       Всі паки програми знаходяться у папці <code>.паки</code> в корені проєкту.
     </p>
-    <p>
-      Ось структура проєкту, де використовуються паки:
-    </p>
+    <p>Ось структура проєкту, де використовуються паки:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            :language="null"
-            :autodetect="false"
-            :code="a"
-        />
+        <highlightjs :language="null" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
     <p>
@@ -81,11 +78,7 @@ const f = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="b"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="b" />
       </ClientOnly>
     </div>
     <p>
@@ -93,24 +86,17 @@ const f = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="c"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="c" />
       </ClientOnly>
     </div>
-    <hr>
+    <hr />
     <p>
-      Якщо в корені паку є файл з такою ж назвою як сам пак, то цей файл буде завантажено як основний модуль паку.
+      Якщо в корені паку є файл з такою ж назвою як сам пак, то цей файл буде
+      завантажено як основний модуль паку.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="d"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
     <p>
@@ -118,11 +104,7 @@ const f = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="e"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="e" />
       </ClientOnly>
     </div>
     <p>
@@ -130,12 +112,8 @@ const f = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="f"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="f" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

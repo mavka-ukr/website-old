@@ -2,38 +2,43 @@
 import { addRouteMiddleware, useState } from "nuxt/app";
 import Mavka from "mavka";
 
-const navigationShown = useState('navigationShown', () => false);
-const isMobile = useState('isMobile', () => false);
+const navigationShown = useState("navigationShown", () => false);
+const isMobile = useState("isMobile", () => false);
 
 function onResize() {
-    isMobile.value = window.innerWidth <= 956;
+  isMobile.value = window.innerWidth <= 956;
 }
 
 onMounted(() => {
-    isMobile.value = window.innerWidth <= 956;
-    console.log(isMobile.value)
-    window.addEventListener("resize", onResize);
+  isMobile.value = window.innerWidth <= 956;
+  console.log(isMobile.value);
+  window.addEventListener("resize", onResize);
 });
 
 onBeforeUnmount(() => {
-    window.removeEventListener("resize", onResize);
+  window.removeEventListener("resize", onResize);
 });
 
 addRouteMiddleware(() => {
-    navigationShown.value = false;
+  navigationShown.value = false;
 });
 </script>
 
 <template>
-  <a target="_blank" href="https://github.com/mavka-ukr" class="top-under-construction">
+  <a
+    v-if="false"
+    target="_blank"
+    href="https://github.com/mavka-ukr"
+    class="top-under-construction"
+  >
     Приєднуйся до створення Мавки!
   </a>
 
   <div class="navbar" :class="{ 'navigation-shown': navigationShown }">
     <NuxtLink to="/" class="logo">
       <div class="logo-image">
-        <img class="logo-light" src="@/assets/images/logo-light.png" alt="">
-        <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="">
+        <img class="logo-light" src="@/assets/images/logo-light.png" alt="" />
+        <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
       </div>
       Мавка
       <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
@@ -42,54 +47,68 @@ addRouteMiddleware(() => {
     <template v-if="isMobile">
       <div v-if="navigationShown" class="ui-mobile-navbar-content">
         <div class="ui-mobile-navbar-links">
-          <a class="ui-mobile-navbar-link" target="_blank" href="https://бавитись.мавка.укр">
-            <img src="@/assets/images/tools/playground.png" alt=""/>
+          <a
+            class="ui-mobile-navbar-link"
+            target="_blank"
+            href="https://бавитись.мавка.укр"
+          >
+            <img src="@/assets/images/tools/playground.png" alt="" />
             Бавитись
           </a>
-          <a class="ui-mobile-navbar-link" target="_blank" href="https://пак.укр">
-            <img src="@/assets/images/tools/pak.png" alt=""/>
+          <a
+            class="ui-mobile-navbar-link"
+            target="_blank"
+            href="https://пак.укр"
+          >
+            <img src="@/assets/images/tools/pak.png" alt="" />
             Паки
           </a>
-          <a class="ui-mobile-navbar-link" href="https://фрагмент.укр" target="_blank">
-            <img src="@/assets/images/tools/fragment-new.png" alt=""/>
+          <a
+            class="ui-mobile-navbar-link"
+            href="https://фрагмент.укр"
+            target="_blank"
+          >
+            <img src="@/assets/images/tools/fragment-new.png" alt="" />
             Фрагменти
           </a>
-          <a class="ui-mobile-navbar-link" href="https://конкурс.укр" target="_blank">
-            <img src="@/assets/images/tools/konkurs.png" alt=""/>
+          <a
+            class="ui-mobile-navbar-link"
+            href="https://конкурс.укр"
+            target="_blank"
+          >
+            <img src="@/assets/images/tools/konkurs.png" alt="" />
             Конкурси
           </a>
           <NuxtLink class="ui-mobile-navbar-link" to="/rozkladka">
-            <img src="@/assets/images/tools/layout.png" alt=""/>
+            <img src="@/assets/images/tools/layout.png" alt="" />
             Розкладка
           </NuxtLink>
           <NuxtLink class="ui-mobile-navbar-link" to="/cyrrilic">
-            <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
+            <img src="@/assets/images/tools/cyrrilic.png" alt="" />
             Цирілик
           </NuxtLink>
           <NuxtLink v-if="false" class="ui-mobile-navbar-link" to="/pravo">
-            <img src="@/assets/images/tools/pravo.png" alt=""/>
+            <img src="@/assets/images/tools/pravo.png" alt="" />
             Право
           </NuxtLink>
         </div>
         <div class="ui-mobile-navbar-buttons">
-          <NuxtLink to="/docs" class="button">
-            Документація
-          </NuxtLink>
+          <NuxtLink to="/docs" class="button"> Документація</NuxtLink>
         </div>
       </div>
     </template>
     <template v-else>
       <div class="links">
         <a class="link" target="_blank" href="https://бавитись.мавка.укр">
-          <img src="@/assets/images/tools/playground.png" alt="">
+          <img src="@/assets/images/tools/playground.png" alt="" />
           Бавитись
         </a>
         <a class="link" target="_blank" href="https://пак.укр">
-          <img src="@/assets/images/tools/pak.png" alt="">
+          <img src="@/assets/images/tools/pak.png" alt="" />
           Паки
         </a>
         <a target="_blank" class="link" href="https://фрагмент.укр">
-          <img src="@/assets/images/tools/fragment-new.png" alt="">
+          <img src="@/assets/images/tools/fragment-new.png" alt="" />
           Фрагменти
         </a>
 
@@ -106,20 +125,29 @@ addRouteMiddleware(() => {
 
             <template #popper>
               <UiMenu>
-                <UiMenuLink v-close-popper href="https://конкурс.укр" target="_blank">
-                  <img src="@/assets/images/tools/konkurs.png" alt=""/>
+                <UiMenuLink
+                  v-close-popper
+                  href="https://конкурс.укр"
+                  target="_blank"
+                >
+                  <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
                 </UiMenuLink>
                 <UiMenuLink v-close-popper tag="RouterLink" to="/rozkladka">
-                  <img src="@/assets/images/tools/layout.png" alt=""/>
+                  <img src="@/assets/images/tools/layout.png" alt="" />
                   Розкладка
                 </UiMenuLink>
                 <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
-                  <img src="@/assets/images/tools/cyrrilic.png" alt=""/>
+                  <img src="@/assets/images/tools/cyrrilic.png" alt="" />
                   Цирілик
                 </UiMenuLink>
-                <UiMenuLink v-if="false" v-close-popper tag="RouterLink" to="/pravo">
-                  <img src="@/assets/images/tools/pravo.png" alt=""/>
+                <UiMenuLink
+                  v-if="false"
+                  v-close-popper
+                  tag="RouterLink"
+                  to="/pravo"
+                >
+                  <img src="@/assets/images/tools/pravo.png" alt="" />
                   Право
                 </UiMenuLink>
               </UiMenu>
@@ -128,15 +156,13 @@ addRouteMiddleware(() => {
         </ClientOnly>
       </div>
       <div class="buttons">
-        <NuxtLink to="/docs" class="button">
-          Документація
-        </NuxtLink>
+        <NuxtLink to="/docs" class="button"> Документація</NuxtLink>
       </div>
     </template>
   </div>
 
   <button @click="navigationShown = !navigationShown" class="nav-toggle">
-    {{ navigationShown ? '×' : '☰' }}
+    {{ navigationShown ? "×" : "☰" }}
   </button>
 </template>
 
@@ -200,7 +226,7 @@ addRouteMiddleware(() => {
 }
 
 .navbar {
-  margin-top: 40px;
+  //margin-top: 40px;
 
   display: grid;
   grid-template-areas: "logo links buttons";
@@ -273,13 +299,13 @@ addRouteMiddleware(() => {
     position: absolute;
     left: 120px;
     top: 40px;
-    font-size: .5rem;
+    font-size: 0.5rem;
     color: var(--hint-color);
   }
 
   @media only screen and (max-width: 956px) {
     margin-top: 0;
-    grid-template-areas: "logo" "links"  "buttons";
+    grid-template-areas: "logo" "links" "buttons";
 
     .navbar-alpha {
       left: 85px;
@@ -296,7 +322,7 @@ addRouteMiddleware(() => {
 
       .logo-image {
         margin-right: 1rem;
-        margin-left: calc(.5rem);
+        margin-left: calc(0.5rem);
       }
     }
 
@@ -332,7 +358,8 @@ addRouteMiddleware(() => {
     }
 
     &:not(.navigation-shown) {
-      .links, .buttons {
+      .links,
+      .buttons {
         display: none;
       }
     }
@@ -366,8 +393,8 @@ addRouteMiddleware(() => {
   border: none;
   font-weight: 600;
   font-size: 1rem;
-  padding: .5rem 1rem;
-  border-radius: .6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
   cursor: pointer;
 
   text-decoration: none;
@@ -395,7 +422,11 @@ addRouteMiddleware(() => {
   color: var(--bg-color);
 
   background: rgb(238, 174, 202);
-  background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 
   @media only screen and (max-width: 956px) {
     display: none;

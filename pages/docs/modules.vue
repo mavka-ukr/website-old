@@ -33,27 +33,26 @@ const modB = `
 
 друк(відняти(4, 2))
 `.trim();
+
+useHead({
+  title: "Модулі | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/oop" next="/docs/comments">
-    <h1 class="docs-content-title">
-      Модулі
-    </h1>
+  <UiDocsWrapper prev="/docs/oop" next="/docs/comments">
+    <h1 class="docs-content-title">Модулі</h1>
 
     <p>
-      Модуль є способом організації коду. Модуль може брати код з іншого модуля і віддавати свій.
+      Модуль є способом організації коду. Модуль може брати код з іншого модуля
+      і віддавати свій.
     </p>
     <p>
       <code>а.м</code>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="modA"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="modA" />
       </ClientOnly>
     </div>
     <p>
@@ -61,12 +60,8 @@ const modB = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="modB"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="modB" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

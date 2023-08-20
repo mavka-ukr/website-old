@@ -28,22 +28,20 @@ const a = `
   тан(значення число) число
 кінець
 `.trim();
+
+useHead({
+  title: "Математика | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/data" next="/docs/style">
-    <h1 class="docs-content-title">
-      Математика
-    </h1>
+  <UiDocsWrapper prev="/docs/data" next="/docs/style">
+    <h1 class="docs-content-title">Математика</h1>
 
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="a"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

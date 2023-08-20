@@ -59,61 +59,39 @@ const operators = `
 
 ! ;; вивернути значення
 `.trim();
+
+useHead({
+  title: "Умовні оператори | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/types" next="/docs/operations">
-    <h1 class="docs-content-title">
-      Умовні оператори
-    </h1>
+  <UiDocsWrapper prev="/docs/types" next="/docs/operations">
+    <h1 class="docs-content-title">Умовні оператори</h1>
 
-    <p>
-      Умовні операції пишуться так:
-    </p>
+    <p>Умовні операції пишуться так:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="basic"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="basic" />
       </ClientOnly>
     </div>
-    <p>
-      Інші приклади:
-    </p>
+    <p>Інші приклади:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="other"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="other" />
       </ClientOnly>
     </div>
-    <p>
-      Скорочений вигляд операції порівняння:
-    </p>
+    <p>Скорочений вигляд операції порівняння:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="ternary"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="ternary" />
       </ClientOnly>
     </div>
-    <p>
-      Список доступних операторів порівняння:
-    </p>
+    <p>Список доступних операторів порівняння:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="operators"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="operators" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

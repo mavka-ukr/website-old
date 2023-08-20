@@ -21,73 +21,45 @@ const d = `
 const e = `
 ЧИСЛО_ПІ = 3.14
 `.trim();
+
+useHead({
+  title: "Стиль | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/data" next="/docs/reflection">
-    <h1 class="docs-content-title">
-      Стиль
-    </h1>
+  <UiDocsWrapper prev="/docs/data" next="/docs/reflection">
+    <h1 class="docs-content-title">Стиль</h1>
 
-    <p>
-      Назви змінних з маленької у snake-case.
-    </p>
+    <p>Назви змінних з маленької у snake-case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="a"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
-    <p>
-      Назви структур з великої у camel-case.
-    </p>
+    <p>Назви структур з великої у camel-case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="b"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="b" />
       </ClientOnly>
     </div>
-    <p>
-      Назви модулів з маленької у snake-case.
-    </p>
+    <p>Назви модулів з маленької у snake-case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="c"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="c" />
       </ClientOnly>
     </div>
-    <p>
-      Назви дій з маленької у snake-case.
-    </p>
+    <p>Назви дій з маленької у snake-case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="d"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
-    <p>
-      Назви констант великими літерами у snake-case.
-    </p>
+    <p>Назви констант великими літерами у snake-case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="e"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="e" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

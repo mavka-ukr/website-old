@@ -95,28 +95,27 @@ mavka.makePortalList([1, 2, 3]);
 // створює метод для структури (поки недоступно)
 mavka.makeMethod(null);
 `.trim();
+
+useHead({
+  title: "Розширення | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/net" next="/docs/showcase">
-    <h1 class="docs-content-title">
-      Розширення
-    </h1>
+  <UiDocsWrapper prev="/docs/net" next="/docs/showcase">
+    <h1 class="docs-content-title">Розширення</h1>
 
     <p>
-      Розширення дозволяють доповнювати можливості мови за допомогою JavaScript. По-суті, ви можете написати скрипт на
-      JS-і та
-      підключити його до <span class="diia-word">Мавки</span>.
+      Розширення дозволяють доповнювати можливості мови за допомогою JavaScript.
+      По-суті, ви можете написати скрипт на JS-і та підключити його до
+      <span class="diia-word">Мавки</span>.
     </p>
     <p>
       <code>fetchAndParseJson.js</code>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="javascript"
-            :code="fetchJs"
-        />
+        <highlightjs language="javascript" :code="fetchJs" />
       </ClientOnly>
     </div>
     <p>
@@ -124,24 +123,14 @@ mavka.makeMethod(null);
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="mainDiia"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="mainDiia" />
       </ClientOnly>
     </div>
-    <p>
-      Список інструментів для розробки розширень:
-    </p>
+    <p>Список інструментів для розробки розширень:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="js"
-            :autodetect="false"
-            :code="tools"
-        />
+        <highlightjs language="js" :autodetect="false" :code="tools" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

@@ -22,55 +22,42 @@ const instance = `
 const call = `
 мій_паспорт.змінити_імʼя("Давид")
 `.trim();
+
+useHead({
+  title: "Макети | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs" next="/docs/vars">
-    <h1 class="docs-content-title">
-      Макети
-    </h1>
+  <UiDocsWrapper prev="/docs" next="/docs/vars">
+    <h1 class="docs-content-title">Макети</h1>
 
     <p>
-      Макет є способом опису певної структури без надання конктретної реалізації її дій та властивостей.
+      Макет є способом опису певної структури без надання конктретної реалізації
+      її дій та властивостей.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="diia"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="diia" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="instance"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="instance" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="call"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="call" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

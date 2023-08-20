@@ -69,36 +69,26 @@ const list = `
 ++а ;; присвоєння з додаванням 1 (вертає нове значення)
 --а ;; присвоєння з відніманням 1 (вертає нове значення)
 `.trim();
+
+useHead({
+  title: "Змінні | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/install" next="/docs/data-types">
-    <h1 class="docs-content-title">
-      Змінні
-    </h1>
+  <UiDocsWrapper prev="/docs/install" next="/docs/data-types">
+    <h1 class="docs-content-title">Змінні</h1>
 
-    <p>
-      Оголосити змінну або присвоїти їй значення можна так:
-    </p>
+    <p>Оголосити змінну або присвоїти їй значення можна так:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <p>
-      Інші приклади оголошення змінної:
-    </p>
+    <p>Інші приклади оголошення змінної:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="other"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="other" />
       </ClientOnly>
     </div>
     <p>
@@ -106,48 +96,29 @@ const list = `
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="visibility"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="visibility" />
+      </ClientOnly>
+    </div>
+    <p>Присвоєння змінної відбувається в найближчому контексті:</p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="setting" />
       </ClientOnly>
     </div>
     <p>
-      Присвоєння змінної відбувається в найближчому контексті:
+      Щоб присвоїти значення змінної в контексті вище, потрібно використовувати
+      оператор <code>:=</code>:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="setting"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="settingUp" />
       </ClientOnly>
     </div>
-    <p>
-      Щоб присвоїти значення змінної в контексті вище, потрібно використовувати оператор <code>:=</code>:
-    </p>
+    <p>Список доступних операторів присвоєння:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="settingUp"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="list" />
       </ClientOnly>
     </div>
-    <p>
-      Список доступних операторів присвоєння:
-    </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="list"
-        />
-      </ClientOnly>
-    </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

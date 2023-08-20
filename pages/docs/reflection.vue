@@ -51,37 +51,27 @@ const definitions = `
   розібрати_параметр_дії(д Дія, назва текст) МакетРозборуПараметруДії
 кінець
 `.trim();
+
+useHead({
+  title: "Розбір | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/style" next="/docs/testing">
-    <h1 class="docs-content-title">
-      Розбір
-    </h1>
+  <UiDocsWrapper prev="/docs/style" next="/docs/testing">
+    <h1 class="docs-content-title">Розбір</h1>
 
-    <p>
-      Розбір є способом для отримання інформації про структуру, дію тощо.
-    </p>
+    <p>Розбір є способом для отримання інформації про структуру, дію тощо.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <p>
-      Макети розбору:
-    </p>
+    <p>Макети розбору:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="definitions"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="definitions" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>

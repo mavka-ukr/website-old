@@ -23,37 +23,32 @@ const simple2 = `
   кінець
 кінець
 `.trim();
+
+useHead({
+  title: "Спроби | Документація | Мавка",
+});
 </script>
 
 <template>
-  <DocsWrapper prev="/docs/comments" next="/docs/magic">
-    <h1 class="docs-content-title">
-      Спроби
-    </h1>
+  <UiDocsWrapper prev="/docs/comments" next="/docs/magic">
+    <h1 class="docs-content-title">Спроби</h1>
 
     <p>
-      Програма може впасти в будь-який момент виконання. Щоб запобігати таким падінням існують "Спроби". Спроба
-      дозволяє обгорнути код в певну конструкцію, і якщо під час виконання цього коду станеться помилка, ви можете
-      зловити цю помилку та якось її обробити.
+      Програма може впасти в будь-який момент виконання. Щоб запобігати таким
+      падінням існують "Спроби". Спроба дозволяє обгорнути код в певну
+      конструкцію, і якщо під час виконання цього коду станеться помилка, ви
+      можете зловити цю помилку та якось її обробити.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <br>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs
-            language="diia"
-            :autodetect="false"
-            :code="simple2"
-        />
+        <highlightjs language="diia" :autodetect="false" :code="simple2" />
       </ClientOnly>
     </div>
-  </DocsWrapper>
+  </UiDocsWrapper>
 </template>
