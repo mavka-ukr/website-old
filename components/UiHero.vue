@@ -63,7 +63,10 @@ const currentCode = useState("currentCode", () => codes[1]);
         <span class="diia-word">Мавка</span> є першою мовою у своєму роді.
       </h5>
       <div class="hero-buttons">
-        <NuxtLink href="/docs" class="button button-large">
+        <NuxtLink
+          :href="encodeURI('/документація')"
+          class="button button-large"
+        >
           Розпочати
         </NuxtLink>
       </div>
