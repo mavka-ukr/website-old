@@ -26,6 +26,10 @@ const call = `
 useHead({
   title: "Макети | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

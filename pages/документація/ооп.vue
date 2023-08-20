@@ -43,6 +43,10 @@ const simple = `
 useHead({
   title: "ООП | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

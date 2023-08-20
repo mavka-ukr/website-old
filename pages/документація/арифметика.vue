@@ -44,6 +44,10 @@ const simple3 = `
 useHead({
   title: "Арифметика | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

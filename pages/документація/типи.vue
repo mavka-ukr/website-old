@@ -93,6 +93,10 @@ const numberMock = `
 useHead({
   title: "Типи даних | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

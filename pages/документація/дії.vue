@@ -30,6 +30,10 @@ const return_2 = `
 useHead({
   title: "Дії | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

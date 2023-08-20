@@ -8,6 +8,10 @@ const life = `
 useHead({
   title: "Вступ | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

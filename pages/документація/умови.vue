@@ -63,6 +63,10 @@ const operators = `
 useHead({
   title: "Умовні оператори | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

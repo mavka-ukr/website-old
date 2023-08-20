@@ -2,6 +2,10 @@
 useHead({
   title: "Тестування | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

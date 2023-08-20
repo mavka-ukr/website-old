@@ -42,6 +42,10 @@ const simple4 = `
 useHead({
   title: "Списки | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

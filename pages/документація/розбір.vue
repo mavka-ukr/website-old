@@ -55,6 +55,10 @@ const definitions = `
 useHead({
   title: "Розбір | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

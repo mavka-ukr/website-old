@@ -37,6 +37,10 @@ const modB = `
 useHead({
   title: "Модулі | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

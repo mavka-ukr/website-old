@@ -25,6 +25,10 @@ const e = `
 useHead({
   title: "Стиль | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

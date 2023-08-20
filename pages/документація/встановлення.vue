@@ -25,6 +25,10 @@ const runHelloWorldFile = `
 useHead({
   title: "Встановлення | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

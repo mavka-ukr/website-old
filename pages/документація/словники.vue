@@ -37,6 +37,10 @@ const simple4 = `
 useHead({
   title: "Словники | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

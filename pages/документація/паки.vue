@@ -54,6 +54,10 @@ const f = `
 useHead({
   title: "Паки | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

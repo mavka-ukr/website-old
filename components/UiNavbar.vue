@@ -232,6 +232,8 @@ addRouteMiddleware(() => {
 .navbar {
   //margin-top: 40px;
 
+  margin-top: 1rem;
+
   display: grid;
   grid-template-areas: "logo links buttons";
 

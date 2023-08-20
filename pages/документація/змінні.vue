@@ -73,6 +73,10 @@ const list = `
 useHead({
   title: "Змінні | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

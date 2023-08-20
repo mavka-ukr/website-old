@@ -42,6 +42,10 @@ const simple3 = `
 useHead({
   title: "Цикли | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

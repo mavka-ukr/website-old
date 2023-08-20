@@ -18,6 +18,10 @@ onMounted(() => {
 useHead({
   title: "Список змін | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

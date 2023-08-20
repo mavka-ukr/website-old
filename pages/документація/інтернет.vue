@@ -36,6 +36,10 @@ const simple3 = `
 useHead({
   title: "Інтернет | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

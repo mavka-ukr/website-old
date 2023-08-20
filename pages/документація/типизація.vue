@@ -46,6 +46,10 @@ const d = `
 useHead({
   title: "Підказки типів | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

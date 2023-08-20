@@ -99,6 +99,10 @@ mavka.makeMethod(null);
 useHead({
   title: "Розширення | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

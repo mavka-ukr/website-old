@@ -32,6 +32,10 @@ const tgbot = `
 useHead({
   title: "Приклади | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

@@ -32,6 +32,10 @@ const a = `
 useHead({
   title: "Математика | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

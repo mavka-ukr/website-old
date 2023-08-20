@@ -30,6 +30,10 @@ const call = `
 useHead({
   title: "Структури | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

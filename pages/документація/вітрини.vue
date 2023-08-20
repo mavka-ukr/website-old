@@ -22,6 +22,10 @@ context.set('показати_картинку', mavka.makeWrappedProxyFunction(
 useHead({
   title: "Вітрини | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

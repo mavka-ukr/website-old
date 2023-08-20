@@ -55,6 +55,10 @@ const simple2 = `
 useHead({
   title: "Магічні дії | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

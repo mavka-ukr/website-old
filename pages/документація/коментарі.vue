@@ -18,6 +18,10 @@ const simple = `
 useHead({
   title: "Коментарі | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

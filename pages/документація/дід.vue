@@ -52,10 +52,17 @@ const simple5 = `
 useHead({
   title: "Дід | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/хмарні-паки" next="/документація/математика">
+  <UiDocsWrapper
+    prev="/документація/хмарні-паки"
+    next="/документація/математика"
+  >
     <h1 class="docs-content-title">Дід</h1>
 
     <p>

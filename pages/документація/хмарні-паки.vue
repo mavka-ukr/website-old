@@ -16,6 +16,10 @@ const b = `
 useHead({
   title: "Хмарні паки | Документація | Мавка",
 });
+
+definePageMeta({
+  layout: "docs",
+});
 </script>
 
 <template>

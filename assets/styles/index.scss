@@ -9,7 +9,7 @@ html {
   --text-color: #000000;
   --hint-color: #444444;
   --code-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  --border-color: #444444;
+  --border-color: #ddd;
   --font-family: 'Rubik', sans-serif;
 
   @media (prefers-color-scheme: dark) {
@@ -61,7 +61,7 @@ body {
 }
 
 #__nuxt {
-  padding: 1rem;
+  padding: 0 1rem;
 
   overflow-x: hidden;
 }
@@ -71,6 +71,13 @@ body {
   margin-right: auto;
 
   max-width: 1024px;
+}
+
+.container-small {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 640px;
 }
 
 .diia-word {
