@@ -22,6 +22,12 @@ onBeforeUnmount(() => {
 addRouteMiddleware(() => {
   navigationShown.value = false;
 });
+
+const darkMode = computed(() => window.darkMode.value);
+
+function toggleDarkMode() {
+  window.toggleDarkMode();
+}
 </script>
 
 <template>
@@ -91,6 +97,28 @@ addRouteMiddleware(() => {
             <img src="@/assets/images/tools/pravo.png" alt="" />
             Право
           </NuxtLink>
+          <ClientOnly>
+            <a
+              class="ui-mobile-navbar-link"
+              @click.stop.prevent="toggleDarkMode"
+            >
+              <span class="material-symbols-rounded bold">
+                <template v-if="darkMode === 'true'">dark_mode</template>
+                <template v-if="darkMode === 'false'">light_mode</template>
+                <template v-if="darkMode === 'auto'">
+                  night_sight_auto
+                </template>
+              </span>
+              <span class="ui-mobile-navbar-link-text">
+                Світло
+                <span class="badge">
+                  <template v-if="darkMode === 'true'">ні</template>
+                  <template v-if="darkMode === 'false'">так</template>
+                  <template v-if="darkMode === 'auto'">авто</template>
+                </span>
+              </span>
+            </a>
+          </ClientOnly>
         </div>
         <div class="ui-mobile-navbar-buttons">
           <NuxtLink :href="encodeURI('/документація')" class="button">
@@ -152,6 +180,25 @@ addRouteMiddleware(() => {
                   <img src="@/assets/images/tools/pravo.png" alt="" />
                   Право
                 </UiMenuLink>
+                <ClientOnly>
+                  <UiMenuItem @click="toggleDarkMode">
+                    <span class="material-symbols-rounded bold">
+                      <template v-if="darkMode === 'true'">dark_mode</template>
+                      <template v-if="darkMode === 'false'"
+                        >light_mode</template
+                      >
+                      <template v-if="darkMode === 'auto'">
+                        night_sight_auto
+                      </template>
+                    </span>
+                    Світло
+                    <span class="badge">
+                      <template v-if="darkMode === 'true'">ні</template>
+                      <template v-if="darkMode === 'false'">так</template>
+                      <template v-if="darkMode === 'auto'">авто</template>
+                    </span>
+                  </UiMenuItem>
+                </ClientOnly>
               </UiMenu>
             </template>
           </VDropdown>
@@ -198,8 +245,32 @@ addRouteMiddleware(() => {
         margin-bottom: 0.75rem;
       }
 
+      .material-symbols-rounded {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+      }
+
       &:hover {
         background: rgba(0, 0, 0, 0.05);
+      }
+
+      .ui-mobile-navbar-link-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .badge {
+        margin-left: 0.75ch;
+        font-size: 0.8rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.4rem;
+        background: var(--text-color);
+        color: var(--bg-color);
+        font-weight: 600;
+        display: flex;
+        align-content: center;
+        justify-content: center;
       }
     }
   }

@@ -14,7 +14,29 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
 </script>
 
 <template>
-  <div class="code-window">
+  <div class="code-window-wrapper">
+    <div class="code-window">
+      <ClientOnly>
+        <highlightjs
+          language="diia"
+          :autodetect="false"
+          :code="currentFile.text"
+        />
+      </ClientOnly>
+
+      <template v-if="playButton">
+        <div class="code-window-buttons">
+          <a
+            href="https://бавитись.мавка.укр"
+            target="_blank"
+            class="button play-button"
+          >
+            <img src="../assets/emoji/play-button.png" alt="" /> Бавитись
+          </a>
+        </div>
+      </template>
+    </div>
+
     <div class="code-window-names">
       <template v-for="file in files">
         <button
@@ -28,30 +50,14 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
         </button>
       </template>
     </div>
-
-    <ClientOnly>
-      <highlightjs
-        language="diia"
-        :autodetect="false"
-        :code="currentFile.text"
-      />
-    </ClientOnly>
-
-    <template v-if="playButton">
-      <div class="code-window-buttons">
-        <a
-          href="https://бавитись.мавка.укр"
-          target="_blank"
-          class="button play-button"
-        >
-          <img src="@/assets/emoji/play_button.png" alt="" /> Бавитись
-        </a>
-      </div>
-    </template>
   </div>
 </template>
 
 <style lang="scss">
+.code-window-wrapper {
+  position: relative;
+}
+
 .code-window {
   position: relative;
 
@@ -62,6 +68,7 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
   box-shadow: var(--code-shadow);
 
   font-size: 1rem;
+  z-index: 1;
 
   &-buttons {
     margin-top: 0.5rem;
@@ -99,9 +106,21 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
   padding-bottom: 1rem;
   border-radius: 1rem;
   left: 0;
+  z-index: unset;
   box-shadow: var(--code-shadow);
 
+  &::before {
+    position: absolute;
+    inset: 0;
+    background: black;
+    content: "";
+    border-radius: inherit;
+    z-index: 1;
+  }
+
   .code-window-name {
+    position: relative;
+    z-index: 2;
     background: transparent;
     border: none;
     border-radius: 0.5rem;
@@ -109,6 +128,10 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
     font-size: 0.8rem;
     color: #999;
     font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
     &-active {
       background: #9d3425;

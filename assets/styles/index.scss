@@ -12,7 +12,7 @@ html {
   --border-color: #ddd;
   --font-family: 'Rubik', sans-serif;
 
-  @media (prefers-color-scheme: dark) {
+  &.cs-dark {
     --bg-color: #000000;
     --text-color: #ffffff;
     --hint-color: #999999;
@@ -259,6 +259,19 @@ blockquote {
 
   &.red {
     color: red;
+  }
+
+  .badge {
+    margin-left: auto;
+    font-size: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.4rem;
+    background: black;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 }
 
