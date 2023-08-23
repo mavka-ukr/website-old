@@ -3,7 +3,7 @@
     <UiNavbar />
 
     <div class="ui-cyrillic-page">
-      <img src="@/assets/images/tools/cyrrilic-2.png" alt="" />
+      <img src="@/assets/images/tools/cyrrilic.png" alt="" />
       <a
         class="link external"
         href="https://github.com/mavka-ukr/english-cyrillic"
