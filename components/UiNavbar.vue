@@ -90,7 +90,7 @@ function toggleDarkMode() {
             Розкладка
           </NuxtLink>
           <NuxtLink class="ui-mobile-navbar-link" to="/cyrrilic">
-            <img src="@/assets/images/tools/cyrrilic.png" alt="" />
+            <img src="@/assets/images/tools/cyrrilic-2.png" alt="" />
             Цирілик
           </NuxtLink>
           <NuxtLink v-if="false" class="ui-mobile-navbar-link" to="/pravo">
@@ -168,7 +168,7 @@ function toggleDarkMode() {
                   Розкладка
                 </UiMenuLink>
                 <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
-                  <img src="@/assets/images/tools/cyrrilic.png" alt="" />
+                  <img src="@/assets/images/tools/cyrrilic-2.png" alt="" />
                   Цирілик
                 </UiMenuLink>
                 <UiMenuLink
