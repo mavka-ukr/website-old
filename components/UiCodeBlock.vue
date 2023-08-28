@@ -2,6 +2,7 @@
 interface File {
   name: string;
   text: string;
+  plaintext?: boolean;
 }
 
 const props = defineProps<{
@@ -18,7 +19,7 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
     <div class="code-window">
       <ClientOnly>
         <highlightjs
-          language="diia"
+          :language="currentFile.plaintext ? 'text' : 'diia'"
           :autodetect="false"
           :code="currentFile.text"
         />
@@ -150,6 +151,7 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
 
 .code-window-full {
   padding-top: 0.5rem;
+
   .hljs {
     max-width: 100% !important;
   }

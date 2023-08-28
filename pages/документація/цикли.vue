@@ -1,34 +1,153 @@
 <script setup>
-const simpleEach = `
-перебрати діапазон(0, 10) як х
-  друк(х)
-кінець
-
+const each1files = [
+  {
+    name: "діапазон_чисел.м",
+    text: `
 перебрати 0..10 як х
   друк(х)
 кінець
-`.trim();
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+`.trim(),
+    plaintext: true,
+  },
+];
 
-const simpleWhile = `
-а = 10
+const each2files = [
+  {
+    name: "діапазон_чисел_2.м",
+    text: `
+а = 0
+б = 10
 
-поки а не рівно 0
-  а = а - 1
+перебрати а..=б як х
+  друк(х)
 кінець
-`.trim();
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+`.trim(),
+    plaintext: true,
+  },
+];
 
-const simple3 = `
+const each3files = [
+  {
+    name: "список.м",
+    text: `
+перебрати [2.2, "привіт", так] як х
+  друк(х)
+кінець
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+2.2
+привіт
+так
+`.trim(),
+    plaintext: true,
+  },
+];
+
+const each4files = [
+  {
+    name: "словник.м",
+    text: `
+словотвір = (
+  лайк="вподобайка",
+  лінк="посилання",
+  кавер="переспів",
+  баг="вада"
+)
+
+перебрати словотвір як суржик, слово
+  друк("кажуть '%(суржик)', а треба '%(слово)'")
+кінець
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+кажуть 'лайк', а треба 'вподобайка'
+кажуть 'лінк', а треба 'посилання'
+кажуть 'кавер', а треба 'переспів'
+кажуть 'баг', а треба 'вада'
+`.trim(),
+    plaintext: true,
+  },
+];
+
+const while1files = [
+  {
+    name: "поки_умова_1.м",
+    text: `
+а = 0
+
+поки а < 10
+  друк(а)
+  а = а + 1
+кінець
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+`.trim(),
+    plaintext: true,
+  },
+];
+
+const example1files = [
+  {
+    name: "парні_числа.м",
+    text: `
 границя = число(читати("границя = "))
 
 парні_числа = []
 
-перебрати діапазон(0, границя) як ч
-  ;; перебираємо лише до 50
+перебрати 0..границя як ч
   якщо ч більше 50
     зупинити
   кінець
 
-  ;; якщо число не парне
   якщо ч % 2 не рівно 0
     пропустити
   кінець
@@ -37,7 +156,17 @@ const simple3 = `
 кінець
 
 друк(парні_числа)
-`.trim();
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+границя = 100
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+`.trim(),
+    plaintext: true,
+  },
+];
 
 useHead({
   title: "Цикли | Документація | Мавка",
@@ -53,25 +182,41 @@ definePageMeta({
     <h1 class="docs-content-title">Цикли</h1>
 
     <p>
-      Цикл є послідовним набором операцій, що повторюється визначену або
+      Цикл є послідовним набором операцій, що повторюються визначену або
       невизначену кількість раз.
     </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simpleEach" />
-      </ClientOnly>
-    </div>
+    <p>
+      Мавка надає два типи циклів: <code>перебрати</code> та <code>поки</code>.
+    </p>
+    <p>
+      Ітерацію циклу можна пропустити або зупинити за допомогою ключових слів
+      <code>пропустити</code> та <code>зупинити</code>.
+    </p>
+    <hr />
+    <h3 id="перебрати">Перебрати</h3>
+    <p>
+      Цикл <code>перебрати</code> використовується для перебору елементів
+      списку, елементів словника або діапазону чисел.
+    </p>
+    <h5>Перебрати діапазон чисел</h5>
+    <UiCodeBlock :files="each1files" />
     <br />
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simpleWhile" />
-      </ClientOnly>
-    </div>
-    <p>Знаходження парних чисел в певному діапазоні який не перевищує 50:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple3" />
-      </ClientOnly>
-    </div>
+    <UiCodeBlock :files="each2files" />
+    <h5>Перебрати список</h5>
+    <UiCodeBlock :files="each3files" />
+    <h5>Перебрати словник</h5>
+    <UiCodeBlock :files="each4files" />
+    <hr />
+    <h3 id="поки">Поки</h3>
+    <p>
+      Цикл <code>поки</code> використовується для повторення операцій, допоки
+      виконується певна умова.
+    </p>
+    <h5>Друкувати <code>а</code>, поки <code>а</code> менше 10</h5>
+    <UiCodeBlock :files="while1files" />
+    <hr />
+    <h3 id="приклади">Приклади</h3>
+    <h5>Знаходження парних чисел в певному діапазоні який не перевищує 50</h5>
+    <UiCodeBlock :files="example1files" />
   </UiDocsWrapper>
 </template>

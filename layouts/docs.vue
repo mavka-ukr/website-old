@@ -98,6 +98,29 @@ addRouteMiddleware(() => {
         >
           Цикли
         </NuxtLink>
+        <template v-if="$route.path === encodeURI(`/документація/цикли`)">
+          <NuxtLink
+            :href="encodeURI(`/документація/цикли#перебрати`)"
+            class="docs-sidebar-menu-item subitem"
+          >
+            <span class="material-symbols-rounded">chevron_right</span>
+            Перебрати
+          </NuxtLink>
+          <NuxtLink
+            :href="encodeURI(`/документація/цикли#поки`)"
+            class="docs-sidebar-menu-item subitem"
+          >
+            <span class="material-symbols-rounded">chevron_right</span>
+            Поки
+          </NuxtLink>
+          <NuxtLink
+            :href="encodeURI(`/документація/цикли#приклади`)"
+            class="docs-sidebar-menu-item subitem"
+          >
+            <span class="material-symbols-rounded">chevron_right</span>
+            Приклади
+          </NuxtLink>
+        </template>
         <NuxtLink
           :href="encodeURI(`/документація/структури`)"
           class="docs-sidebar-menu-item"
@@ -339,7 +362,8 @@ $sidebarWidth: 20rem;
     &-item {
       padding: 0.5rem 1rem;
 
-      display: block;
+      display: flex;
+      align-items: center;
 
       text-decoration: none;
       border-top: 1px solid var(--border-color);
@@ -347,6 +371,17 @@ $sidebarWidth: 20rem;
       cursor: pointer;
 
       color: var(--text-color);
+
+      .material-symbols-rounded {
+        margin-right: 0.33rem;
+        font-size: 1em;
+      }
+
+      &.subitem {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--bg-color);
+      }
 
       &:last-child {
         border-bottom: 1px solid var(--border-color);
@@ -357,6 +392,7 @@ $sidebarWidth: 20rem;
       }
 
       &.active {
+        font-weight: 500;
         background-color: var(--text-color);
         color: var(--bg-color);
       }

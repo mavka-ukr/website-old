@@ -1,6 +1,19 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  router: {
+    options: {
+      scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+          // BEFORE:
+          // return { selector: to.hash }
+
+          return { el: to.hash };
+        }
+      },
+    },
+  },
+
   app: {
     head: {
       charset: "utf-8",

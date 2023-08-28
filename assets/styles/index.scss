@@ -50,6 +50,8 @@ html, body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
+
+  line-height: 1.25;
 }
 
 *, *::before, *::after {
@@ -180,6 +182,16 @@ blockquote {
 .small-code {
   font-size: 0.8rem;
   padding: .1rem .25rem;
+}
+
+code {
+  padding: 0.1rem 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace !important;
 }
 
 .v-popper__popper.v-popper__popper--show-from .v-popper__wrapper {

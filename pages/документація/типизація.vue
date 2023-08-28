@@ -126,13 +126,6 @@ definePageMeta({
 </template>
 
 <style lang="scss">
-code {
-  padding: 0.2rem 0.5rem;
-  background-color: black;
-  color: white;
-  border-radius: 1rem;
-}
-
 ul {
   li {
     margin-bottom: 0.5rem;
