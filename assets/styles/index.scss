@@ -184,7 +184,7 @@ blockquote {
   padding: .1rem .25rem;
 }
 
-code {
+code:not(.hljs) {
   padding: 0.1rem 0.5rem;
   background-color: black;
   color: white;

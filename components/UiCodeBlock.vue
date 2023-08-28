@@ -19,7 +19,7 @@ const currentFile = ref<File>(props.files[props.defaultIndex ?? 0]);
     <div class="code-window">
       <ClientOnly>
         <highlightjs
-          :language="currentFile.plaintext ? 'text' : 'diia'"
+          :language="currentFile.plaintext ? null : 'diia'"
           :autodetect="false"
           :code="currentFile.text"
         />
