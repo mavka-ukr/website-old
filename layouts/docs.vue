@@ -103,22 +103,19 @@ addRouteMiddleware(() => {
             :href="encodeURI(`/документація/цикли#перебрати`)"
             class="docs-sidebar-menu-item subitem"
           >
-            <span class="material-symbols-rounded">chevron_right</span>
-            Перебрати
+            • Перебрати
           </NuxtLink>
           <NuxtLink
             :href="encodeURI(`/документація/цикли#поки`)"
             class="docs-sidebar-menu-item subitem"
           >
-            <span class="material-symbols-rounded">chevron_right</span>
-            Поки
+            • Поки
           </NuxtLink>
           <NuxtLink
             :href="encodeURI(`/документація/цикли#приклади`)"
             class="docs-sidebar-menu-item subitem"
           >
-            <span class="material-symbols-rounded">chevron_right</span>
-            Приклади
+            • Приклади
           </NuxtLink>
         </template>
         <NuxtLink
