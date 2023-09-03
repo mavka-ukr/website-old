@@ -85,10 +85,14 @@ function toggleDarkMode() {
             <img src="@/assets/images/tools/konkurs.png" alt="" />
             Конкурси
           </a>
-          <NuxtLink class="ui-mobile-navbar-link" to="/rozkladka">
+          <a
+            class="ui-mobile-navbar-link"
+            target="_blank"
+            href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode"
+          >
             <img src="@/assets/images/tools/layout.png" alt="" />
             Розкладка
-          </NuxtLink>
+          </a>
           <NuxtLink class="ui-mobile-navbar-link" to="/cyrrilic">
             <img src="@/assets/images/tools/cyrrilic.png" alt="" />
             Цирілик
