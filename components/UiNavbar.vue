@@ -167,7 +167,10 @@ function toggleDarkMode() {
                   <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" to="/rozkladka">
+                <UiMenuLink
+                  target="_blank"
+                  href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode"
+                >
                   <img src="@/assets/images/tools/layout.png" alt="" />
                   Розкладка
                 </UiMenuLink>
