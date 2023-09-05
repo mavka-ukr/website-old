@@ -35,31 +35,31 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/математика" next="/документація/розбір">
     <h1 class="docs-content-title">Стиль</h1>
 
-    <p>Назви змінних з маленької у snake-case.</p>
+    <p>Назви змінних з маленької у snake_case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
-    <p>Назви структур з великої у camel-case.</p>
+    <p>Назви структур з великої у PascalCase.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="b" />
       </ClientOnly>
     </div>
-    <p>Назви модулів з маленької у snake-case.</p>
+    <p>Назви модулів з маленької у snake_case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="c" />
       </ClientOnly>
     </div>
-    <p>Назви дій з маленької у snake-case.</p>
+    <p>Назви дій з маленької у snake_case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
-    <p>Назви констант великими літерами у snake-case.</p>
+    <p>Назви констант великими літерами у SCREAMING_SNAKE_CASE.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="e" />
