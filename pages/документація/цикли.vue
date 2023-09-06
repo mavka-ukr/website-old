@@ -21,6 +21,7 @@ const each1files = [
 7
 8
 9
+10
 `.trim(),
     plaintext: true,
   },
@@ -33,7 +34,7 @@ const each2files = [
 а = 0
 б = 10
 
-перебрати а..=б як х
+перебрати а..<б як х
   друк(х)
 кінець
 `.trim(),
@@ -51,7 +52,6 @@ const each2files = [
 7
 8
 9
-10
 `.trim(),
     plaintext: true,
   },
