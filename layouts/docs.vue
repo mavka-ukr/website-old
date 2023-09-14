@@ -148,14 +148,6 @@ addRouteMiddleware(() => {
           Модулі
         </NuxtLink>
         <NuxtLink
-          v-if="false"
-          :href="encodeURI(`/документація/паки`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Паки
-        </NuxtLink>
-        <NuxtLink
           :href="encodeURI(`/документація/коментарі`)"
           class="docs-sidebar-menu-item"
           active-class="active"
@@ -232,6 +224,14 @@ addRouteMiddleware(() => {
           active-class="active"
         >
           Хмарні паки
+        </NuxtLink>
+        <NuxtLink
+          v-if="false"
+          :href="encodeURI(`/документація/нові-паки`)"
+          class="docs-sidebar-menu-item"
+          active-class="active"
+        >
+          Паки 2.0
         </NuxtLink>
         <NuxtLink
           :href="encodeURI(`/документація/дід`)"
