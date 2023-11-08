@@ -43,31 +43,15 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/словники" next="/документація/розширення">
+  <UiDocsWrapper prev="/документація/дід" next="/документація/математика">
     <h1 class="docs-content-title">Інтернет</h1>
-
-    <p>
-      <span class="diia-word">Мавка</span> надає дуже високорівневий програмний
-      інтерфейс (ПІ) для взаємодії з мережею інтернет. Передача даних
-      відбувається по протоколу HTTP та у форматі
-      <span class="diia-word">Дід</span>.
-    </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple" />
-      </ClientOnly>
-    </div>
-    <br />
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple2" />
-      </ClientOnly>
-    </div>
-    <p>Також є підтримка WebSockets.</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple3" />
-      </ClientOnly>
-    </div>
+    <blockquote>
+      Офіційний модуль в процесі написання. Тимчасове рішення: використання
+      <NuxtLink
+        class="link external"
+        :href="encodeURI('/документація/розширення')"
+        >розширень</NuxtLink
+      >.
+    </blockquote>
   </UiDocsWrapper>
 </template>

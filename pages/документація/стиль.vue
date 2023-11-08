@@ -14,7 +14,7 @@ const c = `
 `.trim();
 
 const d = `
-дія виконати_тривалу_операцію()
+дія виконати_важливу_дію()
 кінець
 `.trim();
 
@@ -32,34 +32,56 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/математика" next="/документація/розбір">
+  <UiDocsWrapper
+    prev="/документація/перша-програма"
+    next="/документація/вступ-до-теорії"
+  >
     <h1 class="docs-content-title">Стиль</h1>
 
-    <p>Назви змінних з маленької у snake_case.</p>
+    <p>
+      Назви
+      <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
+      з маленької у snake_case.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
-    <p>Назви структур з великої у PascalCase.</p>
+    <p>
+      Назви
+      <span style="font-weight: 500" class="hljs-keyword"> структур</span> з
+      великої у PascalCase.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="b" />
       </ClientOnly>
     </div>
-    <p>Назви модулів з маленької у snake_case.</p>
+    <p>
+      Назви
+      <span style="font-weight: 500" class="hljs-keyword"> модулів</span> з
+      маленької у snake_case.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="c" />
       </ClientOnly>
     </div>
-    <p>Назви дій з маленької у snake_case.</p>
+    <p>
+      Назви <span style="font-weight: 500" class="hljs-keyword"> дій</span> з
+      маленької у snake_case.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
-    <p>Назви констант великими літерами у SCREAMING_SNAKE_CASE.</p>
+    <p>
+      Назви сталих
+      <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
+      великими літерами у SCREAMING_SNAKE_CASE.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="e" />

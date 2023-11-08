@@ -16,7 +16,7 @@ onMounted(() => {
 });
 
 useHead({
-  title: "Список змін | Документація | Мавка",
+  title: "Змінопис | Документація | Мавка",
 });
 
 definePageMeta({
@@ -26,10 +26,10 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    title="Список змін"
+    title="Змінопис"
     :loading="isLoading"
-    prev="/документація/тестування"
-    next="/документація/контрибутори"
+    prev="/документація/подяка"
+    next="/документація/післясцена"
   >
     <div class="code-window code-window-full">
       <ClientOnly>
@@ -40,6 +40,10 @@ definePageMeta({
         />
       </ClientOnly>
     </div>
+    <hr />
+    <blockquote>
+      Цей змінопис не є повним. Мавка почалась задовго до початку його ведення.
+    </blockquote>
     <hr />
     <p>
       <a

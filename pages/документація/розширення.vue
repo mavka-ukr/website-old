@@ -1,22 +1,19 @@
 <script setup>
 const fetchJs = `
-const mavka = getMavka();
-const context = getContext();
+var $отримати_джсон = async (p) => {
+  var url = Array.isArray(p) ? p[0] : p['адреса'];
 
-const fetchAndParseJson = mavka.makeWrappedAsyncProxyFunction(async ([url]) => {
-  const response = await fetch(url);
-  const json = await response.json();
+  var response = await fetch(url);
+  var json = await response.json();
 
-  return json;
-});
-
-context.set("отримати_джсон", fetchAndParseJson);
+  return mavka.make(json);
+};
 `.trim();
 
 const mainDiia = `
 взяти файл "fetchAndParseJson.js" як fetchAndParseJson
-
 js fetchAndParseJson
+макет тривала дія отримати_джсон(адреса текст) щось
 
 чекати відповідь = отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
@@ -24,76 +21,13 @@ js fetchAndParseJson
 `.trim();
 
 const tools = `
-// логічне "так"
-mavka.yes;
+mavka.make(value) // створити обʼєкт Мавки з JS-значення
 
-// логічне "ні"
-mavka.no;
+mavka.unmake(object) // отримати JS-значення з обʼєкта Мавки
 
-// "пусто"
-mavka.empty;
+mavka.get(object, name) // отримати властивість з обʼєкта Мавки
 
-// перевіряє чи значення Мавки є число
-mavka.isNumber(mavka.makeNumber(2));
-
-// перевіряє чи значення Мавки є текст
-mavka.isText(mavka.makeText("ого..."));
-
-// перевіряє чи значення Мавки є пусто
-mavka.isEmpty(mavka.empty);
-
-// перетвоює будь-яке js-значення на значення Мавки
-mavka.toCell(someValue);
-
-// виконує падіння з певним значенням
-mavka.fall(context, mavka.makeText("Помилка!"));
-
-// перетворює js-функцію на дію Мавки (з доступом до контексту виконання)
-mavka.makeProxyFunction((args, context) => {
-  //
-});
-// mavka.makeWrappedProxyFunction для автоматичного конвернування вхідних і вихідних значень
-
-// перетворює асинхронну js-функцію на тривалу дію Мавки (з доступом до контексту виконання)
-mavka.makeAsyncProxyFunction(async (args, context) => {
-  //
-});
-// mavka.makeWrappedAsyncProxyFunction для автоматичного конвернування вхідних і вихідних значень
-
-// створює текстове значення
-mavka.makeText("Привіт!");
-
-// створює числове значення
-mavka.makeNumber(123);
-
-// створює список
-mavka.makeList([mavka.makeNumber(1), mavka.makeText("123")]);
-
-// створює словник (поки недоступно)
-mavka.makeDictionary(null);
-
-// створює дію (поки недоступно)
-mavka.makeDiia(null);
-
-// створює модуль
-mavka.makeModule(name, giveContext);
-
-// створює портал до js-обʼєкта
-mavka.makePortal({
-  a: 1,
-  b: "some text"
-});
-
-// створює портал до js-функції
-mavka.makePortalFunction((...args) => {
-  //
-});
-
-// створює портал до js-масиву
-mavka.makePortalList([1, 2, 3]);
-
-// створює метод для структури (поки недоступно)
-mavka.makeMethod(null);
+mavka.set(object, name, value) // встановити властивість обʼєкта Мавки
 `.trim();
 
 useHead({
@@ -106,13 +40,25 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/інтернет" next="/документація/вітрини">
+  <UiDocsWrapper prev="/документація/пак" next="/документація/бог">
     <h1 class="docs-content-title">Розширення</h1>
 
     <p>
-      Розширення дозволяють доповнювати можливості мови за допомогою JavaScript.
-      По-суті, ви можете написати скрипт на JS-і та підключити його до
-      <span class="diia-word">Мавки</span>.
+      Так історично склалось, що <span class="diia-word">Мавка</span> написана
+      JavaScript-ом.
+    </p>
+    <p>Тому існує можливість розширення.</p>
+    <p>
+      Розширення дозволяє доповнювати можливості мови за допомогою JavaScript.
+      По-суті, ви можете написати скрипт на JS-і
+      <span style="font-weight: 500" class="hljs-keyword">та</span> підключити
+      його до <span class="diia-word">Мавки</span>.
+    </p>
+    <hr />
+    <h3>Приклад</h3>
+    <p>
+      У цьому прикладі ми створюємо розширення, що дозволяє отримати JSON за
+      певною URL.
     </p>
     <p>
       <code>fetchAndParseJson.js</code>
@@ -130,11 +76,8 @@ definePageMeta({
         <highlightjs language="diia" :autodetect="false" :code="mainDiia" />
       </ClientOnly>
     </div>
-    <p>Список інструментів для розробки розширень:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="js" :autodetect="false" :code="tools" />
-      </ClientOnly>
-    </div>
+    <hr />
+    <blockquote>Часте прибігання до розширень є гріхом.</blockquote>
+    <blockquote>Сторінка доповнюється.</blockquote>
   </UiDocsWrapper>
 </template>

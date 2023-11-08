@@ -40,12 +40,15 @@ const simple3 = `
 const simple4 = `
 макет модуль Дід
   зібрати(значення щось) текст
-  розібрати(значення текст) щось
+  розібрати(значення текст, визначення словник = ()) щось
 кінець
 `.trim();
 
 const simple5 = `
 Дід.зібрати((імʼя="Леся", вік=20))
+`.trim();
+
+const simple6 = `
 Дід.розібрати("(імʼя=\\"Леся\\", вік=20)")
 `.trim();
 
@@ -59,16 +62,32 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/хмарні-паки"
-    next="/документація/математика"
-  >
+  <UiDocsWrapper prev="/документація/бог" next="/документація/інтернет">
     <h1 class="docs-content-title">Дід</h1>
 
     <p>
-      <code>Дід</code> - це формат для зручного збереження та передачі даних. За
-      виглядом ідентичний до обʼєкта.
+      <span class="diia-word">Дід</span>
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> формат для
+      зручного збереження
+      <span style="font-weight: 500" class="hljs-keyword">та</span> передачі
+      обʼєктів <span class="diia-word">Мавки</span>.
     </p>
+    <p>
+      <span class="diia-word">Дід</span> дозволяє зберігати
+      <span style="font-weight: 500" class="hljs-keyword">та</span> передавати
+      лише такі обʼєкти:
+    </p>
+    <ul>
+      <li><code>пусто</code></li>
+      <li><code>логічне</code></li>
+      <li><code>число</code></li>
+      <li><code>текст</code></li>
+      <li><code>список</code></li>
+      <li><code>словник</code></li>
+      <li><code>складений обʼєкт</code></li>
+    </ul>
+    <hr />
+    <h3>Приклади обʼєктів Мавки, що підтримуються Дід-ом</h3>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple" />
@@ -86,20 +105,24 @@ definePageMeta({
         <highlightjs language="diia" :autodetect="false" :code="simple3" />
       </ClientOnly>
     </div>
-    <blockquote>
-      Значення може бути числом, текстом, логічним, списком, словником, обʼєктом
-      або пусто.
-    </blockquote>
     <hr />
+    <h3>Макет модуля Дід</h3>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple4" />
       </ClientOnly>
     </div>
-    <br />
+    <hr />
+    <h3>Приклади застосування Дід</h3>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple5" />
+      </ClientOnly>
+    </div>
+    <br />
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="simple6" />
       </ClientOnly>
     </div>
   </UiDocsWrapper>

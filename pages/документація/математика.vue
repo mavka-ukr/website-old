@@ -1,7 +1,6 @@
 <script setup>
 const a = `
-;; макет модуля математики
-макет М
+макет модуль М
   Е число
   ЛОГ10 число
   ЛОГ2 число
@@ -40,13 +39,15 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/дід" next="/документація/стиль">
+  <UiDocsWrapper prev="/документація/інтернет" next="/документація/автор">
     <h1 class="docs-content-title">Математика</h1>
-
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
+    <blockquote>
+      Щось ще може змінитись до версії 1.0.0. Прохання мати це наувазі.
+    </blockquote>
   </UiDocsWrapper>
 </template>

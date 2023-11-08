@@ -8,7 +8,214 @@ defineProps({
   loading: Boolean,
 });
 
+const route = useRoute();
 const sidebarShown = useState("sidebarShown", () => false);
+const practiceLinks = useState("practiceLinks", () => [
+  {
+    name: "Встановлення",
+    encodedLink: encodeURI("/документація/встановлення"),
+  },
+  {
+    name: "Перша програма",
+    encodedLink: encodeURI("/документація/перша-програма"),
+  },
+  {
+    name: "Стиль",
+    encodedLink: encodeURI("/документація/стиль"),
+  },
+]);
+const theoryLinks = useState("theoryLinks", () => [
+  {
+    name: "Вступ до Теорії",
+    encodedLink: encodeURI("/документація/вступ-до-теорії"),
+  },
+  {
+    name: "Інструкція",
+    encodedLink: encodeURI("/документація/інструкція"),
+  },
+  {
+    name: "Обʼєкт",
+    encodedLink: encodeURI("/документація/обʼєкт"),
+  },
+  {
+    name: "Субʼєкт",
+    encodedLink: encodeURI("/документація/субʼєкт"),
+  },
+  {
+    name: "Дія",
+    encodedLink: encodeURI("/документація/дія"),
+  },
+  {
+    name: "Структура",
+    encodedLink: encodeURI("/документація/структура"),
+  },
+  {
+    name: "Число",
+    encodedLink: encodeURI("/документація/число"),
+  },
+  {
+    name: "Текст",
+    encodedLink: encodeURI("/документація/текст"),
+  },
+  {
+    name: "Логічне",
+    encodedLink: encodeURI("/документація/логічне"),
+  },
+  {
+    name: "Список",
+    encodedLink: encodeURI("/документація/список"),
+  },
+  {
+    name: "Словник",
+    encodedLink: encodeURI("/документація/словник"),
+  },
+  {
+    name: "Модуль",
+    encodedLink: encodeURI("/документація/модуль"),
+  },
+  {
+    name: "Умова",
+    encodedLink: encodeURI("/документація/умова"),
+  },
+  {
+    name: "Перебір",
+    encodedLink: encodeURI("/документація/перебір"),
+  },
+  {
+    name: "Поки",
+    encodedLink: encodeURI("/документація/поки"),
+  },
+  {
+    name: "Спроба",
+    encodedLink: encodeURI("/документація/спроба"),
+  },
+  {
+    name: "Коментар",
+    encodedLink: encodeURI("/документація/коментар"),
+  },
+  {
+    name: "Тест",
+    encodedLink: encodeURI("/документація/тест"),
+  },
+  {
+    name: "Чародія",
+    encodedLink: encodeURI("/документація/чародія"),
+  },
+  {
+    name: "Пак",
+    encodedLink: encodeURI("/документація/пак"),
+  },
+  {
+    name: "Розширення",
+    encodedLink: encodeURI("/документація/розширення"),
+  },
+  {
+    name: "Бог",
+    encodedLink: encodeURI("/документація/бог"),
+  },
+]);
+const stlLinks = useState("stlLinks", () => [
+  {
+    name: "Дід",
+    encodedLink: encodeURI("/документація/дід"),
+  },
+  {
+    name: "Інтернет",
+    encodedLink: encodeURI("/документація/інтернет"),
+  },
+  {
+    name: "Математика",
+    encodedLink: encodeURI("/документація/математика"),
+  },
+]);
+const informationLinks = useState("informationLinks", () => [
+  {
+    name: "Автор",
+    encodedLink: encodeURI("/документація/автор"),
+  },
+  {
+    name: "Подяка",
+    encodedLink: encodeURI("/документація/подяка"),
+  },
+  {
+    name: "Змінопис",
+    encodedLink: encodeURI("/документація/змінопис"),
+  },
+  {
+    name: "Післясцена",
+    encodedLink: encodeURI("/документація/післясцена"),
+  },
+]);
+const isPracticeExpanded = useState("isPracticeExpanded", () => false);
+const isPracticePage = useState("isPracticePage", () => false);
+const isTheoryExpanded = useState("isTheoryExpanded", () => false);
+const isTheoryPage = useState("isTheoryPage", () => false);
+const isStlExpanded = useState("isStlExpanded", () => false);
+const isStlPage = useState("isStlPage", () => false);
+const isInformationExpanded = useState("isInformationExpanded", () => false);
+const isInformationPage = useState("isInformationPage", () => false);
+
+function updateColor() {
+  if (process.client) {
+    const randomNumberFrom0To3 = Math.floor(Math.random() * 4);
+
+    const colors = [
+      ["#485cb0", "var(--bg-color)"],
+      ["#f3d74b", "#000000"],
+      ["#b3271a", "var(--bg-color)"],
+      ["var(--text-color)", "var(--bg-color)"],
+    ];
+
+    const randomColor = colors[randomNumberFrom0To3];
+
+    document.documentElement.style.setProperty(
+      "--sidebar-color",
+      randomColor[0],
+    );
+    document.documentElement.style.setProperty(
+      "--sidebar-text-color",
+      randomColor[1],
+    );
+  }
+}
+
+watch(
+  () => route.name,
+  () => {
+    if (practiceLinks.value.find((l) => route.path === l.encodedLink)) {
+      isPracticeExpanded.value = true;
+      isPracticePage.value = true;
+    } else {
+      isPracticePage.value = false;
+    }
+
+    if (theoryLinks.value.find((l) => route.path === l.encodedLink)) {
+      isTheoryExpanded.value = true;
+      isTheoryPage.value = true;
+    } else {
+      isTheoryPage.value = false;
+    }
+
+    if (stlLinks.value.find((l) => route.path === l.encodedLink)) {
+      isStlExpanded.value = true;
+      isStlPage.value = true;
+    } else {
+      isStlPage.value = false;
+    }
+
+    if (informationLinks.value.find((l) => route.path === l.encodedLink)) {
+      isInformationExpanded.value = true;
+      isInformationPage.value = true;
+    } else {
+      isInformationPage.value = false;
+    }
+
+    updateColor();
+  },
+  {
+    immediate: true,
+  },
+);
 
 addRouteMiddleware(() => {
   sidebarShown.value = false;
@@ -27,269 +234,124 @@ addRouteMiddleware(() => {
           <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
         </NuxtLink>
       </div>
-      <div class="docs-sidebar-menu">
-        <NuxtLink
-          :href="encodeURI(`/документація`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
+      <NuxtLink
+        :href="encodeURI(`/документація`)"
+        class="docs-sidebar-menu-item first"
+        active-class="active"
+      >
+        Вступ
+      </NuxtLink>
+      <a
+        @click.stop.prevent="isPracticeExpanded = !isPracticeExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Практика
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isPracticeExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isPracticeExpanded">
+        <template
+          v-for="(practiceLink, i) in practiceLinks"
+          :key="practiceLink.encodedLink"
         >
-          Вступ
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/встановлення`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Встановлення
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/змінні`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Змінні
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/типи`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Типи даних
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/типизація`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Типизація
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/умови`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Умовні оператори
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/арифметика`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Арифметика
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/дії`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Дії
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/функції`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Функції
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/цикли`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Цикли
-        </NuxtLink>
-        <template v-if="$route.path === encodeURI(`/документація/цикли`)">
           <NuxtLink
-            :href="encodeURI(`/документація/цикли#перебрати`)"
+            :href="practiceLink.encodedLink"
             class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === practiceLinks.length - 1,
+            }"
           >
-            • Перебрати
-          </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/цикли#поки`)"
-            class="docs-sidebar-menu-item subitem"
-          >
-            • Поки
-          </NuxtLink>
-          <NuxtLink
-            :href="encodeURI(`/документація/цикли#приклади`)"
-            class="docs-sidebar-menu-item subitem"
-          >
-            • Приклади
+            {{ practiceLink.name }}
           </NuxtLink>
         </template>
-        <NuxtLink
-          :href="encodeURI(`/документація/структури`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
+      </template>
+      <a
+        @click.stop.prevent="isTheoryExpanded = !isTheoryExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Теорія
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isTheoryExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isTheoryExpanded">
+        <template
+          v-for="(theoryLink, i) in theoryLinks"
+          :key="theoryLink.encodedLink"
         >
-          Структури
-        </NuxtLink>
-        <NuxtLink
-          v-if="false"
-          :href="encodeURI(`/документація/макети`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
+          <NuxtLink
+            :href="theoryLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === theoryLinks.length - 1,
+            }"
+          >
+            {{ theoryLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
+      <a
+        @click.stop.prevent="isStlExpanded = !isStlExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Бібліотека
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isStlExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isStlExpanded">
+        <template v-for="(stlLink, i) in stlLinks" :key="stlLink.encodedLink">
+          <NuxtLink
+            :href="stlLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === stlLinks.length - 1,
+            }"
+          >
+            {{ stlLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
+      <a
+        @click.stop.prevent="isInformationExpanded = !isInformationExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Кінець
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isInformationExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isInformationExpanded">
+        <template
+          v-for="(informationLink, i) in informationLinks"
+          :key="informationLink.encodedLink"
         >
-          Макети
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/ооп`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          ООП
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/модулі`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Модулі
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/коментарі`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Коментарі
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/спроби`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Спроби
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/магія`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Магічні дії
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/списки`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Списки
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/словники`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Словники
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/інтернет`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Інтернет
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/розширення`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Розширення
-        </NuxtLink>
-        <NuxtLink
-          v-if="false"
-          :href="encodeURI(`/документація/вітрини`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Вітрини
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/приклади`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Приклади
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/паки`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Паки
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/хмарні-паки`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Хмарні паки
-        </NuxtLink>
-        <NuxtLink
-          v-if="false"
-          :href="encodeURI(`/документація/нові-паки`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Паки 2.0
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/дід`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Дід
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/математика`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Математика
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/стиль`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Стиль
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/розбір`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Розбір
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/тестування`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Тестування
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/список-змін`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Список змін
-        </NuxtLink>
-        <NuxtLink
-          v-if="false"
-          :href="encodeURI(`/документація/ма-2`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Ма-2
-        </NuxtLink>
-        <NuxtLink
-          :href="encodeURI(`/документація/контрибутори`)"
-          class="docs-sidebar-menu-item"
-          active-class="active"
-        >
-          Контрибутори
-        </NuxtLink>
+          <NuxtLink
+            :href="informationLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === informationLinks.length - 1,
+            }"
+          >
+            {{ informationLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
+      <div class="docs-sidebar-footer-wrapper">
+        <div class="docs-sidebar-footer">Документація Мавки</div>
       </div>
     </div>
 
@@ -328,6 +390,11 @@ $sidebarWidth: 20rem;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
+  background: var(--bg-color);
+
+  display: flex;
+  flex-direction: column;
+
   border-right: 1px solid var(--border-color);
 
   &::-webkit-scrollbar {
@@ -335,7 +402,14 @@ $sidebarWidth: 20rem;
   }
 
   &-head {
-    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 1.25rem;
 
     display: flex;
     align-items: center;
@@ -353,47 +427,98 @@ $sidebarWidth: 20rem;
     }
   }
 
-  &-menu {
-    padding-bottom: 4rem;
+  &-menu-item {
+    padding: 0.75rem 1rem;
 
-    &-item {
+    display: flex;
+    align-items: center;
+
+    background: var(--bg-color);
+
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+
+    cursor: pointer;
+
+    color: var(--text-color);
+
+    &.sticky {
+      position: sticky;
+      top: 89.91px;
+    }
+
+    .material-symbols-rounded {
+      margin-right: 0.33rem;
+      font-size: 1em;
+    }
+
+    &.subitem {
       padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
 
-      display: flex;
-      align-items: center;
+    &.withTopShadow {
+      box-shadow: inset 0 11px 8px -10px #3333331a;
 
-      text-decoration: none;
-      border-top: 1px solid var(--border-color);
-
-      cursor: pointer;
-
-      color: var(--text-color);
-
-      .material-symbols-rounded {
-        margin-right: 0.33rem;
-        font-size: 1em;
-      }
-
-      &.subitem {
-        padding: 0.4rem 1rem;
-        font-size: 0.9rem;
-        border-top: 1px solid var(--bg-color);
-      }
-
-      &:last-child {
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      &:hover {
-        background-color: rgba(var(--text-color_rgb), 0.1);
-      }
-
-      &.active {
-        font-weight: 500;
-        background-color: var(--text-color);
-        color: var(--bg-color);
+      @at-root html.cs-dark & {
+        box-shadow: inset 0 11px 8px -10px #111111;
       }
     }
+
+    &.withBottomShadow {
+      box-shadow: inset 0 -11px 8px -10px #3333331a;
+
+      @at-root html.cs-dark & {
+        box-shadow: inset 0 -11px 8px -10px #111111;
+      }
+    }
+
+    &.withTopShadow.withBottomShadow {
+      box-shadow:
+        inset 0 11px 8px -10px #3333331a,
+        inset 0 -11px 8px -10px #3333331a;
+
+      @at-root html.cs-dark & {
+        box-shadow:
+          inset 0 11px 8px -10px #111111,
+          inset 0 -11px 8px -10px #111111;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    &:hover {
+      background-color: #eeeeee;
+
+      @at-root html.cs-dark & {
+        background-color: #222222;
+      }
+    }
+
+    &.active {
+      font-weight: 500;
+      background-color: var(--sidebar-color) !important;
+      color: var(--sidebar-text-color);
+    }
+  }
+
+  &-footer-wrapper {
+    margin-top: auto;
+  }
+
+  &-footer {
+    margin-top: 5rem;
+
+    padding: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid var(--border-color);
+    color: rgba(var(--text-color_rgb), 0.5);
   }
 
   @media screen and (max-width: 956px) {
@@ -405,8 +530,6 @@ $sidebarWidth: 20rem;
     bottom: 0;
     top: 0;
 
-    padding: 1rem;
-
     background-color: var(--bg-color);
     border-right: none;
 
@@ -414,16 +537,16 @@ $sidebarWidth: 20rem;
       display: none;
     }
 
-    .docs-sidebar-menu {
-      border-right: 1px solid var(--border-color);
-      border-left: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
+    &-menu-item {
+      //border-right: 1px solid var(--border-color);
+      //border-left: 1px solid var(--border-color);
     }
   }
 }
 
 .docs-content {
   margin-top: 3rem;
+  margin-bottom: 3rem;
 
   padding-left: $sidebarWidth;
 
@@ -434,6 +557,20 @@ $sidebarWidth: 20rem;
 
     padding: 0 3rem;
     padding-bottom: 4rem;
+
+    .docs-content-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 3rem;
+
+      img,
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
 
     .docs-content-title {
       text-align: center;

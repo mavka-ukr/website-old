@@ -1,9 +1,10 @@
 <script setup>
 const npmInstall = `
 npm i -g mavka
+`.trim();
 
-// наразі рекомендується встановлювати останню версію вручну:
-// npm i -g mavka@x.y.z
+const npmInstall2 = `
+npm i -g mavka@x.y.z
 `.trim();
 
 const diiaRun = `
@@ -32,7 +33,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація" next="/документація/змінні">
+  <UiDocsWrapper prev="/документація" next="/документація/перша-програма">
     <h1 class="docs-content-title">Встановлення</h1>
 
     <p>
@@ -65,35 +66,18 @@ definePageMeta({
         <highlightjs lang="bash" :autodetect="false" :code="npmInstall" />
       </ClientOnly>
     </div>
+    <p><span style="font-weight: 500" class="hljs-keyword">або</span></p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs lang="bash" :autodetect="false" :code="npmInstall2" />
+      </ClientOnly>
+    </div>
     <p>
       <b>Запуск:</b>
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="bash" :autodetect="false" :code="diiaRun" />
-      </ClientOnly>
-    </div>
-    <p>
-      <b>Приклад:</b>
-    </p>
-    <p>Створіть файл <code>привіт.м</code>:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-          language="diia"
-          :autodetect="false"
-          :code="helloWorldFile"
-        />
-      </ClientOnly>
-    </div>
-    <p>Запустіть за допомогою наступної команди:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-          language="bash"
-          :autodetect="false"
-          :code="runHelloWorldFile"
-        />
       </ClientOnly>
     </div>
 

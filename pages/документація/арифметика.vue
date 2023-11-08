@@ -51,7 +51,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/умови" next="/документація/дії">
+  <UiDocsWrapper prev="/документація/умова" next="/документація/дія">
     <h1 class="docs-content-title">Арифметика</h1>
 
     <p>
