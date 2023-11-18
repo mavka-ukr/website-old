@@ -19,6 +19,12 @@ const moduleStructure = `
 кінець
 `.trim();
 
+const moduleMockup = `
+макет Модуль
+  назва(м Модуль) текст
+кінець
+`.trim();
+
 useHead({
   title: "Модуль | Документація | Мавка",
 });
@@ -60,5 +66,7 @@ definePageMeta({
     <hr />
     <h3>Структура модуля</h3>
     <UiCodeBlock :files="moduleStructure" />
+    <br />
+    <UiCodeBlock :files="moduleMockup" />
   </UiDocsWrapper>
 </template>

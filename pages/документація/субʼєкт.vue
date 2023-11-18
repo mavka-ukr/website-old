@@ -102,6 +102,11 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span> також
       може бути обʼєктом.
     </p>
+    <p>
+      Допитливим:
+      <span style="font-weight: 500" class="hljs-keyword">cубʼєкт</span>
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> підмет.
+    </p>
 
     <hr />
 

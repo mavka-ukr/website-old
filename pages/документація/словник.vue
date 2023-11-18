@@ -14,7 +14,12 @@ const dict = `
 
 const dictStructure = `
 структура словник
-  розмір число
+кінець
+`.trim();
+
+const dictMockup = `
+макет словник
+  розмір(с словник) число
 кінець
 `.trim();
 
@@ -54,5 +59,7 @@ definePageMeta({
     <hr />
     <h3>Структура словника</h3>
     <UiCodeBlock :files="dictStructure" />
+    <br />
+    <UiCodeBlock :files="dictMockup" />
   </UiDocsWrapper>
 </template>

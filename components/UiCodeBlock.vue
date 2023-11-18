@@ -9,6 +9,7 @@ const props = defineProps<{
   files: File[] | string;
   playButton?: boolean;
   defaultIndex?: number;
+  plaintext?: boolean;
 }>();
 
 const currentFile = ref<File>();
@@ -39,7 +40,7 @@ watch(
         <div class="code-window-wrapper">
           <div class="code-window">
             <highlightjs
-              :language="currentFile.plaintext ? 'text' : 'diia'"
+              :language="plaintext || currentFile.plaintext ? 'plaintext' : 'diia'"
               :autodetect="false"
               :code="currentFile.text"
             />
@@ -75,7 +76,7 @@ watch(
       <template v-else>
         <div class="code-window code-window-full">
           <highlightjs
-            :language="currentFile.plaintext ? 'text' : 'diia'"
+            :language="plaintext || currentFile.plaintext ? 'plaintext' : 'diia'"
             :autodetect="false"
             :code="currentFile.text"
           />

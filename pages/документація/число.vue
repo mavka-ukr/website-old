@@ -86,9 +86,9 @@ definePageMeta({
     <p>
       Число
       <span style="font-weight: 500" class="hljs-keyword">містить</span>
-      властивості з усіма наявними у <span class="diia-word">Мавці </span>
+      властивості з більшістю
       <NuxtLink class="link external" :href="encodeURI(`/документація/чародія`)"
-        >чародіями
+        >чародій
       </NuxtLink>
       .
     </p>

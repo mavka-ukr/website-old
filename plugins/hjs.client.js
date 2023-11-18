@@ -4,6 +4,7 @@ import "highlight.js/lib/common";
 import bash from "highlight.js/lib/languages/bash";
 import javascript from "highlight.js/lib/languages/javascript";
 import markdown from "highlight.js/lib/languages/markdown";
+import plaintext from "highlight.js/lib/languages/plaintext";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
 const diia = () => {
@@ -50,6 +51,30 @@ const diia = () => {
       {
         begin: [
           "структура ",
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
+        ],
+        className: { 2: "title.class", 3: "title.class" },
+      },
+      {
+        begin: [
+          "макет модуль ",
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
+        ],
+        className: { 2: "title.class", 3: "title.class" },
+      },
+      {
+        begin: [
+          "макет тривала дія ",
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
+          /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
+        ],
+        className: { 2: "title.class", 3: "title.class" },
+      },
+      {
+        begin: [
+          "макет ",
           /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
           /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
         ],
@@ -157,6 +182,10 @@ const diiaSpecial = () => {
         className: { 2: "title.class", 3: "title.class" },
       },
       {
+        begin: ["макет ", /[A-ZА-ЯІЇЄ]/, /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/],
+        className: { 2: "title.class", 3: "title.class" },
+      },
+      {
         begin: [/[A-ZА-ЯІЇЄ]/, /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/, /\./],
         className: { 1: "title.class", 2: "title.class" },
       },
@@ -217,6 +246,7 @@ hljs.registerLanguage("diia", diia);
 hljs.registerLanguage("diiaspec", diiaSpecial);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("plaintext", plaintext);
 hljs.registerLanguage("markdown", markdown);
 
 export default defineNuxtPlugin((nuxtApp) => {

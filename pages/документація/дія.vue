@@ -58,6 +58,11 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">дії</span> може бути
       створення нових обʼєктів або зміна властивостей існуючих.
     </p>
+    <p>
+      Допитливим:
+      <span style="font-weight: 500" class="hljs-keyword">дія</span>
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> присудок.
+    </p>
     <hr />
     <h3>Визначення дій</h3>
     <p>

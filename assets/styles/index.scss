@@ -443,7 +443,24 @@ ul {
   max-width: 446px;
 
   &::-webkit-scrollbar {
-    display: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #5c6370;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #abb2bf;
   }
 }
 
