@@ -1,7 +1,7 @@
 <script setup>
 const fetchJs = `
 var $отримати_джсон = async (p, di) => {
-  var url = param(p, 0, 'адреса', $текст, di);
+  var url = param(p, 0, 'адреса', undefined, $текст, di);
 
   var response = await fetch(url);
   var json = await response.json();
