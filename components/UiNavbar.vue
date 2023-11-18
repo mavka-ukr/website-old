@@ -1,5 +1,6 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
+import Mavka from "mavka";
 
 const navigationShown = useState("navigationShown", () => false);
 const isMobile = useState("isMobile", () => false);
@@ -46,7 +47,7 @@ function toggleDarkMode() {
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
       </div>
       Мавка
-      <span class="navbar-alpha">а.б.в</span>
+      <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
     </NuxtLink>
 
     <template v-if="isMobile">
