@@ -38,18 +38,22 @@ const simple3 = `
 `.trim();
 
 const simple4 = `
-макет модуль Дід
+макет модуль дід
   зібрати(значення щось) текст
   розібрати(значення текст, визначення словник = ()) щось
 кінець
 `.trim();
 
 const simple5 = `
-Дід.зібрати((імʼя="Леся", вік=20))
+взяти "дід"
+
+дід.зібрати((імʼя="Леся", вік=20))
 `.trim();
 
 const simple6 = `
-Дід.розібрати("""(імʼя="Леся", вік=20)""")
+взяти "дід"
+
+дід.розібрати("""(імʼя="Леся", вік=20)""")
 `.trim();
 
 useHead({
@@ -106,14 +110,14 @@ definePageMeta({
       </ClientOnly>
     </div>
     <hr />
-    <h3>Макет модуля Дід</h3>
+    <h3>Макет модуля дід</h3>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple4" />
       </ClientOnly>
     </div>
     <hr />
-    <h3>Приклади застосування Дід</h3>
+    <h3>Приклади використання</h3>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple5" />

@@ -17,8 +17,8 @@ const files = [
 
 const fullUrlExample = `https://{домен}/{?шлях}/{назва}/{версія}/{назва}.м`;
 
-const example1 = "https://хмарний.пак.укр/привіт/0.0.1/привіт.м";
-const example2 = "хмарний.пак.укр/привіт/0.0.1";
+const example1 = "https://пак.укр/привіт/0.0.1/привіт.м";
+const example2 = "пак.укр/привіт/0.0.1";
 const example4 = "привіт/0.0.1";
 
 useHead({

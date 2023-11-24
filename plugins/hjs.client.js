@@ -62,7 +62,7 @@ const diia = () => {
           /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
           /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
         ],
-        className: { 2: "title.class", 3: "title.class" },
+        className: {},
       },
       {
         begin: [
@@ -70,7 +70,7 @@ const diia = () => {
           /[a-zA-Zа-яА-ЯіІїЇєЄ_]/,
           /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/,
         ],
-        className: { 2: "title.class", 3: "title.class" },
+        className: { 2: "title.function", 3: "title.function" },
       },
       {
         begin: [
