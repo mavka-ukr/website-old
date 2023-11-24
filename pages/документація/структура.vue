@@ -208,6 +208,7 @@ definePageMeta({
         <highlightjs language="diia" :autodetect="false" :code="being" />
       </ClientOnly>
     </div>
+    <hr />
     <h3>Структура структури</h3>
     <UiCodeBlock :files="structureStructure" />
     <br />
