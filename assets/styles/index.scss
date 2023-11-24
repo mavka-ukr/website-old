@@ -199,6 +199,10 @@ code:not(.hljs) {
   font-size: 0.9rem;
   box-sizing: border-box;
   font-family: "Fira Code", monospace !important;
+
+  @at-root html.cs-dark & {
+    box-shadow: var(--code-shadow);
+  }
 }
 
 .v-popper__popper.v-popper__popper--show-from .v-popper__wrapper {

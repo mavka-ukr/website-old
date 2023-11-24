@@ -9,7 +9,7 @@
         href="https://github.com/mavka-ukr/english-cyrillic"
         target="_blank"
       >
-        Готується.
+        github.com/mavka-ukr/english-cyrillic (скасовано)
       </a>
     </div>
 

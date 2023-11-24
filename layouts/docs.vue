@@ -23,6 +23,22 @@ const practiceLinks = useState("practiceLinks", () => [
     name: "Стиль",
     encodedLink: encodeURI("/документація/стиль"),
   },
+  {
+    name: "Арифметика",
+    encodedLink: encodeURI("/документація/арифметика"),
+  },
+  {
+    name: "Побітові операції",
+    encodedLink: encodeURI("/документація/побітові-операції"),
+  },
+  {
+    name: "Порівняння",
+    encodedLink: encodeURI("/документація/порівняння"),
+  },
+  {
+    name: "Тестування",
+    encodedLink: encodeURI("/документація/тестування"),
+  },
 ]);
 const theoryLinks = useState("theoryLinks", () => [
   {
@@ -92,10 +108,6 @@ const theoryLinks = useState("theoryLinks", () => [
   {
     name: "Коментар",
     encodedLink: encodeURI("/документація/коментар"),
-  },
-  {
-    name: "Тест",
-    encodedLink: encodeURI("/документація/тест"),
   },
   {
     name: "Чародія",

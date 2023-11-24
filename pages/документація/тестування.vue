@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Тест | Документація | Мавка",
+  title: "Тестування | Документація | Мавка",
 });
 
 definePageMeta({
@@ -9,8 +9,11 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/коментар" next="/документація/чародія">
-    <h1 class="docs-content-title">Тест</h1>
+  <UiDocsWrapper
+    prev="/документація/порівняння"
+    next="/документація/вступ-до-теорії"
+  >
+    <h1 class="docs-content-title">Тестування</h1>
     <blockquote>Сторінка доповнюється.</blockquote>
     <hr />
     <p>Доступні способи тестування:</p>

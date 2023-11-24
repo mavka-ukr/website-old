@@ -1,44 +1,30 @@
 <script setup>
-const simple = `
-а = 2
-б = 2
-
-друк(а + б)
-друк(а - б)
-друк(а * б)
-друк(а / б)
-друк(а % б)
-друк(а // б)
-друк(а ** б)
+const addition = `
+друк(2 + 2)
 `.trim();
 
-const simple2 = `
-структура ІншеЧисло
-  значення число
-кінець
-
-дія ІншеЧисло.виконати_додавання(б) ІншеЧисло
-  якщо б є ІншеЧисло
-    ІншеЧисло(я.значення + б.значення - 2)
-  інакше
-    впасти "б не є ІншеЧисло!"
-  кінець
-кінець
-
-а = ІншеЧисло(2)
-б = ІншеЧисло(2)
-
-друк(а + б) ;; ІншеЧисло(значення=2)
+const subtraction = `
+друк(10 - 5)
 `.trim();
 
-const simple3 = `
-виконати_додавання ;; +
-виконати_віднімання ;; -
-виконати_множення ;; *
-виконати_ділення ;; /
-виконати_ділення_за_модулем_остача ;; %
-виконати_ділення_за_модулем_частка ;; //
-виконати_піднесення_до_степеня ;; **
+const multiplication = `
+друк(2 * 2)
+`.trim();
+
+const division = `
+друк(10 / 5)
+`.trim();
+
+const divisionMod = `
+друк(10 % 5)
+`.trim();
+
+const divisionDiv = `
+друк(10 // 5)
+`.trim();
+
+const pow = `
+друк(2 ** 32)
 `.trim();
 
 useHead({
@@ -51,29 +37,44 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/умова" next="/документація/дія">
+  <UiDocsWrapper
+    prev="/документація/стиль"
+    next="/документація/побітові-операції"
+  >
     <h1 class="docs-content-title">Арифметика</h1>
-
     <p>
-      <span class="diia-word">Мавка</span> надає можливість виконувати базові
+      <span class="diia-word">Мавка</span> надає можливість виконувати різні
       арифметичні операції.
     </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple" />
-      </ClientOnly>
-    </div>
-    <p>Також існує можливість перезаписати логіку цих операцій для структур:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple2" />
-      </ClientOnly>
-    </div>
-    <p>Список операцій, що можна перезаписати:</p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simple3" />
-      </ClientOnly>
-    </div>
+    <p>Кожна арифметична операція має свою вказівку.</p>
+    <p>
+      Логіку виконання арифметичних операції для обʼєктів можна перезаписати
+      через
+      <NuxtLink :href="encodeURI('/документація/чародія')" class="link external"
+        >чародії</NuxtLink
+      >.
+    </p>
+    <hr />
+    <h4>Додавання</h4>
+    <UiCodeBlock :files="addition" />
+    <p><code>чародія_додати</code></p>
+    <h4>Віднімання</h4>
+    <UiCodeBlock :files="subtraction" />
+    <p><code>чародія_відняти</code></p>
+    <h4>Множення</h4>
+    <UiCodeBlock :files="multiplication" />
+    <p><code>чародія_помножити</code></p>
+    <h4>Ділення</h4>
+    <UiCodeBlock :files="division" />
+    <p><code>чародія_поділити</code></p>
+    <h4>Ділення за модулем з остачею</h4>
+    <UiCodeBlock :files="divisionMod" />
+    <p><code>чародія_поділити_за_модулем_остача</code></p>
+    <h4>Ділення з часткою</h4>
+    <UiCodeBlock :files="divisionDiv" />
+    <p><code>чародія_поділити_за_модулем_частка</code></p>
+    <h4>Піднесення до степеня</h4>
+    <UiCodeBlock :files="pow" />
+    <p><code>чародія_піднести_до_степеня</code></p>
   </UiDocsWrapper>
 </template>

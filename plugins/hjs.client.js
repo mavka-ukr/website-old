@@ -112,6 +112,18 @@ const diia = () => {
       },
       {
         className: "string",
+        begin: /"""/,
+        end: /"""/,
+        contains: [
+          {
+            begin: /%\(/,
+            end: /\)/,
+            scope: "subst",
+          },
+        ],
+      },
+      {
+        className: "string",
         begin: /"/,
         end: /"/,
         contains: [

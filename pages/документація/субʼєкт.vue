@@ -1,6 +1,6 @@
 <script setup>
 const simple = `
-субʼєкт кіт_моєї_сестри = Кіт(імʼя="Тимофій")
+кіт_моєї_сестри = Кіт(імʼя="Тимофій")
 `.trim();
 
 const simpleX = `
@@ -22,7 +22,7 @@ const simpleZ = `
 `.trim();
 
 const simpleM = `
-субʼєкт давид
+субʼєкт давид ;; = пусто
 
 друк(давид є Людина) ;; ні
 друк(давид є пусто) ;; так
@@ -33,29 +33,6 @@ const simpleM = `
 
 друк(давид є Людина) ;; так
 друк(давид є пусто) ;; ні
-`.trim();
-
-const list = `
-а = 1 ;; звичайне присвоєння
-
-а := 2 ;; присвоєння в контексті вище
-а += 2 ;; присвоєння з додаванням
-а -= 2 ;; присвоєння з відніманням
-а *= 2 ;; присвоєння з множенням
-а /= 2 ;; присвоєння з діленням
-а %= 2 ;; присвоєння з діленням за модулем
-а //= 2 ;; присвоєння з діленням за часткою
-а <<= 2 ;; присвоєння з зсувом вліво
-а >>= 2 ;; присвоєння з зсувом вправо
-а &= 2 ;; присвоєння з побітовим і
-а |= 2 ;; присвоєння з побітовим або
-а ^= 2 ;; присвоєння з xor
-а **= 2 ;; присвоєння з піднесенням до степеня
-
-а++ ;; присвоєння з додаванням 1 (вертає старе значення)
-а-- ;; присвоєння з відніманням 1 (вертає старе значення)
-++а ;; присвоєння з додаванням 1 (вертає нове значення)
---а ;; присвоєння з відніманням 1 (вертає нове значення)
 `.trim();
 
 useHead({
@@ -98,10 +75,10 @@ definePageMeta({
     </p>
     <!--    <p>Субʼєкт завжди визначає якийсь обʼєкт.</p>-->
     <!--    <p>Субʼєкт є активним елементом.</p>-->
-    <p>
-      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span> також
-      може бути обʼєктом.
-    </p>
+    <!--    <p>-->
+    <!--      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span> також-->
+    <!--      може бути обʼєктом.-->
+    <!--    </p>-->
     <p>
       Допитливим:
       <span style="font-weight: 500" class="hljs-keyword">cубʼєкт</span>
@@ -119,38 +96,42 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> дії</span>.
     </p>
     <p>
-      Існує дві вказівки для визначення
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>. Вони
-      за своєю суттю ідентичні.
+      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
+      визначається через символ <code>=</code> або ключове слово
+      <code>це</code>. Спочатку необхідно вказати назву
+      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>
+      <span style="font-weight: 500" class="hljs-keyword"> і</span>
+      після неї обʼєкт.
     </p>
-    <h4>Визначення з ключовим словом та значенням</h4>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple" />
       </ClientOnly>
     </div>
-    <h4>Визначення з ключовим словом та без значення</h4>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simpleM" />
-      </ClientOnly>
-    </div>
-    <h4>Визначення без ключового слова</h4>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simpleX" />
       </ClientOnly>
     </div>
-    <hr />
-    <h3 id="створення">Додатково</h3>
-    <p>
-      Для визначення
-      <span style="font-weight: 500" class="hljs-keyword">субʼєктів</span> також
-      доступне ключове слово <code>це</code>.
-    </p>
+    <br />
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simpleY" />
+      </ClientOnly>
+    </div>
+    <p>
+      Також існує допоміжне ключове слово <code>субʼєкт</code>, яке можна
+      поставити перед назвою
+      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>. Воно
+      <span style="font-weight: 500" class="hljs-keyword"> не є</span>
+      обовʼязковим
+      <span style="font-weight: 500" class="hljs-keyword"> та не</span> впливає
+      на виконання вказівки.
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="simpleM" />
       </ClientOnly>
     </div>
   </UiDocsWrapper>

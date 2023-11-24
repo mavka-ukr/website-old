@@ -13,7 +13,7 @@
       <div class="feature-name">Швидка</div>
       <div class="feature-description">
         Завдяки реалізації, <span class="diia-word">Мавка</span> є досить
-        швидкою інтерпретованою мовою.
+        швидкою мовою.
       </div>
     </div>
     <div class="feature">

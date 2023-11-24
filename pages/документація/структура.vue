@@ -71,6 +71,20 @@ const being = `
 ;; авель = адам + єва
 `.trim();
 
+const structureStructure = `
+структура Структура
+  назва текст
+  властивості список
+  дії список
+кінець
+`.trim();
+
+const structureMockup = `
+макет Структура
+  дізнатись(с щось) Структура
+кінець
+`.trim();
+
 useHead({
   title: "Структура | Документація | Мавка",
 });
@@ -194,5 +208,9 @@ definePageMeta({
         <highlightjs language="diia" :autodetect="false" :code="being" />
       </ClientOnly>
     </div>
+    <h3>Структура структури</h3>
+    <UiCodeBlock :files="structureStructure" />
+    <br />
+    <UiCodeBlock :files="structureMockup" />
   </UiDocsWrapper>
 </template>
