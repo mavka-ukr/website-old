@@ -57,6 +57,34 @@ const each2files = [
   },
 ];
 
+const each2_5files = [
+  {
+    name: "діапазон_чисел_3.м",
+    text: `
+перебрати 0..+0.1..1 як х
+  друк(х)
+кінець
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: `
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+`.trim(),
+    plaintext: true,
+  },
+];
+
 const each3files = [
   {
     name: "список.м",
@@ -137,6 +165,8 @@ definePageMeta({
     <UiCodeBlock :files="each1files" />
     <br />
     <UiCodeBlock :files="each2files" />
+    <br />
+    <UiCodeBlock :files="each2_5files" />
     <h4>Перебрати список</h4>
     <UiCodeBlock :files="each3files" />
     <h4>Перебрати словник</h4>
