@@ -1,33 +1,25 @@
 <script setup>
 const fetchJs = `
-var $отримати_джсон = async (p, di) => {
-  var url = param(p, 0, 'адреса', undefined, $текст, di);
+
+`.trim();
+
+const mainDiia = `
+js """
+async function $отримати_джсон(p, di) {
+  var url = mavka_param(p, 0, 'адреса', undefined, $текст, di);
 
   var response = await fetch(url);
   var json = await response.json();
 
-  return mavka.make(json);
-};
-`.trim();
-
-const mainDiia = `
-взяти файл "fetchAndParseJson.js" як fetchAndParseJson
-js fetchAndParseJson
+  return mavka_make(json);
+}
+$отримати_джсон.__m_name__ = 'отримати_джсон';
+"""
 макет тривала дія отримати_джсон(адреса текст) щось
 
 чекати відповідь = отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
 
-друк(відповідь)
-`.trim();
-
-const tools = `
-mavka.make(value) // створити обʼєкт Мавки з JS-значення
-
-mavka.unmake(object) // отримати JS-значення з обʼєкта Мавки
-
-mavka.get(object, name) // отримати властивість з обʼєкта Мавки
-
-mavka.set(object, name, value) // встановити властивість обʼєкта Мавки
+друк(відповідь.result.name)
 `.trim();
 
 useHead({
@@ -60,14 +52,14 @@ definePageMeta({
       У цьому прикладі ми створюємо розширення, що дозволяє отримати JSON за
       певною URL.
     </p>
-    <p>
-      <code>fetchAndParseJson.js</code>
-    </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="javascript" :code="fetchJs" />
-      </ClientOnly>
-    </div>
+    <!--    <p>-->
+    <!--      <code>fetchAndParseJson.js</code>-->
+    <!--    </p>-->
+    <!--    <div class="code-window code-window-full">-->
+    <!--      <ClientOnly>-->
+    <!--        <highlightjs language="javascript" :code="fetchJs" />-->
+    <!--      </ClientOnly>-->
+    <!--    </div>-->
     <p>
       <code>галерея_кави.м</code>
     </p>
