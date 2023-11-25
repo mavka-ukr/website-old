@@ -3,7 +3,7 @@ const files = [
   {
     name: "привіт.м",
     text: `
-взяти "пак.укр/привіт/0.0.1"
+взяти "привіт/0.0.1"
 
 привіт.привіт()
 `.trim(),
@@ -14,12 +14,21 @@ const files = [
     plaintext: true,
   },
 ];
+const files2 = [
+  {
+    name: "програма.м",
+    text: `
+взяти "дід"
 
-const fullUrlExample = `https://{домен}/{?шлях}/{назва}/{версія}/{назва}.м`;
-
-const example1 = "https://пак.укр/привіт/0.0.1/привіт.м";
-const example2 = "пак.укр/привіт/0.0.1";
-const example4 = "привіт/0.0.1";
+друк(дід)
+`.trim(),
+  },
+  {
+    name: "результат",
+    text: "<модуль дід[розібрати, зібрати]>",
+    plaintext: true,
+  },
+];
 
 useHead({
   title: "Пак | Документація | Мавка",
@@ -40,19 +49,23 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">і</span> можуть бути
       підключені за потреби.
     </p>
+    <p>Є два типи паків: вбудовані та зовнішні.</p>
+    <p>
+      Вбудовані паки це паки, що надаються
+      <span class="diia-word">Мавкою</span>. Такі паки не мають версії.
+    </p>
+    <p>
+      Зовнішні паки це паки, що створені користувачами і завантажуються з
+      <a href="https://пак.укр" target="_blank" class="link external">пак.укр</a
+      >. Такі паки мають версії.
+    </p>
     <hr />
+    <UiCodeBlock :files="files2" />
+    <br />
     <UiCodeBlock :files="files" />
     <hr />
-    <UiCodeBlock :files="fullUrlExample" plaintext />
-    <br />
-    <UiCodeBlock :files="example1" plaintext />
-    <br />
-    <UiCodeBlock :files="example2" plaintext />
-    <br />
-    <UiCodeBlock :files="example4" plaintext />
-    <hr />
     <p>
-      Версіонування відбувається строго через
+      Версіонування зовнішніх паків відбувається строго через
       <a
         href="https://semver.org/lang/uk/"
         target="_blank"
