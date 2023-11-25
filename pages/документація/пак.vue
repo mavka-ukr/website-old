@@ -49,13 +49,23 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">і</span> можуть бути
       підключені за потреби.
     </p>
-    <p>Є два типи паків: вбудовані та зовнішні.</p>
     <p>
-      Вбудовані паки це паки, що надаються
-      <span class="diia-word">Мавкою</span>. Такі паки не мають версії.
+      <span style="font-weight: 500" class="hljs-keyword">Є</span> два типи
+      паків: вбудовані
+      <span style="font-weight: 500" class="hljs-keyword">та</span> зовнішні.
     </p>
     <p>
-      Зовнішні паки це паки, що створені користувачами і завантажуються з
+      Вбудовані паки
+      <span style="font-weight: 500" class="hljs-keyword">це</span> паки, що
+      надаються <span class="diia-word">Мавкою</span>. Такі паки не мають
+      версії.
+    </p>
+    <p>
+      Зовнішні паки
+      <span style="font-weight: 500" class="hljs-keyword">це</span> паки, що
+      створені користувачами
+      <span style="font-weight: 500" class="hljs-keyword">і</span>
+      завантажуються з
       <a href="https://пак.укр" target="_blank" class="link external">пак.укр</a
       >. Такі паки мають версії.
     </p>
