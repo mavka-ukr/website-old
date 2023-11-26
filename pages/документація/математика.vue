@@ -42,7 +42,7 @@ const example = `
 `.trim();
 
 useHead({
-  title: "Математика | Документація | Мавка",
+  title: "Математика | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
@@ -51,7 +51,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/інтернет" next="/документація/автор">
+  <UiDocsWrapper prev="/документація/рація" next="/документація/автор">
     <h1 class="docs-content-title">Математика</h1>
     <div class="code-window code-window-full">
       <ClientOnly>

@@ -57,7 +57,7 @@ const simple6 = `
 `.trim();
 
 useHead({
-  title: "Дід | Документація | Мавка",
+  title: "Дід | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
@@ -66,7 +66,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/бог" next="/документація/інтернет">
+  <UiDocsWrapper prev="/документація/бог" next="/документація/станція">
     <h1 class="docs-content-title">Дід</h1>
 
     <p>
