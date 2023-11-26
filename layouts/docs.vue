@@ -5,7 +5,7 @@ defineProps({
   prev: String,
   next: String,
   title: String,
-  loading: Boolean,
+  loading: Boolean
 });
 
 const route = useRoute();
@@ -13,150 +13,150 @@ const sidebarShown = useState("sidebarShown", () => false);
 const practiceLinks = useState("practiceLinks", () => [
   {
     name: "Встановлення",
-    encodedLink: encodeURI("/документація/встановлення"),
+    encodedLink: encodeURI("/документація/встановлення")
   },
   {
     name: "Перша програма",
-    encodedLink: encodeURI("/документація/перша-програма"),
+    encodedLink: encodeURI("/документація/перша-програма")
   },
   {
     name: "Стиль",
-    encodedLink: encodeURI("/документація/стиль"),
+    encodedLink: encodeURI("/документація/стиль")
   },
   {
     name: "Арифметика",
-    encodedLink: encodeURI("/документація/арифметика"),
+    encodedLink: encodeURI("/документація/арифметика")
   },
   {
     name: "Побітові операції",
-    encodedLink: encodeURI("/документація/побітові-операції"),
+    encodedLink: encodeURI("/документація/побітові-операції")
   },
   {
     name: "Порівняння",
-    encodedLink: encodeURI("/документація/порівняння"),
+    encodedLink: encodeURI("/документація/порівняння")
   },
   {
     name: "Тестування",
-    encodedLink: encodeURI("/документація/тестування"),
-  },
+    encodedLink: encodeURI("/документація/тестування")
+  }
 ]);
 const theoryLinks = useState("theoryLinks", () => [
   {
     name: "Вступ до Теорії",
-    encodedLink: encodeURI("/документація/вступ-до-теорії"),
+    encodedLink: encodeURI("/документація/вступ-до-теорії")
   },
   {
     name: "Інструкція",
-    encodedLink: encodeURI("/документація/інструкція"),
+    encodedLink: encodeURI("/документація/інструкція")
   },
   {
     name: "Обʼєкт",
-    encodedLink: encodeURI("/документація/обʼєкт"),
+    encodedLink: encodeURI("/документація/обʼєкт")
   },
   {
     name: "Субʼєкт",
-    encodedLink: encodeURI("/документація/субʼєкт"),
+    encodedLink: encodeURI("/документація/субʼєкт")
   },
   {
     name: "Дія",
-    encodedLink: encodeURI("/документація/дія"),
+    encodedLink: encodeURI("/документація/дія")
   },
   {
     name: "Структура",
-    encodedLink: encodeURI("/документація/структура"),
+    encodedLink: encodeURI("/документація/структура")
   },
   {
     name: "Число",
-    encodedLink: encodeURI("/документація/число"),
+    encodedLink: encodeURI("/документація/число")
   },
   {
     name: "Текст",
-    encodedLink: encodeURI("/документація/текст"),
+    encodedLink: encodeURI("/документація/текст")
   },
   {
     name: "Логічне",
-    encodedLink: encodeURI("/документація/логічне"),
+    encodedLink: encodeURI("/документація/логічне")
   },
   {
     name: "Список",
-    encodedLink: encodeURI("/документація/список"),
+    encodedLink: encodeURI("/документація/список")
   },
   {
     name: "Словник",
-    encodedLink: encodeURI("/документація/словник"),
+    encodedLink: encodeURI("/документація/словник")
   },
   {
     name: "Модуль",
-    encodedLink: encodeURI("/документація/модуль"),
+    encodedLink: encodeURI("/документація/модуль")
   },
   {
     name: "Умова",
-    encodedLink: encodeURI("/документація/умова"),
+    encodedLink: encodeURI("/документація/умова")
   },
   {
     name: "Перебір",
-    encodedLink: encodeURI("/документація/перебір"),
+    encodedLink: encodeURI("/документація/перебір")
   },
   {
     name: "Поки",
-    encodedLink: encodeURI("/документація/поки"),
+    encodedLink: encodeURI("/документація/поки")
   },
   {
     name: "Спроба",
-    encodedLink: encodeURI("/документація/спроба"),
+    encodedLink: encodeURI("/документація/спроба")
   },
   {
     name: "Коментар",
-    encodedLink: encodeURI("/документація/коментар"),
+    encodedLink: encodeURI("/документація/коментар")
   },
   {
     name: "Чародія",
-    encodedLink: encodeURI("/документація/чародія"),
+    encodedLink: encodeURI("/документація/чародія")
   },
   {
     name: "Пак",
-    encodedLink: encodeURI("/документація/пак"),
+    encodedLink: encodeURI("/документація/пак")
   },
   {
     name: "Розширення",
-    encodedLink: encodeURI("/документація/розширення"),
+    encodedLink: encodeURI("/документація/розширення")
   },
   {
     name: "Бог",
-    encodedLink: encodeURI("/документація/бог"),
-  },
+    encodedLink: encodeURI("/документація/бог")
+  }
 ]);
 const stlLinks = useState("stlLinks", () => [
   {
     name: "Дід",
-    encodedLink: encodeURI("/документація/дід"),
+    encodedLink: encodeURI("/документація/дід")
   },
   {
     name: "Інтернет",
-    encodedLink: encodeURI("/документація/інтернет"),
+    encodedLink: encodeURI("/документація/інтернет")
   },
   {
     name: "Математика",
-    encodedLink: encodeURI("/документація/математика"),
-  },
+    encodedLink: encodeURI("/документація/математика")
+  }
 ]);
 const informationLinks = useState("informationLinks", () => [
   {
     name: "Автор",
-    encodedLink: encodeURI("/документація/автор"),
+    encodedLink: encodeURI("/документація/автор")
   },
   {
     name: "Подяка",
-    encodedLink: encodeURI("/документація/подяка"),
+    encodedLink: encodeURI("/документація/подяка")
   },
   {
     name: "Змінопис",
-    encodedLink: encodeURI("/документація/змінопис"),
+    encodedLink: encodeURI("/документація/змінопис")
   },
   {
     name: "Післясцена",
-    encodedLink: encodeURI("/документація/післясцена"),
-  },
+    encodedLink: encodeURI("/документація/післясцена")
+  }
 ]);
 const isPracticeExpanded = useState("isPracticeExpanded", () => false);
 const isPracticePage = useState("isPracticePage", () => false);
@@ -175,18 +175,18 @@ function updateColor() {
       ["#485cb0", "var(--bg-color)"],
       ["#f3d74b", "#000000"],
       ["#b3271a", "var(--bg-color)"],
-      ["var(--text-color)", "var(--bg-color)"],
+      ["var(--text-color)", "var(--bg-color)"]
     ];
 
     const randomColor = colors[randomNumberFrom0To3];
 
     document.documentElement.style.setProperty(
       "--sidebar-color",
-      randomColor[0],
+      randomColor[0]
     );
     document.documentElement.style.setProperty(
       "--sidebar-text-color",
-      randomColor[1],
+      randomColor[1]
     );
   }
 }
@@ -218,6 +218,12 @@ watch(
     if (informationLinks.value.find((l) => route.path === l.encodedLink)) {
       isInformationExpanded.value = true;
       isInformationPage.value = true;
+
+      if (process.client) {
+        if (localStorage.getItem("audioVisible") !== "true") {
+          document.getElementById("pluto").play();
+        }
+      }
     } else {
       isInformationPage.value = false;
     }
@@ -225,16 +231,45 @@ watch(
     updateColor();
   },
   {
-    immediate: true,
-  },
+    immediate: true
+  }
 );
 
 addRouteMiddleware(() => {
   sidebarShown.value = false;
   window.scrollTo({
-    top: 0,
+    top: 0
   });
 });
+
+const audioVisible = useState("audioVisible", () => false);
+const audioPlaying = useState("audioPlaying", () => false);
+
+onMounted(() => {
+  if (process.client) {
+    audioVisible.value = localStorage.getItem("audioVisible") === "true";
+
+    document.getElementById("pluto").addEventListener("play", () => {
+      audioPlaying.value = true;
+      localStorage.setItem("audioVisible", "true");
+      audioVisible.value = true;
+    });
+    document.getElementById("pluto").addEventListener("pause", () => {
+      audioPlaying.value = false;
+    });
+  }
+});
+
+function toggleAudio() {
+  if (process.client) {
+    if (audioPlaying.value) {
+      document.getElementById("pluto").pause();
+    } else {
+      document.getElementById("pluto").play();
+      document.getElementById("pluto").loop = true;
+    }
+  }
+}
 </script>
 
 <template>
@@ -362,8 +397,21 @@ addRouteMiddleware(() => {
           </NuxtLink>
         </template>
       </template>
+      <div style="min-height: 5rem; display: block; width: 100%"></div>
       <div class="docs-sidebar-footer-wrapper">
-        <div class="docs-sidebar-footer">Документація Мавки</div>
+        <div class="docs-sidebar-footer">
+          <template v-if="audioPlaying || isInformationPage">
+            <button @click="toggleAudio" class="docs-sidebar-footer-play">
+              <template v-if="audioPlaying">
+                <span class="material-symbols-rounded">stop_circle</span>
+              </template>
+              <template v-else>
+                <span class="material-symbols-rounded">play_arrow</span>
+              </template>
+            </button>
+          </template>
+          Документація Мавки
+        </div>
       </div>
     </div>
 
@@ -486,14 +534,12 @@ $sidebarWidth: 20rem;
     }
 
     &.withTopShadow.withBottomShadow {
-      box-shadow:
-        inset 0 11px 8px -10px #3333331a,
-        inset 0 -11px 8px -10px #3333331a;
+      box-shadow: inset 0 11px 8px -10px #3333331a,
+      inset 0 -11px 8px -10px #3333331a;
 
       @at-root html.cs-dark & {
-        box-shadow:
-          inset 0 11px 8px -10px #111111,
-          inset 0 -11px 8px -10px #111111;
+        box-shadow: inset 0 11px 8px -10px #111111,
+        inset 0 -11px 8px -10px #111111;
       }
     }
 
@@ -518,11 +564,14 @@ $sidebarWidth: 20rem;
 
   &-footer-wrapper {
     margin-top: auto;
+
+    position: sticky;
+    bottom: 0;
+    background: var(--bg-color);
   }
 
   &-footer {
-    margin-top: 5rem;
-
+    position: relative;
     padding: 0.5rem;
 
     display: flex;
@@ -531,6 +580,25 @@ $sidebarWidth: 20rem;
 
     border-top: 1px solid var(--border-color);
     color: rgba(var(--text-color_rgb), 0.5);
+  }
+
+  .docs-sidebar-footer-play {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2.5rem;
+    border: none;
+    background: none;
+    color: rgba(var(--text-color_rgb), 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 1rem;
+      height: 0.9rem;
+    }
   }
 
   @media screen and (max-width: 956px) {

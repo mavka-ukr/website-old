@@ -1,4 +1,8 @@
 <template>
+  <audio style="position: fixed; display: none; z-index: -9999; opacity: 0; width: 0; height: 0; visibility: hidden"
+         id="pluto"
+         src="/pluto.mp3"></audio>
+
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
