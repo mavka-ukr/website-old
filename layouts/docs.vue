@@ -401,9 +401,9 @@ function toggleAudio() {
       <div class="docs-sidebar-footer-wrapper">
         <div class="docs-sidebar-footer">
           <template v-if="audioPlaying || isInformationPage">
-            <button @click="toggleAudio" class="docs-sidebar-footer-play">
+            <button @click="toggleAudio" class="docs-sidebar-footer-play" :class="{ active: audioPlaying }">
               <template v-if="audioPlaying">
-                <span class="material-symbols-rounded">stop_circle</span>
+                <span class="material-symbols-rounded filled">stop</span>
               </template>
               <template v-else>
                 <span class="material-symbols-rounded">play_arrow</span>
@@ -598,6 +598,11 @@ $sidebarWidth: 20rem;
     span {
       font-size: 1rem;
       height: 0.9rem;
+    }
+
+    &.active {
+      color: var(--sidebar-text-color);
+      background-color: var(--sidebar-color);
     }
   }
 
