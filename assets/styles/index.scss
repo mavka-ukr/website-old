@@ -110,6 +110,14 @@ body {
 
   color: var(--text-color);
 
+  &.playing {
+    background-color: var(--sidebar-color);
+    background-image: none;
+    background-size: 100%;
+    backdrop-filter: none;
+    color: var(--sidebar-text-color);
+  }
+
   @media screen and (min-width: 956px) {
     display: none;
   }

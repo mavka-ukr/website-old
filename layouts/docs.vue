@@ -421,7 +421,8 @@ function toggleAudio() {
       </div>
     </div>
 
-    <button @click="sidebarShown = !sidebarShown" class="nav-toggle">
+    <button @click="sidebarShown = !sidebarShown" class="nav-toggle"
+            :class="{ playing: audioPlaying && !sidebarShown }">
       {{ sidebarShown ? "×" : "☰" }}
     </button>
   </div>
