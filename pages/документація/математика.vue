@@ -29,6 +29,18 @@ const a = `
 кінець
 `.trim();
 
+const example = `
+взяти "М"
+
+друк(М.абс(-10))
+друк(М.ПІ)
+друк(М.корінь(9))
+друк(М.степінь(2, 3))
+друк(М.округлити(3.14))
+друк(М.найбільше(1, 2, 3, 4, 5))
+друк(М.найменше(1, 2, 3, 4, 5))
+`.trim();
+
 useHead({
   title: "Математика | Документація | Мавка",
 });
@@ -43,9 +55,13 @@ definePageMeta({
     <h1 class="docs-content-title">Математика</h1>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="a" />
+        <highlightjs language="diia" :autodetect="false" :code="a"/>
       </ClientOnly>
     </div>
+    <hr>
+    <h3>Приклад використання</h3>
+    <UiCodeBlock :files="example"/>
+    <hr>
     <blockquote>
       Щось ще може змінитись до версії 1.0.0. Прохання мати це наувазі.
     </blockquote>
