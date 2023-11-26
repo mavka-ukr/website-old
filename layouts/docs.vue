@@ -265,8 +265,8 @@ function toggleAudio() {
     if (audioPlaying.value) {
       document.getElementById("pluto").pause();
     } else {
-      document.getElementById("pluto").play();
       document.getElementById("pluto").loop = true;
+      document.getElementById("pluto").play();
     }
   }
 }
