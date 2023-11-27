@@ -1,19 +1,18 @@
 <script setup>
-const fetchJs = `
-
-`.trim();
-
 const mainDiia = `
 js """
-async function $отримати_джсон(p, di) {
-  var url = mavka_param(p, 0, 'адреса', undefined, $текст, di);
+var $отримати_джсон = mavka_diia(
+  'отримати_джсон',
+  { 'адреса': mavka_param(0, 'адреса', $текст, undefined) },
+  async function(args, di) {
+    var url = mavka_arg(args, 0, 'адреса', $текст, undefined, di);
 
-  var response = await fetch(url);
-  var json = await response.json();
+    var response = await fetch(url);
+    var json = await response.json();
 
-  return mavka_make(json);
-}
-$отримати_джсон.__m_name__ = 'отримати_джсон';
+    return mavka_portal(json);
+  }
+)
 """
 макет тривала дія отримати_джсон(адреса текст) щось
 
@@ -23,11 +22,11 @@ $отримати_джсон.__m_name__ = 'отримати_джсон';
 `.trim();
 
 useHead({
-  title: "Розширення | Документація | Мавка",
+  title: "Розширення | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
