@@ -1,9 +1,9 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
-import Mavka from "mavka";
 
 const navigationShown = useState("navigationShown", () => false);
 const isMobile = useState("isMobile", () => false);
+const version = useState("version", () => "а.б.в");
 
 function onResize() {
   isMobile.value = window.innerWidth <= 956;
@@ -13,6 +13,12 @@ onMounted(() => {
   isMobile.value = window.innerWidth <= 956;
   console.log(isMobile.value);
   window.addEventListener("resize", onResize);
+  if (process.client) {
+    fetch("https://запуск.мавка.укр/список.txt")
+      .then((r) => r.text())
+      .then((t) => t.split("\n")[1])
+      .then((v) => version.value = v);
+  }
 });
 
 onBeforeUnmount(() => {
@@ -47,7 +53,7 @@ function toggleDarkMode() {
         <img class="logo-dark" src="@/assets/images/logo-dark.png" alt="" />
       </div>
       Мавка
-      <span class="navbar-alpha">{{ Mavka.VERSION }}</span>
+      <span class="navbar-alpha">{{ version }}</span>
     </NuxtLink>
 
     <template v-if="isMobile">
@@ -192,7 +198,7 @@ function toggleDarkMode() {
                     <span class="material-symbols-rounded bold">
                       <template v-if="darkMode === 'true'">dark_mode</template>
                       <template v-if="darkMode === 'false'"
-                        >light_mode</template
+                      >light_mode</template
                       >
                       <template v-if="darkMode === 'auto'">
                         night_sight_auto
@@ -505,9 +511,9 @@ function toggleDarkMode() {
 
   background: rgb(238, 174, 202);
   background: linear-gradient(
-    90deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
+      90deg,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
   );
 
   @media only screen and (max-width: 956px) {
