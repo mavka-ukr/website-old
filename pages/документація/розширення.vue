@@ -68,7 +68,6 @@ definePageMeta({
       </ClientOnly>
     </div>
     <hr />
-    <blockquote>Часте прибігання до розширень є гріхом.</blockquote>
     <blockquote>Сторінка доповнюється.</blockquote>
   </UiDocsWrapper>
 </template>
