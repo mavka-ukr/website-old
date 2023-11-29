@@ -16,6 +16,7 @@ const serverModuleMockup = `
 
 const severOptionsStructure = `
 структура Опції
+  хост текст = "localhost"
   порт число = 80
 кінець
 `.trim();
