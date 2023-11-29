@@ -132,12 +132,16 @@ const stlLinks = useState("stlLinks", () => [
     encodedLink: encodeURI("/документація/дід")
   },
   {
+    name: "Математика",
+    encodedLink: encodeURI("/документація/математика")
+  },
+  {
     name: "Інтернет",
     encodedLink: encodeURI("/документація/інтернет")
   },
   {
-    name: "Математика",
-    encodedLink: encodeURI("/документація/математика")
+    name: "Сервер",
+    encodedLink: encodeURI("/документація/сервер")
   }
 ]);
 const informationLinks = useState("informationLinks", () => [

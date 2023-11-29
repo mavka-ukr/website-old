@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/дід" next="/документація/математика">
+  <UiDocsWrapper prev="/документація/математика" next="/документація/сервер">
     <h1 class="docs-content-title">Інтернет</h1>
     <blockquote>
       Офіційний модуль в процесі написання. Тимчасове рішення: використання

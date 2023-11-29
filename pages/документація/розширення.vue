@@ -4,8 +4,8 @@ js """
 var $отримати_джсон = mavka_diia(
   'отримати_джсон',
   { 'адреса': mavka_param(0, 'адреса', $текст, undefined) },
-  async function(args, di) {
-    var url = mavka_arg(args, 0, 'адреса', $текст, undefined, di);
+  async function(args, di, { arg }) {
+    var url = arg('адреса');
 
     var response = await fetch(url);
     var json = await response.json();
