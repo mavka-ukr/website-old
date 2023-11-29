@@ -62,7 +62,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/інтернет" next="/документація/запит">
+  <UiDocsWrapper prev="/документація/математика" next="/документація/запит">
     <h1 class="docs-content-title">Сервер</h1>
     <UiCodeBlock :files="serverModuleMockup" />
     <br>
