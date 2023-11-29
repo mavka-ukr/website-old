@@ -6,7 +6,7 @@ const serverModuleMockup = `
 
   запустити(
     обробник Дія, ;; дія(запит Запит) Відповідь або текст
-    опції словник = (),
+    опції Опції = (),
     зворот Дія або пусто = пусто
   ) текст
 кінець
@@ -26,6 +26,12 @@ const severResponseStructure = `
   код число = 200
   заголовки словник = ()
   тіло текст = ""
+кінець
+`.trim();
+
+const severOptionsStructure = `
+структура Опції
+  порт число = 80
 кінець
 `.trim();
 
@@ -62,6 +68,8 @@ definePageMeta({
     <UiCodeBlock :files="severRequestStructure" />
     <br>
     <UiCodeBlock :files="severResponseStructure" />
+    <br>
+    <UiCodeBlock :files="severOptionsStructure" />
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="example" />
