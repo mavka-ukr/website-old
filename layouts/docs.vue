@@ -142,6 +142,10 @@ const stlLinks = useState("stlLinks", () => [
   {
     name: "Сервер",
     encodedLink: encodeURI("/документація/сервер")
+  },
+  {
+    name: "Запит",
+    encodedLink: encodeURI("/документація/запит")
   }
 ]);
 const informationLinks = useState("informationLinks", () => [
