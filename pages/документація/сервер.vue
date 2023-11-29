@@ -49,14 +49,16 @@ const severOptionsStructure = `
 const example = `
 взяти "сервер"
 
-сервер.запустити(
-  дія(запит)
-    якщо запит.шлях == "/"
-      вернути "Привіт!"
-    кінець
+дія обробити(запит)
+  якщо запит.шлях == "/"
+    вернути "Привіт!"
+  кінець
 
-    вернути сервер.Відповідь(404)
-  кінець,
+  вернути сервер.Відповідь(404)
+кінець
+
+сервер.запустити(
+  обробити,
   (порт=8080),
   (): друк("Сервер запущено на http://localhsot:8080.")
 )
@@ -74,6 +76,15 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/математика" next="/документація/запит">
     <h1 class="docs-content-title">Сервер</h1>
+    <p>
+      Сервер <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований пак, що дозволяє зручно <span
+      style="font-weight: 500" class="hljs-keyword">та</span> просто
+      обробляти HTTP-запити.
+    </p>
+    <hr />
+    <h3>Приклад</h3>
+    <UiCodeBlock :files="example" />
+    <hr>
     <UiCodeBlock :files="serverModuleMockup" />
     <br>
     <UiCodeBlock :files="severStructure" />
@@ -83,8 +94,5 @@ definePageMeta({
     <UiCodeBlock :files="severResponseStructure" />
     <br>
     <UiCodeBlock :files="severOptionsStructure" />
-    <hr />
-    <h3>Приклад</h3>
-    <UiCodeBlock :files="example" />
   </UiDocsWrapper>
 </template>

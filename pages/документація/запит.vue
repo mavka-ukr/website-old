@@ -23,7 +23,10 @@ const requestResponseStructure = `
 const example = `
 взяти "запит"
 
-чекати відповідь = запит.надіслати("GET", "http://localhost:8080")
+чекати відповідь = запит.надіслати(
+  "GET",
+  "https://мавка.укр/тачки"
+)
 
 друк(відповідь)
 `.trim();
@@ -40,11 +43,17 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/сервер" next="/документація/автор">
     <h1 class="docs-content-title">Запит</h1>
-    <UiCodeBlock :files="requestModuleMockup" />
-    <br>
-    <UiCodeBlock :files="requestResponseStructure" />
+    <p>
+      Запит <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований пак, що дозволяє зручно <span
+      style="font-weight: 500" class="hljs-keyword">та</span> просто
+      надсилати HTTP-запити.
+    </p>
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="example" />
+    <hr>
+    <UiCodeBlock :files="requestModuleMockup" />
+    <br>
+    <UiCodeBlock :files="requestResponseStructure" />
   </UiDocsWrapper>
 </template>
