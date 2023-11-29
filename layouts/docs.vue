@@ -128,12 +128,12 @@ const theoryLinks = useState("theoryLinks", () => [
 ]);
 const stlLinks = useState("stlLinks", () => [
   {
-    name: "Дід",
-    encodedLink: encodeURI("/документація/дід")
-  },
-  {
     name: "Математика",
     encodedLink: encodeURI("/документація/математика")
+  },
+  {
+    name: "Дід",
+    encodedLink: encodeURI("/документація/дід")
   },
   {
     name: "Сервер",
