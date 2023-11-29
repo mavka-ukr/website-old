@@ -1,16 +1,22 @@
 <script setup>
 const serverModuleMockup = `
 макет модуль сервер
+  Опції Опції
   Сервер Сервер
   Запит Запит
   Відповідь Відповідь
-  Опції Опції
 
   запустити(
     обробник Дія,
     опції Опції = (),
     зворот Дія або пусто = пусто
   ) Сервер
+кінець
+`.trim();
+
+const severOptionsStructure = `
+структура Опції
+  порт число = 80
 кінець
 `.trim();
 
@@ -37,12 +43,6 @@ const severResponseStructure = `
   код число = 200
   заголовки словник = ()
   дані байти або текст = ""
-кінець
-`.trim();
-
-const severOptionsStructure = `
-структура Опції
-  порт число = 80
 кінець
 `.trim();
 
@@ -87,12 +87,12 @@ definePageMeta({
     <hr>
     <UiCodeBlock :files="serverModuleMockup" />
     <br>
+    <UiCodeBlock :files="severOptionsStructure" />
+    <br>
     <UiCodeBlock :files="severStructure" />
     <br>
     <UiCodeBlock :files="severRequestStructure" />
     <br>
     <UiCodeBlock :files="severResponseStructure" />
-    <br>
-    <UiCodeBlock :files="severOptionsStructure" />
   </UiDocsWrapper>
 </template>
