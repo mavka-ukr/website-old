@@ -419,6 +419,8 @@ ul {
   left: 0;
   z-index: unset;
   box-shadow: var(--code-shadow);
+  max-width: 100%;
+  overflow-x: auto;
 
   &::before {
     position: absolute;
