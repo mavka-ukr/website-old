@@ -146,6 +146,10 @@ const stlLinks = useState("stlLinks", () => [
   {
     name: "Файлова система",
     encodedLink: encodeURI("/документація/фс")
+  },
+  {
+    name: "JSON",
+    encodedLink: encodeURI("/документація/json")
   }
 ]);
 const informationLinks = useState("informationLinks", () => [
