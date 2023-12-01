@@ -1,41 +1,41 @@
 <script setup>
 const files = [
   {
-    name: "привіт.м",
+    name: "запуск.м",
     text: `
-взяти "привіт/0.0.1"
+взяти "привіт/1.0.0"
 
 привіт.привіт()
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
     text: "Привіт від Лесі!",
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 const files2 = [
   {
-    name: "програма.м",
+    name: "запуск.м",
     text: `
 взяти "дід"
 
 друк(дід)
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
     text: "<модуль дід[розібрати, зібрати]>",
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 useHead({
-  title: "Пак | Документація | Мавка",
+  title: "Пак | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
@@ -52,7 +52,7 @@ definePageMeta({
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Є</span> два типи
       паків: вбудовані
-      <span style="font-weight: 500" class="hljs-keyword">та</span> зовнішні.
+      <span style="font-weight: 500" class="hljs-keyword">та</span> звичайні.
     </p>
     <p>
       Вбудовані паки
@@ -61,7 +61,7 @@ definePageMeta({
       версії.
     </p>
     <p>
-      Зовнішні паки
+      Звичайні паки
       <span style="font-weight: 500" class="hljs-keyword">це</span> паки, що
       створені користувачами
       <span style="font-weight: 500" class="hljs-keyword">і</span>
@@ -69,18 +69,23 @@ definePageMeta({
       <a href="https://пак.укр" target="_blank" class="link external">пак.укр</a
       >. Такі паки мають версії.
     </p>
+    <p>
+      Звичайні паки зберігаються в папці <code>.паки</code> в домашній папці.
+    </p>
     <hr />
+    <h3>Приклад підключення вбудованого паку</h3>
     <UiCodeBlock :files="files2" />
-    <br />
+    <hr />
+    <h3>Приклад підключення звичайного паку</h3>
     <UiCodeBlock :files="files" />
     <hr />
     <p>
-      Версіонування зовнішніх паків відбувається строго через
+      Версіонування звичайних паків відбувається строго через
       <a
         href="https://semver.org/lang/uk/"
         target="_blank"
         class="link external"
-        >semver</a
+      >semver</a
       >.
     </p>
     <hr />

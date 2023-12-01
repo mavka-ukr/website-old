@@ -11,7 +11,7 @@ definePageMeta({
 <template>
   <UiDocsWrapper
     prev="/документація/порівняння"
-    next="/документація/вступ-до-теорії"
+    next="/документація/запуск-паки"
   >
     <h1 class="docs-content-title">Тестування</h1>
     <blockquote>Сторінка доповнюється.</blockquote>
