@@ -19,8 +19,8 @@ const a = `
   кос(значення число) число
   експ(значення число) число
   до_меншого(значення число) число
-  найбільше(...значення) число
-  найменше(...значення) число
+  найбільше(значення список) число
+  найменше(значення список) число
   степінь(а число, б число) число
   округлити(значення число) число
   син(значення число) число
@@ -42,11 +42,11 @@ const example = `
 `.trim();
 
 useHead({
-  title: "Математика | Бібліотека | Документація | Мавка",
+  title: "Математика | Бібліотека | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
@@ -55,12 +55,12 @@ definePageMeta({
     <h1 class="docs-content-title">Математика</h1>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="a"/>
+        <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
     <hr>
     <h3>Приклад використання</h3>
-    <UiCodeBlock :files="example"/>
+    <UiCodeBlock :files="example" />
     <hr>
     <blockquote>
       Щось ще може змінитись до версії 1.0.0. Прохання мати це наувазі.
