@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Вступ до Теорії | Документація | Мавка",
+  title: "Вступ до Теорії | Документація | Мавка"
 });
 
 const inyan = `
@@ -12,13 +12,13 @@ const inyan = `
 `.trim();
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
 <template>
   <UiDocsWrapper
-    prev="/документація/запуск-паки"
+    prev="/документація/приклади"
     next="/документація/інструкція"
   >
     <div class="docs-content-logo">
