@@ -1,9 +1,11 @@
 <script setup>
 const mainDiia = `
 js """
-var $отримати_джсон = mavka_diia(
+var м_отримати_джсон = mavka_diia(
   'отримати_джсон',
-  { 'адреса': mavka_param(0, 'адреса', $текст, undefined) },
+  {
+    'адреса': mavka_param(0, м_текст)
+  },
   async function(args, di, { arg }) {
     var url = arg('адреса');
 
