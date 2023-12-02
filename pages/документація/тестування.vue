@@ -10,7 +10,7 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/порівняння"
+    prev="/документація/взяти"
     next="/документація/запуск-паки"
   >
     <h1 class="docs-content-title">Тестування</h1>

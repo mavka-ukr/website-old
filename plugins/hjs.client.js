@@ -94,7 +94,7 @@ const diia = () => {
       },
       {
         begin: ["дати ", /[a-zа-яіїє_]/, /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]*/],
-        className: { 2: "title.function", 3: "title.function" }
+        className: { 2: "title.label", 3: "title.label" }
       },
       {
         begin: [
@@ -103,7 +103,7 @@ const diia = () => {
           /[a-zа-яіїє_]/,
           /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ]*/
         ],
-        className: { 3: "title.function", 4: "title.function" }
+        className: { 3: "label", 4: "label" }
       },
       {
         begin: [
