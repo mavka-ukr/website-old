@@ -1,5 +1,6 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
+import { POSITION, useToast } from "vue-toastification";
 
 defineProps({
   prev: String,
@@ -277,6 +278,13 @@ onMounted(() => {
       audioPlaying.value = true;
       localStorage.setItem("audioVisible", "true");
       audioVisible.value = true;
+
+      const toast = useToast();
+      toast("Hans Zimmer - Interstellar - Main Theme (Piano Version by Patrik Pietschmann)", {
+        position: POSITION.BOTTOM_CENTER,
+        hideProgressBar: true,
+        icon: false
+      });
     });
     document.getElementById("pluto").addEventListener("pause", () => {
       audioPlaying.value = false;
@@ -454,6 +462,11 @@ function toggleAudio() {
 
 <style lang="scss">
 $sidebarWidth: 20rem;
+
+.Vue-Toastification__toast--default {
+  background-color: var(--sidebar-color);
+  color: var(--sidebar-text-color);
+}
 
 .docs {
   width: 100%;
