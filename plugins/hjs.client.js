@@ -5,6 +5,7 @@ import bash from "highlight.js/lib/languages/bash";
 import javascript from "highlight.js/lib/languages/javascript";
 import markdown from "highlight.js/lib/languages/markdown";
 import plaintext from "highlight.js/lib/languages/plaintext";
+import xml from "highlight.js/lib/languages/xml";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
 const diia = () => {
@@ -271,6 +272,7 @@ hljs.registerLanguage("diiaspec", diiaSpecial);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("plaintext", plaintext);
+hljs.registerLanguage("xml", xml);
 hljs.registerLanguage("markdown", markdown);
 
 export default defineNuxtPlugin((nuxtApp) => {

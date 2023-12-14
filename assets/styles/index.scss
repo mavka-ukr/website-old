@@ -401,8 +401,6 @@ ul {
 
   pre {
     margin: 0;
-
-    overflow-x: auto;
   }
 }
 
@@ -454,8 +452,6 @@ ul {
 }
 
 .hljs {
-  max-width: 446px;
-
   &::-webkit-scrollbar {
     width: 0.5rem;
     height: 0.5rem;

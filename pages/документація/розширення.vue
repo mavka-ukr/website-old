@@ -1,26 +1,8 @@
 <script setup>
 const mainDiia = `
 js """
-var м_отримати_джсон = mavka_diia(
-  'отримати_джсон',
-  {
-    'адреса': mavka_param(0, м_текст)
-  },
-  async function(args, di, { arg }) {
-    var url = arg('адреса');
-
-    var response = await fetch(url);
-    var json = await response.json();
-
-    return mavka_portal(json);
-  }
-)
+console.log("Вуху! Ми в JavaScript!");
 """
-макет тривала дія отримати_джсон(адреса текст) щось
-
-чекати відповідь = отримати_джсон("https://api.storinka.menu/invoke/4/getCafe?id=kava-gallery")
-
-друк(відповідь.result.name)
 `.trim();
 
 useHead({
@@ -33,37 +15,24 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/пак" next="/документація/бог">
+  <UiDocsWrapper prev="/документація/джеджалик" next="/документація/вступ-до-теорії">
     <h1 class="docs-content-title">Розширення</h1>
 
     <p>
-      Так історично склалось, що <span class="diia-word">Мавка</span> написана
-      JavaScript-ом.
+      Розширення дозволяють доповнювати можливості мови під час запуску в браузері за допомогою JavaScript.
     </p>
-    <p>Тому існує можливість розширення.</p>
     <p>
-      Розширення дозволяє доповнювати можливості мови за допомогою JavaScript.
-      По-суті, ви можете написати скрипт на JS-і
-      <span style="font-weight: 500" class="hljs-keyword">та</span> підключити
-      його до <span class="diia-word">Мавки</span>.
+      Розширення записуються спеціальною вказівкою <code>js</code>.
     </p>
+    <p>
+      Щоб ця вказівка працювала перед запуском <span style="font-weight: 500" class="hljs-keyword"> або</span>
+      компіляцією необхідно додати опцію <code>--розширення=1</code>.
+    </p>
+    <UiCodeBlock :files="`мавка --розширення=1 старт.м
+# або
+джеджалик --розширення=1 старт.м старт.js`" language="bash" />
     <hr />
     <h3>Приклад</h3>
-    <p>
-      У цьому прикладі ми створюємо розширення, що дозволяє отримати JSON за
-      певною URL.
-    </p>
-    <!--    <p>-->
-    <!--      <code>fetchAndParseJson.js</code>-->
-    <!--    </p>-->
-    <!--    <div class="code-window code-window-full">-->
-    <!--      <ClientOnly>-->
-    <!--        <highlightjs language="javascript" :code="fetchJs" />-->
-    <!--      </ClientOnly>-->
-    <!--    </div>-->
-    <p>
-      <code>галерея_кави.м</code>
-    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="mainDiia" />

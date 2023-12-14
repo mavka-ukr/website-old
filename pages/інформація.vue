@@ -1,17 +1,13 @@
 <script setup lang="ts">
 useHead({
-  title: "Мавка",
+  title: "Інформація | Мавка"
 });
 </script>
 
 <template>
   <main class="container">
     <UiNavbar />
-    <UiHero />
-    <UiFeatures />
-  </main>
-  <UiAtom />
-  <main class="container">
+    <UiGetInvolved />
     <UiFooter />
   </main>
 </template>

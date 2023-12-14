@@ -3,6 +3,7 @@ interface File {
   name: string;
   text: string;
   plaintext?: boolean;
+  language?: string;
 }
 
 const props = defineProps<{
@@ -10,6 +11,7 @@ const props = defineProps<{
   playButton?: boolean;
   defaultIndex?: number;
   plaintext?: boolean;
+  language?: string;
 }>();
 
 const currentFile = ref<File>();
@@ -22,14 +24,14 @@ watch(
     } else {
       currentFile.value = {
         name: "default",
-        text: props.files,
+        text: props.files
       };
     }
   },
   {
     deep: true,
-    immediate: true,
-  },
+    immediate: true
+  }
 );
 </script>
 
@@ -37,10 +39,11 @@ watch(
   <ClientOnly>
     <tempalte v-if="currentFile">
       <template v-if="typeof files === 'object'">
+        <div style="display: block; height: 0.5rem"></div>
         <div class="code-window-wrapper">
           <div class="code-window">
             <highlightjs
-              :language="plaintext || currentFile.plaintext ? 'plaintext' : 'diia'"
+              :language="currentFile.language ? currentFile.language : (language ? language : (plaintext || currentFile.plaintext ? 'plaintext' : 'diia'))"
               :autodetect="false"
               :code="currentFile.text"
             />
@@ -76,7 +79,7 @@ watch(
       <template v-else>
         <div class="code-window code-window-full">
           <highlightjs
-            :language="plaintext || currentFile.plaintext ? 'plaintext' : 'diia'"
+            :language="currentFile.language ? currentFile.language : (language ? language : (plaintext || currentFile.plaintext ? 'plaintext' : 'diia'))"
             :autodetect="false"
             :code="currentFile.text"
           />

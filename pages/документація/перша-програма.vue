@@ -23,7 +23,7 @@ definePageMeta({
 <template>
   <UiDocsWrapper
     prev="/документація/встановлення"
-    next="/документація/стиль"
+    next="/документація/приклади"
   >
     <h1 class="docs-content-title">Перша програма</h1>
 

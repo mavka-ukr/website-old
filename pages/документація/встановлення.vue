@@ -1,11 +1,26 @@
 <script setup>
+import { useState } from "nuxt/app";
+
+const version = useState("version", () => "x.y.z");
+
+onMounted(() => {
+  if (process.client) {
+    fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
+      .then((r) => r.text())
+      .then((t) => t.split("\n")[1])
+      .then((v) => version.value = v);
+  }
+});
+
 const npmInstall = `
 npm i -g mavka
 `.trim();
 
-const npmInstall2 = `
-npm i -g mavka@x.y.z
+const npmInstall2 = computed(() => {
+  return `
+npm i -g mavka@${version.value}
 `.trim();
+});
 
 const diiaRun = `
 мавка
@@ -24,11 +39,11 @@ const runHelloWorldFile = `
 `.trim();
 
 useHead({
-  title: "Встановлення | Документація | Мавка",
+  title: "Встановлення | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
@@ -54,7 +69,7 @@ definePageMeta({
           class="link"
           href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode"
           target="_blank"
-          >Ukrainian Unicode</a
+        >Ukrainian Unicode</a
         >
       </li>
     </ul>
@@ -86,8 +101,8 @@ definePageMeta({
     <blockquote>
       Для апострофа використовується символ <code class="small-code">ʼ</code>.
       Також потрібні символи <code class="small-code">[</code
-      ><code class="small-code">]</code>, <code class="small-code">&lt;</code
-      ><code class="small-code">&gt;</code> які є доступними на розкладці
+    ><code class="small-code">]</code>, <code class="small-code">&lt;</code
+    ><code class="small-code">&gt;</code> які є доступними на розкладці
       <a
         class="link external"
         href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode"

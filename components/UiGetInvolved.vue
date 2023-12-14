@@ -2,7 +2,7 @@
 
 <template>
   <section class="get-involved">
-    <h3 id="get-involved">Приєднатись до створення</h3>
+    <h3 id="get-involved">Офіційні посилання</h3>
     <div class="involve-items">
       <a
         target="_blank"
@@ -75,42 +75,11 @@
       </a>
     </div>
   </section>
-  <section v-if="false" class="get-involved">
-    <h3>Патрони</h3>
-    <div class="involve-items">
-      <a
-        target="_blank"
-        href="https://www.patreon.com/user/creators?u=11659902"
-        class="involve-item"
-      >
-        <div class="involve-item-icon round">
-          <img
-            src="https://c10.patreonusercontent.com/4/patreon-media/p/user/11659902/ed678cd729024929a91a6e8229351b1a/eyJ3IjoyMDB9/1.jpeg?token-time=2145916800&token-hash=xrbhLpCiQsKf61Dr9SwvLsjjTjdDWaHEgeUtyvrZ8dw%3D"
-            alt="GitHub Logo"
-          />
-        </div>
-        <div class="involve-item-name">Joter Glem</div>
-      </a>
-      <a
-        target="_blank"
-        href="https://www.patreon.com/user/creators?u=72512934"
-        class="involve-item"
-      >
-        <div class="involve-item-icon round">
-          <img
-            src="https://c10.patreonusercontent.com/4/patreon-media/p/user/72512934/0098fae9e67c48a4ba50cc479ae62094/eyJ3IjoyMDB9/1.jpeg?token-time=2145916800&token-hash=vvzu4cXVj1FAg7jO9i-P-HzzavzalfnYKMwjpwS3Th0%3D"
-            alt="GitHub Logo"
-          />
-        </div>
-        <div class="involve-item-name">Максим Гавриленко</div>
-      </a>
-    </div>
-  </section>
 </template>
 
 <style lang="scss">
 .get-involved {
-  margin-top: 200px;
+  margin-top: 100px;
 
   h3 {
     text-align: center;

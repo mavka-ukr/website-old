@@ -11,7 +11,6 @@ function onResize() {
 
 onMounted(() => {
   isMobile.value = window.innerWidth <= 956;
-  console.log(isMobile.value);
   window.addEventListener("resize", onResize);
   if (process.client) {
     fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
@@ -103,9 +102,9 @@ function toggleDarkMode() {
             <img src="@/assets/images/tools/cyrrilic.png" alt="" />
             Цирілик
           </NuxtLink>
-          <NuxtLink v-if="false" class="ui-mobile-navbar-link" to="/pravo">
-            <img src="@/assets/images/tools/pravo.png" alt="" />
-            Право
+          <NuxtLink class="ui-mobile-navbar-link" :to="encodeURI('/інформація')">
+            <span class="material-symbols-rounded bold">info</span>
+            Інформація
           </NuxtLink>
           <ClientOnly>
             <a
@@ -184,14 +183,9 @@ function toggleDarkMode() {
                   <img src="@/assets/images/tools/cyrrilic.png" alt="" />
                   Цирілик
                 </UiMenuLink>
-                <UiMenuLink
-                  v-if="false"
-                  v-close-popper
-                  tag="RouterLink"
-                  to="/pravo"
-                >
-                  <img src="@/assets/images/tools/pravo.png" alt="" />
-                  Право
+                <UiMenuLink v-close-popper tag="RouterLink" :to="encodeURI('/інформація')">
+                  <span class="material-symbols-rounded bold">info</span>
+                  Інформація
                 </UiMenuLink>
                 <ClientOnly>
                   <UiMenuItem @click="toggleDarkMode">

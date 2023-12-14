@@ -117,6 +117,11 @@ const currentCode = useState("currentCode", () => codes[1]);
     margin-top: 2rem;
   }
 
+  .right {
+    margin-top: -0.5rem;
+    max-width: 446px;
+  }
+
   &-title {
     margin: 0;
 

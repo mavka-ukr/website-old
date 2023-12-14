@@ -21,6 +21,14 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/перша-програма")
   },
   {
+    name: "Приклади",
+    encodedLink: encodeURI("/документація/приклади")
+  },
+  {
+    name: "Запуск в браузері",
+    encodedLink: encodeURI("/документація/запуск-в-браузері")
+  },
+  {
     name: "Стиль",
     encodedLink: encodeURI("/документація/стиль")
   },
@@ -49,8 +57,12 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/старт-паки")
   },
   {
-    name: "Приклади",
-    encodedLink: encodeURI("/документація/приклади")
+    name: "Джеджалик",
+    encodedLink: encodeURI("/документація/джеджалик")
+  },
+  {
+    name: "Розширення",
+    encodedLink: encodeURI("/документація/розширення")
   }
 ]);
 const theoryLinks = useState("theoryLinks", () => [
@@ -129,10 +141,6 @@ const theoryLinks = useState("theoryLinks", () => [
   {
     name: "Пак",
     encodedLink: encodeURI("/документація/пак")
-  },
-  {
-    name: "Розширення",
-    encodedLink: encodeURI("/документація/розширення")
   },
   {
     name: "Бог",

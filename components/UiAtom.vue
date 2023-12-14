@@ -15,6 +15,9 @@
   position: relative;
   overflow: hidden;
   background: black;
+  @at-root html.cs-light & {
+    box-shadow: var(--code-shadow);
+  }
 
   cursor: none;
 

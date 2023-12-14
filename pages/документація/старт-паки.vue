@@ -37,7 +37,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/тестування" next="/документація/приклади">
+  <UiDocsWrapper prev="/документація/тестування" next="/документація/джеджалик">
     <h1 class="docs-content-title">Старт-паки</h1>
 
     <p>
