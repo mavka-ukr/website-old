@@ -18,7 +18,7 @@ const example = computed(() => {
       name: "index.html",
       text: `
 <script src="https://запуск.мавка.укр/${version.value}/веб.js" jejalyk="--розширення=1"><\/script>
-<script type="text/mavka">
+<script type="mavka">
 друк("Привіт від Лесі!")
 <\/script>
 `.trim(),
@@ -44,7 +44,7 @@ const example2 = computed(() => {
       name: "index.html",
       text: `
 <script src="https://запуск.мавка.укр/${version.value}/веб.js" jejalyk="--розширення=1"><\/script>
-<script src="запуск.м" type="text/mavka"><\/script>
+<script src="запуск.м" type="mavka"><\/script>
 `.trim(),
       language: "xml"
     },
