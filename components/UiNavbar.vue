@@ -92,7 +92,7 @@ function toggleDarkMode() {
           </a>
           <a
             class="ui-mobile-navbar-link"
-            href="https://gitlab.diia.dev/mavka"
+            href="https://diia.dev/mavka"
             target="_blank"
           >
             <img src="@/assets/images/tools/gitlab.png" alt="" />
@@ -182,7 +182,7 @@ function toggleDarkMode() {
                 </UiMenuLink>
                 <UiMenuLink
                   target="_blank"
-                  href="https://gitlab.diia.dev/mavka"
+                  href="https://diia.dev/mavka"
                 >
                   <img src="@/assets/images/tools/gitlab.png" alt="" />
                   Ґіт
