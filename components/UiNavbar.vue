@@ -92,6 +92,14 @@ function toggleDarkMode() {
           </a>
           <a
             class="ui-mobile-navbar-link"
+            href="https://gitlab.diia.dev/mavka"
+            target="_blank"
+          >
+            <img src="@/assets/images/tools/gitlab.png" alt="" />
+            Ґіт
+          </a>
+          <a
+            class="ui-mobile-navbar-link"
             target="_blank"
             href="https://r2u.org.ua/wiki/keyboard/UkrainianUnicode"
           >
@@ -171,6 +179,13 @@ function toggleDarkMode() {
                 >
                   <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
+                </UiMenuLink>
+                <UiMenuLink
+                  target="_blank"
+                  href="https://gitlab.diia.dev/mavka"
+                >
+                  <img src="@/assets/images/tools/gitlab.png" alt="" />
+                  Ґіт
                 </UiMenuLink>
                 <UiMenuLink
                   target="_blank"
