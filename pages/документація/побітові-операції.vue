@@ -58,13 +58,13 @@ definePageMeta({
     <p><code>чародія_вправо</code></p>
     <h4>І</h4>
     <UiCodeBlock :files="and" />
-    <p><code>чародія_бі</code></p>
+    <p><code>чародія_ді</code></p>
     <h4>Або</h4>
     <UiCodeBlock :files="or" />
-    <p><code>чародія_бабо</code></p>
+    <p><code>чародія_дабо</code></p>
     <h4>Не</h4>
     <UiCodeBlock :files="not" />
-    <p><code>чародія_бне</code></p>
+    <p><code>чародія_дне</code></p>
     <h4>Виключне або</h4>
     <UiCodeBlock :files="xor" />
     <p><code>чародія_вабо</code></p>
