@@ -69,12 +69,12 @@ definePageMeta({
     <p><code>чародія_поділити</code></p>
     <h4>Ділення за модулем з остачею</h4>
     <UiCodeBlock :files="divisionMod" />
-    <p><code>чародія_поділити_за_модулем_остача</code></p>
+    <p><code>чародія_остача</code></p>
     <h4>Ділення з часткою</h4>
     <UiCodeBlock :files="divisionDiv" />
-    <p><code>чародія_поділити_за_модулем_частка</code></p>
+    <p><code>чародія_частка</code></p>
     <h4>Піднесення до степеня</h4>
     <UiCodeBlock :files="pow" />
-    <p><code>чародія_піднести_до_степеня</code></p>
+    <p><code>чародія_степінь</code></p>
   </UiDocsWrapper>
 </template>

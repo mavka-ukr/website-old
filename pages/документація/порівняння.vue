@@ -78,33 +78,33 @@ definePageMeta({
     <UiCodeBlock :files="equals2" />
     <br />
     <UiCodeBlock :files="equals" />
-    <p><code>чародія_порівняти_чи_рівно</code></p>
+    <p><code>чародія_рівно</code></p>
     <h4>Не рівно</h4>
     <UiCodeBlock :files="notEquals2" />
     <br />
     <UiCodeBlock :files="notEquals" />
     <p>
-      <blockquote>Використовується чародія <code>чародія_порівняти_чи_рівно</code></blockquote>
+      <blockquote>Використовується чародія <code>чародія_рівно</code></blockquote>
     </p>
     <h4>Більше</h4>
     <UiCodeBlock :files="greater2" />
     <br />
     <UiCodeBlock :files="greater" />
-    <p><code>чародія_порівняти_чи_більше</code></p>
+    <p><code>чародія_більше</code></p>
     <h4>Менше</h4>
     <UiCodeBlock :files="lesser2" />
     <br />
     <UiCodeBlock :files="lesser" />
-    <p><code>чародія_порівняти_чи_менше</code></p>
+    <p><code>чародія_менше</code></p>
     <h4>Не більше</h4>
     <UiCodeBlock :files="notGreater2" />
     <br />
     <UiCodeBlock :files="notGreater" />
-    <p><code>чародія_порівняти_чи_не_більше</code></p>
+    <p><code>чародія_не_більше</code></p>
     <h4>Не менше</h4>
     <UiCodeBlock :files="notLesser2" />
     <br />
     <UiCodeBlock :files="notLesser" />
-    <p><code>чародія_порівняти_чи_не_менше</code></p>
+    <p><code>чародія_не_менше</code></p>
   </UiDocsWrapper>
 </template>

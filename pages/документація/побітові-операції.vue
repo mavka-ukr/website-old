@@ -52,21 +52,21 @@ definePageMeta({
     <hr />
     <h4>Зсув вліво</h4>
     <UiCodeBlock :files="shiftLeft" />
-    <p><code>чародія_зсунути_вліво</code></p>
+    <p><code>чародія_вліво</code></p>
     <h4>Зсув вправо</h4>
     <UiCodeBlock :files="shiftRight" />
-    <p><code>чародія_зсунути_вправо</code></p>
+    <p><code>чародія_вправо</code></p>
     <h4>І</h4>
     <UiCodeBlock :files="and" />
-    <p><code>чародія_побітове_і</code></p>
+    <p><code>чародія_бі</code></p>
     <h4>Або</h4>
     <UiCodeBlock :files="or" />
-    <p><code>чародія_побітове_або</code></p>
+    <p><code>чародія_бабо</code></p>
     <h4>Не</h4>
     <UiCodeBlock :files="not" />
-    <p><code>чародія_побітове_не</code></p>
+    <p><code>чародія_бне</code></p>
     <h4>Виключне або</h4>
     <UiCodeBlock :files="xor" />
-    <p><code>чародія_побітове_виключне_або</code></p>
+    <p><code>чародія_вабо</code></p>
   </UiDocsWrapper>
 </template>
