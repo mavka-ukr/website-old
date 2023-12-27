@@ -18,7 +18,7 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/розширення"
+    prev="/документація/мрм"
     next="/документація/інструкція"
   >
     <div class="docs-content-logo">

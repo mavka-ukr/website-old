@@ -1,49 +1,36 @@
 <script setup>
 const serverModuleMockup = `
 макет модуль сервер
-  Опції = Опції
-  Сервер = Опції
-  Запит = Опції
-  Відповідь = Опції
+  макет структура Опції
+    хост текст = "localhost"
+    порт число = 80
+  кінець
 
-  запустити(
+  макет структура Сервер
+    обробник Дія
+    опції Опції
+
+    запустити(зворот Дія або пусто = пусто)
+  кінець
+
+  макет структура Запит
+    метод текст
+    шлях текст
+    заголовки словник
+    дані байти
+  кінець
+
+  макет структура Відповідь
+    код число = 200
+    заголовки словник = ()
+    дані байти або текст = ""
+  кінець
+
+  макет дія запустити(
     обробник Дія,
     опції Опції = (),
     зворот Дія або пусто = пусто
   ) Сервер
-кінець
-`.trim();
-
-const severOptionsStructure = `
-структура Опції
-  хост текст = "localhost"
-  порт число = 80
-кінець
-`.trim();
-
-const severStructure = `
-структура Сервер
-  обробник Дія
-  опції Опції
-
-  запустити(зворот Дія або пусто = пусто)
-кінець
-`.trim();
-
-const severRequestStructure = `
-структура Запит
-  метод текст
-  шлях текст
-  заголовки словник
-  дані байти
-кінець
-`.trim();
-
-const severResponseStructure = `
-структура Відповідь
-  код число = 200
-  заголовки словник = ()
-  дані байти або текст = ""
 кінець
 `.trim();
 
@@ -87,13 +74,5 @@ definePageMeta({
     <UiCodeBlock :files="example" />
     <hr>
     <UiCodeBlock :files="serverModuleMockup" />
-    <br>
-    <UiCodeBlock :files="severOptionsStructure" />
-    <br>
-    <UiCodeBlock :files="severStructure" />
-    <br>
-    <UiCodeBlock :files="severRequestStructure" />
-    <br>
-    <UiCodeBlock :files="severResponseStructure" />
   </UiDocsWrapper>
 </template>

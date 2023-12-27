@@ -85,11 +85,11 @@ const structureMockup = `
 `.trim();
 
 useHead({
-  title: "Структура | Документація | Мавка",
+  title: "Структура | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 

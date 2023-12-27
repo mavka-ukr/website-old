@@ -16,12 +16,7 @@ const module = `
 
 const moduleStructure = `
 структура Модуль
-кінець
-`.trim();
-
-const moduleMockup = `
-макет Модуль
-  назва(м Модуль) текст
+  спец назва(м Модуль) текст
 кінець
 `.trim();
 
@@ -66,7 +61,5 @@ definePageMeta({
     <hr />
     <h3>Структура модуля</h3>
     <UiCodeBlock :files="moduleStructure" />
-    <br />
-    <UiCodeBlock :files="moduleMockup" />
   </UiDocsWrapper>
 </template>

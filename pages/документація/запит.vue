@@ -1,22 +1,18 @@
 <script setup>
 const requestModuleMockup = `
 макет модуль запит
-  Відповідь = Відповідь
+  макет структура Відповідь
+    код число
+    заголовки словник
+    дані байти
+  кінець
 
-  тривала надіслати(
+  макет тривала дія надіслати(
     метод текст = "GET",
     урл текст = "",
     заголовки словник = (),
     дані байти або текст = ""
   ) Відповідь
-кінець
-`.trim();
-
-const requestResponseStructure = `
-структура Відповідь
-  код число
-  заголовки словник
-  дані байти
 кінець
 `.trim();
 
@@ -53,7 +49,5 @@ definePageMeta({
     <UiCodeBlock :files="example" />
     <hr>
     <UiCodeBlock :files="requestModuleMockup" />
-    <br>
-    <UiCodeBlock :files="requestResponseStructure" />
   </UiDocsWrapper>
 </template>

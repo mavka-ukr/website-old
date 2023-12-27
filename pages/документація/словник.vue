@@ -9,13 +9,11 @@ const dict = `
 `.trim();
 
 const dictStructure = `
-структура словник
-кінець
-`.trim();
+макет структура словник<К, З>
+  розмір число
 
-const dictMockup = `
-макет словник
-  розмір(с словник) число
+  чародія_отримати(ключ К) З
+  чародія_покласти(ключ К, значення З) З
 кінець
 `.trim();
 
@@ -54,7 +52,5 @@ definePageMeta({
     <hr />
     <h3>Структура словника</h3>
     <UiCodeBlock :files="dictStructure" />
-    <br />
-    <UiCodeBlock :files="dictMockup" />
   </UiDocsWrapper>
 </template>
