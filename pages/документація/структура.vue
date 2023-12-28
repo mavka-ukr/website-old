@@ -74,13 +74,8 @@ const being = `
 const structureStructure = `
 структура Структура
   назва текст
-  властивості список
-кінець
-`.trim();
 
-const structureMockup = `
-макет Структура
-  дізнатись(с щось) Структура
+  спец дізнатись(значення обʼєкт) Структура
 кінець
 `.trim();
 
@@ -210,7 +205,5 @@ definePageMeta({
     <hr />
     <h3>Структура структури</h3>
     <UiCodeBlock :files="structureStructure" />
-    <br />
-    <UiCodeBlock :files="structureMockup" />
   </UiDocsWrapper>
 </template>
