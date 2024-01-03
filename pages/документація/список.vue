@@ -19,7 +19,8 @@ const listStructurePushMethod = `дія список.додати(значенн
 const listStructurePopMethod = `дія список.забрати() Т`;
 const listStructureFilterMethod = `дія список.фільтр(д Дія) список<Т>`;
 const listStructureFindMethod = `дія список.знайти(д Дія) Т`;
-const listStructurePositionMethod = `дія список.позиція(д Дія) Т`;
+const listStructureFindPositionMethod = `дія список.знайти_позицію(д Дія) число`;
+const listStructurePositionMethod = `дія список.позиція(значення Т) число`;
 const listStructureMapMethod = `дія список.перетворити<НТ>(д Дія) список<НТ>`;
 const listStructureJoinMethod = `дія список.зʼєднати(роздільник текст = "") текст`;
 const listStructureReverseMethod = `дія список.обернути() список<Т>`;
@@ -88,6 +89,8 @@ definePageMeta({
     <UiCodeBlock :files="listStructureFilterMethod" />
     <p><code>знайти</code> це дія для пошуку елемента в списку.</p>
     <UiCodeBlock :files="listStructureFindMethod" />
+    <p><code>позиція</code> це дія для пошуку позиції елемента в списку.</p>
+    <UiCodeBlock :files="listStructureFindPositionMethod" />
     <p><code>позиція</code> це дія для отримання позиції елемента в списку.</p>
     <UiCodeBlock :files="listStructurePositionMethod" />
     <p><code>перетворити</code> це дія для перетворення списку на інший список.</p>
