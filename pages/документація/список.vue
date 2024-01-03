@@ -24,6 +24,12 @@ const listStructureMapMethod = `дія список.перетворити<НТ>
 const listStructureJoinMethod = `дія список.зʼєднати(роздільник текст = "") текст`;
 const listStructureReverseMethod = `дія список.обернути() список<Т>`;
 const listStructureSliceMethod = `дія список.зріз(від число, до число або пусто = пусто) список<Т>`;
+const listStructureMagicContainsMethod = `дія список.чародія_містить(значення Т) Т`;
+const listStructureMagicGetMethod = `дія список.чародія_отримати(позиція число) Т`;
+const listStructureMagicSetMethod = `дія список.чародія_покласти(позиція число, значення Т) Т`;
+const listStructureMagicIteratorMethod = `дія список.чародія_перебір() перебір<Т>`;
+const listStructureMagicLogicalMethod = `дія список.чародія_логічне() логічне`;
+const listStructureMagicTextMethod = `дія список.чародія_текст() текст`;
 
 useHead({
   title: "Список | Документація | Мавка"
@@ -96,5 +102,17 @@ definePageMeta({
     <UiCodeBlock :files="listStructureReverseMethod" />
     <p><code>зріз</code> це дія для отримання елементів списку від та до конкретної позиції. Вертає новий список.</p>
     <UiCodeBlock :files="listStructureSliceMethod" />
+    <p><code>чародія_містить</code> це дія для перевірки чи список містить обʼєкт.</p>
+    <UiCodeBlock :files="listStructureMagicContainsMethod" />
+    <p><code>чародія_отримати</code> це дія для отримання елемента зі списку за певною позицією.</p>
+    <UiCodeBlock :files="listStructureMagicGetMethod" />
+    <p><code>чародія_покласти</code> це дія для зміни елемента в списку за певною позицією.</p>
+    <UiCodeBlock :files="listStructureMagicSetMethod" />
+    <p><code>чародія_перебір</code> це дія для отримання перебору списку.</p>
+    <UiCodeBlock :files="listStructureMagicIteratorMethod" />
+    <p><code>чародія_логічне</code> це дія для перетворення списку на логічне.</p>
+    <UiCodeBlock :files="listStructureMagicLogicalMethod" />
+    <p><code>чародія_текст</code> це дія для перетворення списку на текст.</p>
+    <UiCodeBlock :files="listStructureMagicTextMethod" />
   </UiDocsWrapper>
 </template>
