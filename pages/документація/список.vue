@@ -76,64 +76,81 @@ definePageMeta({
       самий
       список.</p>
     <UiCodeBlock :files="listStructureSortSpecMethod" />
+
     <p><code>сортувати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для сортування списку.
       Змінює позиції елементів самого списку, а не
       створює новий. Вертає той
       самий
       список.</p>
     <UiCodeBlock :files="listStructureSortMethod" />
+
     <p><code>додати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для додавання елемента в
       <span style="font-weight: 500" class="hljs-keyword">кінець</span> списку. Вертає нову довжину списку.</p>
     <UiCodeBlock :files="listStructurePushMethod" />
+
     <p><code>забрати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> отримування останнього
       елемента зі списку. Цей елемент також видаляється зі списку.
     </p>
     <UiCodeBlock :files="listStructurePopMethod" />
+
     <p><code>фільтр</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для створення нового
       відфільтрованого списку.</p>
     <UiCodeBlock :files="listStructureFilterMethod" />
+
     <p><code>знайти</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для пошуку елемента в
       списку.</p>
     <UiCodeBlock :files="listStructureFindMethod" />
+
     <p><code>позиція</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для пошуку позиції
       елемента в списку.</p>
     <UiCodeBlock :files="listStructureFindPositionMethod" />
+
     <p><code>позиція</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання позиції
       елемента в списку.</p>
     <UiCodeBlock :files="listStructurePositionMethod" />
+
     <p><code>перетворити</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       списку на інший список.</p>
     <UiCodeBlock :files="listStructureMapMethod" />
+
     <p><code>зʼєднати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       елементів списку на текст <span style="font-weight: 500" class="hljs-keyword">та</span> встановлення між ними
       певного
       роздільника.</p>
     <UiCodeBlock :files="listStructureJoinMethod" />
+
     <p><code>обернути</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для обернення позицій
       елементів списку. Змінює позиції елементів самого списку, а не
       створює новий. Вертає той
       самий
       список.</p>
     <UiCodeBlock :files="listStructureReverseMethod" />
+
     <p><code>зріз</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання елементів
       списку від <span style="font-weight: 500" class="hljs-keyword">та</span> до конкретної позиції. Вертає новий
       список.</p>
     <UiCodeBlock :files="listStructureSliceMethod" />
+
     <p><code>чародія_містить</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перевірки чи
       список <span style="font-weight: 500" class="hljs-keyword">містить</span> обʼєкт.</p>
     <UiCodeBlock :files="listStructureMagicContainsMethod" />
+
     <p><code>чародія_отримати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання
       елемента зі списку за певною позицією.</p>
     <UiCodeBlock :files="listStructureMagicGetMethod" />
+
     <p><code>чародія_покласти</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для зміни
       елемента в списку за певною позицією.</p>
     <UiCodeBlock :files="listStructureMagicSetMethod" />
+
     <p><code>чародія_перебір</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання
       <span style="font-weight: 500" class="hljs-keyword">перебору</span> списку.</p>
     <UiCodeBlock :files="listStructureMagicIteratorMethod" />
+
     <p><code>чародія_логічне</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       списку на логічне.</p>
     <UiCodeBlock :files="listStructureMagicLogicalMethod" />
+
     <p><code>чародія_текст</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       списку на текст.</p>
     <UiCodeBlock :files="listStructureMagicTextMethod" />
