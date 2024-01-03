@@ -24,7 +24,7 @@ const listStructureMapMethod = `дія список.перетворити<НТ>
 const listStructureJoinMethod = `дія список.зʼєднати(роздільник текст = "") текст`;
 const listStructureReverseMethod = `дія список.обернути() список<Т>`;
 const listStructureSliceMethod = `дія список.зріз(від число, до число або пусто = пусто) список<Т>`;
-const listStructureMagicContainsMethod = `дія список.чародія_містить(значення Т) Т`;
+const listStructureMagicContainsMethod = `дія список.чародія_містить(значення Т) логічне`;
 const listStructureMagicGetMethod = `дія список.чародія_отримати(позиція число) Т`;
 const listStructureMagicSetMethod = `дія список.чародія_покласти(позиція число, значення Т) Т`;
 const listStructureMagicIteratorMethod = `дія список.чародія_перебір() перебір<Т>`;
@@ -86,7 +86,7 @@ definePageMeta({
     <UiCodeBlock :files="listStructurePopMethod" />
     <p><code>фільтр</code> це дія для створення нового відфільтрованого списку.</p>
     <UiCodeBlock :files="listStructureFilterMethod" />
-    <p><code>знайти</code> це дія для пошуку елементу в списку.</p>
+    <p><code>знайти</code> це дія для пошуку елемента в списку.</p>
     <UiCodeBlock :files="listStructureFindMethod" />
     <p><code>позиція</code> це дія для отримання позиції елемента в списку.</p>
     <UiCodeBlock :files="listStructurePositionMethod" />
