@@ -23,7 +23,6 @@ const dictStructureMagicGetMethod = `дія словник.чародія_отр
 const dictStructureMagicSetMethod = `дія словник.чародія_покласти(ключ К, значення З) З`;
 const dictStructureMagicIteratorMethod = `дія словник.чародія_перебір() перебір<К>`;
 const dictStructureMagicIteratorWithKeyMethod = `дія словник.чародія_перебір_з_ключем() перебір_з_ключем<К, З>`;
-const dictStructureMagicLogicalMethod = `дія словник.чародія_логічне() логічне`;
 const dictStructureMagicTextMethod = `дія словник.чародія_текст() текст`;
 
 useHead({
@@ -98,10 +97,6 @@ definePageMeta({
       отримання
       <span style="font-weight: 500" class="hljs-keyword">перебору</span> елементів цього словника.</p>
     <UiCodeBlock :files="dictStructureMagicIteratorWithKeyMethod" />
-
-    <p><code>чародія_логічне</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
-      словника на логічне.</p>
-    <UiCodeBlock :files="dictStructureMagicLogicalMethod" />
 
     <p><code>чародія_текст</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       словника на текст.</p>

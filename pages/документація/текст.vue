@@ -23,28 +23,27 @@ const text3 = `
 const textStructure = `
 структура текст
   довжина число
-
-  символ(позиція число) текст
-  код_символу(позиція число) текст
-  позиція(значення текст) число
-  повторити(кількість число) текст
-  замінити(старе_значення текст, нове_значення текст) текст
-  замінити_перше(старе_значення текст, нове_значення текст) текст
-  зрізати(від число, до число або пусто = пусто) текст
-  приєднати(...значення) текст
-  розділити(роздільник текст) текст
-  починається_з(значення текст) логічне
-  закінчується_на(значення текст) логічне
-  обрізати() текст
 кінець
 `.trim();
 
+const textStructureSplitMethod = `дія текст.розбити(дільник текст) список<текст>`;
+const textStructureReplaceMethod = `дія текст.замінити(старе текст, нове текст) текст`;
+const textStructureStartsWithMethod = `дія текст.починається(значення текст) логічне`;
+const textStructureEndsWithMethod = `дія текст.закінчується(значення текст) логічне`;
+const textStructureTrimMethod = `дія текст.обтяти() текст`;
+const textStructureSliceMethod = `дія текст.зріз(від число, до число або пусто = пусто) текст`;
+const textStructureMagicIteratorMethod = `дія словник.чародія_перебір() перебір<текст>`;
+const textStructureMagicIteratorWithKeyMethod = `дія словник.чародія_перебір_з_ключем() перебір_з_ключем<число, текст>`;
+const textStructureMagicContainsMethod = `дія словник.чародія_містить(значення текст) логічне`;
+const textStructureMagicGetMethod = `дія словник.чародія_отримати(позиція число) текст`;
+const textStructureMagicNumberMethod = `дія словник.чародія_число() число`;
+
 useHead({
-  title: "Текст | Документація | Мавка",
+  title: "Текст | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
@@ -55,10 +54,10 @@ definePageMeta({
     <p>
       Текст
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
-      обʼєктом <span class="diia-word">Мавки</span>.
+      обʼєктом <span class="diia-word">Мавки</span>, що зберігає послідовність символів.
     </p>
     <p>
-      Текст описано спеціальною
+      Текст описано
       <span style="font-weight: 500" class="hljs-keyword">структурою </span>
       <code>текст</code>.
     </p>
@@ -74,5 +73,42 @@ definePageMeta({
     <hr />
     <h3>Структура тексту</h3>
     <UiCodeBlock :files="textStructure" />
+    <hr>
+    <h3>Дії тексту</h3>
+    <p><code>розбити</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для розбиття тексту за
+      певним роздільником.</p>
+    <UiCodeBlock :files="textStructureSplitMethod" />
+
+    <p><code>замінити</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для заміни частини тексту
+      на інший текст.</p>
+    <UiCodeBlock :files="textStructureReplaceMethod" />
+
+    <p><code>починається</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перевірки чи текст
+      починається певним текстом.</p>
+    <UiCodeBlock :files="textStructureStartsWithMethod" />
+
+    <p><code>закінчується</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перевірки чи
+      текст закінчується певним текстом.</p>
+    <UiCodeBlock :files="textStructureEndsWithMethod" />
+
+    <p><code>обтяти</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для видалення з
+      початку <span style="font-weight: 500" class="hljs-keyword">і кінця</span> тексту певних символів.</p>
+    <UiCodeBlock :files="textStructureTrimMethod" />
+
+    <p><code>чародія_містить</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перевірки чи
+      текст <span style="font-weight: 500" class="hljs-keyword">містить</span> інший текст.</p>
+    <UiCodeBlock :files="textStructureMagicContainsMethod" />
+
+    <p><code>чародія_отримати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання
+      символа з тексту за певною позицією.</p>
+    <UiCodeBlock :files="textStructureMagicGetMethod" />
+
+    <p><code>чародія_перебір</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання
+      перебору символів тексту.</p>
+    <UiCodeBlock :files="textStructureMagicIteratorMethod" />
+
+    <p><code>чародія_число</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
+      тексту на число.</p>
+    <UiCodeBlock :files="textStructureMagicNumberMethod" />
   </UiDocsWrapper>
 </template>

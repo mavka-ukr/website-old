@@ -29,7 +29,6 @@ const listStructureMagicContainsMethod = `дія список.чародія_м�
 const listStructureMagicGetMethod = `дія список.чародія_отримати(позиція число) Т`;
 const listStructureMagicSetMethod = `дія список.чародія_покласти(позиція число, значення Т) Т`;
 const listStructureMagicIteratorMethod = `дія список.чародія_перебір() перебір<Т>`;
-const listStructureMagicLogicalMethod = `дія список.чародія_логічне() логічне`;
 const listStructureMagicTextMethod = `дія список.чародія_текст() текст`;
 
 useHead({
@@ -146,10 +145,6 @@ definePageMeta({
     <p><code>чародія_перебір</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для отримання
       <span style="font-weight: 500" class="hljs-keyword">перебору</span> списку.</p>
     <UiCodeBlock :files="listStructureMagicIteratorMethod" />
-
-    <p><code>чародія_логічне</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
-      списку на логічне.</p>
-    <UiCodeBlock :files="listStructureMagicLogicalMethod" />
 
     <p><code>чародія_текст</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
       списку на текст.</p>
