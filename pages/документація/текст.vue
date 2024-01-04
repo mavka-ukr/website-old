@@ -32,6 +32,7 @@ const textStructureStartsWithMethod = `дія текст.починається(
 const textStructureEndsWithMethod = `дія текст.закінчується(значення текст) логічне`;
 const textStructureTrimMethod = `дія текст.обтяти() текст`;
 const textStructureSliceMethod = `дія текст.зріз(від число, до число або пусто = пусто) текст`;
+const textStructureMagicAddMethod = `дія словник.чародія_додати(значення текст) текст`;
 const textStructureMagicIteratorMethod = `дія словник.чародія_перебір() перебір<текст>`;
 const textStructureMagicIteratorWithKeyMethod = `дія словник.чародія_перебір_з_ключем() перебір_з_ключем<число, текст>`;
 const textStructureMagicContainsMethod = `дія словник.чародія_містить(значення текст) логічне`;
@@ -95,6 +96,10 @@ definePageMeta({
     <p><code>обтяти</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для видалення з
       початку <span style="font-weight: 500" class="hljs-keyword">і кінця</span> тексту певних символів.</p>
     <UiCodeBlock :files="textStructureTrimMethod" />
+
+    <p><code>чародія_додати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для обʼєднання
+      тексту з іншим текстом.</p>
+    <UiCodeBlock :files="textStructureMagicAddMethod" />
 
     <p><code>чародія_містить</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перевірки чи
       текст <span style="font-weight: 500" class="hljs-keyword">містить</span> інший текст.</p>
