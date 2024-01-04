@@ -34,7 +34,8 @@ definePageMeta({
       обʼєктом <span class="diia-word">Мавки</span>.
     </p>
     <p>
-      Логічне має лише два значення: <code>так</code> або <code>ні</code>.
+      Логічне має лише два значення: <code>так</code> <span style="font-weight: 500" class="hljs-keyword">або </span>
+      <code>ні</code>.
     </p>
     <p>
       Логічне описано
