@@ -9,7 +9,7 @@ const while1files = [
   друк(а)
   а = а + 1
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -25,23 +25,27 @@ const while1files = [
 8
 9
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 useHead({
-  title: "Поки | Документація | Мавка",
+  title: "Поки | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
 <template>
   <UiDocsWrapper prev="/документація/перебір" next="/документація/спроба">
     <h1 class="docs-content-title">Поки</h1>
-
+    <blockquote class="success">
+      Ця частина <span class="diia-word">Мавки </span>
+      <span style="font-weight: 500" class="hljs-keyword">є </span>
+      стабільною.
+    </blockquote>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Поки</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span> вказівкою

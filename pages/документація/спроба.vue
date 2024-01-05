@@ -25,18 +25,22 @@ const simple2 = `
 `.trim();
 
 useHead({
-  title: "Спроба | Документація | Мавка",
+  title: "Спроба | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
 <template>
   <UiDocsWrapper prev="/документація/поки" next="/документація/коментар">
     <h1 class="docs-content-title">Спроба</h1>
-
+    <blockquote class="success">
+      Ця частина <span class="diia-word">Мавки </span>
+      <span style="font-weight: 500" class="hljs-keyword">є </span>
+      стабільною.
+    </blockquote>
     <p>
       Спроба
       <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою

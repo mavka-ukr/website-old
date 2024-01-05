@@ -37,6 +37,11 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/список" next="/документація/модуль">
     <h1 class="docs-content-title">Словник</h1>
+    <blockquote class="success">
+      Ця частина <span class="diia-word">Мавки </span>
+      <span style="font-weight: 500" class="hljs-keyword">є </span>
+      стабільною.
+    </blockquote>
     <p>
       Словник
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним

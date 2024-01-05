@@ -55,6 +55,11 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/коментар" next="/документація/пак">
     <h1 class="docs-content-title">Чародія</h1>
+    <blockquote class="success">
+      Ця частина <span class="diia-word">Мавки </span>
+      <span style="font-weight: 500" class="hljs-keyword">є </span>
+      стабільною.
+    </blockquote>
     <p>
       <span class="diia-word">Мавка</span> надає можливість перезаписувати
       логіку деяких вказівок для обʼєктів через
