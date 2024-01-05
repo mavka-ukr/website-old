@@ -17,7 +17,7 @@ const requestModuleMockup = `
 `.trim();
 
 const example = `
-взяти "запит"
+взяти запит
 
 чекати відповідь = запит.надіслати(
   "GET",

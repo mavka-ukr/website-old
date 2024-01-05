@@ -39,7 +39,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/тестування" next="/документація/джеджалик">
     <h1 class="docs-content-title">Старт-паки</h1>
-
+    <blockquote>Інформація застаріла. Сторінка оновлюється.</blockquote>
+    <hr>
     <p>
       Старт-паки
       <span style="font-weight: 500" class="hljs-keyword">це</span> паки

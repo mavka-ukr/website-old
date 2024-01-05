@@ -1,13 +1,13 @@
 <script setup>
 const example = `
-взяти "json"
+взяти json
 
 друк(json.parse("""{"a": 2, "b": [1, 2, 3]}"""))
 
 друк(json.stringify((а=2, б=[1, 2, 3])))
 `.trim();
 
-const jsonModuleMockup   = `
+const jsonModuleMockup = `
 макет модуль json
   макет дія parse(значення текст) обʼєкт
   макет дія stringify(значення обʼєкт) текст

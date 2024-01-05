@@ -42,6 +42,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/чародія" next="/документація/бог">
     <h1 class="docs-content-title">Пак</h1>
+    <blockquote>Інформація застаріла. Сторінка оновлюється.</blockquote>
+    <hr>
     <p>
       Пак <span style="font-weight: 500" class="hljs-keyword">це</span> один
       <span style="font-weight: 500" class="hljs-keyword">або</span>
@@ -88,7 +90,5 @@ definePageMeta({
       >semver</a
       >.
     </p>
-    <hr />
-    <blockquote>Сторінка доповнюється.</blockquote>
   </UiDocsWrapper>
 </template>

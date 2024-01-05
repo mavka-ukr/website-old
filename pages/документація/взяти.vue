@@ -65,6 +65,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/порівняння" next="/документація/тестування">
     <h1 class="docs-content-title">Взяти</h1>
+    <blockquote>Інформація застаріла. Сторінка оновлюється.</blockquote>
+    <hr>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Взяти</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span> вказівка <span class="diia-word">Мавки</span>,

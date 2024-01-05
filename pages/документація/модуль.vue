@@ -31,7 +31,6 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/словник" next="/документація/умова">
     <h1 class="docs-content-title">Модуль</h1>
-
     <p>
       Модуль
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
