@@ -16,16 +16,15 @@ const module = `
 
 const moduleStructure = `
 структура Модуль
-  спец назва(м Модуль) текст
 кінець
 `.trim();
 
 useHead({
-  title: "Модуль | Документація | Мавка",
+  title: "Модуль | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
