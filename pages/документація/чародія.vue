@@ -204,9 +204,5 @@ definePageMeta({
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="simple2" />
-    <hr />
-    <blockquote>
-      Щось ще може змінитись до версії 1.0.0. Прохання мати це наувазі.
-    </blockquote>
   </UiDocsWrapper>
 </template>
