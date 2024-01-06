@@ -62,7 +62,7 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/математика" next="/документація/запит">
     <h1 class="docs-content-title">Сервер</h1>
     <p>
-      Сервер <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований пак, що дозволяє зручно <span
+      Сервер <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно <span
       style="font-weight: 500" class="hljs-keyword">та</span> просто
       обробляти HTTP-запити.
     </p>

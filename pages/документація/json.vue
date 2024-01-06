@@ -27,7 +27,7 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/фс" next="/документація/автор">
     <h1 class="docs-content-title">JSON</h1>
     <p>
-      JSON <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований пак, що дозволяє зручно
+      JSON <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно
       <span
         style="font-weight: 500" class="hljs-keyword">та</span> просто
       збирати та розбирати формат JSON.

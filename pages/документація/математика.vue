@@ -53,6 +53,11 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/бібліотека" next="/документація/дід">
     <h1 class="docs-content-title">Математика</h1>
+    <p>
+      Математика <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дає деякі
+      математичні
+      константи та функції.
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
@@ -61,9 +66,5 @@ definePageMeta({
     <hr>
     <h3>Приклад використання</h3>
     <UiCodeBlock :files="example" />
-    <hr>
-    <blockquote>
-      Щось ще може змінитись до версії 1.0.0. Прохання мати це наувазі.
-    </blockquote>
   </UiDocsWrapper>
 </template>

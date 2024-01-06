@@ -38,7 +38,7 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/запит" next="/документація/json">
     <h1 class="docs-content-title">Файлова система</h1>
     <p>
-      Файлова система <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований пак, що дозволяє зручно
+      Файлова система <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно
       <span
         style="font-weight: 500" class="hljs-keyword">та</span> просто
       працювати з файлами на вашому компʼютері.
