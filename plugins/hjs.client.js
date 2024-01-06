@@ -50,10 +50,6 @@ const diia = () => {
         className: { 2: "title.class", 3: "title.class" }
       },
       {
-        begin: ["  ", /[A-ZА-ЯІЇЄ]/, /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]+/],
-        className: {}
-      },
-      {
         begin: [/\[\]/, /[A-ZА-ЯІЇЄ]/, /[a-zA-Zа-яА-ЯіІїЇєЄ_ʼ0-9]+/],
         className: { 2: "title.class", 3: "title.class" }
       },
