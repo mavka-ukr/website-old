@@ -153,6 +153,10 @@ const theoryLinks = useState("theoryLinks", () => [
 ]);
 const stlLinks = useState("stlLinks", () => [
   {
+    name: "Вступ до Бібліотеки",
+    encodedLink: encodeURI("/документація/бібліотека")
+  },
+  {
     name: "Математика",
     encodedLink: encodeURI("/документація/математика")
   },
