@@ -1,7 +1,7 @@
 <script setup>
 const files = [
   {
-    name: "запуск.м",
+    name: "старт.м",
     text: `
 взяти "привіт/1.0.0"
 
@@ -16,7 +16,7 @@ const files = [
 ];
 const files2 = [
   {
-    name: "запуск.м",
+    name: "старт.м",
     text: `
 взяти пак "привіт" "1.0.0"
 взяти привіт

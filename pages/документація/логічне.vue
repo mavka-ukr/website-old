@@ -27,11 +27,6 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/текст" next="/документація/список">
     <h1 class="docs-content-title">Логічне</h1>
-    <blockquote class="success">
-      Ця частина <span class="diia-word">Мавки </span>
-      <span style="font-weight: 500" class="hljs-keyword">є </span>
-      стабільною.
-    </blockquote>
     <p>
       Логічне
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним

@@ -93,11 +93,6 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/структура" next="/документація/текст">
     <h1 class="docs-content-title">Число</h1>
-    <blockquote class="success">
-      Ця частина <span class="diia-word">Мавки </span>
-      <span style="font-weight: 500" class="hljs-keyword">є </span>
-      стабільною.
-    </blockquote>
     <p>
       Число
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
