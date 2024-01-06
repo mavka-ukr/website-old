@@ -9,7 +9,7 @@ const example = `
 
 const jsonModuleMockup = `
 макет модуль json
-  макет дія parse(значення текст) обʼєкт
+  макет дія parse<Т>(значення текст) Т
   макет дія stringify(значення обʼєкт) текст
 кінець
 `.trim();
