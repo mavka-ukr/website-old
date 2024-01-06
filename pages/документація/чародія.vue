@@ -53,7 +53,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/коментар" next="/документація/пак">
+  <UiDocsWrapper prev="/документація/коментар" next="/документація/бог">
     <h1 class="docs-content-title">Чародія</h1>
     <blockquote class="success">
       Ця частина <span class="diia-word">Мавки </span>

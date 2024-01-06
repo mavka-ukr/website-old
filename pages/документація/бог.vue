@@ -13,7 +13,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/пак" next="/документація/математика">
+  <UiDocsWrapper prev="/документація/чародія" next="/документація/математика">
     <h1 class="docs-content-title">Бог</h1>
     <UiCodeBlock :files="x" />
   </UiDocsWrapper>

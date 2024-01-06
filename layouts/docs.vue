@@ -53,6 +53,10 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/тестування")
   },
   {
+    name: "Паки",
+    encodedLink: encodeURI("/документація/паки")
+  },
+  {
     name: "Старт-паки",
     encodedLink: encodeURI("/документація/старт-паки")
   },
@@ -141,10 +145,6 @@ const theoryLinks = useState("theoryLinks", () => [
   {
     name: "Чародія",
     encodedLink: encodeURI("/документація/чародія")
-  },
-  {
-    name: "Пак",
-    encodedLink: encodeURI("/документація/пак")
   },
   {
     name: "Бог",
