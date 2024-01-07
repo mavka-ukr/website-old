@@ -25,6 +25,16 @@ const example = `
 друк(блок_привіт)
 `.trim();
 
+const examplediia = `
+блок_суми = (
+  <блок>
+    2 + 2 = <дія>2 + 2</дія>
+  </блок>
+)
+
+друк(блок_суми)
+`.trim();
+
 useHead({
   title: "МРМ | Документація | Мавка"
 });
@@ -47,5 +57,10 @@ definePageMeta({
     <UiCodeBlock :files="exampledef" />
     <br>
     <UiCodeBlock :files="example" language="html" />
+    <p>
+      Ви можете виконувати код <span class="diia-word">Мавки</span> всередині <span class="diia-word">МРМ</span> за
+      допомогою тегу <code>дія</code>.
+    </p>
+    <UiCodeBlock :files="examplediia" language="html" />
   </UiDocsWrapper>
 </template>
