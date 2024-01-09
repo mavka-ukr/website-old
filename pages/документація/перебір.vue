@@ -1,4 +1,14 @@
 <script setup>
+const eachStructure = `
+структура перебір<З>
+  завершено логічне
+  значення З
+кінець
+`.trim();
+
+const eachStructureSpecCreateMethod = `спец дія перебір.створити<З>(завершено логічне, значення З, далі Дія) перебір<З>`;
+const eachStructureNextMethod = `дія перебір.далі()`;
+
 const each1files = [
   {
     name: "діапазон_чисел.м",
@@ -6,7 +16,7 @@ const each1files = [
 перебрати 0..10 як х
   друк(х)
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -23,8 +33,8 @@ const each1files = [
 9
 10
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 const each2files = [
@@ -37,7 +47,7 @@ const each2files = [
 перебрати а..<б як х
   друк(х)
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -53,8 +63,8 @@ const each2files = [
 8
 9
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 const each2_5files = [
@@ -64,7 +74,7 @@ const each2_5files = [
 перебрати 0..0.5..5 як х
   друк(х)
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -81,8 +91,8 @@ const each2_5files = [
 4.5
 5
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 const each3files = [
@@ -92,7 +102,7 @@ const each3files = [
 перебрати [2.2, "привіт", так] як х
   друк(х)
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -101,8 +111,8 @@ const each3files = [
 привіт
 так
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 const each4files = [
@@ -119,7 +129,7 @@ const each4files = [
 перебрати структури як назва, значення
   друк(назва, значення)
 кінець
-`.trim(),
+`.trim()
   },
   {
     name: "результат",
@@ -129,16 +139,16 @@ const each4files = [
 число <структура число>
 логічне <структура логічне>
 `.trim(),
-    plaintext: true,
-  },
+    plaintext: true
+  }
 ];
 
 useHead({
-  title: "Перебір | Документація | Мавка",
+  title: "Перебір | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
@@ -147,29 +157,50 @@ definePageMeta({
     <h1 class="docs-content-title">Перебір</h1>
 
     <p>
-      Перебір
+      Перебір <span style="font-weight: 500" class="hljs-keyword">є</span> обʼєктом <span
+      class="diia-word">Мавки</span>,
+      що виконується вказівкою <span style="font-weight: 500" class="hljs-keyword">перебрати</span>.
+    </p>
+    <p>
+      <span style="font-weight: 500" class="hljs-keyword">Перебрати </span>
       <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
-      <span class="diia-word">Мавки</span>, що виконує перебір діапазону
-      <span style="font-weight: 500" class="hljs-keyword">або</span> списку
-      <span style="font-weight: 500" class="hljs-keyword">й</span>
-      застосовує необхідні інструкції кожному елементу.
+      <span class="diia-word">Мавки</span>, що виконує <span style="font-weight: 500" class="hljs-keyword">дію </span>
+      <code>далі</code> якогось перебіру, допоки значення його
+      властивісті <code>завершено</code> <span style="font-weight: 500" class="hljs-keyword">рівно </span>
+      <code>ні</code>.
+    </p>
+    <p>
+      До прикладу,
+      <NuxtLink class="link external" :href="encodeURI('/документація/список')">список</NuxtLink>
+      має чародію <code>чародія_перебрати</code> яка вертає перебір кожного
+      елементу цього списку.
     </p>
     <hr />
-    <h3>Запис перебору</h3>
-    <p>
-      Пербір записується через ключове слово <code>перебрати</code>. Після нього
-      необхідно вказати обʼєкт перебору, визначення субʼєкта елемента
-      <span style="font-weight: 500" class="hljs-keyword">та</span> тіло.
-    </p>
-    <h4>Перебрати діапазон чисел</h4>
+    <h3>Структура перебору</h3>
+    <UiCodeBlock :files="eachStructure" />
+    <hr>
+    <h3>Дії перебору</h3>
+    <p><code>далі</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> переходу до наступного
+      значення перебору.</p>
+    <UiCodeBlock :files="eachStructureNextMethod" />
+    <p><code>створити</code> <span style="font-weight: 500" class="hljs-keyword">це спец дія</span> для створення нового
+      перебору.</p>
+    <UiCodeBlock :files="eachStructureSpecCreateMethod" />
+    <hr>
+    <h3>Приклад вказівки перебрати</h3>
+    <h4>Перебрати список</h4>
+    <UiCodeBlock :files="each3files" />
+    <h4>Перебрати словник</h4>
+    <UiCodeBlock :files="each4files" />
+    <hr>
+    <h3>Діапазон</h3>
+    <p>Діапазон <span style="font-weight: 500" class="hljs-keyword">це</span> вказівка <span
+      class="diia-word">Мавки</span>, що створює перебір чисел в
+      конкретному діапазоні.</p>
     <UiCodeBlock :files="each1files" />
     <br />
     <UiCodeBlock :files="each2files" />
     <br />
     <UiCodeBlock :files="each2_5files" />
-    <h4>Перебрати список</h4>
-    <UiCodeBlock :files="each3files" />
-    <h4>Перебрати словник</h4>
-    <UiCodeBlock :files="each4files" />
   </UiDocsWrapper>
 </template>
