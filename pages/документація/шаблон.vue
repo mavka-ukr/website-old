@@ -5,7 +5,7 @@ const structureExample = `
 кінець
 `.trim();
 
-const structureExampleObject = `дивна_ракета = Ракета<текст>("Реактивний Двигун")`;
+const structureExampleObject = `дивна_ракета = Ракета<текст>("Текстовий Двигун")`;
 const structureExampleObjectTest = `друк(дивна_ракета.двигун є текст)`;
 
 const diiaExample = `
