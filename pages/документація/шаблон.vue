@@ -39,7 +39,7 @@ definePageMeta({
     <p>Шаблон дозволяє визначити деякі типи властивостей обʼєкта після визначення його <span
       style="font-weight: 500" class="hljs-keyword">структури</span> <span
       style="font-weight: 500" class="hljs-keyword">та</span> перед його
-      створенням або деякі типи параметрів
+      створенням <span style="font-weight: 500" class="hljs-keyword">або</span> деякі типи параметрів
       <span
         style="font-weight: 500" class="hljs-keyword">дії</span>
       після її визначення <span
