@@ -139,6 +139,10 @@ const theoryLinks = useState("theoryLinks", () => [
     encodedLink: encodeURI("/документація/спроба")
   },
   {
+    name: "Шаблон",
+    encodedLink: encodeURI("/документація/шаблон")
+  },
+  {
     name: "Коментар",
     encodedLink: encodeURI("/документація/коментар")
   },
