@@ -50,8 +50,15 @@ definePageMeta({
     <p>
       <span class="diia-word">МРМ</span> <span style="font-weight: 500" class="hljs-keyword"> це</span> вбудована в
       <span
-        class="diia-word">Мавку</span> спеціальна мова розмітки. За
-      синтаксисом схожа до HTML.
+        class="diia-word">Мавку</span> спеціальна мова розмітки.
+    </p>
+    <p>
+      Кожен тег <span class="diia-word">МРМ</span><span style="font-weight: 500" class="hljs-keyword"> це</span>
+      виконання <span style="font-weight: 500" class="hljs-keyword">дії</span>. Дочірні теги передаються через
+      параметр <code>дочірні</code>. Ви також можете передавати значення аргументів <span
+      style="font-weight: 500" class="hljs-keyword">як</span> у звичайній вказівці виконання
+      <span
+        style="font-weight: 500" class="hljs-keyword">дії</span>.
     </p>
     <hr>
     <UiCodeBlock :files="exampledef" />
