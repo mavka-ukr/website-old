@@ -28,9 +28,7 @@ definePageMeta({
       Щоб ця вказівка працювала перед запуском <span style="font-weight: 500" class="hljs-keyword"> або</span>
       компіляцією необхідно додати опцію <code>--розширення=1</code>.
     </p>
-    <UiCodeBlock :files="`мавка --розширення=1 старт.м
-# або
-джеджалик --розширення=1 старт.м старт.js`" language="bash" />
+    <UiCodeBlock :files="`джеджалик --розширення=1 старт.м старт.js`" language="bash" />
     <hr />
     <h3>Приклад</h3>
     <div class="code-window code-window-full">
