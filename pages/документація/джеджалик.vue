@@ -1,4 +1,10 @@
 <script setup>
+const mainDiia = `
+js """
+console.log("Вуху! Ми в JavaScript!");
+"""
+`.trim();
+
 useHead({
   title: "Джеджалик | Документація | Мавка"
 });
@@ -9,10 +15,9 @@ definePageMeta({
 </script>
 
 <template>
-
   <UiDocsWrapper
     prev="/документація/старт-паки"
-    next="/документація/розширення"
+    next="/документація/мрм"
   >
     <div class="docs-content-logo">
       <svg viewBox="0 0 820 820" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -59,5 +64,24 @@ definePageMeta({
     <!--    <UiCodeBlock :files="'джеджалик <вхід.м> <вихід.html>'" plaintext />-->
     <h4>Компіляція в JavaScript з виводом в термінал (stdout)</h4>
     <UiCodeBlock :files="'джеджалик <вхід.м>'" plaintext />
+    <hr>
+    <h3>Розширення</h3>
+    <p>
+      Розширення джеджалика дозволяють доповнювати можливості мови за допомогою JavaScript.
+    </p>
+    <p>
+      Розширення записуються спеціальною вказівкою <code>js</code>.
+    </p>
+    <p>
+      Щоб ця вказівка працювала перед запуском <span style="font-weight: 500" class="hljs-keyword"> або</span>
+      компіляцією необхідно додати опцію <code>--розширення=1</code>.
+    </p>
+    <UiCodeBlock :files="`джеджалик --розширення=1 старт.м старт.js`" language="bash" />
+    <h4>Приклад розширення</h4>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs language="diia" :autodetect="false" :code="mainDiia" />
+      </ClientOnly>
+    </div>
   </UiDocsWrapper>
 </template>
