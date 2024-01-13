@@ -44,7 +44,7 @@ definePageMeta({
       в JavaScript.
     </p>
     <p>
-      <span class="diia-word">Джеджалик</span> встановлюється разом з <span class="diia-word">Мавкою</span>.
+      <span class="diia-word">Джеджалик</span> наразі встановлюється разом з <span class="diia-word">Мавкою</span>.
     </p>
     <p>
       <span class="diia-word">Джеджалик</span> можна використовувати для створення веб-аплікацій <span
