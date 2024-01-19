@@ -5,7 +5,7 @@ const isLoading = ref(true);
 onMounted(() => {
   isLoading.value = true;
 
-  fetch("https://diia.dev/mavka/jejalyk/-/raw/main/CHANGELOG.md")
+  fetch("https://diia.dev/api/v4/projects/2/repository/files/CHANGELOG.md/raw")
     .then((r) => r.text())
     .then((text) => {
       changelog.value = text;
