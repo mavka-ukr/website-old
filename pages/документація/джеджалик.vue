@@ -60,7 +60,7 @@ definePageMeta({
       необхідно використовувати JavaScript.
     </p>
     <p>
-      <span class="diia-word">Джеджалик</span> запускається командою <code>джеджалик</code>.
+      <span class="diia-word">Джеджалик</span> запускається командою <code>джеджалик</code> після встановлення.
     </p>
     <UiCodeBlock :files="'джеджалик привіт.м привіт.js'" plaintext />
     <hr>

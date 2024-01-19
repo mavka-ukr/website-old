@@ -417,7 +417,7 @@ definePageMeta({
       class="diia-word">Мавки</span>.
     </p>
     <p>
-      Робота над <span class="diia-word">МаМою</span> ведеться <a target="_blank" href="https://diia.dev/mavka/mama"
+      Робота над <span class="diia-word">МаМа</span> ведеться <a target="_blank" href="https://diia.dev/mavka/mama"
                                                                   class="link external">тут</a>.
     </p>
     <blockquote>Сторінка доповнюється.</blockquote>
