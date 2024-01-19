@@ -1,4 +1,15 @@
 <script setup>
+const version = useState("version", () => "x.y.z");
+
+onMounted(() => {
+  if (process.client) {
+    fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
+      .then((r) => r.text())
+      .then((t) => t.split("\n")[1])
+      .then((v) => version.value = v);
+  }
+});
+
 const mainDiia = `
 js """
 console.log("Вуху! Ми в JavaScript!");
@@ -16,8 +27,8 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/старт-паки"
-    next="/документація/мрм"
+    prev="/документація/мама"
+    next="/документація/запуск-в-браузері"
   >
     <div class="docs-content-logo">
       <svg viewBox="0 0 820 820" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -44,26 +55,26 @@ definePageMeta({
       в JavaScript.
     </p>
     <p>
-      <span class="diia-word">Джеджалик</span> наразі встановлюється разом з <span class="diia-word">Мавкою</span>.
-    </p>
-    <p>
       <span class="diia-word">Джеджалик</span> можна використовувати для створення веб-аплікацій <span
       class="diia-word">Мавкою</span> <span style="font-weight: 500" class="hljs-keyword">або</span> для інших задач, де
       необхідно використовувати JavaScript.
     </p>
     <p>
-      <span class="diia-word">Джеджалик</span> запускається командою <code>джеджалик</code> після встановлення <span
-      class="diia-word">Мавки</span>.
+      <span class="diia-word">Джеджалик</span> запускається командою <code>джеджалик</code>.
     </p>
     <UiCodeBlock :files="'джеджалик привіт.м привіт.js'" plaintext />
+    <hr>
+    <h3>Встановлення</h3>
+    <p>Щоб встановити <span class="diia-word">Джеджалик</span> вам необхідно мати NodeJS 18+.</p>
+    <UiCodeBlock :files="`npm i -g jejalyk@${version}`" plaintext />
     <hr>
     <h3>Використання</h3>
     <h4>Компіляція в JavaScript зі збереженням у файл</h4>
     <UiCodeBlock :files="'джеджалик <вхід.м> <вихід.js>'" plaintext />
-    <!--    <h4>Компіляція в JavaScript зі збереженням у HTML-файл</h4>-->
-    <!--    <UiCodeBlock :files="'джеджалик <вхід.м> <вихід.html>'" plaintext />-->
     <h4>Компіляція в JavaScript з виводом в термінал (stdout)</h4>
     <UiCodeBlock :files="'джеджалик <вхід.м>'" plaintext />
+    <h4>Компіляція в JavaScript з автоматичним запуском</h4>
+    <UiCodeBlock :files="'джеджалик старт <вхід.м>'" plaintext />
     <hr>
     <h3>Розширення</h3>
     <p>

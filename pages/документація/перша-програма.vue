@@ -8,21 +8,21 @@ const helloWorldFile = `
 `.trim();
 
 const runHelloWorldFile = `
-мавка привіт.м
+джеджалик старт привіт.м
 `.trim();
 
 useHead({
-  title: "Перша програма | Документація | Мавка",
+  title: "Перша програма | Документація | Мавка"
 });
 
 definePageMeta({
-  layout: "docs",
+  layout: "docs"
 });
 </script>
 
 <template>
   <UiDocsWrapper
-    prev="/документація/встановлення"
+    prev="/документація/розкладка"
     next="/документація/приклади"
   >
     <h1 class="docs-content-title">Перша програма</h1>
@@ -37,7 +37,7 @@ definePageMeta({
         />
       </ClientOnly>
     </div>
-    <p>Запустіть, виконавши цю команду:</p>
+    <p>Запустіть через <span class="diia-word">Джеджалик</span>, виконавши цю команду:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs

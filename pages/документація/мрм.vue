@@ -45,7 +45,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/джеджалик" next="/документація/вступ-до-теорії">
+  <UiDocsWrapper prev="/документація/старт-паки" next="/документація/вступ-до-теорії">
     <h1 class="docs-content-title">Мова розмітки Мавки</h1>
     <p>
       <span class="diia-word">МРМ</span> <span style="font-weight: 500" class="hljs-keyword"> це</span> вбудована в

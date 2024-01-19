@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/перша-програма" next="/документація/запуск-в-браузері">
+  <UiDocsWrapper prev="/документація/перша-програма" next="/документація/мама">
     <h1 class="docs-content-title">Приклади</h1>
     <p>
       Ви можете знайти безліч прикладів на <a href="https://фрагмент.укр" target="_blank" class="link external">Фрагменті</a>.

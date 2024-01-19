@@ -68,12 +68,13 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/приклади"
+    prev="/документація/джеджалик"
     next="/документація/стиль"
   >
     <h1 class="docs-content-title">Запуск в браузері</h1>
     <p>
-      Ви можете підключити <span class="diia-word">Мавку</span> відразу у ваш HTML-файл для запуску у веб-переглядачі.
+      Ви можете підключити <span class="diia-word">Мавку</span> завдяки <span class="diia-word">Джеджалику</span>
+      відразу у ваш HTML-файл для запуску у веб-переглядачі.
     </p>
     <hr>
     <UiCodeBlock :files="example" />

@@ -159,20 +159,20 @@ definePageMeta({
     <p>
       Перебір <span style="font-weight: 500" class="hljs-keyword">є</span> обʼєктом <span
       class="diia-word">Мавки</span>,
-      що виконується вказівкою <span style="font-weight: 500" class="hljs-keyword">перебрати</span>.
+      що використовується вказівкою <span style="font-weight: 500" class="hljs-keyword">перебрати</span>.
     </p>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Перебрати </span>
       <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
       <span class="diia-word">Мавки</span>, що виконує <span style="font-weight: 500" class="hljs-keyword">дію </span>
       <code>далі</code> якогось перебіру, допоки значення його
-      властивісті <code>завершено</code> <span style="font-weight: 500" class="hljs-keyword">рівно </span>
+      властивості <code>завершено</code> <span style="font-weight: 500" class="hljs-keyword">рівно </span>
       <code>ні</code>.
     </p>
     <p>
       До прикладу,
       <NuxtLink class="link external" :href="encodeURI('/документація/список')">список</NuxtLink>
-      має чародію <code>чародія_перебрати</code> яка вертає перебір кожного
+      має чародію <code>чародія_перебір</code> яка вертає перебір кожного
       елементу цього списку.
     </p>
     <hr />

@@ -17,12 +17,24 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/встановлення")
   },
   {
+    name: "Розкладка",
+    encodedLink: encodeURI("/документація/розкладка")
+  },
+  {
     name: "Перша програма",
     encodedLink: encodeURI("/документація/перша-програма")
   },
   {
     name: "Приклади",
     encodedLink: encodeURI("/документація/приклади")
+  },
+  {
+    name: "МаМа",
+    encodedLink: encodeURI("/документація/мама")
+  },
+  {
+    name: "Джеджалик",
+    encodedLink: encodeURI("/документація/джеджалик")
   },
   {
     name: "Запуск в браузері",
@@ -59,10 +71,6 @@ const practiceLinks = useState("practiceLinks", () => [
   {
     name: "Старт-паки",
     encodedLink: encodeURI("/документація/старт-паки")
-  },
-  {
-    name: "Джеджалик",
-    encodedLink: encodeURI("/документація/джеджалик")
   },
   {
     name: "МРМ",
