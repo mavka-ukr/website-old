@@ -1,27 +1,4 @@
 <script setup>
-import { useState } from "nuxt/app";
-
-const version = useState("version", () => "x.y.z");
-
-onMounted(() => {
-  if (process.client) {
-    fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
-      .then((r) => r.text())
-      .then((t) => t.split("\n")[1])
-      .then((v) => version.value = v);
-  }
-});
-
-const npmInstall = `
-npm i -g mavka
-`.trim();
-
-const npmInstall2 = computed(() => {
-  return `
-npm i -g mavka@${version.value}
-`.trim();
-});
-
 useHead({
   title: "Встановлення | Документація | Мавка"
 });
@@ -45,6 +22,10 @@ definePageMeta({
       <li>
         <NuxtLink class="link external diia-word" :href="encodeURI('/документація/джеджалик')">
           Джеджалик
+        </NuxtLink>
+        <span style="font-weight: 500" class="hljs-keyword">або</span>
+        <NuxtLink class="link external" :href="encodeURI('/документація/mavka')">
+          npm i -g mavka (застаріло)
         </NuxtLink>
       </li>
     </ul>

@@ -5,7 +5,7 @@ const isLoading = ref(true);
 onMounted(() => {
   isLoading.value = true;
 
-  fetch("https://raw.githubusercontent.com/mavka-ukr/mavka/main/CHANGELOG.md")
+  fetch("https://diia.dev/mavka/jejalyk/-/raw/main/CHANGELOG.md")
     .then((r) => r.text())
     .then((text) => {
       changelog.value = text;
@@ -47,11 +47,11 @@ definePageMeta({
     <hr />
     <p>
       <a
-        href="https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md"
+        href="https://diia.dev/mavka/jejalyk/-/blob/main/CHANGELOG.md"
         target="_blank"
         class="link external"
       >
-        https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md
+        https://diia.dev/mavka/jejalyk/-/blob/main/CHANGELOG.md
       </a>
     </p>
   </UiDocsWrapper>
