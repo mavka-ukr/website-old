@@ -19,9 +19,6 @@ definePageMeta({
     <p>Тим, хто боронив.</p>
     <p>Тим, хто поборов.</p>
     <hr />
-    <p>Місце тим, хто повірив.</p>
-    <p>Окреме місце першим з тих, хто повірив.</p>
-    <hr />
     <p>
       <a
         href="https://github.com/mavka-ukr/mavka/blob/main/CONTRIBUTORS.md"

@@ -84,6 +84,14 @@ function toggleDarkMode() {
           </a>
           <a
             class="ui-mobile-navbar-link"
+            href="https://маска.укр/мавка"
+            target="_blank"
+          >
+            <img src="@/assets/images/tools/maska.png" alt="" />
+            Маска
+          </a>
+          <a
+            class="ui-mobile-navbar-link"
             href="https://конкурс.укр"
             target="_blank"
           >
@@ -172,6 +180,14 @@ function toggleDarkMode() {
 
             <template #popper>
               <UiMenu>
+                <UiMenuLink
+                  v-close-popper
+                  href="https://маска.укр/мавка"
+                  target="_blank"
+                >
+                  <img src="@/assets/images/tools/maska.png" alt="" />
+                  Маска
+                </UiMenuLink>
                 <UiMenuLink
                   v-close-popper
                   href="https://конкурс.укр"

@@ -48,22 +48,21 @@ definePageMeta({
     <p>
       Умова
       <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
-      <span class="diia-word">Мавки</span>, що перевіряє чи результатом
-      інструкції
+      <span class="diia-word">Мавки</span>, що перевіряє чи результатом вказівки
       <span style="font-weight: 500" class="hljs-keyword">є</span>
       <span style="font-weight: 500" class="hljs-keyword"> логічне </span>
       <code>так</code>.
       <span style="font-weight: 500" class="hljs-keyword">Якщо </span>
-      <code>так</code>, тоді виконуються відповідні інструкції.
+      <code>так</code>, тоді виконуються відповідні вказівки.
       <span style="font-weight: 500" class="hljs-keyword">Якщо</span>
       <span style="font-weight: 500" class="hljs-keyword"> інакше</span>, тоді
-      також можуть виконуватись відповідні інструкції.
+      також можуть виконуватись відповідні вказівки.
     </p>
     <hr />
     <h3>Запис умови</h3>
     <p>
       Умова записується через ключове слово <code>якщо</code>. Після нього
-      необхідно вказати інструкцію для перевірки, а також тіло.
+      необхідно вказати вказівку для перевірки, а також тіло.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>

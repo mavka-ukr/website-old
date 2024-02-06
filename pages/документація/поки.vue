@@ -44,8 +44,8 @@ definePageMeta({
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Поки</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span> вказівкою
-      <span class="diia-word">Мавки</span>, що виконує інструкції допоки
-      результат вказаної інструкції
+      <span class="diia-word">Мавки</span>, що виконує вказівки допоки
+      результат вказаної вказівки
       <span style="font-weight: 500" class="hljs-keyword">є</span> логічним
       <code>так</code>.
     </p>
@@ -54,7 +54,7 @@ definePageMeta({
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Поки</span>
       записується через ключове слово <code>поки</code>. Після нього необхідно
-      вказати інструкцію
+      вказати вказівку
       <span style="font-weight: 500" class="hljs-keyword">та</span> тіло.
     </p>
     <h4>Друкувати <code>а</code>, поки <code>а</code> менше 10</h4>

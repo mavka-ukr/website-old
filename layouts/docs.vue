@@ -6,7 +6,7 @@ defineProps({
   prev: String,
   next: String,
   title: String,
-  loading: Boolean
+  loading: Boolean,
 });
 
 const route = useRoute();
@@ -14,198 +14,198 @@ const sidebarShown = useState("sidebarShown", () => false);
 const practiceLinks = useState("practiceLinks", () => [
   {
     name: "Встановлення",
-    encodedLink: encodeURI("/документація/встановлення")
+    encodedLink: encodeURI("/документація/встановлення"),
   },
   {
     name: "Розкладка",
-    encodedLink: encodeURI("/документація/розкладка")
+    encodedLink: encodeURI("/документація/розкладка"),
   },
   {
     name: "Перша програма",
-    encodedLink: encodeURI("/документація/перша-програма")
+    encodedLink: encodeURI("/документація/перша-програма"),
   },
   {
     name: "Приклади",
-    encodedLink: encodeURI("/документація/приклади")
+    encodedLink: encodeURI("/документація/приклади"),
   },
   {
     name: "МаМа",
-    encodedLink: encodeURI("/документація/мама")
+    encodedLink: encodeURI("/документація/мама"),
   },
   {
     name: "Джеджалик",
-    encodedLink: encodeURI("/документація/джеджалик")
+    encodedLink: encodeURI("/документація/джеджалик"),
   },
   {
     name: "Запуск в браузері",
-    encodedLink: encodeURI("/документація/запуск-в-браузері")
+    encodedLink: encodeURI("/документація/запуск-в-браузері"),
   },
   {
     name: "Стиль",
-    encodedLink: encodeURI("/документація/стиль")
+    encodedLink: encodeURI("/документація/стиль"),
   },
   {
     name: "Арифметика",
-    encodedLink: encodeURI("/документація/арифметика")
+    encodedLink: encodeURI("/документація/арифметика"),
   },
   {
     name: "Побітові операції",
-    encodedLink: encodeURI("/документація/побітові-операції")
+    encodedLink: encodeURI("/документація/побітові-операції"),
   },
   {
     name: "Порівняння",
-    encodedLink: encodeURI("/документація/порівняння")
+    encodedLink: encodeURI("/документація/порівняння"),
   },
   {
     name: "Взяти",
-    encodedLink: encodeURI("/документація/взяти")
+    encodedLink: encodeURI("/документація/взяти"),
   },
   {
     name: "Тестування",
-    encodedLink: encodeURI("/документація/тестування")
+    encodedLink: encodeURI("/документація/тестування"),
   },
   {
     name: "Паки",
-    encodedLink: encodeURI("/документація/паки")
+    encodedLink: encodeURI("/документація/паки"),
   },
   {
     name: "Старт-паки",
-    encodedLink: encodeURI("/документація/старт-паки")
+    encodedLink: encodeURI("/документація/старт-паки"),
   },
   {
     name: "МРМ",
-    encodedLink: encodeURI("/документація/мрм")
-  }
+    encodedLink: encodeURI("/документація/мрм"),
+  },
 ]);
 const theoryLinks = useState("theoryLinks", () => [
   {
     name: "Вступ до Теорії",
-    encodedLink: encodeURI("/документація/вступ-до-теорії")
+    encodedLink: encodeURI("/документація/вступ-до-теорії"),
   },
   {
-    name: "Інструкція",
-    encodedLink: encodeURI("/документація/інструкція")
+    name: "Вказівка",
+    encodedLink: encodeURI("/документація/вказівка"),
   },
   {
     name: "Обʼєкт",
-    encodedLink: encodeURI("/документація/обʼєкт")
+    encodedLink: encodeURI("/документація/обʼєкт"),
   },
   {
     name: "Субʼєкт",
-    encodedLink: encodeURI("/документація/субʼєкт")
+    encodedLink: encodeURI("/документація/субʼєкт"),
   },
   {
     name: "Дія",
-    encodedLink: encodeURI("/документація/дія")
+    encodedLink: encodeURI("/документація/дія"),
   },
   {
     name: "Структура",
-    encodedLink: encodeURI("/документація/структура")
+    encodedLink: encodeURI("/документація/структура"),
   },
   {
     name: "Число",
-    encodedLink: encodeURI("/документація/число")
+    encodedLink: encodeURI("/документація/число"),
   },
   {
     name: "Текст",
-    encodedLink: encodeURI("/документація/текст")
+    encodedLink: encodeURI("/документація/текст"),
   },
   {
     name: "Логічне",
-    encodedLink: encodeURI("/документація/логічне")
+    encodedLink: encodeURI("/документація/логічне"),
   },
   {
     name: "Список",
-    encodedLink: encodeURI("/документація/список")
+    encodedLink: encodeURI("/документація/список"),
   },
   {
     name: "Словник",
-    encodedLink: encodeURI("/документація/словник")
+    encodedLink: encodeURI("/документація/словник"),
   },
   {
     name: "Модуль",
-    encodedLink: encodeURI("/документація/модуль")
+    encodedLink: encodeURI("/документація/модуль"),
   },
   {
     name: "Умова",
-    encodedLink: encodeURI("/документація/умова")
+    encodedLink: encodeURI("/документація/умова"),
   },
   {
     name: "Перебір",
-    encodedLink: encodeURI("/документація/перебір")
+    encodedLink: encodeURI("/документація/перебір"),
   },
   {
     name: "Поки",
-    encodedLink: encodeURI("/документація/поки")
+    encodedLink: encodeURI("/документація/поки"),
   },
   {
     name: "Спроба",
-    encodedLink: encodeURI("/документація/спроба")
+    encodedLink: encodeURI("/документація/спроба"),
   },
   {
     name: "Шаблон",
-    encodedLink: encodeURI("/документація/шаблон")
+    encodedLink: encodeURI("/документація/шаблон"),
   },
   {
     name: "Коментар",
-    encodedLink: encodeURI("/документація/коментар")
+    encodedLink: encodeURI("/документація/коментар"),
   },
   {
     name: "Чародія",
-    encodedLink: encodeURI("/документація/чародія")
+    encodedLink: encodeURI("/документація/чародія"),
   },
-  {
-    name: "Бог",
-    encodedLink: encodeURI("/документація/бог")
-  }
+  // {
+  //   name: "Бог",
+  //   encodedLink: encodeURI("/документація/бог")
+  // }
 ]);
 const stlLinks = useState("stlLinks", () => [
   {
     name: "Вступ до Бібліотеки",
-    encodedLink: encodeURI("/документація/бібліотека")
+    encodedLink: encodeURI("/документація/бібліотека"),
   },
   {
     name: "Математика",
-    encodedLink: encodeURI("/документація/математика")
+    encodedLink: encodeURI("/документація/математика"),
   },
   {
     name: "Дід",
-    encodedLink: encodeURI("/документація/дід")
+    encodedLink: encodeURI("/документація/дід"),
   },
   {
     name: "Сервер",
-    encodedLink: encodeURI("/документація/сервер")
+    encodedLink: encodeURI("/документація/сервер"),
   },
   {
     name: "Запит",
-    encodedLink: encodeURI("/документація/запит")
+    encodedLink: encodeURI("/документація/запит"),
   },
   {
     name: "Файлова система",
-    encodedLink: encodeURI("/документація/фс")
+    encodedLink: encodeURI("/документація/фс"),
   },
   {
     name: "JSON",
-    encodedLink: encodeURI("/документація/json")
-  }
+    encodedLink: encodeURI("/документація/json"),
+  },
 ]);
 const informationLinks = useState("informationLinks", () => [
   {
     name: "Автор",
-    encodedLink: encodeURI("/документація/автор")
+    encodedLink: encodeURI("/документація/автор"),
   },
   {
     name: "Подяка",
-    encodedLink: encodeURI("/документація/подяка")
+    encodedLink: encodeURI("/документація/подяка"),
   },
   {
     name: "Змінопис",
-    encodedLink: encodeURI("/документація/змінопис")
+    encodedLink: encodeURI("/документація/змінопис"),
   },
   {
     name: "Післясцена",
-    encodedLink: encodeURI("/документація/післясцена")
-  }
+    encodedLink: encodeURI("/документація/післясцена"),
+  },
 ]);
 const isPracticeExpanded = useState("isPracticeExpanded", () => false);
 const isPracticePage = useState("isPracticePage", () => false);
@@ -224,18 +224,18 @@ function updateColor() {
       ["#485cb0", "var(--bg-color)"],
       ["#f3d74b", "#000000"],
       ["#b3271a", "var(--bg-color)"],
-      ["var(--text-color)", "var(--bg-color)"]
+      ["var(--text-color)", "var(--bg-color)"],
     ];
 
     const randomColor = colors[randomNumberFrom0To3];
 
     document.documentElement.style.setProperty(
       "--sidebar-color",
-      randomColor[0]
+      randomColor[0],
     );
     document.documentElement.style.setProperty(
       "--sidebar-text-color",
-      randomColor[1]
+      randomColor[1],
     );
   }
 }
@@ -280,14 +280,14 @@ watch(
     updateColor();
   },
   {
-    immediate: true
-  }
+    immediate: true,
+  },
 );
 
 addRouteMiddleware(() => {
   sidebarShown.value = false;
   window.scrollTo({
-    top: 0
+    top: 0,
   });
 });
 
@@ -304,11 +304,14 @@ onMounted(() => {
       audioVisible.value = true;
 
       const toast = useToast();
-      toast("Hans Zimmer - Interstellar - Main Theme (Piano Version by Patrik Pietschmann)", {
-        position: POSITION.BOTTOM_CENTER,
-        hideProgressBar: true,
-        icon: false
-      });
+      toast(
+        "Hans Zimmer - Interstellar - Main Theme (Piano Version by Patrik Pietschmann)",
+        {
+          position: POSITION.BOTTOM_CENTER,
+          hideProgressBar: true,
+          icon: false,
+        },
+      );
     });
     document.getElementById("pluto").addEventListener("pause", () => {
       audioPlaying.value = false;
@@ -457,7 +460,11 @@ function toggleAudio() {
       <div class="docs-sidebar-footer-wrapper">
         <div class="docs-sidebar-footer">
           <template v-if="audioPlaying || isInformationPage">
-            <button @click="toggleAudio" class="docs-sidebar-footer-play" :class="{ active: audioPlaying }">
+            <button
+              @click="toggleAudio"
+              class="docs-sidebar-footer-play"
+              :class="{ active: audioPlaying }"
+            >
               <template v-if="audioPlaying">
                 <span class="material-symbols-rounded filled">stop</span>
               </template>
@@ -477,8 +484,11 @@ function toggleAudio() {
       </div>
     </div>
 
-    <button @click="sidebarShown = !sidebarShown" class="nav-toggle"
-            :class="{ playing: audioPlaying && !sidebarShown }">
+    <button
+      @click="sidebarShown = !sidebarShown"
+      class="nav-toggle"
+      :class="{ playing: audioPlaying && !sidebarShown }"
+    >
       {{ sidebarShown ? "×" : "☰" }}
     </button>
   </div>
@@ -596,12 +606,14 @@ $sidebarWidth: 20rem;
     }
 
     &.withTopShadow.withBottomShadow {
-      box-shadow: inset 0 11px 8px -10px #3333331a,
-      inset 0 -11px 8px -10px #3333331a;
+      box-shadow:
+        inset 0 11px 8px -10px #3333331a,
+        inset 0 -11px 8px -10px #3333331a;
 
       @at-root html.cs-dark & {
-        box-shadow: inset 0 11px 8px -10px #111111,
-        inset 0 -11px 8px -10px #111111;
+        box-shadow:
+          inset 0 11px 8px -10px #111111,
+          inset 0 -11px 8px -10px #111111;
       }
     }
 

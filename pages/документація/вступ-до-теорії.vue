@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Вступ до Теорії | Документація | Мавка"
+  title: "Вступ до Теорії | Документація | Мавка",
 });
 
 const inyan = `
@@ -12,15 +12,12 @@ const inyan = `
 `.trim();
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/мрм"
-    next="/документація/інструкція"
-  >
+  <UiDocsWrapper prev="/документація/мрм" next="/документація/вказівка">
     <div class="docs-content-logo">
       <svg
         class="logo-light"
@@ -200,10 +197,9 @@ definePageMeta({
     <p>
       <span class="diia-word">Теорію Мавки</span> можна ще називати
       <span class="diia-word">теорією української мови програмування</span>,
-      <span class="diia-word">загальною теорією мов програмування</span>,
-      <span class="diia-word">теорією всього від Мавки</span>
+      <span class="diia-word">загальною теорією мов програмування</span>
       <span style="font-weight: 500" class="hljs-keyword"> або </span>
-      <span class="diia-word">теорією правди</span>.
+      <span class="diia-word">теорією всього від Мавки</span>.
     </p>
 
     <div class="wrapped-code-window">

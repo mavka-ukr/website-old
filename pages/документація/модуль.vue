@@ -57,7 +57,7 @@ definePageMeta({
       Модуль
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
       обʼєктом <span class="diia-word">Мавки</span>, в якому виконуються
-      інструкції.
+      вказівки.
     </p>
     <p>
       Властивостями модуля
@@ -81,7 +81,7 @@ definePageMeta({
       Підмодуль може бути визначений за допомогою ключового слова
       <code>модуль</code>. Також необхідно вказати назву модуля
       <span style="font-weight: 500" class="hljs-keyword">та</span> його тіло у
-      вигляді інструкцій.
+      вигляді вказівок.
     </p>
     <UiCodeBlock :files="submodule" />
     <hr />

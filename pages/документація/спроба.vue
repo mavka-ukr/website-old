@@ -39,7 +39,7 @@ definePageMeta({
     <p>
       Спроба
       <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
-      <span class="diia-word">Мавки</span>, що виконує інструкції
+      <span class="diia-word">Мавки</span>, що виконує вказівки
       <span style="font-weight: 500" class="hljs-keyword">і</span> в разі
       помилки виконує інші.
     </p>
