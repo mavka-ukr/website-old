@@ -16,7 +16,7 @@ onMounted(() => {
     fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
       .then((r) => r.text())
       .then((t) => t.split("\n")[1])
-      .then((v) => version.value = v);
+      .then((v) => (version.value = v));
   }
 });
 
@@ -86,6 +86,7 @@ function toggleDarkMode() {
             class="ui-mobile-navbar-link"
             href="https://маска.укр/мавка"
             target="_blank"
+            v-if="false"
           >
             <img src="@/assets/images/tools/maska.png" alt="" />
             Маска
@@ -118,7 +119,10 @@ function toggleDarkMode() {
             <img src="@/assets/images/tools/cyrrilic.png" alt="" />
             Цирілик
           </NuxtLink>
-          <NuxtLink class="ui-mobile-navbar-link" :to="encodeURI('/інформація')">
+          <NuxtLink
+            class="ui-mobile-navbar-link"
+            :to="encodeURI('/інформація')"
+          >
             <span class="material-symbols-rounded bold">info</span>
             Інформація
           </NuxtLink>
@@ -184,6 +188,7 @@ function toggleDarkMode() {
                   v-close-popper
                   href="https://маска.укр/мавка"
                   target="_blank"
+                  v-if="false"
                 >
                   <img src="@/assets/images/tools/maska.png" alt="" />
                   Маска
@@ -196,10 +201,7 @@ function toggleDarkMode() {
                   <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
                 </UiMenuLink>
-                <UiMenuLink
-                  target="_blank"
-                  href="https://diia.dev"
-                >
+                <UiMenuLink target="_blank" href="https://diia.dev">
                   <img src="@/assets/images/tools/gitlab.png" alt="" />
                   Ґіт
                 </UiMenuLink>
@@ -214,7 +216,11 @@ function toggleDarkMode() {
                   <img src="@/assets/images/tools/cyrrilic.png" alt="" />
                   Цирілик
                 </UiMenuLink>
-                <UiMenuLink v-close-popper tag="RouterLink" :to="encodeURI('/інформація')">
+                <UiMenuLink
+                  v-close-popper
+                  tag="RouterLink"
+                  :to="encodeURI('/інформація')"
+                >
                   <span class="material-symbols-rounded bold">info</span>
                   Інформація
                 </UiMenuLink>
@@ -223,7 +229,7 @@ function toggleDarkMode() {
                     <span class="material-symbols-rounded bold">
                       <template v-if="darkMode === 'true'">dark_mode</template>
                       <template v-if="darkMode === 'false'"
-                      >light_mode</template
+                        >light_mode</template
                       >
                       <template v-if="darkMode === 'auto'">
                         night_sight_auto
@@ -536,9 +542,9 @@ function toggleDarkMode() {
 
   background: rgb(238, 174, 202);
   background: linear-gradient(
-      90deg,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
   );
 
   @media only screen and (max-width: 956px) {
