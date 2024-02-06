@@ -2707,7 +2707,7 @@ definePageMeta({
     <p>
       <span class="diia-word">МаМа</span> (Машина
       <span class="diia-word">Мавки</span>
-      <span style="font-weight: 500" class="hljs-keyword">або</span> Машина
+      <span style="font-weight: 500" class="hljs-keyword"> або</span> Машина
       вказівок)
       <span style="font-weight: 500" class="hljs-keyword"> це</span> спеціальна
       віртуальна машина, в якій виконуються вказівки

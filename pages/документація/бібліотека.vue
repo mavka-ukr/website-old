@@ -15,7 +15,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/бог" next="/документація/математика">
+  <UiDocsWrapper prev="/документація/чародія" next="/документація/математика">
     <div class="docs-content-logo">
       <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_1063_39" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="500"
