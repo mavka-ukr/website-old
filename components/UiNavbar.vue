@@ -103,6 +103,7 @@ function toggleDarkMode() {
             class="ui-mobile-navbar-link"
             href="https://diia.dev"
             target="_blank"
+            v-if="false"
           >
             <img src="@/assets/images/tools/gitlab.png" alt="" />
             Ґіт
@@ -201,7 +202,11 @@ function toggleDarkMode() {
                   <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
                 </UiMenuLink>
-                <UiMenuLink target="_blank" href="https://diia.dev">
+                <UiMenuLink
+                  target="_blank"
+                  href="https://diia.dev"
+                  v-if="false"
+                >
                   <img src="@/assets/images/tools/gitlab.png" alt="" />
                   Ґіт
                 </UiMenuLink>
