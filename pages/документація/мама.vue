@@ -2715,7 +2715,7 @@ definePageMeta({
     </p>
     <p>
       <span class="diia-word">МаМа</span>
-      <span style="font-weight: 500" class="hljs-keyword">є</span> ядром
+      <span style="font-weight: 500" class="hljs-keyword"> є</span> ядром
       <span class="diia-word">Мавки</span>.
     </p>
     <p>
