@@ -1,4 +1,17 @@
 <script setup>
+const releases = ref([]);
+const isLoadingReleases = ref(true);
+
+onMounted(() => {
+  isLoadingReleases.value = true;
+  fetch("https://api.github.com/repos/mavka-ukr/mavka/releases")
+    .then((res) => res.json())
+    .then((data) => {
+      releases.value = data;
+      isLoadingReleases.value = false;
+    });
+});
+
 useHead({
   title: "МаМа | Документація | Мавка",
 });
@@ -9,7 +22,11 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/приклади" next="/документація/джеджалик">
+  <UiDocsWrapper
+    prev="/документація/приклади"
+    next="/документація/джеджалик"
+    :loading="isLoadingReleases"
+  >
     <div class="docs-content-logo">
       <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="100" fill="black" />
@@ -2719,14 +2736,75 @@ definePageMeta({
       <span class="diia-word">Мавки</span>.
     </p>
     <p>
-      Робота над <span class="diia-word">МаМа</span> ведеться
-      <a
-        target="_blank"
-        href="https://github.com/mavka-ukr/mavka"
-        class="link external"
-        >тут</a
-      >.
+      Завантажити <span class="diia-word">Мавку</span> на основі
+      <span class="diia-word">МаМа</span> можна з табиці нижче.
     </p>
-    <blockquote>Сторінка доповнюється.</blockquote>
+    <template v-if="releases.length">
+      <div class="UiTable">
+        <table>
+          <template v-for="release in releases">
+            <tr>
+              <td style="width: 20%">
+                {{ release.name }}
+              </td>
+              <td style="width: 60%">
+                <template v-for="asset in release.assets">
+                  <a :href="asset.browser_download_url" class="link external">
+                    <span class="material-symbols-rounded bold">download</span>
+                    {{ asset.name }}
+                  </a>
+                </template>
+              </td>
+              <td style="width: 20%">
+                <a
+                  target="_blank"
+                  :href="release.html_url"
+                  class="link external"
+                >
+                  <span class="material-symbols-rounded bold">code</span>
+                  GitHub
+                </a>
+              </td>
+            </tr>
+          </template>
+        </table>
+      </div>
+    </template>
+    <template v-else>
+      <blockquote>Доповнюється.</blockquote>
+    </template>
   </UiDocsWrapper>
 </template>
+
+<style lang="scss">
+.UiTable {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+
+    a {
+      font-size: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      .material-symbols-rounded {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    a + a {
+      margin-top: 0.5rem;
+    }
+  }
+}
+</style>
