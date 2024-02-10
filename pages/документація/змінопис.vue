@@ -5,7 +5,7 @@ const isLoading = ref(true);
 onMounted(() => {
   isLoading.value = true;
 
-  fetch("https://diia.dev/api/v4/projects/2/repository/files/CHANGELOG.md/raw")
+  fetch("https://raw.githubusercontent.com/mavka-ukr/mavka/main/CHANGELOG.md")
     .then((r) => r.text())
     .then((text) => {
       changelog.value = text;
@@ -41,17 +41,13 @@ definePageMeta({
       </ClientOnly>
     </div>
     <hr />
-    <blockquote>
-      Цей змінопис не є повним. Мавка почалась задовго до початку його ведення.
-    </blockquote>
-    <hr />
     <p>
       <a
-        href="https://diia.dev/mavka/jejalyk/-/blob/main/CHANGELOG.md"
+        href="https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md"
         target="_blank"
         class="link external"
       >
-        https://diia.dev/mavka/jejalyk/-/blob/main/CHANGELOG.md
+        https://github.com/mavka-ukr/mavka/blob/main/CHANGELOG.md
       </a>
     </p>
   </UiDocsWrapper>
