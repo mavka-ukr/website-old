@@ -2737,7 +2737,7 @@ definePageMeta({
     </p>
     <p>
       Завантажити <span class="diia-word">Мавку</span> на основі
-      <span class="diia-word">МаМа</span> можна з табиці нижче.
+      <span class="diia-word">МаМа</span> можна з таблиці нижче.
     </p>
     <template v-if="releases.length">
       <div class="UiTable">
