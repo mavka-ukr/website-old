@@ -13,10 +13,11 @@ onMounted(() => {
   isMobile.value = window.innerWidth <= 956;
   window.addEventListener("resize", onResize);
   if (process.client) {
-    fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
-      .then((r) => r.text())
-      .then((t) => t.split("\n")[1])
-      .then((v) => (version.value = v));
+    fetch("https://api.github.com/repos/mavka-ukr/mavka/releases")
+      .then((res) => res.json())
+      .then((data) => {
+        version.value = data[0].tag_name;
+      });
   }
 });
 
