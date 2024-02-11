@@ -2736,6 +2736,15 @@ definePageMeta({
       <span class="diia-word">Мавки</span>.
     </p>
     <p>
+      Переглянути код <span class="diia-word">МаМа</span> можна
+      <a
+        href="https://github.com/mavka-ukr/mavka"
+        target="_blank"
+        class="link external"
+        >тут</a
+      >.
+    </p>
+    <p>
       Завантажити <span class="diia-word">Мавку</span> на основі
       <span class="diia-word">МаМа</span> можна з таблиці нижче.
     </p>
