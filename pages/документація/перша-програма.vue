@@ -8,23 +8,20 @@ const helloWorldFile = `
 `.trim();
 
 const runHelloWorldFile = `
-джеджалик старт привіт.м
+мавка привіт.м
 `.trim();
 
 useHead({
-  title: "Перша програма | Документація | Мавка"
+  title: "Перша програма | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/розкладка"
-    next="/документація/приклади"
-  >
+  <UiDocsWrapper prev="/документація/розкладка" next="/документація/приклади">
     <h1 class="docs-content-title">Перша програма</h1>
 
     <p>Створіть файл <code>привіт.м</code>:</p>
@@ -37,7 +34,10 @@ definePageMeta({
         />
       </ClientOnly>
     </div>
-    <p>Запустіть через <span class="diia-word">Джеджалик</span>, виконавши цю команду:</p>
+    <p>
+      Запустіть через <span class="diia-word">Джеджалик</span>, виконавши цю
+      команду:
+    </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs

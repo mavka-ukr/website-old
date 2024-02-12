@@ -82,11 +82,11 @@ const numberStructureMagicNegativeGreaterMethod = `дія число.чарод�
 const numberStructureMagicTextGreaterMethod = `дія число.чародія_текст() текст`;
 
 useHead({
-  title: "Число | Документація | Мавка"
+  title: "Число | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -96,7 +96,17 @@ definePageMeta({
     <p>
       Число
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
-      обʼєктом <span class="diia-word">Мавки</span>, що містить інформацію про дійсне число.
+      обʼєктом <span class="diia-word">Мавки</span>, що містить інформацію про
+      дійсне число.
+    </p>
+    <p>
+      Розмір числа
+      <a
+        target="_blank"
+        class="link external"
+        href="https://uk.wikipedia.org/wiki/64_%D0%B1%D1%96%D1%82%D0%B8"
+        >64 біти.</a
+      >
     </p>
     <p>
       Число описано
@@ -163,87 +173,148 @@ definePageMeta({
     <hr />
     <h3>Структура числа</h3>
     <UiCodeBlock :files="numberStructure" />
-    <hr>
+    <hr />
     <h3>Дії числа</h3>
-    <p><code>чародія_додати</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції додавання.</p>
+    <p>
+      <code>чародія_додати</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції додавання.
+    </p>
     <UiCodeBlock :files="numberStructureMagicAddMethod" />
 
-    <p><code>чародія_відняти</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції віднімання.</p>
+    <p>
+      <code>чародія_відняти</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції віднімання.
+    </p>
     <UiCodeBlock :files="numberStructureMagicSubMethod" />
 
-    <p><code>чародія_помножити</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції множення.</p>
+    <p>
+      <code>чародія_помножити</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції множення.
+    </p>
     <UiCodeBlock :files="numberStructureMagicMulMethod" />
 
-    <p><code>чародія_поділити</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції ділення.</p>
+    <p>
+      <code>чародія_поділити</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції ділення.
+    </p>
     <UiCodeBlock :files="numberStructureMagicDivMethod" />
 
-    <p><code>чародія_остача</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції отримання остачі від ділення.</p>
+    <p>
+      <code>чародія_остача</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції отримання остачі від ділення.
+    </p>
     <UiCodeBlock :files="numberStructureMagicModMethod" />
 
-    <p><code>чародія_частка</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції отримання цілої частини від ділення.</p>
+    <p>
+      <code>чародія_частка</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції отримання цілої частини від ділення.
+    </p>
     <UiCodeBlock :files="numberStructureMagicDivDivMethod" />
 
-    <p><code>чародія_степінь</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції піднесення до степеня.</p>
+    <p>
+      <code>чародія_степінь</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції піднесення до степеня.
+    </p>
     <UiCodeBlock :files="numberStructureMagicPowMethod" />
 
-    <p><code>чародія_вліво</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції двійкового зсуву вліво.</p>
+    <p>
+      <code>чародія_вліво</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового зсуву вліво.
+    </p>
     <UiCodeBlock :files="numberStructureMagicShLeftMethod" />
 
-    <p><code>чародія_вправо</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції двійкового зсуву вправо.</p>
+    <p>
+      <code>чародія_вправо</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового зсуву вправо.
+    </p>
     <UiCodeBlock :files="numberStructureMagicShRightMethod" />
 
-    <p><code>чародія_вабо</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції двійкового виключного або.</p>
+    <p>
+      <code>чародія_вабо</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового виключного або.
+    </p>
     <UiCodeBlock :files="numberStructureMagicXorMethod" />
 
-    <p><code>чародія_дабо</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції двійкового або.</p>
+    <p>
+      <code>чародія_дабо</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового або.
+    </p>
     <UiCodeBlock :files="numberStructureMagicBorMethod" />
 
-    <p><code>чародія_ді</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції двійкового і.</p>
+    <p>
+      <code>чародія_ді</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового і.
+    </p>
     <UiCodeBlock :files="numberStructureMagicBandMethod" />
 
-    <p><code>чародія_більше</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції перевірки чи число більше іншого числа.</p>
+    <p>
+      <code>чародія_більше</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції перевірки чи число більше іншого числа.
+    </p>
     <UiCodeBlock :files="numberStructureMagicGreaterMethod" />
 
-    <p><code>чародія_менше</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції перевірки чи число менше іншого числа.</p>
+    <p>
+      <code>чародія_менше</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції перевірки чи число менше іншого числа.
+    </p>
     <UiCodeBlock :files="numberStructureMagicLesserMethod" />
 
-    <p><code>чародія_не_більше</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції перевірки чи число не більше (менше або рівно) іншого числа.</p>
+    <p>
+      <code>чародія_не_більше</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції перевірки чи число не більше (менше або рівно) іншого
+      числа.
+    </p>
     <UiCodeBlock :files="numberStructureMagicEqLesserMethod" />
 
-    <p><code>чародія_не_менше</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання
-      операції перевірки чи число не менше (більше або рівно) іншого числа.</p>
+    <p>
+      <code>чародія_не_менше</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції перевірки чи число не менше (більше або рівно) іншого
+      числа.
+    </p>
     <UiCodeBlock :files="numberStructureMagicEqGreaterMethod" />
 
-    <p><code>чародія_дні</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для виконання операції
-      двійкового ні.</p>
+    <p>
+      <code>чародія_дні</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      виконання операції двійкового ні.
+    </p>
     <UiCodeBlock :files="numberStructureMagicBnotGreaterMethod" />
 
-    <p><code>чародія_додатнє</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
-      число на додатнє.</p>
+    <p>
+      <code>чародія_додатнє</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      перетворення число на додатнє.
+    </p>
     <UiCodeBlock :files="numberStructureMagicPositiveGreaterMethod" />
 
-    <p><code>чародія_відʼємне</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
-      числа на відʼємне.</p>
+    <p>
+      <code>чародія_відʼємне</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      перетворення числа на відʼємне.
+    </p>
     <UiCodeBlock :files="numberStructureMagicNegativeGreaterMethod" />
 
-    <p><code>чародія_текст</code> <span style="font-weight: 500" class="hljs-keyword">це дія</span> для перетворення
-      числа на текст.</p>
+    <p>
+      <code>чародія_текст</code>
+      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
+      перетворення числа на текст.
+    </p>
     <UiCodeBlock :files="numberStructureMagicTextGreaterMethod" />
-
   </UiDocsWrapper>
 </template>
