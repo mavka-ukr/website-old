@@ -1,6 +1,14 @@
 <script setup>
 const releases = ref([]);
 const isLoadingReleases = ref(true);
+const showAllReleases = ref(false);
+
+const renderedReleases = computed(() => {
+  if (showAllReleases.value) {
+    return releases.value;
+  }
+  return releases.value.slice(0, 1);
+});
 
 onMounted(() => {
   isLoadingReleases.value = true;
@@ -2748,10 +2756,10 @@ definePageMeta({
       Завантажити <span class="diia-word">Мавку</span> на основі
       <span class="diia-word">МаМа</span> можна з таблиці нижче.
     </p>
-    <template v-if="releases.length">
+    <template v-if="renderedReleases.length">
       <div class="UiTable">
         <table>
-          <template v-for="release in releases">
+          <template v-for="release in renderedReleases">
             <tr>
               <td style="width: 20%">
                 {{ release.name }}
@@ -2773,6 +2781,15 @@ definePageMeta({
                   <span class="material-symbols-rounded bold">code</span>
                   GitHub
                 </a>
+              </td>
+            </tr>
+          </template>
+          <template v-if="!showAllReleases">
+            <tr>
+              <td colspan="3" class="td-all">
+                <button @click="showAllReleases = true">
+                  Показати всі випуски
+                </button>
               </td>
             </tr>
           </template>
@@ -2813,6 +2830,24 @@ table {
 
     a + a {
       margin-top: 0.5rem;
+    }
+  }
+
+  .td-all {
+    padding: 0;
+
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: var(--background-color-hover);
+      }
     }
   }
 }
