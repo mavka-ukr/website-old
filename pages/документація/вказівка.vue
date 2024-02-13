@@ -28,13 +28,13 @@ definePageMeta({
         <code>визначити субʼєкт</code>
       </li>
       <li>
-        <code>визначити дію</code>
+        <code>створити дію</code>
       </li>
       <li>
-        <code>визначити структуру</code>
+        <code>створити структуру</code>
       </li>
       <li>
-        <code>визначити модуль</code>
+        <code>створити модуль</code>
       </li>
       <li><code>звернутись до субʼєкта</code></li>
       <li><code>виконати дію</code></li>
@@ -76,7 +76,7 @@ definePageMeta({
         <code>зупинити перебір</code>
       </li>
       <li>
-        <code>пропустити елемент перебору</code>
+        <code>продовжити перебір</code>
       </li>
       <li>
         <code>зробити спробу</code>
@@ -86,9 +86,6 @@ definePageMeta({
       </li>
       <li>
         <code>взяти модуль</code>
-      </li>
-      <li>
-        <code>взяти субʼєкт з модуля</code>
       </li>
       <li>
         <code>дати субʼєкт з модуля</code>
