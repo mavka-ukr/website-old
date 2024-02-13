@@ -29,9 +29,5 @@ definePageMeta({
         </NuxtLink>
       </li>
     </ul>
-    <p>
-      Наразі для встановлення доступним <span style="font-weight: 500" class="hljs-keyword">є</span> лише
-      <NuxtLink class="link external diia-word" :href="encodeURI('/документація/джеджалик')">Джеджалик</NuxtLink>.
-    </p>
   </UiDocsWrapper>
 </template>
