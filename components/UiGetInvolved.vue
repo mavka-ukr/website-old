@@ -12,7 +12,7 @@
         <div class="involve-item-icon">
           <img src="@/assets/images/github-logo.png" alt="GitHub Logo" />
         </div>
-        <div class="involve-item-name">Гітхаб</div>
+        <div class="involve-item-name">Ґітхаб</div>
       </a>
       <a target="_blank" href="https://t.me/mavka_lang" class="involve-item">
         <div class="involve-item-icon">
@@ -30,48 +30,13 @@
         </div>
         <div class="involve-item-name">Ютуб</div>
       </a>
-      <a
-        v-if="false"
-        target="_blank"
-        href="https://patreon.com/diia"
-        class="involve-item patreon"
-      >
-        <div class="involve-item-icon">
-          <img src="@/assets/images/patreon-logo.png" alt="Patreon Logo" />
-        </div>
-        <div class="involve-item-name">Патреон</div>
-      </a>
     </div>
     <div class="involve-items">
-      <a
-        target="_blank"
-        href="https://discord.gg/q53ADmPqFU"
-        class="involve-item"
-      >
+      <a target="_blank" href="https://maska.me/g3" class="involve-item">
         <div class="involve-item-icon">
-          <img src="@/assets/images/discord-logo.png" alt="Discord Logo" />
+          <img src="@/assets/images/tools/maska2.png" alt="Маска" />
         </div>
-        <div class="involve-item-name">Дискорд</div>
-      </a>
-      <a
-        target="_blank"
-        href="https://facebook.com/mavka.ukr"
-        class="involve-item"
-      >
-        <div class="involve-item-icon">
-          <img src="@/assets/images/facebook-logo.png" alt="Discord Logo" />
-        </div>
-        <div class="involve-item-name">Фейсбук</div>
-      </a>
-      <a
-        target="_blank"
-        href="https://twitter.com/mavka_ukr"
-        class="involve-item"
-      >
-        <div class="involve-item-icon">
-          <img src="@/assets/images/twitter-logo.png" alt="Discord Logo" />
-        </div>
-        <div class="involve-item-name">Твітер</div>
+        <div class="involve-item-name">Маска</div>
       </a>
     </div>
   </section>

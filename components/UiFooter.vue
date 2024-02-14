@@ -1,7 +1,5 @@
 <template>
-  <section class="footer">
-    Мавка - мова програмування, 2024
-  </section>
+  <section class="footer">Мавка – мова програмування, 2024</section>
 </template>
 
 <style lang="scss">

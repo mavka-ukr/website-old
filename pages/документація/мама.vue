@@ -12,11 +12,19 @@ const renderedReleases = computed(() => {
 
 onMounted(() => {
   isLoadingReleases.value = true;
-  fetch("https://api.github.com/repos/mavka-ukr/mavka/releases")
+  fetch("https://api.github.com/repos/mavka-ukr/mavka/releases/latest")
     .then((res) => res.json())
-    .then((data) => {
-      releases.value = data;
-      isLoadingReleases.value = false;
+    .then((latestRelease) => {
+      fetch("https://api.github.com/repos/mavka-ukr/mavka/releases")
+        .then((res) => res.json())
+        .then((data) => {
+          releases.value = data;
+          if (data[0] && data[0].id === latestRelease.id) {
+            releases.value = data.slice(1);
+          }
+          releases.value = [latestRelease, ...releases.value];
+          isLoadingReleases.value = false;
+        });
     });
 });
 
