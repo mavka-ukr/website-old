@@ -66,9 +66,6 @@ const being = `
 друк(адам є Людина) ;; так
 друк(адам є Тварина) ;; так
 друк(адам є Гриб) ;; ні
-
-;; каїн = єва + адам
-;; авель = адам + єва
 `.trim();
 
 const structureStructure = `
@@ -77,11 +74,11 @@ const structureStructure = `
 `.trim();
 
 useHead({
-  title: "Структура | Документація | Мавка"
+  title: "Структура | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -111,16 +108,16 @@ definePageMeta({
       властивість з чародією виклику, яка виконує створення обʼєкту.
     </p>
     <hr />
-    <h3>Визначення структур</h3>
+    <h3>Створення структур</h3>
     <p>
-      Визначення
+      Створення
       <span style="font-weight: 500" class="hljs-keyword">структури</span>
       відбувається через ключове слово <code>структура</code>. Після нього
       необхідно вказати її назву
       <span style="font-weight: 500" class="hljs-keyword">і</span> тіло у
       вигляді властивостей.
     </p>
-    <h4>Приклад визначення структури</h4>
+    <h4>Приклад створення структури</h4>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simple" />
@@ -133,7 +130,7 @@ definePageMeta({
       </ClientOnly>
     </div>
     <hr />
-    <h3>Визначення дій обʼєкта через структуру</h3>
+    <h3>Створення дій обʼєкта через структуру</h3>
     <p>
       Над кожним обʼєктом можна виконувати
       <span style="font-weight: 500" class="hljs-keyword"> дії</span>. Часто
@@ -166,7 +163,7 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> субʼєкт </span>
       <code>я</code>.
     </p>
-    <h4>Приклад визначення дії обʼєкта</h4>
+    <h4>Приклад створення дії обʼєкта</h4>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="simpleDiia" />

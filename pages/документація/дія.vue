@@ -64,16 +64,16 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> це</span> присудок.
     </p>
     <hr />
-    <h3>Визначення дій</h3>
+    <h3>Створення дій</h3>
     <p>
-      Існує три способи визначити
+      Існує три способи створити
       <span style="font-weight: 500" class="hljs-keyword">дію</span>.
     </p>
     <h4>Звичайна дія</h4>
     <p>
       Звичайна
       <span style="font-weight: 500" class="hljs-keyword">дія</span> може бути
-      визначена за допомогою ключового слова <code>дія</code>. Також необхідно
+      створена за допомогою ключового слова <code>дія</code>. Також необхідно
       вказати назву
       <span style="font-weight: 500" class="hljs-keyword">дії</span>, визначення
       <span style="font-weight: 500" class="hljs-keyword">субʼєктів</span>, до

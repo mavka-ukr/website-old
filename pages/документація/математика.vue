@@ -30,7 +30,7 @@ const a = `
 `.trim();
 
 const example = `
-взяти М
+взяти біб М
 
 друк(М.абс(-10))
 друк(М.ПІ)
@@ -42,11 +42,11 @@ const example = `
 `.trim();
 
 useHead({
-  title: "Математика | Бібліотека | Документація | Мавка"
+  title: "Математика | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -54,16 +54,16 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/бібліотека" next="/документація/дід">
     <h1 class="docs-content-title">Математика</h1>
     <p>
-      Математика <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дає деякі
-      математичні
-      константи та функції.
+      Математика
+      <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований
+      модуль, що дає деякі математичні константи та функції.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
       </ClientOnly>
     </div>
-    <hr>
+    <hr />
     <h3>Приклад використання</h3>
     <UiCodeBlock :files="example" />
   </UiDocsWrapper>

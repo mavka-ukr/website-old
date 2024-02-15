@@ -17,7 +17,7 @@ const requestModuleMockup = `
 `.trim();
 
 const example = `
-взяти запит
+взяти біб запит
 
 чекати відповідь = запит.надіслати(
   "GET",
@@ -28,11 +28,11 @@ const example = `
 `.trim();
 
 useHead({
-  title: "Запит | Бібліотека | Документація | Мавка"
+  title: "Запит | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -40,14 +40,16 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/сервер" next="/документація/фс">
     <h1 class="docs-content-title">Запит</h1>
     <p>
-      Запит <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно <span
-      style="font-weight: 500" class="hljs-keyword">та</span> просто
+      Запит
+      <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований
+      модуль, що дозволяє зручно
+      <span style="font-weight: 500" class="hljs-keyword">та</span> просто
       надсилати HTTP-запити.
     </p>
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="example" />
-    <hr>
+    <hr />
     <UiCodeBlock :files="requestModuleMockup" />
   </UiDocsWrapper>
 </template>

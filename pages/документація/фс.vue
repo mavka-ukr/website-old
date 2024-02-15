@@ -1,6 +1,6 @@
 <script setup>
 const example = `
-взяти фс
+взяти біб фс
 
 чекати фс.записати("./привіт.txt", "Привіт!")
 
@@ -26,11 +26,11 @@ const fsModuleMockup = `
 `.trim();
 
 useHead({
-  title: "Файлова система | Бібліотека | Документація | Мавка"
+  title: "Файлова система | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -38,15 +38,16 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/запит" next="/документація/json">
     <h1 class="docs-content-title">Файлова система</h1>
     <p>
-      Файлова система <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно
-      <span
-        style="font-weight: 500" class="hljs-keyword">та</span> просто
+      Файлова система
+      <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований
+      модуль, що дозволяє зручно
+      <span style="font-weight: 500" class="hljs-keyword">та</span> просто
       працювати з файлами на вашому компʼютері.
     </p>
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="example" />
-    <hr>
+    <hr />
     <UiCodeBlock :files="fsModuleMockup" />
   </UiDocsWrapper>
 </template>

@@ -1,9 +1,14 @@
 <script setup>
 const takePak = `
-взяти пак "привіт" "1.0.0"
-взяти привіт
+взяти пак привіт
 
 привіт.привіт()
+`.trim();
+
+const takeBib = `
+взяти біб читати
+
+читати("Введіть ваші ПІБ: ")
 `.trim();
 
 const takeModule = `
@@ -37,36 +42,42 @@ const takeModule5 = `
 `.trim();
 
 useHead({
-  title: "Взяти | Документація | Мавка"
+  title: "Взяти | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/порівняння" next="/документація/тестування">
+  <UiDocsWrapper
+    prev="/документація/порівняння"
+    next="/документація/тестування"
+  >
     <h1 class="docs-content-title">Взяти</h1>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Взяти</span>
-      <span style="font-weight: 500" class="hljs-keyword"> це</span> вказівка <span class="diia-word">Мавки</span>,
-      що дозволяє підключити пак <span style="font-weight: 500" class="hljs-keyword"> або</span>
-      модуль.
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> вказівка
+      <span class="diia-word">Мавки</span>, що дозволяє підключити
+      <span style="font-weight: 500" class="hljs-keyword">модуль</span>.
     </p>
-    <hr>
-    <h3>Взяти пак</h3>
+    <hr />
+    <h3>Взяти з паків</h3>
     <UiCodeBlock :files="takePak" />
-    <hr>
-    <h3>Взяти модуль</h3>
+    <hr />
+    <h3>Взяти з бібліотеки</h3>
+    <UiCodeBlock :files="takeBib" />
+    <hr />
+    <h3>Взяти з проекту</h3>
     <UiCodeBlock :files="takeModule" />
-    <br>
+    <br />
     <UiCodeBlock :files="takeModule2" />
-    <br>
+    <br />
     <UiCodeBlock :files="takeModule3" />
-    <br>
+    <br />
     <UiCodeBlock :files="takeModule4" />
-    <br>
+    <br />
     <UiCodeBlock :files="takeModule5" />
   </UiDocsWrapper>
 </template>

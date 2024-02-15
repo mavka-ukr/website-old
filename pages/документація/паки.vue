@@ -1,47 +1,44 @@
 <script setup>
-const files = [
-  {
-    name: "старт.м",
-    text: `
-взяти "привіт/1.0.0"
-
-привіт.привіт()
-`.trim()
-  },
-  {
-    name: "результат",
-    text: "Привіт від Лесі!",
-    plaintext: true
-  }
-];
 const files2 = [
   {
+    name: ".паки/привіт/привіт.м",
+    text: `
+дія привіт()
+  друк("Привіт від Лесі!")
+кінець
+
+дати привіт
+`.trim(),
+  },
+  {
     name: "старт.м",
     text: `
-взяти пак "привіт" "1.0.0"
-взяти привіт
+взяти пак привіт
 
 друк(привіт)
-`.trim()
+`.trim(),
   },
   {
     name: "результат",
     text: "<модуль привіт[привіт]>",
-    plaintext: true
-  }
+    plaintext: true,
+  },
 ];
 
 useHead({
-  title: "Паки | Документація | Мавка"
+  title: "Паки | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/тестування" next="/документація/старт-паки">
+  <UiDocsWrapper
+    prev="/документація/тестування"
+    next="/документація/старт-паки"
+  >
     <h1 class="docs-content-title">Паки</h1>
     <p>
       Пак <span style="font-weight: 500" class="hljs-keyword">це</span> один
@@ -52,11 +49,16 @@ definePageMeta({
     </p>
     <p>
       Паки завантажуються з
-      <a href="https://пак.укр" target="_blank" class="link external">пак.укр</a
-      > та зберігаються в папці <code>.паки</code> в домашній папці.
+      <a href="https://пак.укр" target="_blank" class="link external"
+        >пак.укр</a
+      >
+      <span style="font-weight: 500" class="hljs-keyword"> та</span>
+      зберігаються в папці <code>.паки</code> на рівні з головним
+      <span style="font-weight: 500" class="hljs-keyword">модулем</span>
+      проекту.
     </p>
     <hr />
-    <h3>Приклад підключення паку і взяття модуля з нього</h3>
+    <h3>Приклад взяття модуля з паку</h3>
     <UiCodeBlock :files="files2" />
     <hr />
     <p>
@@ -65,7 +67,7 @@ definePageMeta({
         href="https://semver.org/lang/uk/"
         target="_blank"
         class="link external"
-      >semver</a
+        >semver</a
       >.
     </p>
   </UiDocsWrapper>

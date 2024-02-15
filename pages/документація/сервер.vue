@@ -34,7 +34,7 @@ const serverModuleMockup = `
 `.trim();
 
 const example = `
-взяти сервер
+взяти біб сервер
 
 сервер.запустити(
   дія(запит сервер.Запит)
@@ -50,11 +50,11 @@ const example = `
 `.trim();
 
 useHead({
-  title: "Сервер | Бібліотека | Документація | Мавка"
+  title: "Сервер | Бібліотека | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -62,14 +62,16 @@ definePageMeta({
   <UiDocsWrapper prev="/документація/математика" next="/документація/запит">
     <h1 class="docs-content-title">Сервер</h1>
     <p>
-      Сервер <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований модуль, що дозволяє зручно <span
-      style="font-weight: 500" class="hljs-keyword">та</span> просто
+      Сервер
+      <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований
+      модуль, що дозволяє зручно
+      <span style="font-weight: 500" class="hljs-keyword">та</span> просто
       обробляти HTTP-запити.
     </p>
     <hr />
     <h3>Приклад</h3>
     <UiCodeBlock :files="example" />
-    <hr>
+    <hr />
     <UiCodeBlock :files="serverModuleMockup" />
   </UiDocsWrapper>
 </template>
