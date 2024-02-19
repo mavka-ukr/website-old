@@ -56,6 +56,7 @@ definePageMeta({
         <code>створити словник</code>
       </li>
       <li><code>виконати дію</code></li>
+      <li><code>чекати на результат виконання тривалої дії</code></li>
       <li><code>зупинити виконання дії з результатом</code></li>
       <li>
         <code>отримати властивість</code>
@@ -92,6 +93,12 @@ definePageMeta({
       </li>
       <li>
         <code>перевірити структуру обʼєкта</code>
+      </li>
+      <li>
+        <code>додатнє</code>
+      </li>
+      <li>
+        <code>відʼємне</code>
       </li>
       <li>
         <code>заперечити</code>
