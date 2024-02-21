@@ -7,7 +7,7 @@ const module = [
 ПІ = 3.14
 
 дати Е, ПІ
-`.trim()
+`.trim(),
   },
   {
     name: "старт.м",
@@ -15,8 +15,8 @@ const module = [
 взяти сталі
 
 друк(сталі)
-`.trim()
-  }
+`.trim(),
+  },
 ];
 
 const submodule = `
@@ -38,15 +38,16 @@ const submodule = `
 
 const moduleStructure = `
 структура Модуль
+  назва текст
 кінець
 `.trim();
 
 useHead({
-  title: "Модуль | Документація | Мавка"
+  title: "Модуль | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -56,13 +57,13 @@ definePageMeta({
     <p>
       Модуль
       <span style="font-weight: 500" class="hljs-keyword">є</span> елементарним
-      обʼєктом <span class="diia-word">Мавки</span>, в якому виконуються
-      вказівки.
+      обʼєктом <span class="diia-word">Мавки</span>, який зберігає результат
+      виконання вказівок.
     </p>
     <p>
       Властивостями модуля
-      <span style="font-weight: 500" class="hljs-keyword">є</span> видані
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкти</span>.
+      <span style="font-weight: 500" class="hljs-keyword">є</span>
+      обʼєкти, збережені вказівкою <code>дати</code>.
     </p>
     <p>
       Модуль описано спеціальною
@@ -72,7 +73,8 @@ definePageMeta({
     <hr />
     <h3>Створення модуля</h3>
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Модуль</span> створюється автоматично на основі файлу.
+      <span style="font-weight: 500" class="hljs-keyword">Модуль</span>
+      створюється автоматично на основі файлу.
     </p>
     <UiCodeBlock :files="module" />
     <hr />
