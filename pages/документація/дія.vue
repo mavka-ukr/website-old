@@ -49,10 +49,6 @@ definePageMeta({
       вказівки.
     </p>
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Дія</span> виконується
-      через <span style="font-weight: 500" class="hljs-keyword">субʼєкт</span>.
-    </p>
-    <p>
       Метою виконання
       <span style="font-weight: 500" class="hljs-keyword">дії</span> може бути
       створення нових обʼєктів або зміна властивостей існуючих.
