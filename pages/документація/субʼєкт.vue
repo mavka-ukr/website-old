@@ -55,7 +55,8 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span> тим, хто
       визначає роль обʼєкта
-      <span style="font-weight: 500" class="hljs-keyword">та</span> оперує ним.
+      <span style="font-weight: 500" class="hljs-keyword">та</span> та дозволяє
+      керувати ним.
     </p>
     <p>
       Головним

@@ -462,23 +462,23 @@ definePageMeta({
       </li>
     </ul>
     <hr />
-    <h3 id="дії">Дії обʼєкту</h3>
+    <h3 id="дії">Дії обʼєкта</h3>
     <p>
       Над кожним обʼєктом можна виконувати
       <span style="font-weight: 500" class="hljs-keyword"> дії</span>. Так-як
       дуже часто певні
       <span style="font-weight: 500" class="hljs-keyword"> дії</span> можна
       виконувати лише над конкретним обʼєктом, то їх можна причепити до самого
-      обʼєкту
+      обʼєкта
       <span style="font-weight: 500" class="hljs-keyword"> як</span>
       властивості. Ці
       <span style="font-weight: 500" class="hljs-keyword"> дії</span> можна
-      отримати з обʼєкту
+      отримати з обʼєкта
       <span style="font-weight: 500" class="hljs-keyword"> та</span> виконати.
       При виконанні таких
       <span style="font-weight: 500" class="hljs-keyword"> дій</span>,
       <span style="font-weight: 500" class="hljs-keyword"> субʼєктом</span>
-      обʼєкту <span style="font-weight: 500" class="hljs-keyword"> є</span> сам
+      обʼєкта <span style="font-weight: 500" class="hljs-keyword"> є</span> сам
       обʼєкт. В
       <span style="font-weight: 500" class="hljs-keyword"> дії</span> звертатись
       до нього можна через <code>я</code>.
@@ -517,7 +517,7 @@ definePageMeta({
       .
     </blockquote>
     <hr />
-    <h3 id="отримання-стуктури">Отримання структури обʼєкту</h3>
+    <h3 id="отримання-стуктури">Отримання структури обʼєкта</h3>
     <p>
       Так-як кожен обʼєкт створюється за певною
       <span style="font-weight: 500" class="hljs-keyword"> структурою</span>,
@@ -538,11 +538,11 @@ definePageMeta({
       </ClientOnly>
     </div>
     <hr />
-    <h3 id="перевірка-структури">Перевірка структури обʼєкту</h3>
+    <h3 id="перевірка-структури">Перевірка структури обʼєкта</h3>
     <p>
       Часто необхідно перевірити
       <span style="font-weight: 500" class="hljs-keyword"> структуру</span>
-      обʼєкту.
+      обʼєкта.
     </p>
     <p>
       Для цього <span class="diia-word">Мавка</span> має оператор

@@ -35,7 +35,7 @@ definePageMeta({
       конструкція в <span class="diia-word">Мавці</span>, що використовується
       під час визначення
       <span style="font-weight: 500" class="hljs-keyword">дії</span>
-      <span style="font-weight: 500" class="hljs-keyword">або</span>
+      <span style="font-weight: 500" class="hljs-keyword"> або </span>
       <span style="font-weight: 500" class="hljs-keyword">структури</span>.
     </p>
     <p>

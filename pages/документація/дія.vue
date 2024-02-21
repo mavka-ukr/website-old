@@ -46,12 +46,11 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">Дія</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
       елементарним обʼєктом <span class="diia-word">Мавки</span>, що зберігає
-      вказівки, які будуть застосовані під час виконання цієї
-      <span style="font-weight: 500" class="hljs-keyword">дії</span>.
+      вказівки.
     </p>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Дія</span> виконується
-      <span style="font-weight: 500" class="hljs-keyword">субʼєктом</span>.
+      через <span style="font-weight: 500" class="hljs-keyword">субʼєкт</span>.
     </p>
     <p>
       Метою виконання

@@ -90,7 +90,7 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword">Структура</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
       елементарним обʼєктом <span class="diia-word">Мавки</span>, що зберігає
-      опис властивостей обʼєкту.
+      опис властивостей обʼєкта.
     </p>
     <p>
       Кожен обʼєкт в <span class="diia-word">Мавці</span> створений за певною
@@ -98,14 +98,14 @@ definePageMeta({
     </p>
     <p>
       Кожен обʼєкт в <span class="diia-word">Мавці</span>
-      <span style="font-weight: 500" class="hljs-keyword"> містить</span> лише
+      <span style="font-weight: 500" class="hljs-keyword"> містить</span>
       ті властивості, які описані в його
       <span style="font-weight: 500" class="hljs-keyword">структурі</span>.
     </p>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Структура</span>
       <span style="font-weight: 500" class="hljs-keyword"> містить</span>
-      властивість з чародією виклику, яка виконує створення обʼєкту.
+      властивість <code>чародія_викликати</code>, яка виконує створення обʼєкта.
     </p>
     <hr />
     <h3>Створення структур</h3>
@@ -183,11 +183,11 @@ definePageMeta({
     <h3>Батьківський обʼєкт</h3>
     <p>
       Кожен обʼєкт в <span class="diia-word">Мавці</span> наслідує властивості
-      батьківського обʼєкту.
+      батьківського обʼєкта.
     </p>
     <p>
       <span class="diia-word">Мавка</span> надає можливість вказувати
-      властивості якого саме обʼєкту необхідно наслідувати. Це робиться під час
+      властивості якого саме обʼєкта необхідно наслідувати. Це робиться під час
       визначення
       <span style="font-weight: 500" class="hljs-keyword"> структури</span>.
     </p>

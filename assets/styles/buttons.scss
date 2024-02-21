@@ -1,8 +1,8 @@
 button,
 .button {
   position: relative;
-
   cursor: pointer;
+  white-space: nowrap;
 
   &:disabled {
     opacity: .5;

@@ -100,7 +100,7 @@ definePageMeta({
       дійсне число.
     </p>
     <p>
-      Розмір числа
+      Вмісткість числа
       <a
         target="_blank"
         class="link external"

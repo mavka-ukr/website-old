@@ -74,7 +74,7 @@ definePageMeta({
         <code>виконувати поки</code>
       </li>
       <li>
-        <code>виконати перебір</code>
+        <code>перебрати</code>
       </li>
       <li>
         <code>перервати виконання перебору або поки</code>
@@ -83,7 +83,7 @@ definePageMeta({
         <code>продовжити виконання перебору або поки</code>
       </li>
       <li>
-        <code>зробити спробу</code>
+        <code>спробувати</code>
       </li>
       <li>
         <code>впасти</code>
