@@ -20,6 +20,12 @@
         </div>
         <div class="involve-item-name">Телеграм</div>
       </a>
+      <a target="_blank" href="https://maska.me/g3" class="involve-item">
+        <div class="involve-item-icon">
+          <img src="@/assets/images/tools/maska2.png" alt="Маска" />
+        </div>
+        <div class="involve-item-name">Маска</div>
+      </a>
       <a
         target="_blank"
         href="https://www.youtube.com/@MavkaUkr"
@@ -29,14 +35,6 @@
           <img src="@/assets/images/youtube.png" alt="YouTube Logo" />
         </div>
         <div class="involve-item-name">Ютуб</div>
-      </a>
-    </div>
-    <div class="involve-items">
-      <a target="_blank" href="https://maska.me/g3" class="involve-item">
-        <div class="involve-item-icon">
-          <img src="@/assets/images/tools/maska2.png" alt="Маска" />
-        </div>
-        <div class="involve-item-name">Маска</div>
       </a>
     </div>
   </section>
@@ -56,7 +54,7 @@
     margin-top: 5rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
 
     @media only screen and (max-width: 1024px) {
