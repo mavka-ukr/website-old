@@ -23,7 +23,8 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> є</span> простою,
       зручною
       <span style="font-weight: 500" class="hljs-keyword"> та</span> динамічною
-      мовою програмування на основі кириличної абетки, української мови та моєї
+      мовою програмування на основі кириличної абетки, української мови
+      <span style="font-weight: 500" class="hljs-keyword"> та</span> моєї
       свідомості.
     </p>
     <p>
