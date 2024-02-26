@@ -4,7 +4,7 @@ import UiCodeBlock from "~/components/UiCodeBlock.vue";
 
 const codes = [
   {
-    name: "привіт_ім'я.м",
+    name: "привіт_імʼя.м",
     text: `
 взяти біб читати
 
