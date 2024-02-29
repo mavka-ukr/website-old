@@ -2754,7 +2754,7 @@ definePageMeta({
     <p>
       Переглянути код <span class="diia-word">МаМа</span> можна
       <a
-        href="https://github.com/mavka-ukr/mavka"
+        href="https://github.com/mavka-ukr/mama"
         target="_blank"
         class="link external"
         >тут</a
