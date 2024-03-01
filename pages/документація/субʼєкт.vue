@@ -5,6 +5,7 @@ const simple = `
 
 const simpleX = `
 число_пі = 3.14
+дві_третини = 2 / 3
 `.trim();
 
 const simpleY = `
