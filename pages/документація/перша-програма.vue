@@ -7,10 +7,6 @@ const helloWorldFile = `
 привітатись_від_імені("Леся")
 `.trim();
 
-const runHelloWorldFile = `
-мавка привіт.м
-`.trim();
-
 useHead({
   title: "Перша програма | Документація | Мавка",
 });
@@ -35,15 +31,27 @@ definePageMeta({
       </ClientOnly>
     </div>
     <p>
-      Запустіть через <span class="diia-word">Джеджалик</span>, виконавши цю
-      команду:
+      Запустіть через <span class="diia-word">МаМа</span>, виконавши цю команду:
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
           language="bash"
           :autodetect="false"
-          :code="runHelloWorldFile"
+          code="мавка привіт.м"
+        />
+      </ClientOnly>
+    </div>
+    <p>
+      <span style="font-weight: 500" class="hljs-keyword">Або</span> скомпілюйте
+      через <span class="diia-word">Джеджалик</span>, виконавши цю команду:
+    </p>
+    <div class="code-window code-window-full">
+      <ClientOnly>
+        <highlightjs
+          language="bash"
+          :autodetect="false"
+          code="джеджалик привіт.м привіт.js"
         />
       </ClientOnly>
     </div>
