@@ -15,7 +15,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/джеджалик/встановлення" next="/джеджалик/встановлення">
+  <UiDocsWrapper prev="/джеджалик/встановлення">
     <h1 class="docs-content-title">Використання</h1>
 
     <h4>Компіляція в JavaScript зі збереженням у файл</h4>
