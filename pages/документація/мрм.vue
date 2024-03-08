@@ -41,7 +41,7 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/старт-паки"
+    prev="/документація/діалог"
     next="/документація/вступ-до-теорії"
   >
     <h1 class="docs-content-title">Мова розмітки Мавки</h1>

@@ -73,6 +73,10 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/старт-паки"),
   },
   {
+    name: "Діалог",
+    encodedLink: encodeURI("/документація/діалог"),
+  },
+  {
     name: "МРМ",
     encodedLink: encodeURI("/документація/мрм"),
   },
