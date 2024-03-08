@@ -1,21 +1,4 @@
 <script setup>
-const version = useState("version", () => "x.y.z");
-
-onMounted(() => {
-  if (process.client) {
-    fetch(`https://запуск.мавка.укр/список.txt?t=${new Date().getTime()}`)
-      .then((r) => r.text())
-      .then((t) => t.split("\n")[1])
-      .then((v) => (version.value = v));
-  }
-});
-
-const mainDiia = `
-js """
-console.log("Вуху! Ми в JavaScript!");
-"""
-`.trim();
-
 useHead({
   title: "Джеджалик | Документація | Мавка",
 });
@@ -64,6 +47,12 @@ definePageMeta({
 
     <h1 class="docs-content-title">Джеджалик</h1>
 
+    <blockquote>
+      Наразі рекомендується використовувати
+      <span class="diia-word">Мавку</span> на основі
+      <span class="diia-word">МаМа</span>.
+    </blockquote>
+    <hr />
     <p>
       <span class="diia-word">Джеджалик</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span> швидкий
@@ -71,57 +60,10 @@ definePageMeta({
       в JavaScript.
     </p>
     <p>
-      <span class="diia-word">Джеджалик</span> можна використовувати для
-      створення веб-аплікацій <span class="diia-word">Мавкою</span>
-      <span style="font-weight: 500" class="hljs-keyword">або</span> для інших
-      задач, де необхідно використовувати JavaScript.
+      Детальніше тут:
+      <NuxtLink class="link external" :href="encodeURI('/джеджалик')">
+        мавка.укр/джеджалик
+      </NuxtLink>
     </p>
-    <p>
-      <span class="diia-word">Джеджалик</span> запускається командою
-      <code>джеджалик</code> після встановлення.
-    </p>
-    <UiCodeBlock :files="'джеджалик привіт.м привіт.js'" plaintext />
-    <hr />
-    <blockquote>
-      Наразі рекомендується використовувати
-      <span class="diia-word">Мавку</span> на основі
-      <span class="diia-word">МаМа</span>.
-    </blockquote>
-    <hr />
-    <h3>Встановлення</h3>
-    <p>
-      Щоб встановити <span class="diia-word">Джеджалик</span> вам необхідно мати
-      NodeJS 18+.
-    </p>
-    <UiCodeBlock :files="`npm i -g jejalyk@${version}`" plaintext />
-    <hr />
-    <h3>Використання</h3>
-    <h4>Компіляція в JavaScript зі збереженням у файл</h4>
-    <UiCodeBlock :files="'джеджалик <вхід.м> <вихід.js>'" plaintext />
-    <h4>Компіляція в JavaScript з виводом в термінал (stdout)</h4>
-    <UiCodeBlock :files="'джеджалик <вхід.м>'" plaintext />
-    <h4>Компіляція в JavaScript з автоматичним запуском</h4>
-    <UiCodeBlock :files="'джеджалик старт <вхід.м>'" plaintext />
-    <hr />
-    <h3>Розширення</h3>
-    <p>
-      Розширення <span class="diia-word">Джеджалика</span> дозволяють
-      доповнювати можливості мови за допомогою JavaScript.
-    </p>
-    <p>Розширення записуються спеціальною вказівкою <code>js</code>.</p>
-    <p>
-      Щоб ця вказівка працювала перед компіляцією необхідно додати опцію
-      <code>--розширення=1</code>.
-    </p>
-    <UiCodeBlock
-      :files="`джеджалик --розширення=1 старт.м старт.js`"
-      language="bash"
-    />
-    <h4>Приклад розширення</h4>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="mainDiia" />
-      </ClientOnly>
-    </div>
   </UiDocsWrapper>
 </template>

@@ -83,15 +83,13 @@ function toggleDarkMode() {
             <img src="@/assets/images/tools/fragment-new.png" alt="" />
             Фрагменти
           </a>
-          <a
+          <NuxtLink
             class="ui-mobile-navbar-link"
-            href="https://маска.укр/мавка"
-            target="_blank"
-            v-if="false"
+            :href="encodeURI('/джеджалик')"
           >
-            <img src="@/assets/images/tools/maska.png" alt="" />
-            Маска
-          </a>
+            <img src="@/assets/images/tools/jejalyk.png" alt="" />
+            Джеджалик
+          </NuxtLink>
           <a
             class="ui-mobile-navbar-link"
             href="https://конкурс.укр"
@@ -99,15 +97,6 @@ function toggleDarkMode() {
           >
             <img src="@/assets/images/tools/konkurs.png" alt="" />
             Конкурси
-          </a>
-          <a
-            class="ui-mobile-navbar-link"
-            href="https://diia.dev"
-            target="_blank"
-            v-if="false"
-          >
-            <img src="@/assets/images/tools/gitlab.png" alt="" />
-            Ґіт
           </a>
           <a
             class="ui-mobile-navbar-link"
@@ -188,12 +177,11 @@ function toggleDarkMode() {
               <UiMenu>
                 <UiMenuLink
                   v-close-popper
-                  href="https://маска.укр/мавка"
-                  target="_blank"
-                  v-if="false"
+                  tag="RouterLink"
+                  :to="encodeURI('/джеджалик')"
                 >
-                  <img src="@/assets/images/tools/maska.png" alt="" />
-                  Маска
+                  <img src="@/assets/images/tools/jejalyk.png" alt="" />
+                  Джеджалик
                 </UiMenuLink>
                 <UiMenuLink
                   v-close-popper
@@ -202,14 +190,6 @@ function toggleDarkMode() {
                 >
                   <img src="@/assets/images/tools/konkurs.png" alt="" />
                   Конкурси
-                </UiMenuLink>
-                <UiMenuLink
-                  target="_blank"
-                  href="https://diia.dev"
-                  v-if="false"
-                >
-                  <img src="@/assets/images/tools/gitlab.png" alt="" />
-                  Ґіт
                 </UiMenuLink>
                 <UiMenuLink
                   target="_blank"
