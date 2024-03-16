@@ -40,10 +40,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/діалог"
-    next="/документація/вступ-до-теорії"
-  >
+  <UiDocsWrapper prev="/документація/діалог" next="/документація/розширення">
     <h1 class="docs-content-title">Мова розмітки Мавки</h1>
     <p>
       <span class="diia-word">МРМ</span>

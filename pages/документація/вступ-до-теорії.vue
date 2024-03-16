@@ -17,7 +17,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/документація/мрм" next="/документація/вказівка">
+  <UiDocsWrapper prev="/документація/розширення" next="/документація/вказівка">
     <div class="docs-content-logo">
       <svg
         class="logo-light"

@@ -131,7 +131,7 @@ const diia = () => {
           },
         ],
       },
-      hljs.COMMENT(";;;", ";;;"),
+      hljs.COMMENT(";\\*", "\\*;"),
       hljs.COMMENT(";;", "$"),
       {
         scope: "number",
@@ -252,7 +252,7 @@ const diiaSpecial = () => {
           },
         ],
       },
-      hljs.COMMENT(";;;", ";;;"),
+      hljs.COMMENT(";\\*", "\\*;"),
       hljs.COMMENT(";;", "$"),
       {
         scope: "number",
