@@ -20,11 +20,15 @@
         </div>
         <div class="involve-item-name">Телеграм</div>
       </a>
-      <a target="_blank" href="https://maska.me/g3" class="involve-item">
+      <a
+        target="_blank"
+        href="https://discord.gg/q53ADmPqFU"
+        class="involve-item"
+      >
         <div class="involve-item-icon">
-          <img src="@/assets/images/tools/maska2.png" alt="Маска" />
+          <img src="@/assets/images/discord-logo.png" alt="Discord Logo" />
         </div>
-        <div class="involve-item-name">Маска</div>
+        <div class="involve-item-name">Дискорд</div>
       </a>
       <a
         target="_blank"
