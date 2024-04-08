@@ -1,6 +1,6 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
-import jejalykLogo from "assets/images/tools/jejalyk.png";
+import orgFavicon from "@/assets/images/organization.svg";
 
 defineProps({
   prev: String,
@@ -13,14 +13,30 @@ useHead({
   link: [
     {
       rel: "icon",
-      type: "image/png",
-      href: jejalykLogo,
+      type: "image/svg",
+      href: orgFavicon,
     },
   ],
 });
 
 const route = useRoute();
 const sidebarShown = useState("sidebarShown", () => false);
+const structureLinks = useState("structureLinks", () => [
+  {
+    name: "Капітан",
+    encodedLink: encodeURI("/організація/капітан"),
+  },
+  {
+    name: "Кернел",
+    encodedLink: encodeURI("/організація/кернел"),
+  },
+  {
+    name: "Учасник",
+    encodedLink: encodeURI("/організація/учасник"),
+  },
+]);
+const isStructureExpanded = useState("isStructureExpanded", () => false);
+const isStructurePage = useState("isStructurePage", () => false);
 
 function updateColor() {
   if (process.client) {
@@ -49,6 +65,13 @@ function updateColor() {
 watch(
   () => route.name,
   () => {
+    if (structureLinks.value.find((l) => route.path === l.encodedLink)) {
+      isStructureExpanded.value = true;
+      isStructurePage.value = true;
+    } else {
+      isStructurePage.value = false;
+    }
+
     updateColor();
   },
   {
@@ -71,36 +94,64 @@ addRouteMiddleware(() => {
         <NuxtLink to="/" class="logo">
           <img
             class="logo-light"
-            src="@/assets/images/tools/jejalyk.png"
+            src="@/assets/images/organization.svg"
             alt=""
           />
           <img
             class="logo-dark"
-            src="@/assets/images/tools/jejalyk.png"
+            src="@/assets/images/organization.svg"
             alt=""
           />
         </NuxtLink>
       </div>
       <NuxtLink
-        :href="encodeURI(`/джеджалик`)"
+        :href="encodeURI(`/організація`)"
         class="docs-sidebar-menu-item first"
         active-class="active"
       >
-        Джеджалик
+        Організація
       </NuxtLink>
+      <a
+        @click.stop.prevent="isStructureExpanded = !isStructureExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Структура
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isStructureExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isStructureExpanded">
+        <template
+          v-for="(structureLink, i) in structureLinks"
+          :key="structureLink.encodedLink"
+        >
+          <NuxtLink
+            :href="structureLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === structureLinks.length - 1,
+            }"
+          >
+            {{ structureLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
       <NuxtLink
-        :href="encodeURI(`/джеджалик/встановлення`)"
-        class="docs-sidebar-menu-item"
+        :href="encodeURI(`/організація/фінансування`)"
+        class="docs-sidebar-menu-item first"
         active-class="active"
       >
-        Встановлення
+        Фінансування
       </NuxtLink>
       <NuxtLink
-        :href="encodeURI(`/джеджалик/використання`)"
-        class="docs-sidebar-menu-item"
+        :href="encodeURI(`/організація/юридичне`)"
+        class="docs-sidebar-menu-item first"
         active-class="active"
       >
-        Використання
+        Юридичне
       </NuxtLink>
       <div style="min-height: 5rem; display: block; width: 100%"></div>
       <div class="docs-sidebar-footer-wrapper">
@@ -354,6 +405,14 @@ $sidebarWidth: 20rem;
       svg {
         width: 50px;
         height: 50px;
+      }
+
+      &.organization {
+        img,
+        svg {
+          width: auto;
+          height: 100px;
+        }
       }
     }
 

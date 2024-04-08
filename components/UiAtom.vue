@@ -1,6 +1,6 @@
 <template>
   <div class="section-atom">
-    <img src="@/assets/images/atom.png" alt="" />
+    <!--    <img src="@/assets/images/atom.png" alt="" />-->
   </div>
 </template>
 
@@ -14,27 +14,21 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: black;
-  @at-root html.cs-light & {
-    box-shadow: var(--code-shadow);
-  }
-  rotate: -1deg;
-
+  background-color: black;
+  background-image: url("@/assets/images/atom.png");
+  min-height: 120vh;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 250%;
   cursor: none;
 
-  img {
-    width: 100vw;
-    height: calc(100vh + 5rem);
-    object-fit: cover;
-    transform: scale(1.5);
-    rotate: 1deg;
-    //animation: turn-image 500s linear infinite;
+  @supports (background-attachment: fixed) {
+    background-attachment: fixed;
+  }
 
-    @keyframes turn-image {
-      100% {
-        transform: scale(1.5) rotate(1turn);
-      }
-    }
+  @media only screen and (max-device-width: 1366px) {
+    background-size: 600%;
   }
 }
 </style>

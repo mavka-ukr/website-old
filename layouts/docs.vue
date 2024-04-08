@@ -1,12 +1,23 @@
 <script setup>
 import { addRouteMiddleware, useState } from "nuxt/app";
 import { POSITION, useToast } from "vue-toastification";
+import mavkaLogo from "@/assets/images/logo-light.png";
 
 defineProps({
   prev: String,
   next: String,
   title: String,
   loading: Boolean,
+});
+
+useHead({
+  link: [
+    {
+      rel: "icon",
+      type: "image/png",
+      href: mavkaLogo,
+    },
+  ],
 });
 
 const route = useRoute();
@@ -481,7 +492,7 @@ function toggleAudio() {
               </template>
             </button>
           </template>
-          Документація Мавки
+          Організація Мавки
         </div>
       </div>
     </div>

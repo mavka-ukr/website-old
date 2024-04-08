@@ -1,24 +1,31 @@
 <script setup>
 useHead({
-  title: "Застаріле встановлення | Документація | Мавка"
+  title: "Застаріле встановлення | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
 <template>
   <UiDocsWrapper>
-    <h1 class="docs-content-title">Встановлення через NPM</h1>
+    <h1 class="docs-content-title">Оригінальна Мавка</h1>
     <p>
-      Раніше <span class="diia-word">Мавку</span> можна було встановити через NPM.
+      <span class="diia-word">Оригінальна Мавка</span> написана JavaScript-ом
+      <span style="font-weight: 500" class="hljs-keyword"> і</span>
+      встановлюється через NPM.
     </p>
-    <UiCodeBlock files="npm i -g mavka" plaintext />
+    <UiCodeBlock files="npm i -g mavka@0.12.3" plaintext />
     <p>
-      Цей спосіб наразі вважається
-      застарілим. Натомість рекомендується
-      використовувати <span class="diia-word">Джеджалик</span>.
+      <span class="diia-word">Оригінальна Мавка</span> більше не підтримується.
+      Натомість ведеться робота над
+      <NuxtLink
+        class="link external diia-word"
+        :href="encodeURI('/документація/мама')"
+      >
+        Машиною Мавки</NuxtLink
+      >.
     </p>
   </UiDocsWrapper>
 </template>

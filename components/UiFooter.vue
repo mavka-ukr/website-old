@@ -1,5 +1,12 @@
 <template>
-  <section class="footer">Мавка – мова програмування, 2024</section>
+  <section class="footer">
+    <img
+      style="height: 1.2rem; margin-right: 0.2rem; margin-bottom: -0.1rem"
+      src="@/assets/images/organization.svg"
+      alt=""
+    />
+    Організація Мавки, 2024
+  </section>
 </template>
 
 <style lang="scss">

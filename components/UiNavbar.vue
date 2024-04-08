@@ -112,6 +112,13 @@ function toggleDarkMode() {
           </NuxtLink>
           <NuxtLink
             class="ui-mobile-navbar-link"
+            :to="encodeURI('/організація')"
+          >
+            <img src="@/assets/images/organization.svg" alt="" />
+            Організація
+          </NuxtLink>
+          <NuxtLink
+            class="ui-mobile-navbar-link"
             :to="encodeURI('/інформація')"
           >
             <span class="material-symbols-rounded bold">info</span>
@@ -201,6 +208,14 @@ function toggleDarkMode() {
                 <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
                   <img src="@/assets/images/tools/cyrrilic.png" alt="" />
                   Цирілик
+                </UiMenuLink>
+                <UiMenuLink
+                  v-close-popper
+                  tag="RouterLink"
+                  :to="encodeURI('/організація')"
+                >
+                  <img src="@/assets/images/organization.svg" alt="" />
+                  Організація
                 </UiMenuLink>
                 <UiMenuLink
                   v-close-popper
@@ -413,17 +428,14 @@ function toggleDarkMode() {
     grid-template-areas: "logo" "links" "buttons";
 
     .navbar-alpha {
-      left: 85px;
-      top: 16px;
+      right: 56px;
+      left: unset;
+      top: 35px;
     }
 
     .logo {
       flex-direction: row-reverse;
       padding-top: 3px;
-
-      .navbar-alpha {
-        display: none;
-      }
 
       .logo-image {
         margin-right: 1rem;
