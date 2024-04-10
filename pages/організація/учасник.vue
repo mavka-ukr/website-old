@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Кернел | Організація | Мавка",
+  title: "Учасник | Організація | Мавка",
 });
 
 definePageMeta({
@@ -13,11 +13,22 @@ definePageMeta({
     <h1 class="docs-content-title">Учасник</h1>
 
     <p>
-      Учасник є особою, що сплачує щомісячний збір, бере активну участь в ОМ та
+      <span class="diia-word">Учасник ОМ</span>
+      <span style="font-weight: 500" class="hljs-keyword"> є</span> особою, що
+      сплачує щомісячний збір в <span class="diia-word">ОМ</span>, бере активну
+      участь в роботі <span class="diia-word">ОМ</span>
+      <span style="font-weight: 500" class="hljs-keyword"> та</span>
       має право голосу.
     </p>
-    <p>Кожен учасник має рівне право голосу.</p>
+    <p>
+      Кожен <span class="diia-word">учасник ОМ</span> має рівне право голосу.
+    </p>
     <hr />
-    <p>Детальніше про структуру ОМ можна дізнатись ставши учасником ОМ.</p>
+    <p>
+      Детальніше про
+      <span style="font-weight: 500" class="hljs-keyword"> структуру </span>
+      <span class="diia-word">ОМ</span> можна дізнатись ставши
+      <span class="diia-word"> учасником ОМ</span>.
+    </p>
   </UiDocsWrapper>
 </template>

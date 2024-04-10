@@ -12,11 +12,32 @@ definePageMeta({
   <UiDocsWrapper prev="/організація" next="/організація/кернел">
     <h1 class="docs-content-title">Капітан</h1>
 
-    <p>Капітан є учасником ОМ.</p>
-    <p>Капітан є менеджером ОМ.</p>
-    <p>Капітан звітує перед учасниками ОМ та автором.</p>
-    <p>Капітан обирається учасниками ОМ шляхом голосування.</p>
+    <p>
+      <span class="diia-word">Капітан</span>
+      <span style="font-weight: 500" class="hljs-keyword"> є</span>
+      <span class="diia-word"> учасником ОМ</span>.
+    </p>
+    <p>
+      <span class="diia-word">Капітан</span>
+      <span style="font-weight: 500" class="hljs-keyword"> є</span> менеджером
+      <span class="diia-word">ОМ</span>.
+    </p>
+    <p>
+      <span class="diia-word">Капітан</span> звітує перед
+      <span class="diia-word"> учасниками ОМ</span>
+      <span style="font-weight: 500" class="hljs-keyword"> та </span>
+      <span class="diia-word">автором</span>.
+    </p>
+    <p>
+      <span class="diia-word">Капітан</span> обирається
+      <span class="diia-word"> учасниками ОМ</span> шляхом голосування.
+    </p>
     <hr />
-    <p>Детальніше про структуру ОМ можна дізнатись ставши учасником ОМ.</p>
+    <p>
+      Детальніше про
+      <span style="font-weight: 500" class="hljs-keyword"> структуру </span>
+      <span class="diia-word">ОМ</span> можна дізнатись ставши
+      <span class="diia-word"> учасником ОМ</span>.
+    </p>
   </UiDocsWrapper>
 </template>

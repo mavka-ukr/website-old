@@ -147,6 +147,13 @@ addRouteMiddleware(() => {
         Фінансування
       </NuxtLink>
       <NuxtLink
+        :href="encodeURI(`/організація/приєднатись`)"
+        class="docs-sidebar-menu-item first"
+        active-class="active"
+      >
+        Приєднатись
+      </NuxtLink>
+      <NuxtLink
         :href="encodeURI(`/організація/юридичне`)"
         class="docs-sidebar-menu-item first"
         active-class="active"

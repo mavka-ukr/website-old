@@ -125,7 +125,7 @@ const currentCode = useState("currentCode", () => codes[1]);
   &-title {
     margin: 0;
 
-    font-size: 2.4rem;
+    font-size: 2.6em;
     font-weight: 600;
     line-height: 1.125;
 
