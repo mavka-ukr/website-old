@@ -85,6 +85,21 @@ function toggleDarkMode() {
           </a>
           <NuxtLink
             class="ui-mobile-navbar-link"
+            :to="encodeURI('/організація')"
+          >
+            <img src="@/assets/images/organization.svg" alt="" />
+            Організація
+          </NuxtLink>
+          <a
+            class="ui-mobile-navbar-link"
+            href="https://ціль.укр"
+            target="_blank"
+          >
+            <img src="@/assets/images/tsil.png" alt="" />
+            Ціль
+          </a>
+          <NuxtLink
+            class="ui-mobile-navbar-link"
             :href="encodeURI('/джеджалик')"
           >
             <img src="@/assets/images/tools/jejalyk.png" alt="" />
@@ -109,13 +124,6 @@ function toggleDarkMode() {
           <NuxtLink class="ui-mobile-navbar-link" to="/cyrrilic">
             <img src="@/assets/images/tools/cyrrilic.png" alt="" />
             Цирілик
-          </NuxtLink>
-          <NuxtLink
-            class="ui-mobile-navbar-link"
-            :to="encodeURI('/організація')"
-          >
-            <img src="@/assets/images/organization.svg" alt="" />
-            Організація
           </NuxtLink>
           <NuxtLink
             class="ui-mobile-navbar-link"
@@ -181,7 +189,23 @@ function toggleDarkMode() {
             </template>
 
             <template #popper>
-              <UiMenu>
+              <UiMenu class="large">
+                <UiMenuLink
+                  v-close-popper
+                  tag="RouterLink"
+                  :to="encodeURI('/організація')"
+                >
+                  <img src="@/assets/images/organization.svg" alt="" />
+                  Організація
+                </UiMenuLink>
+                <UiMenuLink
+                  v-close-popper
+                  href="https://ціль.укр"
+                  target="_blank"
+                >
+                  <img src="@/assets/images/tsil.png" alt="" />
+                  Ціль
+                </UiMenuLink>
                 <UiMenuLink
                   v-close-popper
                   tag="RouterLink"
@@ -208,14 +232,6 @@ function toggleDarkMode() {
                 <UiMenuLink v-close-popper tag="RouterLink" to="/cyrrilic">
                   <img src="@/assets/images/tools/cyrrilic.png" alt="" />
                   Цирілик
-                </UiMenuLink>
-                <UiMenuLink
-                  v-close-popper
-                  tag="RouterLink"
-                  :to="encodeURI('/організація')"
-                >
-                  <img src="@/assets/images/organization.svg" alt="" />
-                  Організація
                 </UiMenuLink>
                 <UiMenuLink
                   v-close-popper
@@ -271,6 +287,8 @@ function toggleDarkMode() {
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  padding-bottom: 3rem;
 
   .ui-mobile-navbar-links {
     display: grid;

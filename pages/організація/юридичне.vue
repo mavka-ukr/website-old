@@ -14,10 +14,9 @@ definePageMeta({
 
     <p>
       <span class="diia-word">Організація Мавки</span>
-      підзвітна лише <span class="diia-word">творцю всесвіту</span>,
-      <span class="diia-word"> фізичним законам</span>
+      підзвітна лише творцю всесвіту, фізичним законам
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
-      <span class="diia-word">автору</span>.
+      автору.
     </p>
   </UiDocsWrapper>
 </template>
