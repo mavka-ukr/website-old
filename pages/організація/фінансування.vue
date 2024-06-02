@@ -9,7 +9,10 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/організація/кернел" next="/організація/приєднатись">
+  <UiDocsWrapper
+    prev="/організація/учасники/БДКП"
+    next="/організація/приєднатись"
+  >
     <h1 class="docs-content-title">Фінансування</h1>
 
     <p>

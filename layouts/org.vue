@@ -21,22 +21,66 @@ useHead({
 
 const route = useRoute();
 const sidebarShown = useState("sidebarShown", () => false);
-const structureLinks = useState("structureLinks", () => [
+const structuresLinks = useState("structuresLinks", () => [
   {
-    name: "Капітан",
-    encodedLink: encodeURI("/організація/капітан"),
+    name: "Орган",
+    encodedLink: encodeURI("/організація/структура/орган"),
   },
   {
-    name: "Кернел",
-    encodedLink: encodeURI("/організація/кернел"),
+    name: "Проект",
+    encodedLink: encodeURI("/організація/структура/проект"),
   },
   {
     name: "Учасник",
-    encodedLink: encodeURI("/організація/учасник"),
+    encodedLink: encodeURI("/організація/структура/учасник"),
+  },
+  {
+    name: "Комітет",
+    encodedLink: encodeURI("/організація/структура/комітет"),
   },
 ]);
-const isStructureExpanded = useState("isStructureExpanded", () => false);
-const isStructurePage = useState("isStructurePage", () => false);
+const isStructuresExpanded = useState("isStructuresExpanded", () => false);
+const isStructuresPage = useState("isStructuresPage", () => false);
+const organsLinks = useState("organsLinks", () => [
+  {
+    name: "КомітетʼДослідження",
+    encodedLink: encodeURI("/організація/комітет/дослідження"),
+  },
+  {
+    name: "КомітетʼНавчання",
+    encodedLink: encodeURI("/організація/комітет/навчання"),
+  },
+  {
+    name: "КомітетʼДобробуту",
+    encodedLink: encodeURI("/організація/комітет/добробуту"),
+  },
+  {
+    name: "КомітетʼЗахисту",
+    encodedLink: encodeURI("/організація/комітет/захисту"),
+  },
+  {
+    name: "КомітетʼМаМа",
+    encodedLink: encodeURI("/організація/комітет/мама"),
+  },
+  {
+    name: "КомітетʼЦілі",
+    encodedLink: encodeURI("/організація/комітет/цілі"),
+  },
+  {
+    name: "КомітетʼВебу",
+    encodedLink: encodeURI("/організація/комітет/вебу"),
+  },
+]);
+const isOrgansExpanded = useState("isOrgansExpanded", () => false);
+const isOrgansPage = useState("isOrgansPage", () => false);
+const membersLinks = useState("membersLinks", () => [
+  {
+    name: "БДКП",
+    encodedLink: encodeURI("/організація/учасники/БДКП"),
+  },
+]);
+const isMembersExpanded = useState("isMembersExpanded", () => false);
+const isMembersPage = useState("isMembersPage", () => false);
 
 function updateColor() {
   if (process.client) {
@@ -65,11 +109,19 @@ function updateColor() {
 watch(
   () => route.name,
   () => {
-    if (structureLinks.value.find((l) => route.path === l.encodedLink)) {
-      isStructureExpanded.value = true;
-      isStructurePage.value = true;
+    if (structuresLinks.value.find((l) => route.path === l.encodedLink)) {
+      isStructuresExpanded.value = true;
+      isStructuresPage.value = true;
+    } else if (organsLinks.value.find((l) => route.path === l.encodedLink)) {
+      isOrgansExpanded.value = true;
+      isOrgansPage.value = true;
+    } else if (membersLinks.value.find((l) => route.path === l.encodedLink)) {
+      isMembersExpanded.value = true;
+      isMembersPage.value = true;
     } else {
-      isStructurePage.value = false;
+      isStructuresPage.value = false;
+      isOrgansPage.value = false;
+      isMembersPage.value = false;
     }
 
     updateColor();
@@ -112,40 +164,89 @@ addRouteMiddleware(() => {
         Організація
       </NuxtLink>
       <a
-        @click.stop.prevent="isStructureExpanded = !isStructureExpanded"
+        @click.stop.prevent="isStructuresExpanded = !isStructuresExpanded"
         class="docs-sidebar-menu-item sticky"
       >
-        Структура
+        Структури
         <span style="margin-left: auto" class="material-symbols-rounded">
-          <template v-if="isStructureExpanded">expand_less</template>
+          <template v-if="isStructuresExpanded">expand_less</template>
           <template v-else>expand_more</template>
         </span>
       </a>
-      <template v-if="isStructureExpanded">
+      <template v-if="isStructuresExpanded">
         <template
-          v-for="(structureLink, i) in structureLinks"
-          :key="structureLink.encodedLink"
+          v-for="(subjectLink, i) in structuresLinks"
+          :key="subjectLink.encodedLink"
         >
           <NuxtLink
-            :href="structureLink.encodedLink"
+            :href="subjectLink.encodedLink"
             class="docs-sidebar-menu-item subitem"
             active-class="active"
             :class="{
               withTopShadow: i === 0,
-              withBottomShadow: i === structureLinks.length - 1,
+              withBottomShadow: i === structuresLinks.length - 1,
             }"
           >
-            {{ structureLink.name }}
+            {{ subjectLink.name }}
           </NuxtLink>
         </template>
       </template>
-      <NuxtLink
-        :href="encodeURI(`/організація/фінансування`)"
-        class="docs-sidebar-menu-item first"
-        active-class="active"
+      <a
+        @click.stop.prevent="isOrgansExpanded = !isOrgansExpanded"
+        class="docs-sidebar-menu-item sticky"
       >
-        Фінансування
-      </NuxtLink>
+        Комітети
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isOrgansExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isOrgansExpanded">
+        <template
+          v-for="(organLink, i) in organsLinks"
+          :key="organLink.encodedLink"
+        >
+          <NuxtLink
+            :href="organLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === organsLinks.length - 1,
+            }"
+          >
+            {{ organLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
+      <a
+        @click.stop.prevent="isMembersExpanded = !isMembersExpanded"
+        class="docs-sidebar-menu-item sticky"
+      >
+        Учасники
+        <span style="margin-left: auto" class="material-symbols-rounded">
+          <template v-if="isMembersExpanded">expand_less</template>
+          <template v-else>expand_more</template>
+        </span>
+      </a>
+      <template v-if="isMembersExpanded">
+        <template
+          v-for="(memberLink, i) in membersLinks"
+          :key="memberLink.encodedLink"
+        >
+          <NuxtLink
+            :href="memberLink.encodedLink"
+            class="docs-sidebar-menu-item subitem"
+            active-class="active"
+            :class="{
+              withTopShadow: i === 0,
+              withBottomShadow: i === membersLinks.length - 1,
+            }"
+          >
+            {{ memberLink.name }}
+          </NuxtLink>
+        </template>
+      </template>
       <NuxtLink
         :href="encodeURI(`/організація/приєднатись`)"
         class="docs-sidebar-menu-item first"
@@ -159,6 +260,13 @@ addRouteMiddleware(() => {
         active-class="active"
       >
         Юридичне
+      </NuxtLink>
+      <NuxtLink
+        :href="encodeURI(`/організація/органопис`)"
+        class="docs-sidebar-menu-item first"
+        active-class="active"
+      >
+        Органопис
       </NuxtLink>
       <div style="min-height: 5rem; display: block; width: 100%"></div>
       <div class="docs-sidebar-footer-wrapper">

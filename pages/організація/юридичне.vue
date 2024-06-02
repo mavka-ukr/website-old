@@ -9,14 +9,18 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/організація/приєднатись">
+  <UiDocsWrapper prev="/організація/приєднатись" next="/організація/органопис">
     <h1 class="docs-content-title">Юридичне</h1>
-
+    <p>
+      <span class="diia-word">Організація Мавки</span> тимчасово
+      <span style="font-weight: 500" class="hljs-keyword">є</span> незалежною
+      від будь-якої держави.
+    </p>
     <p>
       <span class="diia-word">Організація Мавки</span>
-      підзвітна лише творцю всесвіту, фізичним законам
+      несе відповідальність перед творцем всесвіту, фізичними законами
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
-      автору.
+      автором.
     </p>
   </UiDocsWrapper>
 </template>

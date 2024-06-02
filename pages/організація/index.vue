@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper next="/організація/капітан">
+  <UiDocsWrapper next="/організація/структура/орган">
     <div class="docs-content-logo organization">
       <svg viewBox="0 0 380 246" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -526,11 +526,26 @@ definePageMeta({
 
     <p>
       <span class="diia-word">Організація Мавки</span>
+      (також <span class="diia-word">ОМ</span>)
       <span style="font-weight: 500" class="hljs-keyword"> це субʼєкт</span>, що
       відповідає за підтримку, розвиток й захист
       <span class="diia-word">Мавки</span>
-      <span style="font-weight: 500" class="hljs-keyword"> та</span> її
-      проектів.
+      <span style="font-weight: 500" class="hljs-keyword"> та</span> українських
+      технологій.
+    </p>
+    <p>
+      <span class="diia-word">ОМ</span> складається з
+      <span class="diia-word">Капітана</span>,
+      <span class="diia-word">Учасників</span>
+      <span style="font-weight: 500" class="hljs-keyword"> та </span>
+      <span class="diia-word">Комітетів</span>.
+    </p>
+    <p>
+      <span class="diia-word">Капітан ОМ</span> на даний момент
+      <span style="font-weight: 500" class="hljs-keyword"> це </span>
+      <span class="diia-word">Учасникʼ0</span>
+      (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
+      Богданович Давид Когут Прихожденко).
     </p>
   </UiDocsWrapper>
 </template>

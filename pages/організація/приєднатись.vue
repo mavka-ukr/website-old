@@ -9,13 +9,14 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper prev="/організація/фінансування" next="/організація/юридичне">
+  <UiDocsWrapper prev="/організація/учасники/БДКП" next="/організація/юридичне">
     <h1 class="docs-content-title">Приєднатись</h1>
 
     <p>
-      Стати
-      <span class="diia-word">учасником Організації Мавки</span> можна лише
-      через заслуги перед <span class="diia-word">Мавкою</span>.
+      Напишіть <span class="diia-word">Капітану</span> на електропошту:
+      <a class="link external" href="mailto:kohutd@proton.me">
+        kohutd@proton.me</a
+      >.
     </p>
   </UiDocsWrapper>
 </template>
