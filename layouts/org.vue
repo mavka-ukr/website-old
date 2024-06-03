@@ -67,8 +67,8 @@ const organsLinks = useState("organsLinks", () => [
     encodedLink: encodeURI("/організація/комітет/цілі"),
   },
   {
-    name: "КомітетʼВебу",
-    encodedLink: encodeURI("/організація/комітет/вебу"),
+    name: "КомітетʼWeb",
+    encodedLink: encodeURI("/організація/комітет/web"),
   },
 ]);
 const isOrgansExpanded = useState("isOrgansExpanded", () => false);
