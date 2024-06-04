@@ -22,13 +22,5 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
       автором.
     </p>
-    <p>
-      <span class="diia-word">Мавка</span>
-      <span style="font-weight: 500" class="hljs-keyword"> не </span> має
-      жодного стосунку до існуючої держави "Україна". Будь-які спроби цієї
-      держави використовувати, привласнювати, копіювати тощо
-      <span class="diia-word">Мавку</span>
-      <span style="font-weight: 500" class="hljs-keyword"> є</span> злочином.
-    </p>
   </UiDocsWrapper>
 </template>
