@@ -16,10 +16,10 @@ definePageMeta({
     <h1 class="docs-content-title">Центр</h1>
 
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Структура </span>
       <span class="diia-word">Центр</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
-      <span class="diia-word"> Органом ОМ</span>, що обʼєднує
+      <span style="font-weight: 500" class="hljs-keyword"> структурою </span>
+      <span class="diia-word"> Органом</span>, що обʼєднує
       <span class="diia-word">Учасників</span> для праці над
       <span class="diia-word">Проектами</span>.
     </p>
