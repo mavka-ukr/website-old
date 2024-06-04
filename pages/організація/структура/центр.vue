@@ -16,6 +16,7 @@ definePageMeta({
     <h1 class="docs-content-title">Центр</h1>
 
     <p>
+      <span style="font-weight: 500" class="hljs-keyword">Структура </span>
       <span class="diia-word">Центр</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
       <span class="diia-word"> Органом ОМ</span>, що обʼєднує

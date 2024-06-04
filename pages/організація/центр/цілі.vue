@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Цілі | Центр | Організація | Мавка",
+  title: "ЦентрʼЦілі | Організація | Мавка",
 });
 
 definePageMeta({
@@ -44,11 +44,11 @@ definePageMeta({
     </p>
     <ul>
       <li>
-        <span class="diia-word">Проектʼ10</span>: Мова програмування
+        <span class="diia-word">Проектʼ20</span>: Мова програмування
         <span class="diia-word">Ціль</span>
       </li>
       <li>
-        <span class="diia-word">Проектʼ11</span>: Компілятор
+        <span class="diia-word">Проектʼ21</span>: Компілятор
         <span class="diia-word">Цілі</span>
       </li>
     </ul>

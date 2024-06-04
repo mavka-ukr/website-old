@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Навчання | Центр | Організація | Мавка",
+  title: "ЦентрʼНавчання | Організація | Мавка",
 });
 
 definePageMeta({

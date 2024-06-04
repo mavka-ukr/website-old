@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "0 | Учасник | Організація | Мавка",
+  title: "Учасникʼ0 | Організація | Мавка",
 });
 
 definePageMeta({
