@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Web | Комітет | Організація | Мавка",
+  title: "Web | Центр | Організація | Мавка",
 });
 
 definePageMeta({
@@ -10,21 +10,21 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/організація/комітет/цілі"
+    prev="/організація/центр/цілі"
     next="/організація/учасники/БДКП"
   >
-    <h1 class="docs-content-title">КомітетʼWeb</h1>
+    <h1 class="docs-content-title">ЦентрʼWeb</h1>
 
     <p>
-      <span class="diia-word">КомітетʼWeb</span>
+      <span class="diia-word">ЦентрʼWeb</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span>
-      <span class="diia-word"> Комітет ОМ</span>, що відповідає за web-сервіси
+      <span class="diia-word"> Центр ОМ</span>, що відповідає за web-сервіси
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
       web-інфраструктуру <span class="diia-word">Мавки</span>.
     </p>
     <p>
-      <span class="diia-word">Кернел</span> цього
-      <span class="diia-word">Комітету</span> на даний момент
+      <span class="diia-word">Секретар</span> цього
+      <span class="diia-word">Центру</span> на даний момент
       <span style="font-weight: 500" class="hljs-keyword"> це </span>
       <span class="diia-word">Учасникʼ0</span>
       (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
@@ -32,7 +32,7 @@ definePageMeta({
     </p>
     <p>
       <span class="diia-word">Учасники</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
       <li>
@@ -44,7 +44,7 @@ definePageMeta({
     </ul>
     <p>
       <span class="diia-word">Проекти</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
       <li>
@@ -76,9 +76,8 @@ definePageMeta({
         <a target="_blank" class="link external" href="https://пак.укр"
           >пак.укр</a
         >
-        (в розробці)
       </li>
-      <li>
+      <li v-if="false">
         <span class="diia-word">Проектʼ6</span>:
         <a target="_blank" class="link external" href="https://писанка.укр"
           >писанка.укр</a

@@ -535,17 +535,27 @@ definePageMeta({
     </p>
     <p>
       <span class="diia-word">ОМ</span> складається з
-      <span class="diia-word">Капітана</span>,
+      <span class="diia-word">Голови</span>,
       <span class="diia-word">Учасників</span>
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
-      <span class="diia-word">Комітетів</span>.
+      <span class="diia-word">Центрів</span>.
     </p>
     <p>
-      <span class="diia-word">Капітан ОМ</span> на даний момент
+      <span class="diia-word">Голова ОМ</span> на даний момент
       <span style="font-weight: 500" class="hljs-keyword"> це </span>
       <span class="diia-word">Учасникʼ0</span>
       (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
       Богданович Давид Когут Прихожденко).
+    </p>
+    <p>
+      <span class="diia-word">Голова</span> обирається шляхом голосування всіх
+      <span class="diia-word">Учасників</span>.
+    </p>
+    <p>
+      <span class="diia-word">Голова</span> відповідає за здорове
+      <span style="font-weight: 500" class="hljs-keyword"> та </span>
+      якісне функціонування
+      <span class="diia-word">ОМ</span>.
     </p>
   </UiDocsWrapper>
 </template>

@@ -35,40 +35,40 @@ const structuresLinks = useState("structuresLinks", () => [
     encodedLink: encodeURI("/організація/структура/учасник"),
   },
   {
-    name: "Комітет",
-    encodedLink: encodeURI("/організація/структура/комітет"),
+    name: "Центр",
+    encodedLink: encodeURI("/організація/структура/центр"),
   },
 ]);
 const isStructuresExpanded = useState("isStructuresExpanded", () => false);
 const isStructuresPage = useState("isStructuresPage", () => false);
 const organsLinks = useState("organsLinks", () => [
   {
-    name: "КомітетʼДослідження",
-    encodedLink: encodeURI("/організація/комітет/дослідження"),
+    name: "ЦентрʼДослідження",
+    encodedLink: encodeURI("/організація/центр/дослідження"),
   },
   {
-    name: "КомітетʼНавчання",
-    encodedLink: encodeURI("/організація/комітет/навчання"),
+    name: "ЦентрʼНавчання",
+    encodedLink: encodeURI("/організація/центр/навчання"),
   },
   {
-    name: "КомітетʼДобробуту",
-    encodedLink: encodeURI("/організація/комітет/добробуту"),
+    name: "ЦентрʼДобробуту",
+    encodedLink: encodeURI("/організація/центр/добробуту"),
   },
   {
-    name: "КомітетʼЗахисту",
-    encodedLink: encodeURI("/організація/комітет/захисту"),
+    name: "ЦентрʼЗахисту",
+    encodedLink: encodeURI("/організація/центр/захисту"),
   },
   {
-    name: "КомітетʼМаМа",
-    encodedLink: encodeURI("/організація/комітет/мама"),
+    name: "ЦентрʼМаМа",
+    encodedLink: encodeURI("/організація/центр/мама"),
   },
   {
-    name: "КомітетʼЦілі",
-    encodedLink: encodeURI("/організація/комітет/цілі"),
+    name: "ЦентрʼЦілі",
+    encodedLink: encodeURI("/організація/центр/цілі"),
   },
   {
-    name: "КомітетʼWeb",
-    encodedLink: encodeURI("/організація/комітет/web"),
+    name: "ЦентрʼWeb",
+    encodedLink: encodeURI("/організація/центр/web"),
   },
 ]);
 const isOrgansExpanded = useState("isOrgansExpanded", () => false);
@@ -195,7 +195,7 @@ addRouteMiddleware(() => {
         @click.stop.prevent="isOrgansExpanded = !isOrgansExpanded"
         class="docs-sidebar-menu-item sticky"
       >
-        Комітети
+        Центри
         <span style="margin-left: auto" class="material-symbols-rounded">
           <template v-if="isOrgansExpanded">expand_less</template>
           <template v-else>expand_more</template>
@@ -260,13 +260,6 @@ addRouteMiddleware(() => {
         active-class="active"
       >
         Юридичне
-      </NuxtLink>
-      <NuxtLink
-        :href="encodeURI(`/організація/органопис`)"
-        class="docs-sidebar-menu-item first"
-        active-class="active"
-      >
-        Органопис
       </NuxtLink>
       <div style="min-height: 5rem; display: block; width: 100%"></div>
       <div class="docs-sidebar-footer-wrapper">

@@ -24,5 +24,11 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
       <span class="diia-word"> ОМ</span>.
     </p>
+    <p>
+      <span class="diia-word">Проект</span>
+      може бути лише в одному <span class="diia-word">Центрі</span>
+      <span style="font-weight: 500" class="hljs-keyword"> та </span>
+      мати декілька <span class="diia-word">Учасників</span>.
+    </p>
   </UiDocsWrapper>
 </template>

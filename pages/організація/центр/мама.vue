@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "МаМа | Комітет | Організація | Мавка",
+  title: "МаМа | Центр | Організація | Мавка",
 });
 
 definePageMeta({
@@ -10,20 +10,20 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/організація/комітет/захисту"
-    next="/організація/комітет/цілі"
+    prev="/організація/центр/захисту"
+    next="/організація/центр/цілі"
   >
-    <h1 class="docs-content-title">КомітетʼМаМа</h1>
+    <h1 class="docs-content-title">ЦентрʼМаМа</h1>
 
     <p>
-      <span class="diia-word">КомітетʼМаМа</span>
+      <span class="diia-word">ЦентрʼМаМа</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span>
-      <span class="diia-word"> Комітет ОМ</span>, що відповідає за все, що
+      <span class="diia-word"> Центр ОМ</span>, що відповідає за все, що
       повʼязано з мовою програмування <span class="diia-word">Мавка</span>.
     </p>
     <p>
-      <span class="diia-word">Кернел</span> цього
-      <span class="diia-word">Комітету</span> на даний момент
+      <span class="diia-word">Секретар</span> цього
+      <span class="diia-word">Центру</span> на даний момент
       <span style="font-weight: 500" class="hljs-keyword"> це </span>
       <span class="diia-word">Учасникʼ0</span>
       (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
@@ -31,7 +31,7 @@ definePageMeta({
     </p>
     <p>
       <span class="diia-word">Учасники</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
       <li>
@@ -43,15 +43,9 @@ definePageMeta({
     </ul>
     <p>
       <span class="diia-word">Проекти</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
-      <li>
-        <span class="diia-word">Проектʼ1</span>:
-        <a target="_blank" class="link external" href="https://мавка.укр"
-          >мавка.укр</a
-        >
-      </li>
       <li>
         <span class="diia-word">Проектʼ20</span>: Мова програмування
         <span class="diia-word">Мавка</span>

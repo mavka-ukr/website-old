@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Захисту | Комітет | Організація | Мавка",
+  title: "Добробуту | Центр | Організація | Мавка",
 });
 
 definePageMeta({
@@ -10,19 +10,20 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/організація/комітет/добробуту"
-    next="/організація/комітет/мама"
+    prev="/організація/центр/навчання"
+    next="/організація/центр/захисту"
   >
-    <h1 class="docs-content-title">КомітетʼЗахисту</h1>
+    <h1 class="docs-content-title">ЦентрʼДобробуту</h1>
 
     <p>
-      <span class="diia-word">КомітетʼЗахисту</span>
+      <span class="diia-word">ЦентрʼДобробуту</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span>
-      <span class="diia-word"> Комітет ОМ</span>.
+      <span class="diia-word"> Центр ОМ</span>, що відповідає за забезпечення
+      добробуту <span class="diia-word"> ОМ</span>.
     </p>
     <p>
-      <span class="diia-word">Кернел</span> цього
-      <span class="diia-word">Комітету</span> на даний момент
+      <span class="diia-word">Секретар</span> цього
+      <span class="diia-word">Центру</span> на даний момент
       <span style="font-weight: 500" class="hljs-keyword"> це </span>
       <span class="diia-word">Учасникʼ0</span>
       (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
@@ -30,7 +31,7 @@ definePageMeta({
     </p>
     <p>
       <span class="diia-word">Учасники</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
       <li>
@@ -42,7 +43,7 @@ definePageMeta({
     </ul>
     <p>
       <span class="diia-word">Проекти</span> цього
-      <span class="diia-word">Комітету</span>:
+      <span class="diia-word">Центру</span>:
     </p>
     <ul>
       <li><i>Інформація відсутня</i></li>
