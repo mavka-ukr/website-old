@@ -12,6 +12,11 @@ definePageMeta({
   <UiDocsWrapper prev="/організація/приєднатись">
     <h1 class="docs-content-title">Юридичне</h1>
     <p>
+      <span class="diia-word">Організація Мавки</span> тимчасово
+      <span style="font-weight: 500" class="hljs-keyword">є</span> незалежною
+      від будь-якої держави.
+    </p>
+    <p>
       <span class="diia-word">Організація Мавки</span>
       несе відповідальність перед творцем всесвіту, фізичними законами
       <span style="font-weight: 500" class="hljs-keyword"> та </span>
