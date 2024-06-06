@@ -49,5 +49,14 @@ definePageMeta({
       декількох
       <span class="diia-word">Центрах</span>.
     </p>
+    <p>
+      Кожен <span class="diia-word">Учасник</span> має право подати ініціативу
+      до <span class="diia-word">Голови</span>
+      <span style="font-weight: 500" class="hljs-keyword"> або </span>
+      <span class="diia-word">Секретаря</span>
+      на реєстрацію нового <span class="diia-word">Центру</span>
+      <span style="font-weight: 500" class="hljs-keyword"> або </span>
+      <span class="diia-word">Проекту</span>.
+    </p>
   </UiDocsWrapper>
 </template>
