@@ -123,6 +123,7 @@ export default defineNuxtConfig({
         "/документація/число",
         "/документація/шаблон",
         "/документація/інтернет",
+        "/мама",
       ],
       failOnError: false,
     },
