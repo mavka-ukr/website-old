@@ -11,7 +11,7 @@ definePageMeta({
 <template>
   <UiDocsWrapper
     prev="/документація/вступ-до-теорії"
-    next="/документація/обʼєкт"
+    next="/документація/інструкція"
   >
     <h1 class="docs-content-title">Вказівка</h1>
     <p>
