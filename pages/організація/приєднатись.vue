@@ -12,11 +12,6 @@ definePageMeta({
   <UiDocsWrapper prev="/організація/учасники/БДКП" next="/організація/юридичне">
     <h1 class="docs-content-title">Приєднатись</h1>
 
-    <p>
-      Напишіть <span class="diia-word">Голові</span> на електропошту:
-      <a class="link external" href="mailto:kohutd@proton.me">
-        kohutd@proton.me</a
-      >.
-    </p>
+    <p>Вам надійде запрошення.</p>
   </UiDocsWrapper>
 </template>
