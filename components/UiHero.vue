@@ -83,7 +83,7 @@ const currentCode = useState("currentCode", () => codes[1]);
     <div class="left">
       <h1 class="hero-title">Сучасна українська мова програмування</h1>
       <h5 class="hero-subtitle">
-        <span class="diia-word">Мавка</span> - це експериментальна мова
+        <span class="diia-word">Мавка</span> – це експериментальна мова
         програмування, що дозволяє кожному втілювати ідеї українською мовою.
         <span class="diia-word">Мавка</span> є першою мовою у своєму роді.
       </h5>
