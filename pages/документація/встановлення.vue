@@ -40,24 +40,10 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper prev="/документація" next="/документація/розкладка">
-    <div class="docs-content-logo">
-      <UiMaMaLogo />
-    </div>
-    <h1 class="docs-content-title">МаМа</h1>
+    <h1 class="docs-content-title">Встановлення</h1>
     <p>
-      <span class="diia-word">МаМа</span> (<span class="diia-word"
-        >Машина Мавки</span
-      >) <span style="font-weight: 500" class="hljs-keyword"> це</span> машина
-      вказівок <span class="diia-word">Мавки</span>.
-    </p>
-    <p>
-      Переглянути деталі щодо <span class="diia-word">МаМа</span> можна
-      <NuxtLink :href="encodeURI('/мама')" class="link external">тут</NuxtLink>
-      <span>.</span>
-    </p>
-    <p>
-      Завантажити <span class="diia-word">Мавку</span> на основі
-      <span class="diia-word">МаМа</span> можна з таблиці нижче.
+      Завантажте <span class="diia-word">Мавку</span> з таблиці нижче та
+      слідуйте за інструкцією зі встановлення у файлі <code>Встановлення</code>.
     </p>
     <template v-if="renderedReleases.length">
       <div class="UiTable">
