@@ -33,7 +33,7 @@ definePageMeta({
 
 <template>
   <UiDocsWrapper
-    prev="/документація/запуск-в-браузері"
+    prev="/документація/приклади"
     next="/документація/арифметика"
   >
     <h1 class="docs-content-title">Стиль</h1>

@@ -40,18 +40,6 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/приклади"),
   },
   {
-    name: "МаМа",
-    encodedLink: encodeURI("/документація/мама"),
-  },
-  {
-    name: "Джеджалик",
-    encodedLink: encodeURI("/документація/джеджалик"),
-  },
-  {
-    name: "Запуск в браузері",
-    encodedLink: encodeURI("/документація/запуск-в-браузері"),
-  },
-  {
     name: "Стиль",
     encodedLink: encodeURI("/документація/стиль"),
   },
@@ -60,8 +48,8 @@ const practiceLinks = useState("practiceLinks", () => [
     encodedLink: encodeURI("/документація/арифметика"),
   },
   {
-    name: "Побітові операції",
-    encodedLink: encodeURI("/документація/побітові-операції"),
+    name: "Двійкові операції",
+    encodedLink: encodeURI("/документація/двійкові-операції"),
   },
   {
     name: "Порівняння",
@@ -78,10 +66,6 @@ const practiceLinks = useState("practiceLinks", () => [
   {
     name: "Паки",
     encodedLink: encodeURI("/документація/паки"),
-  },
-  {
-    name: "Старт-паки",
-    encodedLink: encodeURI("/документація/старт-паки"),
   },
   {
     name: "Діалог",

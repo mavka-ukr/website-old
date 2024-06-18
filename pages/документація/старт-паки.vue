@@ -53,7 +53,7 @@ definePageMeta({
         >пак.укр</a
       >
       <span style="font-weight: 500" class="hljs-keyword"> та</span>
-      зберігаються в папці <code>.паки</code> в домашній папці.
+      зберігаються в папці <code>паки</code> в домашній папці.
     </p>
     <p>Старт-паки запускаються командою <code>пак</code>.</p>
     <UiCodeBlock :files="'пак привіт/1.0.0'" plaintext />

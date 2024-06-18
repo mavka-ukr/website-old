@@ -30,28 +30,13 @@ definePageMeta({
         />
       </ClientOnly>
     </div>
-    <p>
-      Запустіть через <span class="diia-word">МаМа</span>, виконавши цю команду:
-    </p>
+    <p>Запустіть, виконавши цю команду:</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs
           language="bash"
           :autodetect="false"
           code="мавка привіт.м"
-        />
-      </ClientOnly>
-    </div>
-    <p>
-      <span style="font-weight: 500" class="hljs-keyword">Або</span> скомпілюйте
-      через <span class="diia-word">Джеджалик</span>, виконавши цю команду:
-    </p>
-    <div class="code-window code-window-full">
-      <ClientOnly>
-        <highlightjs
-          language="bash"
-          :autodetect="false"
-          code="джеджалик привіт.м привіт.js"
         />
       </ClientOnly>
     </div>

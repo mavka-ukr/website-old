@@ -1,7 +1,7 @@
 <script setup>
 const files2 = [
   {
-    name: ".паки/привіт/привіт.м",
+    name: "паки/привіт/привіт.м",
     text: `
 дія привіт()
   друк("Привіт від Лесі!")
@@ -35,10 +35,7 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/тестування"
-    next="/документація/старт-паки"
-  >
+  <UiDocsWrapper prev="/документація/тестування" next="/документація/діалог">
     <h1 class="docs-content-title">Паки</h1>
     <p>
       Пак <span style="font-weight: 500" class="hljs-keyword">це</span> один
@@ -53,22 +50,12 @@ definePageMeta({
         >пак.укр</a
       >
       <span style="font-weight: 500" class="hljs-keyword"> та</span>
-      зберігаються в папці <code>.паки</code> на рівні з головним
+      зберігаються в папці <code>паки</code> на рівні з головним
       <span style="font-weight: 500" class="hljs-keyword">модулем</span>
       проекту.
     </p>
     <hr />
     <h3>Приклад взяття модуля з паку</h3>
     <UiCodeBlock :files="files2" />
-    <hr />
-    <p>
-      Версіонування паків відбувається строго через
-      <a
-        href="https://semver.org/lang/uk/"
-        target="_blank"
-        class="link external"
-        >semver</a
-      >.
-    </p>
   </UiDocsWrapper>
 </template>

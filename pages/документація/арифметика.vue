@@ -39,7 +39,7 @@ definePageMeta({
 <template>
   <UiDocsWrapper
     prev="/документація/стиль"
-    next="/документація/побітові-операції"
+    next="/документація/двійкові-операції"
   >
     <h1 class="docs-content-title">Арифметика</h1>
     <p>

@@ -14,7 +14,7 @@ definePageMeta({
 
     <p>
       <span class="diia-word">Мавка</span> має можливість розширення за
-      допомогою C++.
+      допомогою <span class="diia-word">Цілі</span>.
     </p>
     <p>
       Приклад розширення можна знайти

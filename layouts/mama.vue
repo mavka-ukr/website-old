@@ -20,12 +20,7 @@ useHead({
   ],
 });
 
-const instructionsLinks = useState("instructionsLinks", () => [
-  {
-    name: "Основа",
-    encodedLink: encodeURI("/мама/основа"),
-  },
-]);
+const instructionsLinks = useState("instructionsLinks", () => []);
 const isInstructionsExpanded = useState("isInstructionsExpanded", () => false);
 const isInstructionsPage = useState("isInstructionsPage", () => false);
 

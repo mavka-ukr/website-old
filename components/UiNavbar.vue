@@ -98,12 +98,9 @@ function toggleDarkMode() {
             <img src="@/assets/images/tsil.png" alt="" />
             Ціль
           </a>
-          <NuxtLink
-            class="ui-mobile-navbar-link"
-            :href="encodeURI('/джеджалик')"
-          >
-            <img src="@/assets/images/tools/jejalyk.png" alt="" />
-            Джеджалик
+          <NuxtLink class="ui-mobile-navbar-link" :href="encodeURI('/мама')">
+            <img src="@/assets/images/tools/mama.png" alt="" />
+            МаМа
           </NuxtLink>
           <a
             class="ui-mobile-navbar-link"
@@ -209,10 +206,10 @@ function toggleDarkMode() {
                 <UiMenuLink
                   v-close-popper
                   tag="RouterLink"
-                  :to="encodeURI('/джеджалик')"
+                  :to="encodeURI('/мама')"
                 >
-                  <img src="@/assets/images/tools/jejalyk.png" alt="" />
-                  Джеджалик
+                  <img src="@/assets/images/tools/mama.png" alt="" />
+                  МаМа
                 </UiMenuLink>
                 <UiMenuLink
                   v-close-popper

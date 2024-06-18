@@ -48,9 +48,9 @@ definePageMeta({
     <h1 class="docs-content-title">Джеджалик</h1>
 
     <blockquote>
-      Наразі рекомендується використовувати
-      <span class="diia-word">Мавку</span> на основі
-      <span class="diia-word">МаМа</span>.
+      <span class="diia-word">Джеджалик</span> як компілятор
+      <span class="diia-word">Мавки</span> в JavaScript більше не актуальний.
+      Інформація в процесі оновлення.
     </blockquote>
     <hr />
     <p>
