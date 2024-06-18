@@ -548,8 +548,8 @@ definePageMeta({
       Богданович Давид Когут Прихожденко).
     </p>
     <p>
-      <span class="diia-word">Голова</span> обирається шляхом голосування не
-      менше 80% усіх <span class="diia-word">Учасників</span>.
+      <span class="diia-word">Голова</span> обирається шляхом голосування усіх
+      <span class="diia-word">Учасників</span>.
     </p>
     <p>
       <span class="diia-word">Голова</span> відповідає за здорове
