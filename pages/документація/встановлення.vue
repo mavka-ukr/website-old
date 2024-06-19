@@ -4,30 +4,16 @@ const versions = [
     name: "0.123.0",
     files: [
       "мавка-0.123.0-x86_64-linux-gnu.zip",
-      "мавка-0.123.0-x86_64-windows-gnu.zip",
-    ],
-  },
-  {
-    name: "0.111.0",
-    files: [
-      "мавка-0.111.0-x86_64-linux-gnu.zip",
-      "мавка-0.111.0-x86_64-windows-gnu.zip",
+      "мавка-0.123.0-x86_64-windows.zip",
+      "мавка-0.123.0-aarch64-linux.zip",
+      "мавка-0.123.0-aarch64-windows.zip",
     ],
   },
 ];
 const selectedVersionIndex = ref(0);
-const changelog = ref("");
 
 const selectedVersion = computed(() => {
   return versions[selectedVersionIndex.value];
-});
-
-watchEffect(async () => {
-  if (process.client) {
-    const version = selectedVersion.value;
-    const response = await fetch(`/завантажити/${version.name}/Зміни`);
-    changelog.value = await response.text();
-  }
 });
 
 useHead({
@@ -72,12 +58,6 @@ definePageMeta({
           </template>
         </table>
       </div>
-      <template v-if="changelog">
-        <p><b>Зміни:</b></p>
-        <blockquote>
-          <pre style="padding: 0; margin: 0">{{ changelog }}</pre>
-        </blockquote>
-      </template>
     </template>
     <template v-else>
       <blockquote>Завантаження....</blockquote>
