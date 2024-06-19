@@ -1,34 +1,35 @@
 <script setup>
-import UiMaMaLogo from "~/components/UiMaMaLogo.vue";
+const versions = [
+  {
+    name: "0.123.0",
+    files: [
+      "мавка-0.123.0-x86_64-linux-gnu.zip",
+      "мавка-0.123.0-x86_64-windows-gnu.zip",
+    ],
+  },
+  {
+    name: "0.111.0",
+    files: [
+      "мавка-0.111.0-x86_64-linux-gnu.zip",
+      "мавка-0.111.0-x86_64-windows-gnu.zip",
+    ],
+  },
+];
+const selectedVersionIndex = ref(0);
+const changelog = ref("");
 
-const releases = ref([]);
-const isLoadingReleases = ref(true);
-const showAllReleases = ref(false);
+const selectedVersion = computed(() => {
+  return versions[selectedVersionIndex.value];
+});
 
-const renderedReleases = computed(() => {
-  if (showAllReleases.value) {
-    return releases.value;
+watchEffect(async () => {
+  if (process.client) {
+    const version = selectedVersion.value;
+    const response = await fetch(`/завантажити/${version.name}/Зміни`);
+    changelog.value = await response.text();
   }
-  return releases.value.slice(0, 1);
 });
 
-onMounted(() => {
-  isLoadingReleases.value = true;
-  fetch("https://api.github.com/repos/mavka-ukr/mavka/releases/latest")
-    .then((res) => res.json())
-    .then((latestRelease) => {
-      fetch("https://api.github.com/repos/mavka-ukr/mavka/releases")
-        .then((res) => res.json())
-        .then((data) => {
-          releases.value = data;
-          if (data[0] && data[0].id === latestRelease.id) {
-            releases.value = data.slice(1);
-          }
-          releases.value = [latestRelease, ...releases.value];
-          isLoadingReleases.value = false;
-        });
-    });
-});
 useHead({
   title: "Встановлення | Документація | Мавка",
 });
@@ -45,45 +46,38 @@ definePageMeta({
       Завантажте <span class="diia-word">Мавку</span> з таблиці нижче та
       слідуйте за інструкцією зі встановлення у файлі <code>Встановлення</code>.
     </p>
-    <template v-if="renderedReleases.length">
+    <select v-model="selectedVersionIndex" name="version" id="version">
+      <template v-for="(version, i) in versions">
+        <option :value="i">{{ version.name }}</option>
+      </template>
+    </select>
+    <template v-if="selectedVersion">
       <div class="UiTable">
         <table>
-          <template v-for="release in renderedReleases">
+          <tr>
+            <th>Файли</th>
+          </tr>
+          <template v-for="file in selectedVersion.files">
             <tr>
-              <td style="width: 20%">
-                {{ release.name }}
-              </td>
-              <td style="width: 60%">
-                <template v-for="asset in release.assets">
-                  <a :href="asset.browser_download_url" class="link external">
-                    <span class="material-symbols-rounded bold">download</span>
-                    {{ asset.name }}
-                  </a>
-                </template>
-              </td>
-              <td style="width: 20%">
+              <td>
                 <a
-                  target="_blank"
-                  :href="release.html_url"
+                  :href="`/завантажити/${selectedVersion.name}/${file}`"
                   class="link external"
                 >
-                  <span class="material-symbols-rounded bold">code</span>
-                  GitHub
+                  <span class="material-symbols-rounded bold">download</span>
+                  {{ file }}
                 </a>
-              </td>
-            </tr>
-          </template>
-          <template v-if="!showAllReleases">
-            <tr>
-              <td colspan="3" class="td-all">
-                <button @click="showAllReleases = true">
-                  Показати всі випуски
-                </button>
               </td>
             </tr>
           </template>
         </table>
       </div>
+      <template v-if="changelog">
+        <p><b>Зміни:</b></p>
+        <blockquote>
+          <pre style="padding: 0; margin: 0">{{ changelog }}</pre>
+        </blockquote>
+      </template>
     </template>
     <template v-else>
       <blockquote>Завантаження....</blockquote>
@@ -97,13 +91,29 @@ definePageMeta({
   overflow: auto;
 }
 
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
 table {
+  margin-top: 1rem;
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid var(--border-color);
 
-  td {
+  td,
+  th {
     padding: 0.5rem;
-    border: 1px solid var(--border-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     a {
       font-size: 1rem;
@@ -120,6 +130,10 @@ table {
     a + a {
       margin-top: 0.5rem;
     }
+  }
+
+  tr + tr {
+    border-top: 1px solid var(--border-color);
   }
 
   .td-all {
