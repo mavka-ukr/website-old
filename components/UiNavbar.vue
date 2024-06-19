@@ -13,10 +13,10 @@ onMounted(() => {
   isMobile.value = window.innerWidth <= 956;
   window.addEventListener("resize", onResize);
   if (process.client) {
-    fetch("https://api.github.com/repos/mavka-ukr/mavka/releases/latest")
+    fetch("/завантажити/версії.json", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
-        version.value = data.tag_name;
+        version.value = data[0].name;
       });
   }
 });

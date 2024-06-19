@@ -1,19 +1,19 @@
 <script setup>
-const versions = [
-  {
-    name: "0.123.0",
-    files: [
-      "мавка-0.123.0-x86_64-linux-gnu.zip",
-      "мавка-0.123.0-x86_64-windows.zip",
-      "мавка-0.123.0-aarch64-linux.zip",
-      "мавка-0.123.0-aarch64-windows.zip",
-    ],
-  },
-];
+const versions = ref([]);
 const selectedVersionIndex = ref(0);
 
 const selectedVersion = computed(() => {
-  return versions[selectedVersionIndex.value];
+  return versions.value[selectedVersionIndex.value];
+});
+
+onMounted(() => {
+  if (process.client) {
+    fetch("/завантажити/версії.json", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => {
+        versions.value = data;
+      });
+  }
 });
 
 useHead({
@@ -32,7 +32,12 @@ definePageMeta({
       Завантажте <span class="diia-word">Мавку</span> з таблиці нижче та
       слідуйте за інструкцією зі встановлення у файлі <code>Встановлення</code>.
     </p>
-    <select v-model="selectedVersionIndex" name="version" id="version">
+    <select
+      v-if="versions.length"
+      v-model="selectedVersionIndex"
+      name="version"
+      id="version"
+    >
       <template v-for="(version, i) in versions">
         <option :value="i">{{ version.name }}</option>
       </template>
