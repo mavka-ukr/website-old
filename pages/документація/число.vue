@@ -74,10 +74,7 @@ const numberStructureMagicBorMethod = `дія число.чародія_дабо
 const numberStructureMagicBandMethod = `дія число.чародія_ді(значення число) число`;
 const numberStructureMagicGreaterMethod = `дія число.чародія_більше(значення число) логічне`;
 const numberStructureMagicLesserMethod = `дія число.чародія_менше(значення число) логічне`;
-const numberStructureMagicEqLesserMethod = `дія число.чародія_не_більше(значення число) логічне`;
-const numberStructureMagicEqGreaterMethod = `дія число.чародія_не_менше(значення число) логічне`;
 const numberStructureMagicBnotGreaterMethod = `дія число.чародія_дні() число`;
-const numberStructureMagicPositiveGreaterMethod = `дія число.чародія_додатнє() число`;
 const numberStructureMagicNegativeGreaterMethod = `дія число.чародія_відʼємне() число`;
 const numberStructureMagicTextGreaterMethod = `дія число.чародія_текст() текст`;
 
@@ -274,34 +271,11 @@ definePageMeta({
     <UiCodeBlock :files="numberStructureMagicLesserMethod" />
 
     <p>
-      <code>чародія_не_більше</code>
-      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
-      виконання операції перевірки чи число не більше (менше або рівно) іншого
-      числа.
-    </p>
-    <UiCodeBlock :files="numberStructureMagicEqLesserMethod" />
-
-    <p>
-      <code>чародія_не_менше</code>
-      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
-      виконання операції перевірки чи число не менше (більше або рівно) іншого
-      числа.
-    </p>
-    <UiCodeBlock :files="numberStructureMagicEqGreaterMethod" />
-
-    <p>
       <code>чародія_дні</code>
       <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
       виконання операції двійкового ні.
     </p>
     <UiCodeBlock :files="numberStructureMagicBnotGreaterMethod" />
-
-    <p>
-      <code>чародія_додатнє</code>
-      <span style="font-weight: 500" class="hljs-keyword">це дія</span> для
-      перетворення число на додатнє.
-    </p>
-    <UiCodeBlock :files="numberStructureMagicPositiveGreaterMethod" />
 
     <p>
       <code>чародія_відʼємне</code>

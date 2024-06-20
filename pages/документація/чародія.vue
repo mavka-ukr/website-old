@@ -16,8 +16,6 @@ const magicNegative = `дія [назва].чародія_відʼємне() [т
 const magicBnot = `дія [назва].чародія_дні() [тип]`;
 const magicGt = `дія [назва].чародія_більше(значення [тип]) [тип]`;
 const magicLt = `дія [назва].чародія_менше(значення [тип]) [тип]`;
-const magicGe = `дія [назва].чародія_не_менше(значення [тип]) [тип]`;
-const magicLe = `дія [назва].чародія_не_більше(значення [тип]) [тип]`;
 const magicContains = `дія [назва].чародія_містить(значення [тип]) [тип]`;
 const magicGet = `дія [назва].чародія_отримати(ключ [тип]) [тип]`;
 const magicSet = `дія [назва].чародія_покласти(ключ [тип], значення [тип]) [тип]`;
@@ -132,15 +130,6 @@ definePageMeta({
       логіку вказівки <code>&lt;</code>.</p>
     <UiCodeBlock :files="magicLt" />
 
-    <p><code>чародія_не_менше</code> <span style="font-weight: 500" class="hljs-keyword">це</span> чародія, що
-      перезаписує
-      логіку вказівки <code>>=</code>.</p>
-    <UiCodeBlock :files="magicGe" />
-
-    <p><code>чародія_не_більше</code> <span style="font-weight: 500" class="hljs-keyword">це</span> чародія, що
-      перезаписує
-      логіку вказівки <code>&lt;=</code>.</p>
-    <UiCodeBlock :files="magicLe" />
 
     <p><code>чародія_додатнє</code> <span style="font-weight: 500" class="hljs-keyword">це</span> чародія, що
       перезаписує логіку префікс-вказівки <code>+</code>.</p>

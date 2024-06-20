@@ -70,7 +70,7 @@ definePageMeta({
   </UiDocsWrapper>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .UiTable {
   width: 100%;
   overflow: auto;

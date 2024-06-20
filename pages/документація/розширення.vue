@@ -17,13 +17,97 @@ definePageMeta({
       допомогою <span class="diia-word">Цілі</span>.
     </p>
     <p>
-      Приклад розширення можна знайти
-      <a
-        target="_blank"
-        class="link external"
-        href="https://github.com/mavka-ukr/mavka/tree/main/%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B8/%D1%80%D0%BE%D0%B7%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D1%8F"
-        >тут</a
-      >.
+      Для розробки таких розширень вам необхідно мати втановленою
+      <span class="diia-word">Ціль</span>
+      й Clang/Zig.
     </p>
+    <p>
+      Розширення <span class="diia-word">Мавки</span> експериментальні й можуть
+      мінятись від версії до версії.
+    </p>
+    <p>Приклад розширення певної версії можна завантажити нижче.</p>
+    <div class="UiTable">
+      <table>
+        <tr>
+          <th>Версія</th>
+          <th>Файли</th>
+        </tr>
+        <tr>
+          <td>РМв1</td>
+          <td>
+            <div>
+              <a
+                :href="`/завантажити/РМв1/приклад-РМв1.zip`"
+                class="link external"
+              >
+                <span class="material-symbols-rounded bold">download</span>
+                приклад-РМв1.zip
+              </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </UiDocsWrapper>
 </template>
+
+<style lang="scss" scoped>
+.UiTable {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td,
+  th {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      font-size: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      .material-symbols-rounded {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    a + a {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .td-all {
+    padding: 0;
+
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: var(--background-color-hover);
+      }
+    }
+  }
+}
+</style>

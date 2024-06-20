@@ -68,7 +68,8 @@ definePageMeta({
     </p>
     <p>Кожна операція порівняння має свою вказівку.</p>
     <p>
-      Логіку виконання більшості операцій порівняння для обʼєктів можна перезаписати через
+      Логіку виконання більшості операцій порівняння для обʼєктів можна
+      перезаписати через
       <NuxtLink :href="encodeURI('/документація/чародія')" class="link external"
         >чародії</NuxtLink
       >.
@@ -96,11 +97,11 @@ definePageMeta({
     <UiCodeBlock :files="notGreater2" />
     <br />
     <UiCodeBlock :files="notGreater" />
-    <p><code>чародія_не_більше</code></p>
+    <p><code>!чародія_більше</code></p>
     <h4>Не менше</h4>
     <UiCodeBlock :files="notLesser2" />
     <br />
     <UiCodeBlock :files="notLesser" />
-    <p><code>чародія_не_менше</code></p>
+    <p><code>!чародія_менше</code></p>
   </UiDocsWrapper>
 </template>
