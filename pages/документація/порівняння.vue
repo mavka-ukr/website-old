@@ -97,11 +97,9 @@ definePageMeta({
     <UiCodeBlock :files="notGreater2" />
     <br />
     <UiCodeBlock :files="notGreater" />
-    <p><code>!чародія_більше</code></p>
     <h4>Не менше</h4>
     <UiCodeBlock :files="notLesser2" />
     <br />
     <UiCodeBlock :files="notLesser" />
-    <p><code>!чародія_менше</code></p>
   </UiDocsWrapper>
 </template>
