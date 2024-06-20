@@ -38,7 +38,6 @@ const submodule = `
 
 const moduleStructure = `
 структура Модуль
-  назва текст
 кінець
 `.trim();
 
