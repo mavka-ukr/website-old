@@ -7,6 +7,10 @@ const shiftRight = `
 друк(100 >> 2)
 `.trim();
 
+const shiftRight2 = `
+друк(100 >>> 2)
+`.trim();
+
 const and = `
 друк(0 & 1)
 `.trim();
@@ -56,6 +60,9 @@ definePageMeta({
     <h4>Зсув вправо</h4>
     <UiCodeBlock :files="shiftRight" />
     <p><code>чародія_вправо</code></p>
+    <h4>Зсув вправо зі заповенням</h4>
+    <UiCodeBlock :files="shiftRight2" />
+    <p><code>чародія_вправо_зі_заповненням</code></p>
     <h4>І</h4>
     <UiCodeBlock :files="and" />
     <p><code>чародія_ді</code></p>
