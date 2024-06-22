@@ -17,9 +17,7 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
       загальною
       <span style="font-weight: 500" class="hljs-keyword"> структурою</span> для
-      багатьох
-      <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
-      <span class="diia-word"> ОМ</span>.
+      багатьох субʼєктів <span class="diia-word"> ОМ</span>.
     </p>
   </UiDocsWrapper>
 </template>

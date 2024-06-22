@@ -527,7 +527,7 @@ definePageMeta({
     <p>
       <span class="diia-word">Організація Мавки</span>
       (також <span class="diia-word">ОМ</span>)
-      <span style="font-weight: 500" class="hljs-keyword"> це субʼєкт</span>, що
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> субʼєкт, що
       відповідає за підтримку, розвиток й захист
       <span class="diia-word">Мавки</span>
       <span style="font-weight: 500" class="hljs-keyword"> та</span> українських

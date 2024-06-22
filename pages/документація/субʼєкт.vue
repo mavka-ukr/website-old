@@ -12,19 +12,20 @@ const simpleX = `
 const simpleY = `
 нептун це Ракета(...)
 паспорт це Документ(...)
-лисичка це Гриб(...)
+мавка це МашинаВказівок(...)
 `.trim();
 
-const simpleZ = `
-;; визначення субʼєкту
-субʼєкт кіт_моєї_сестри = Кіт(імʼя="Тимофій")
+const simpleV = `
+а = 2
 
-;; перевизначення субʼєкту
-кіт_моєї_сестри = Кіт(імʼя="Тимофій Молодший")
-`.trim();
+дія ф()
+  а = 3
+  а := 5
+кінець
 
-const simpleM = `
-субʼєкт мавка = МашинаВказівок()
+ф()
+
+друк(а) ;; 5
 `.trim();
 
 useHead({
@@ -41,40 +42,19 @@ definePageMeta({
     <h1 class="docs-content-title">Субʼєкт</h1>
 
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
+      Субʼєкт
       <span style="font-weight: 500" class="hljs-keyword"> є</span>
       фундаментальним поняттям у <span class="diia-word">Мавці</span>.
     </p>
+    <p>Сам по собі обʼєкт пасивний.</p>
+    <p>По цій причині існує субʼєкт.</p>
     <p>
-      Сам по собі обʼєкт
-      <span style="font-weight: 500" class="hljs-keyword">є</span> пасивним.
-    </p>
-    <p>
-      По цій причині існує
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкт</span>.
-    </p>
-    <p>
-      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
-      <span style="font-weight: 500" class="hljs-keyword"> є</span> тим, хто
-      визначає роль обʼєкта
-      <span style="font-weight: 500" class="hljs-keyword">та</span> дозволяє
+      Субʼєкт дозволяє визначати роль обʼєкта
+      <span style="font-weight: 500" class="hljs-keyword">та</span>
       керувати ним.
     </p>
     <p>
-      Головним
-      <span style="font-weight: 500" class="hljs-keyword">субʼєктом</span>
-      <span style="font-weight: 500" class="hljs-keyword"> є </span>
-      <span class="diia-word">Мавка</span>.
-    </p>
-    <!--    <p>Субʼєкт завжди визначає якийсь обʼєкт.</p>-->
-    <!--    <p>Субʼєкт є активним елементом.</p>-->
-    <!--    <p>-->
-    <!--      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span> також-->
-    <!--      може бути обʼєктом.-->
-    <!--    </p>-->
-    <p>
-      Допитливим:
-      <span style="font-weight: 500" class="hljs-keyword">cубʼєкт</span>
+      Допитливим: cубʼєкт
       <span style="font-weight: 500" class="hljs-keyword"> це</span> підмет.
     </p>
 
@@ -82,17 +62,14 @@ definePageMeta({
 
     <h3 id="створення">Визначення субʼєктів</h3>
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
-      визначається відносно
+      Субʼєкт визначається в середовищі
       <span style="font-weight: 500" class="hljs-keyword"> модуля</span>
       <span style="font-weight: 500" class="hljs-keyword"> або</span>
       <span style="font-weight: 500" class="hljs-keyword"> дії</span>.
     </p>
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Субʼєкт</span>
-      визначається через символ <code>=</code> або ключове слово
-      <code>це</code>. Спочатку необхідно вказати назву
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>
+      Субʼєкт визначається через символ <code>=</code> або ключове слово
+      <code>це</code>. Спочатку необхідно вказати назву субʼєкта
       <span style="font-weight: 500" class="hljs-keyword"> і</span>
       після неї обʼєкт.
     </p>
@@ -114,17 +91,13 @@ definePageMeta({
       </ClientOnly>
     </div>
     <p>
-      Також існує допоміжне ключове слово <code>субʼєкт</code>, яке можна
-      поставити перед назвою
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>. Воно
-      <span style="font-weight: 500" class="hljs-keyword"> не є</span>
-      обовʼязковим
-      <span style="font-weight: 500" class="hljs-keyword"> та не</span> впливає
-      на виконання вказівки.
+      Також існує можливість визначати субʼєкт у зовнішньому середовищі. Для
+      цього треба використовувати символ
+      <code>:=</code>.
     </p>
     <div class="code-window code-window-full">
       <ClientOnly>
-        <highlightjs language="diia" :autodetect="false" :code="simpleM" />
+        <highlightjs language="diia" :autodetect="false" :code="simpleV" />
       </ClientOnly>
     </div>
   </UiDocsWrapper>

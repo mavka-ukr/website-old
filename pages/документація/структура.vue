@@ -159,9 +159,7 @@ definePageMeta({
     <p>Причеплення відбувається під час створення обʼєкта.</p>
     <p>
       В такій <span style="font-weight: 500" class="hljs-keyword"> дії</span> є
-      можливість керувати обʼєктом через
-      <span style="font-weight: 500" class="hljs-keyword"> субʼєкт </span>
-      <code>я</code>.
+      можливість керувати обʼєктом через субʼєкт <code>я</code>.
     </p>
     <h4>Приклад створення дії обʼєкта</h4>
     <div class="code-window code-window-full">

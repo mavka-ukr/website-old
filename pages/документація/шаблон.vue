@@ -85,8 +85,7 @@ definePageMeta({
     </p>
     <UiCodeBlock :files="diiaExampleObject" />
     <p>
-      Після цього ми можемо перевірити тип
-      <span style="font-weight: 500" class="hljs-keyword">субʼєкта</span>
+      Після цього ми можемо перевірити тип субʼєкта
       <code>дт</code>.
     </p>
     <UiCodeBlock :files="diiaExampleObjectTest" />

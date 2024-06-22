@@ -476,8 +476,7 @@ definePageMeta({
       отримати з обʼєкта
       <span style="font-weight: 500" class="hljs-keyword"> та</span> виконати.
       При виконанні таких
-      <span style="font-weight: 500" class="hljs-keyword"> дій</span>,
-      <span style="font-weight: 500" class="hljs-keyword"> субʼєктом</span>
+      <span style="font-weight: 500" class="hljs-keyword"> дій</span>, субʼєктом
       обʼєкта <span style="font-weight: 500" class="hljs-keyword"> є</span> сам
       обʼєкт. В
       <span style="font-weight: 500" class="hljs-keyword"> дії</span> звертатись

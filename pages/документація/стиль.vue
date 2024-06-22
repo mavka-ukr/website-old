@@ -32,17 +32,10 @@ definePageMeta({
 </script>
 
 <template>
-  <UiDocsWrapper
-    prev="/документація/приклади"
-    next="/документація/арифметика"
-  >
+  <UiDocsWrapper prev="/документація/приклади" next="/документація/арифметика">
     <h1 class="docs-content-title">Стиль</h1>
 
-    <p>
-      Назви
-      <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
-      з маленької у snake_case.
-    </p>
+    <p>Назви субʼєктів з маленької у snake_case.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="a" />
@@ -77,11 +70,7 @@ definePageMeta({
         <highlightjs language="diia" :autodetect="false" :code="d" />
       </ClientOnly>
     </div>
-    <p>
-      Назви сталих
-      <span style="font-weight: 500" class="hljs-keyword"> субʼєктів</span>
-      великими літерами у SCREAMING_SNAKE_CASE.
-    </p>
+    <p>Назви сталих субʼєктів великими літерами у SCREAMING_SNAKE_CASE.</p>
     <div class="code-window code-window-full">
       <ClientOnly>
         <highlightjs language="diia" :autodetect="false" :code="e" />
