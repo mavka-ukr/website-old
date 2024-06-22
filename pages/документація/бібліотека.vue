@@ -124,7 +124,7 @@ definePageMeta({
     <h1 class="docs-content-title">Бібліотека Мавки</h1>
     <p>
       <span class="diia-word">Бібліотека Мавки</span>
-      <span style="font-weight: 500" class="hljs-keyword">це</span> набір
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> набір
       вбудованих
       <span style="font-weight: 500" class="hljs-keyword">модулів</span>, які
       можна <span style="font-weight: 500" class="hljs-keyword">взяти</span> без
