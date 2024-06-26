@@ -308,27 +308,38 @@ const audioPlaying = useState("audioPlaying", () => false);
 onMounted(() => {
   if (process.client) {
     audioVisible.value = localStorage.getItem("audioVisible") === "true";
-
-    document.getElementById("pluto").addEventListener("play", () => {
-      audioPlaying.value = true;
-      localStorage.setItem("audioVisible", "true");
-      audioVisible.value = true;
-
-      const toast = useToast();
-      toast(
-        "Hans Zimmer - Interstellar - Main Theme (Piano Version by Patrik Pietschmann)",
-        {
-          position: POSITION.BOTTOM_CENTER,
-          hideProgressBar: true,
-          icon: false,
-        },
-      );
-    });
-    document.getElementById("pluto").addEventListener("pause", () => {
-      audioPlaying.value = false;
-    });
+    document.getElementById("pluto").addEventListener("play", onPlay);
+    document.getElementById("pluto").addEventListener("pause", onPause);
   }
 });
+
+onBeforeUnmount(() => {
+  if (process.client) {
+    audioVisible.value = localStorage.getItem("audioVisible") === "true";
+    document.getElementById("pluto").removeEventListener("play", onPlay);
+    document.getElementById("pluto").removeEventListener("pause", onPause);
+  }
+});
+
+function onPlay() {
+  audioPlaying.value = true;
+  localStorage.setItem("audioVisible", "true");
+  audioVisible.value = true;
+
+  const toast = useToast();
+  toast(
+    "Hans Zimmer - Interstellar - Main Theme (Piano Version by Patrik Pietschmann)",
+    {
+      position: POSITION.BOTTOM_CENTER,
+      hideProgressBar: true,
+      icon: false,
+    },
+  );
+}
+
+function onPause() {
+  audioPlaying.value = false;
+}
 
 function toggleAudio() {
   if (process.client) {

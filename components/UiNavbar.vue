@@ -16,7 +16,7 @@ onMounted(() => {
     fetch("/завантажити/версії.json", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => {
-        version.value = data[0].name;
+        version.value = data[0].назва;
       });
   }
 });

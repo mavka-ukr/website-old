@@ -46,7 +46,7 @@ definePageMeta({
       id="version"
     >
       <template v-for="(version, i) in versions">
-        <option :value="i">{{ version.name }}</option>
+        <option :value="i">{{ version.назва }}</option>
       </template>
     </select>
     <template v-if="selectedVersion">
@@ -55,11 +55,11 @@ definePageMeta({
           <tr>
             <th>Файли</th>
           </tr>
-          <template v-for="file in selectedVersion.files">
+          <template v-for="file in selectedVersion.файли">
             <tr>
               <td>
                 <a
-                  :href="`/завантажити/${selectedVersion.name}/${file}`"
+                  :href="`/завантажити/${selectedVersion.назва}/${file}`"
                   class="link external"
                 >
                   <span class="material-symbols-rounded bold">download</span>
