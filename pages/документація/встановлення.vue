@@ -29,8 +29,15 @@ definePageMeta({
   <UiDocsWrapper prev="/документація" next="/документація/розкладка">
     <h1 class="docs-content-title">Встановлення</h1>
     <p>
-      Завантажте <span class="diia-word">Мавку</span> з таблиці нижче та
-      слідуйте за інструкцією зі встановлення у файлі <code>Встановлення</code>.
+      Завантажити готову <span class="diia-word">Мавку</span> можна з таблиці
+      нижче.
+    </p>
+    <p>
+      Ви також можете збудувати <span class="diia-word">Мавку</span> власноруч
+      для вашої платформи. Для цього завантажте
+      <span class="diia-word">Код Мавки</span> з таблиці нижче
+      <span style="font-weight: 500" class="hljs-keyword"> та</span> ознайомтесь
+      з інструкцією з будування <span class="diia-word">Мавки</span>.
     </p>
     <select
       v-if="versions.length"

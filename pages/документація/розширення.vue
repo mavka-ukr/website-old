@@ -17,7 +17,7 @@ definePageMeta({
       допомогою <span class="diia-word">Цілі</span>.
     </p>
     <p>
-      Для розробки таких розширень вам необхідно мати втановленими
+      Для розробки таких розширень вам необхідно мати встановленими
       <span class="diia-word">Ціль</span>
       й Clang/Zig.
     </p>
@@ -25,29 +25,14 @@ definePageMeta({
       <span class="diia-word">Розширення Мавки</span> наразі експериментальні й
       можуть мінятись від версії до версії.
     </p>
-    <p>Приклад розширення можна завантажити нижче:</p>
-    <div class="UiTable">
-      <table>
-        <tr>
-          <th>Версія</th>
-          <th>Файли</th>
-        </tr>
-        <tr>
-          <td>РМв1</td>
-          <td>
-            <div>
-              <a
-                :href="`/завантажити/РМв1/приклад-РМв1.zip`"
-                class="link external"
-              >
-                <span class="material-symbols-rounded bold">download</span>
-                приклад-РМв1.zip
-              </a>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <p>
+      Приклад розширення можна завантажити з таблиці на сторінці
+      <NuxtLink
+        :href="encodeURI('/документація/встановлення')"
+        class="link external"
+        >Встановлення</NuxtLink
+      >.
+    </p>
   </UiDocsWrapper>
 </template>
 
