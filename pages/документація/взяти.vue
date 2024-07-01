@@ -58,7 +58,7 @@ definePageMeta({
     <h1 class="docs-content-title">Взяти</h1>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Взяти</span>
-      <span style="font-weight: 500" class="hljs-keyword"> це</span> вказівка
+      <span style="font-weight: 500" class="hljs-keyword"> це</span> інструкція
       <span class="diia-word">Мавки</span>, що дозволяє підключити
       <span style="font-weight: 500" class="hljs-keyword">модуль</span>.
     </p>

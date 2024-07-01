@@ -18,7 +18,6 @@ definePageMeta({
       Кожна програма <span class="diia-word">Мавки</span> складається з
       вказівок.
     </p>
-    <p>Кожна вказівка має свій вигляд в коді.</p>
     <p>
       Вказівки виконуються <span class="diia-word">Мавкою</span> послідовно.
     </p>
@@ -183,9 +182,6 @@ definePageMeta({
       </li>
       <li>
         <code>виконати виключне двійкове або</code>
-      </li>
-      <li>
-        <code>прокоментувати</code>
       </li>
     </ul>
   </UiDocsWrapper>

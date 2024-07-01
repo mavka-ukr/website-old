@@ -4,12 +4,11 @@ const while1files = [
     name: "поки_умова.м",
     text: `
 а = 0
-
 поки а < 10
   друк(а)
-  а = а + 1
+  а += 1
 кінець
-`.trim()
+`.trim(),
   },
   {
     name: "результат",
@@ -25,16 +24,16 @@ const while1files = [
 8
 9
 `.trim(),
-    plaintext: true
-  }
+    plaintext: true,
+  },
 ];
 
 useHead({
-  title: "Поки | Документація | Мавка"
+  title: "Поки | Документація | Мавка",
 });
 
 definePageMeta({
-  layout: "docs"
+  layout: "docs",
 });
 </script>
 
@@ -44,8 +43,8 @@ definePageMeta({
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Поки</span>
       <span style="font-weight: 500" class="hljs-keyword"> є</span> вказівкою
-      <span class="diia-word">Мавки</span>, що виконує вказівки допоки
-      результат вказаної вказівки
+      <span class="diia-word">Мавки</span>, що виконує вказівки допоки результат
+      вказаної вказівки
       <span style="font-weight: 500" class="hljs-keyword">є</span> логічним
       <code>так</code>.
     </p>

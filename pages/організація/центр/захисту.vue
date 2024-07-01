@@ -24,9 +24,9 @@ definePageMeta({
       <span class="diia-word">Секретар</span> цього
       <span class="diia-word">Центру</span> на даний момент
       <span style="font-weight: 500" class="hljs-keyword"> це </span>
-      <span class="diia-word">Учасникʼ0</span>
-      (відомий <span style="font-weight: 500" class="hljs-keyword"> як </span>
-      Богданович Давид Когут Прихожденко).
+      Богданович Давид Когут Прихожденко (<span class="diia-word"
+        >Учасникʼ0</span
+      >).
     </p>
     <p>
       <span class="diia-word">Учасники</span> цього

@@ -13,7 +13,7 @@ const exampledef = `
 const example = `
 блок_привіт = (
   <блок>
-    Вперед до <строго колір="жовтий">Цілі</строго>!
+    Вперед до <строго колір="золотий">Цілі</строго>!
   </блок>
 )
 
@@ -42,6 +42,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/діалог" next="/документація/розширення">
     <h1 class="docs-content-title">Мова розмітки Мавки</h1>
+    <blockquote>Тимчасово недоступно.</blockquote>
+    <hr />
     <p>
       <span class="diia-word">МРМ</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span> вбудована в

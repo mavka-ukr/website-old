@@ -1,11 +1,27 @@
 <script setup>
-const example = `
-Діалог Мавки 0.123.0
+import { useState } from "nuxt/app";
+
+const version = useState("version", () => "а.б.в");
+
+onMounted(() => {
+  if (process.client) {
+    fetch("/завантажити/версії.json", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => {
+        version.value = data[0].назва;
+      });
+  }
+});
+
+const example = computed(() =>
+  `
+Діалог Мавки ${version.value}
 — життя = (а, б, в, г): життя(а(г), б(г), в(г), г)
 пусто
 — життя є Дія
 так
-`.trim();
+`.trim(),
+);
 
 useHead({
   title: "Діалог | Документація | Мавка",

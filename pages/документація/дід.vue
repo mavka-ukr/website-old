@@ -68,7 +68,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/математика" next="/документація/сервер">
     <h1 class="docs-content-title">Дід</h1>
-
+    <blockquote>Тимчасово недоступно.</blockquote>
+    <hr />
     <p>
       <span class="diia-word">Дід</span>
       <span style="font-weight: 500" class="hljs-keyword"> це</span> формат для

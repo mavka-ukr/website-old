@@ -33,7 +33,9 @@ definePageMeta({
       моє бажання до написання компʼютерних команд українською мовою.
     </p>
     <p>
-      <span class="diia-word">Мавка</span> цілком та повністю присвячується
+      <span class="diia-word">Мавка</span> цілком
+      <span style="font-weight: 500" class="hljs-keyword"> та </span>
+      повністю присвячується
       <span class="diia-word">Лесі Українці</span>.
     </p>
     <p>

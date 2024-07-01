@@ -87,13 +87,18 @@ definePageMeta({
     <h1 class="docs-content-title">Структура</h1>
 
     <p>
-      <span style="font-weight: 500" class="hljs-keyword">Структура</span>
-      <span style="font-weight: 500" class="hljs-keyword"> є</span>
-      елементарним обʼєктом <span class="diia-word">Мавки</span>, що зберігає
-      опис властивостей обʼєкта.
+      <span style="font-weight: 500" class="hljs-keyword">Структура є</span>
+      інструкцією
+      <span style="font-weight: 500" class="hljs-keyword"> та структурою </span>
+      <span class="diia-word">Мавки</span>, обʼєкти якої
+      <span style="font-weight: 500" class="hljs-keyword"
+        >є структурами та</span
+      >
+      зберігають опис властивостей.
     </p>
     <p>
-      Кожен обʼєкт в <span class="diia-word">Мавці</span> створений за певною
+      Кожен обʼєкт в <span class="diia-word">Мавці</span> (окрім
+      <code>пусто</code>) створений за певною
       <span style="font-weight: 500" class="hljs-keyword">структурою</span>.
     </p>
     <p>
@@ -101,11 +106,6 @@ definePageMeta({
       <span style="font-weight: 500" class="hljs-keyword"> містить</span>
       ті властивості, які описані в його
       <span style="font-weight: 500" class="hljs-keyword">структурі</span>.
-    </p>
-    <p>
-      <span style="font-weight: 500" class="hljs-keyword">Структура</span>
-      <span style="font-weight: 500" class="hljs-keyword"> містить</span>
-      властивість <code>чародія_викликати</code>, яка виконує створення обʼєкта.
     </p>
     <hr />
     <h3>Створення структур</h3>

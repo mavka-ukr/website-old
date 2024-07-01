@@ -50,9 +50,7 @@ definePageMeta({
         >пак.укр</a
       >
       <span style="font-weight: 500" class="hljs-keyword"> та</span>
-      зберігаються в папці <code>паки</code> на рівні з головним
-      <span style="font-weight: 500" class="hljs-keyword">модулем</span>
-      проекту.
+      зберігаються в папці <code>паки</code> в корені проекту.
     </p>
     <hr />
     <h3>Приклад взяття модуля з паку</h3>

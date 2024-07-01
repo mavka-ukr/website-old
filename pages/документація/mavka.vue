@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Застаріле встановлення | Документація | Мавка",
+  title: "Оригінальна Мавка | Документація | Мавка",
 });
 
 definePageMeta({
@@ -20,10 +20,7 @@ definePageMeta({
     <p>
       <span class="diia-word">Оригінальна Мавка</span> більше не підтримується.
       Натомість ведеться робота над
-      <NuxtLink
-        class="link external diia-word"
-        :href="encodeURI('/документація/мама')"
-      >
+      <NuxtLink class="link external diia-word" :href="encodeURI('/мама')">
         Машиною Мавки</NuxtLink
       >.
     </p>

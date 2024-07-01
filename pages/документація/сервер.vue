@@ -61,6 +61,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/математика" next="/документація/запит">
     <h1 class="docs-content-title">Сервер</h1>
+    <blockquote>Наразі недоступно.</blockquote>
+    <hr />
     <p>
       Сервер
       <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований

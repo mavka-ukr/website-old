@@ -16,6 +16,19 @@ onMounted(() => {
   }
 });
 
+function onClickDownloadUrl(event, file) {
+  if (file.includes("код")) {
+    if (
+      !window.confirm(
+        "УВАГА! Перед переглядом коду обовʼязково ознайомтесь з Правом Автора, що знаходиться в архіві.",
+      )
+    ) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+}
+
 useHead({
   title: "Встановлення | Документація | Мавка",
 });
@@ -29,8 +42,7 @@ definePageMeta({
   <UiDocsWrapper prev="/документація" next="/документація/розкладка">
     <h1 class="docs-content-title">Встановлення</h1>
     <p>
-      Завантажити готову <span class="diia-word">Мавку</span> можна з таблиці
-      нижче.
+      Завантажити <span class="diia-word">Мавку</span> можна з таблиці нижче.
     </p>
     <p>
       Ви також можете збудувати <span class="diia-word">Мавку</span> власноруч
@@ -59,6 +71,7 @@ definePageMeta({
             <tr>
               <td>
                 <a
+                  @click="onClickDownloadUrl($event, file)"
                   :href="`/завантажити/${selectedVersion.назва}/${file}`"
                   class="link external"
                 >
@@ -74,6 +87,14 @@ definePageMeta({
     <template v-else>
       <blockquote>Завантаження....</blockquote>
     </template>
+    <hr />
+    <p>
+      <span class="diia-word">Оригінальна Мавка</span> 0.12.3
+      <NuxtLink :href="encodeURI('/документація/mavka')" class="link external"
+        >тут
+      </NuxtLink>
+      .
+    </p>
   </UiDocsWrapper>
 </template>
 

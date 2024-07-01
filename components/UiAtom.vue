@@ -27,7 +27,7 @@
     background-attachment: fixed;
   }
 
-  @media only screen and (max-device-width: 1366px) {
+  @media only screen and (max-device-width: 700px) {
     background-size: 600%;
   }
 }

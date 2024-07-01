@@ -13,7 +13,7 @@ definePageMeta({
     <h1 class="docs-content-title">Інструкція</h1>
     <p>
       Інструкція <span style="font-weight: 500" class="hljs-keyword"> це </span>
-      послідовний набір вказівок.
+      послідовність вказівок.
     </p>
   </UiDocsWrapper>
 </template>

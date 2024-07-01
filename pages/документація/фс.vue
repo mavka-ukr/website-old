@@ -37,6 +37,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/запит" next="/документація/json">
     <h1 class="docs-content-title">Файлова система</h1>
+    <blockquote>Тимчасово недоступно.</blockquote>
+    <hr />
     <p>
       Файлова система
       <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований

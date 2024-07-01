@@ -21,7 +21,7 @@ const example = `
 
 чекати відповідь = запит.надіслати(
   "GET",
-  "https://мавка.укр/тачки"
+  "https://мавка.укр/машини"
 )
 
 друк(відповідь)
@@ -39,6 +39,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/сервер" next="/документація/фс">
     <h1 class="docs-content-title">Запит</h1>
+    <blockquote>Наразі недоступно.</blockquote>
+    <hr />
     <p>
       Запит
       <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований

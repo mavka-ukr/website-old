@@ -26,6 +26,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/фс" next="/документація/автор">
     <h1 class="docs-content-title">JSON</h1>
+    <blockquote>Наразі недоступно.</blockquote>
+    <hr />
     <p>
       JSON
       <span style="font-weight: 500" class="hljs-keyword">це</span> вбудований

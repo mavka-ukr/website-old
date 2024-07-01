@@ -29,6 +29,8 @@ definePageMeta({
 <template>
   <UiDocsWrapper prev="/документація/спроба" next="/документація/коментар">
     <h1 class="docs-content-title">Шаблон</h1>
+    <blockquote>Тимчасово недоступно.</blockquote>
+    <hr />
     <p>
       Шаблон
       <span style="font-weight: 500" class="hljs-keyword">це</span> спеціальна
