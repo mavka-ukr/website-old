@@ -42,14 +42,20 @@ definePageMeta({
   <UiDocsWrapper prev="/документація" next="/документація/розкладка">
     <h1 class="docs-content-title">Встановлення</h1>
     <p>
-      Завантажити <span class="diia-word">Мавку</span> можна з таблиці нижче.
+      Завантажити
+      <span class="diia-word">Мавку</span>
+      можна з таблиці нижче.
     </p>
     <p>
-      Ви також можете збудувати <span class="diia-word">Мавку</span> власноруч
-      для вашої платформи. Для цього завантажте
-      <span class="diia-word">Код Мавки</span> з таблиці нижче
-      <span style="font-weight: 500" class="hljs-keyword"> та</span> ознайомтесь
-      з інструкцією з будування <span class="diia-word">Мавки</span>.
+      Ви також можете збудувати
+      <span class="diia-word">Мавку</span>
+      власноруч для вашої платформи. Для цього завантажте
+      <span class="diia-word">Код Мавки</span>
+      з таблиці нижче
+      <span style="font-weight: 500" class="hljs-keyword">та</span>
+      ознайомтесь з інструкцією з будування
+      <span class="diia-word">Мавки</span>
+      .
     </p>
     <select
       v-if="versions.length"
@@ -89,9 +95,10 @@ definePageMeta({
     </template>
     <hr />
     <p>
-      <span class="diia-word">Оригінальна Мавка</span> 0.12.3
-      <NuxtLink :href="encodeURI('/документація/mavka')" class="link external"
-        >тут</NuxtLink
+      <span class="diia-word">Оригінальна Мавка</span>
+      0.12.3
+      <NuxtLink :href="encodeURI('/документація/mavka')" class="link external">
+        тут</NuxtLink
       >.
     </p>
   </UiDocsWrapper>
