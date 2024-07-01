@@ -91,9 +91,8 @@ definePageMeta({
     <p>
       <span class="diia-word">Оригінальна Мавка</span> 0.12.3
       <NuxtLink :href="encodeURI('/документація/mavka')" class="link external"
-        >тут
-      </NuxtLink>
-      .
+        >тут</NuxtLink
+      >.
     </p>
   </UiDocsWrapper>
 </template>
