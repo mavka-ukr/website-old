@@ -62,7 +62,7 @@ definePageMeta({
     <p>
       Властивостями модуля
       <span style="font-weight: 500" class="hljs-keyword">є</span>
-      обʼєкти, збережені вказівкою <code>дати</code>.
+      обʼєкти, збережені інструкцією <code>дати</code>.
     </p>
     <p>
       Модуль описано спеціальною

@@ -47,7 +47,7 @@ definePageMeta({
     <h1 class="docs-content-title">Умова</h1>
     <p>
       Умова
-      <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
+      <span style="font-weight: 500" class="hljs-keyword">є</span> інструкцією
       <span class="diia-word">Мавки</span>, що перевіряє чи результатом вказівки
       <span style="font-weight: 500" class="hljs-keyword">є</span>
       <span style="font-weight: 500" class="hljs-keyword"> логічне </span>

@@ -1,6 +1,8 @@
 <template>
-  <div class="section-atom">
-    <!--    <img src="@/assets/images/atom.png" alt="" />-->
+  <div class="section-atom"></div>
+  <div class="section-atom-credit">
+    Фото: Urquhart JS, et al.; Robert Hurt, the Spitzer Science Center; Robert
+    Benjamin
   </div>
 </template>
 
@@ -29,6 +31,18 @@
 
   @media only screen and (max-device-width: 700px) {
     background-size: 600%;
+  }
+}
+
+.section-atom-credit {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 1rem;
+  color: var(--border-color);
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    color: var(--text-color);
   }
 }
 </style>

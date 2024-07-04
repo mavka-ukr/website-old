@@ -159,12 +159,12 @@ definePageMeta({
     <p>
       Перебір
       <span style="font-weight: 500" class="hljs-keyword">є</span> обʼєктом
-      <span class="diia-word">Мавки</span>, що використовується вказівкою
+      <span class="diia-word">Мавки</span>, що використовується інструкцією
       <span style="font-weight: 500" class="hljs-keyword">перебрати</span>.
     </p>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Перебрати </span>
-      <span style="font-weight: 500" class="hljs-keyword">є</span> вказівкою
+      <span style="font-weight: 500" class="hljs-keyword">є</span> інструкцією
       <span class="diia-word">Мавки</span>, що виконує
       <span style="font-weight: 500" class="hljs-keyword">дію </span>
       <code>далі</code> якогось перебіру, допоки значення його властивості
@@ -207,7 +207,7 @@ definePageMeta({
     <h3>Діапазон</h3>
     <p>
       Діапазон
-      <span style="font-weight: 500" class="hljs-keyword">це</span> вказівка
+      <span style="font-weight: 500" class="hljs-keyword">це</span> інструкція
       <span class="diia-word">Мавки</span>, що створює перебір чисел в
       конкретному діапазоні.
     </p>

@@ -42,7 +42,7 @@ definePageMeta({
     <h1 class="docs-content-title">Поки</h1>
     <p>
       <span style="font-weight: 500" class="hljs-keyword">Поки</span>
-      <span style="font-weight: 500" class="hljs-keyword"> є</span> вказівкою
+      <span style="font-weight: 500" class="hljs-keyword"> є</span> інструкцією
       <span class="diia-word">Мавки</span>, що виконує вказівки допоки результат
       вказаної вказівки
       <span style="font-weight: 500" class="hljs-keyword">є</span> логічним
